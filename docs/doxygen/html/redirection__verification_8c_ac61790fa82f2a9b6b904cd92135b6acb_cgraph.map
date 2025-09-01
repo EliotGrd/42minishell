@@ -1,0 +1,5 @@
+<map id="outfile_append_redirection" name="outfile_append_redirection">
+<area shape="rect" id="node1" title="outfile and append are open with the right flags in a case of an error we write a message with the na..." alt="" coords="5,31,200,57"/>
+<area shape="rect" id="node2" href="$redirection__verification_8c.html#a5b79f4b52353f6558575b5da0dd28fd4" title="we close the fd_in and fd_out in case of a fail this function is able to manage the error coming from..." alt="" coords="248,5,363,32"/>
+<area shape="rect" id="node3" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="411,31,503,57"/>
+</map>

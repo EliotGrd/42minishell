@@ -1,0 +1,6 @@
+<map id="launch_builtin" name="launch_builtin">
+<area shape="rect" id="node1" title="launch the builtin &#160;&#160;some of them are not present because we have to fork() them why ?..." alt="" coords="5,56,119,83"/>
+<area shape="rect" id="node2" href="$env_8c.html#ad7678c59b5365c776294bdeefd3d7583" title=" " alt="" coords="184,5,231,32"/>
+<area shape="rect" id="node3" href="$my__echo_8c.html#a5522916069f77552d810e207670e3170" title=" " alt="" coords="167,56,248,83"/>
+<area shape="rect" id="node4" href="$pwd_8c.html#ab62618359287b6604bd60852145b9726" title=" " alt="" coords="183,107,232,133"/>
+</map>

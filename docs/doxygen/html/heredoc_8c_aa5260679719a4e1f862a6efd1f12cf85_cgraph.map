@@ -1,0 +1,10 @@
+<map id="here_doc_management" name="here_doc_management">
+<area shape="rect" id="node1" title="the function will go through all the commands and check the redirection if we encounter a heredoc we ..." alt="" coords="5,132,180,159"/>
+<area shape="rect" id="node2" href="$heredoc_8c.html#ab68377acf2c8adf39f991dc425297c09" title="it&#39;s where we open the heredoc and start writing inside our pipe each time we check if it&#39;s the word ..." alt="" coords="228,132,343,159"/>
+<area shape="rect" id="node3" href="$heredoc_8c.html#ab64ee253d325f2d25cf6d2e51bd00396" title="we have to activate back the echoctl to appear again when we are not inside an heredoc" alt="" coords="408,5,524,32"/>
+<area shape="rect" id="node4" href="$heredoc_8c.html#a3e1410633d8c1ad5b1441509a020b0d4" title="allow us to close the file descriptors when we have fork() again the process" alt="" coords="391,56,541,83"/>
+<area shape="rect" id="node5" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="589,81,681,108"/>
+<area shape="rect" id="node6" href="$heredoc_8c.html#a4fd8e3642e456e9a2f7fe4dc8f44ad43" title="remove the echoctl which are the symbol which appears when you press CTRL+C or CTRL+\ it&#39;s different ..." alt="" coords="403,157,529,184"/>
+<area shape="rect" id="node7" href="$minishell_8h.html#a258e3b580e688a0cf46e4258525aeaf1" title=" " alt="" coords="409,208,523,235"/>
+<area shape="rect" id="node8" href="$heredoc_8c.html#a7ea78f2f2215fe1ed765af80a1b2893d" title="allow us to warn the process child heredoc it&#39;s time to stop and close the file descriptor" alt="" coords="407,259,525,285"/>
+</map>

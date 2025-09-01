@@ -1,0 +1,11 @@
+<map id="reading" name="reading">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,76,83"/>
+<area shape="rect" id="node2" href="$ft__strdup_8c.html#aeab425f44e9a04e54160d60d3c9e870c" title=" " alt="" coords="148,5,227,32"/>
+<area shape="rect" id="node4" href="$ft__strjoin_8c.html#a5c1c26f8be9bc527cfe69a3555124795" title=" " alt="" coords="299,56,377,83"/>
+<area shape="rect" id="node8" href="$get__next__line_8c.html#a34333af6d816f260f7680fcfbc81a2fd" title=" " alt="" coords="124,107,251,133"/>
+<area shape="rect" id="node3" href="$ft__strlen_8c.html#a828402378653640f545a4be2e00e92f9" title=" " alt="" coords="426,5,501,32"/>
+<area shape="rect" id="node5" href="$ft__calloc_8c.html#ab927e999982a91970c6e43b403d66167" title=" " alt="" coords="425,56,501,83"/>
+<area shape="rect" id="node6" href="$ft__bzero_8c.html#a5937ab0d08e31d0e3e4a16ec71e293a1" title=" " alt="" coords="549,56,624,83"/>
+<area shape="rect" id="node7" href="$ft__memset_8c.html#aa32eb193f310275c04ccacf3504b95b9" title=" " alt="" coords="672,56,764,83"/>
+<area shape="rect" id="node9" href="$ft__is__n_8c.html#a9f740b8177921c4d42960f26397031fb" title=" " alt="" coords="314,107,362,133"/>
+</map>

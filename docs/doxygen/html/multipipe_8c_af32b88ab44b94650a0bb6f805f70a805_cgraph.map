@@ -1,0 +1,28 @@
+<map id="multipipe_intermediary_cmd" name="multipipe_intermediary_cmd">
+<area shape="rect" id="node1" title="it&#39;s where the fork happen and sent to be execute" alt="" coords="5,56,216,83"/>
+<area shape="rect" id="node2" href="$redirection__multipipe_8c.html#af7980d82e7ea7c0c84519ef3e3011b98" title=" " alt="" coords="264,5,389,32"/>
+<area shape="rect" id="node3" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="819,107,911,133"/>
+<area shape="rect" id="node4" href="$multipipe_8c.html#a43baea25481fdd02ce42e4d249f12353" title=" " alt="" coords="271,233,382,260"/>
+<area shape="rect" id="node5" href="$multipipe_8c.html#ac70e2499b8aeb789658ff4596ded7221" title="as we are going to fork and create process, the new process will have inherited of all the opened fd...." alt="" coords="438,157,581,184"/>
+<area shape="rect" id="node6" href="$redirection__multipipe_8c.html#a19e2c31eeb0eb25575df2277cbd7774e" title=" " alt="" coords="437,208,581,235"/>
+<area shape="rect" id="node9" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="448,259,571,285"/>
+<area shape="rect" id="node13" href="$lst__env_8c.html#a226ae0aa054e697998b2ecbc5d61d592" title=" " alt="" coords="450,309,569,336"/>
+<area shape="rect" id="node15" href="$execution__node_8c.html#a6cfdc545c2222bbb0ca1dfc8431f72a3" title="we are going to execute the command here we have a security about absolute path given =&gt; because it&#39;s..." alt="" coords="447,436,571,463"/>
+<area shape="rect" id="node7" href="$redirection__multipipe_8c.html#a3a0d7f695cf53df46301e14ffab77638" title=" " alt="" coords="629,157,748,184"/>
+<area shape="rect" id="node8" href="$redirection__multipipe_8c.html#a5b749bc2b4088984c0efe1c479ae6ec8" title=" " alt="" coords="635,208,742,235"/>
+<area shape="rect" id="node10" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="648,259,729,285"/>
+<area shape="rect" id="node11" href="$lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" title=" " alt="" coords="803,259,928,285"/>
+<area shape="rect" id="node12" href="$lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" title=" " alt="" coords="983,259,1065,285"/>
+<area shape="rect" id="node14" href="$lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" title=" " alt="" coords="650,309,727,336"/>
+<area shape="rect" id="node16" href="$execution_8c.html#a3acc0bb56da881cc8609ca9e94ec8e93" title="detect if it&#39;s a builtin with strncmp() but the real question is &quot;is it a builtin I have to launch in..." alt="" coords="640,360,737,387"/>
+<area shape="rect" id="node17" href="$execution_8c.html#a8b2bd9dba90bfc9b2ead44af5e630315" title="launch the builtin &#160;&#160;some of them are not present because we have to fork() them why ?..." alt="" coords="632,411,745,437"/>
+<area shape="rect" id="node21" href="$lst__env__two_8c.html#aafcce0b2f2958645e84ae23b14116680" title=" " alt="" coords="630,461,747,488"/>
+<area shape="rect" id="node24" href="$execution__node_8c.html#adc2c91230d4a0a1a1f98db2a888afcaa" title="error message management for the specific case of execution" alt="" coords="629,512,748,539"/>
+<area shape="rect" id="node25" href="$getenv_8c.html#a5d0cf05c2622983111dcfc0f179c5739" title=" " alt="" coords="638,563,739,589"/>
+<area shape="rect" id="node18" href="$env_8c.html#ad7678c59b5365c776294bdeefd3d7583" title=" " alt="" coords="842,309,889,336"/>
+<area shape="rect" id="node19" href="$my__echo_8c.html#a5522916069f77552d810e207670e3170" title=" " alt="" coords="825,360,906,387"/>
+<area shape="rect" id="node20" href="$pwd_8c.html#ab62618359287b6604bd60852145b9726" title=" " alt="" coords="841,411,890,437"/>
+<area shape="rect" id="node22" href="$env__utils_8c.html#a7cc35c974bce053dbba1c1ec1028f36b" title=" " alt="" coords="814,461,917,488"/>
+<area shape="rect" id="node23" href="$getenv_8c.html#a0250cce1862c20e31d0c0ece960bc3a0" title=" " alt="" coords="824,512,907,539"/>
+<area shape="rect" id="node26" href="$lst__env__two_8c.html#a4d4a14327b2c3ff88099102b6bd77986" title=" " alt="" coords="796,563,935,589"/>
+</map>

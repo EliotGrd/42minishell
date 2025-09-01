@@ -1,0 +1,5 @@
+<map id="infile_redirection" name="infile_redirection">
+<area shape="rect" id="node1" title="we have to check if the file exist then if we are allowed to open it in any error case we write a mes..." alt="" coords="5,31,136,57"/>
+<area shape="rect" id="node2" href="$redirection__verification_8c.html#a5b79f4b52353f6558575b5da0dd28fd4" title="we close the fd_in and fd_out in case of a fail this function is able to manage the error coming from..." alt="" coords="184,5,299,32"/>
+<area shape="rect" id="node3" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="347,31,439,57"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="multipipe_intermediary_cmd" name="multipipe_intermediary_cmd">
+<area shape="rect" id="node1" title="it&#39;s where the fork happen and sent to be execute" alt="" coords="299,5,509,32"/>
+<area shape="rect" id="node2" href="$multipipe_8c.html#a3f78d597d08aaca5580b2c89f956a3a2" title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered..." alt="" coords="132,5,251,32"/>
+<area shape="rect" id="node3" href="$execution_8c.html#a9dffeca3c2ff474e24c3e98ab856df76" title="first function of the execution part when we have something to do we have to deal with two cases ; if..." alt="" coords="5,5,84,32"/>
+</map>

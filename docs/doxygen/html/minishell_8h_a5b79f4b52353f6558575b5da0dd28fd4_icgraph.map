@@ -1,0 +1,9 @@
+<map id="close_fd_error" name="close_fd_error">
+<area shape="rect" id="node1" title="we close the fd_in and fd_out in case of a fail this function is able to manage the error coming from..." alt="" coords="761,31,876,57"/>
+<area shape="rect" id="node2" href="$redirection__verification_8c.html#a95641b4885e9c0b07b477846c96c0d2f" title="we have to check if the file exist then if we are allowed to open it in any error case we write a mes..." alt="" coords="551,5,681,32"/>
+<area shape="rect" id="node7" href="$redirection__verification_8c.html#ac61790fa82f2a9b6b904cd92135b6acb" title="outfile and append are open with the right flags in a case of an error we write a message with the na..." alt="" coords="519,56,713,83"/>
+<area shape="rect" id="node3" href="$redirection__verification_8c.html#af9b05287627b76434ceb0070c5cb2c8a" title="we go through each node of the redirection and we have special treatment depending of the following c..." alt="" coords="299,31,471,57"/>
+<area shape="rect" id="node4" href="$multipipe_8c.html#a3f78d597d08aaca5580b2c89f956a3a2" title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered..." alt="" coords="132,5,251,32"/>
+<area shape="rect" id="node6" href="$execution_8c.html#a4ef7db02a474eb1b198b2a25e1303118" title="here we check if it&#39;s a builtin where we have to fork or not we still need to do the redirection veri..." alt="" coords="132,56,251,83"/>
+<area shape="rect" id="node5" href="$execution_8c.html#a9dffeca3c2ff474e24c3e98ab856df76" title="first function of the execution part when we have something to do we have to deal with two cases ; if..." alt="" coords="5,31,84,57"/>
+</map>

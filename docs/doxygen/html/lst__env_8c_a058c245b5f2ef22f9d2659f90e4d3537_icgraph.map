@@ -1,0 +1,11 @@
+<map id="pop_env" name="pop_env">
+<area shape="rect" id="node1" title=" " alt="" coords="943,56,1020,83"/>
+<area shape="rect" id="node2" href="$lst__env_8c.html#a226ae0aa054e697998b2ecbc5d61d592" title=" " alt="" coords="776,56,895,83"/>
+<area shape="rect" id="node3" href="$multipipe_8c.html#a43baea25481fdd02ce42e4d249f12353" title=" " alt="" coords="587,5,698,32"/>
+<area shape="rect" id="node7" href="$execution_8c.html#ac70faaedddc427b5051b808a8de40da4" title="in this function we do the fork to create a child process we do the redirection if we need to" alt="" coords="557,56,728,83"/>
+<area shape="rect" id="node9" href="$lst__env__two_8c.html#ac1233f225cd25a82eded5e81135528cd" title=" " alt="" coords="595,107,691,133"/>
+<area shape="rect" id="node4" href="$multipipe_8c.html#af32b88ab44b94650a0bb6f805f70a805" title="it&#39;s where the fork happen and sent to be execute" alt="" coords="299,5,509,32"/>
+<area shape="rect" id="node5" href="$multipipe_8c.html#a3f78d597d08aaca5580b2c89f956a3a2" title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered..." alt="" coords="132,5,251,32"/>
+<area shape="rect" id="node6" href="$execution_8c.html#a9dffeca3c2ff474e24c3e98ab856df76" title="first function of the execution part when we have something to do we have to deal with two cases ; if..." alt="" coords="5,31,84,57"/>
+<area shape="rect" id="node8" href="$execution_8c.html#a4ef7db02a474eb1b198b2a25e1303118" title="here we check if it&#39;s a builtin where we have to fork or not we still need to do the redirection veri..." alt="" coords="132,56,251,83"/>
+</map>

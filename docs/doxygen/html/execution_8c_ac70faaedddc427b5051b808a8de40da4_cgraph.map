@@ -1,0 +1,25 @@
+<map id="one_command_execve" name="one_command_execve">
+<area shape="rect" id="node1" title="in this function we do the fork to create a child process we do the redirection if we need to" alt="" coords="5,208,176,235"/>
+<area shape="rect" id="node2" href="$redirection__multipipe_8c.html#a19e2c31eeb0eb25575df2277cbd7774e" title=" " alt="" coords="224,81,368,108"/>
+<area shape="rect" id="node4" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="606,81,698,108"/>
+<area shape="rect" id="node6" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="235,208,357,235"/>
+<area shape="rect" id="node10" href="$lst__env_8c.html#a226ae0aa054e697998b2ecbc5d61d592" title=" " alt="" coords="237,259,355,285"/>
+<area shape="rect" id="node12" href="$execution__node_8c.html#a6cfdc545c2222bbb0ca1dfc8431f72a3" title="we are going to execute the command here we have a security about absolute path given =&gt; because it&#39;s..." alt="" coords="234,385,358,412"/>
+<area shape="rect" id="node3" href="$redirection__multipipe_8c.html#a3a0d7f695cf53df46301e14ffab77638" title=" " alt="" coords="416,5,535,32"/>
+<area shape="rect" id="node5" href="$redirection__multipipe_8c.html#a5b749bc2b4088984c0efe1c479ae6ec8" title=" " alt="" coords="422,107,529,133"/>
+<area shape="rect" id="node7" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="435,208,516,235"/>
+<area shape="rect" id="node8" href="$lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" title=" " alt="" coords="589,208,715,235"/>
+<area shape="rect" id="node9" href="$lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" title=" " alt="" coords="769,208,852,235"/>
+<area shape="rect" id="node11" href="$lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" title=" " alt="" coords="437,259,514,285"/>
+<area shape="rect" id="node13" href="$execution_8c.html#a3acc0bb56da881cc8609ca9e94ec8e93" title="detect if it&#39;s a builtin with strncmp() but the real question is &quot;is it a builtin I have to launch in..." alt="" coords="427,309,524,336"/>
+<area shape="rect" id="node14" href="$execution_8c.html#a8b2bd9dba90bfc9b2ead44af5e630315" title="launch the builtin &#160;&#160;some of them are not present because we have to fork() them why ?..." alt="" coords="419,360,532,387"/>
+<area shape="rect" id="node18" href="$lst__env__two_8c.html#aafcce0b2f2958645e84ae23b14116680" title=" " alt="" coords="417,411,534,437"/>
+<area shape="rect" id="node21" href="$execution__node_8c.html#adc2c91230d4a0a1a1f98db2a888afcaa" title="error message management for the specific case of execution" alt="" coords="416,461,535,488"/>
+<area shape="rect" id="node22" href="$getenv_8c.html#a5d0cf05c2622983111dcfc0f179c5739" title=" " alt="" coords="425,512,526,539"/>
+<area shape="rect" id="node15" href="$env_8c.html#ad7678c59b5365c776294bdeefd3d7583" title=" " alt="" coords="629,259,675,285"/>
+<area shape="rect" id="node16" href="$my__echo_8c.html#a5522916069f77552d810e207670e3170" title=" " alt="" coords="611,309,693,336"/>
+<area shape="rect" id="node17" href="$pwd_8c.html#ab62618359287b6604bd60852145b9726" title=" " alt="" coords="627,360,677,387"/>
+<area shape="rect" id="node19" href="$env__utils_8c.html#a7cc35c974bce053dbba1c1ec1028f36b" title=" " alt="" coords="601,411,703,437"/>
+<area shape="rect" id="node20" href="$getenv_8c.html#a0250cce1862c20e31d0c0ece960bc3a0" title=" " alt="" coords="611,461,693,488"/>
+<area shape="rect" id="node23" href="$lst__env__two_8c.html#a4d4a14327b2c3ff88099102b6bd77986" title=" " alt="" coords="583,512,721,539"/>
+</map>
