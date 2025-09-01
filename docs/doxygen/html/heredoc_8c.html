@@ -100,15 +100,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a3e1410633d8c1ad5b1441509a020b0d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heredoc_8c.html#a3e1410633d8c1ad5b1441509a020b0d4">close_fd_heredocs2</a> (<a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *current, <a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_stack)</td></tr>
 <tr class="memdesc:a3e1410633d8c1ad5b1441509a020b0d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">allow us to close the file descriptors when we have fork() again the process  <a href="heredoc_8c.html#a3e1410633d8c1ad5b1441509a020b0d4">More...</a><br /></td></tr>
 <tr class="separator:a3e1410633d8c1ad5b1441509a020b0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fd8e3642e456e9a2f7fe4dc8f44ad43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heredoc_8c.html#a4fd8e3642e456e9a2f7fe4dc8f44ad43">remove_echoctl</a> (void)</td></tr>
-<tr class="memdesc:a4fd8e3642e456e9a2f7fe4dc8f44ad43"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove the echoctl which are the symbol which appears when you press CTRL+C or CTRL+\ it's different here because we don't have to manage this in readline in particular but only here on here_doc because we are using GNL  <a href="heredoc_8c.html#a4fd8e3642e456e9a2f7fe4dc8f44ad43">More...</a><br /></td></tr>
-<tr class="separator:a4fd8e3642e456e9a2f7fe4dc8f44ad43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab64ee253d325f2d25cf6d2e51bd00396"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heredoc_8c.html#ab64ee253d325f2d25cf6d2e51bd00396">active_echoctl</a> (void)</td></tr>
-<tr class="memdesc:ab64ee253d325f2d25cf6d2e51bd00396"><td class="mdescLeft">&#160;</td><td class="mdescRight">we have to activate back the echoctl to appear again when we are not inside an heredoc  <a href="heredoc_8c.html#ab64ee253d325f2d25cf6d2e51bd00396">More...</a><br /></td></tr>
-<tr class="separator:ab64ee253d325f2d25cf6d2e51bd00396"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ea78f2f2215fe1ed765af80a1b2893d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heredoc_8c.html#a7ea78f2f2215fe1ed765af80a1b2893d">sigint_heredoc</a> (int sig)</td></tr>
-<tr class="memdesc:a7ea78f2f2215fe1ed765af80a1b2893d"><td class="mdescLeft">&#160;</td><td class="mdescRight">allow us to warn the process child heredoc it's time to stop and close the file descriptor  <a href="heredoc_8c.html#a7ea78f2f2215fe1ed765af80a1b2893d">More...</a><br /></td></tr>
-<tr class="separator:a7ea78f2f2215fe1ed765af80a1b2893d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1fac908d63c4fd12485122128c0c0fd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heredoc_8c.html#ae1fac908d63c4fd12485122128c0c0fd">read_gnl_heredoc</a> (int fd[2], <a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *temp, <a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_cmd)</td></tr>
+<tr class="memdesc:ae1fac908d63c4fd12485122128c0c0fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">function which allow me to do the loop to call GNL =&gt; there is also the management to leave with the signal the origin of this function is the norm limitation  <a href="heredoc_8c.html#ae1fac908d63c4fd12485122128c0c0fd">More...</a><br /></td></tr>
+<tr class="separator:ae1fac908d63c4fd12485122128c0c0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e49e3a472f4fd4b4c38a3e393868e67"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heredoc_8c.html#a1e49e3a472f4fd4b4c38a3e393868e67">update_status</a> (int status, int fd[2], <a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *temp, <a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_cmd)</td></tr>
+<tr class="memdesc:a1e49e3a472f4fd4b4c38a3e393868e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the CTRL+C signal and setup the exit_code  <a href="heredoc_8c.html#a1e49e3a472f4fd4b4c38a3e393868e67">More...</a><br /></td></tr>
+<tr class="separator:a1e49e3a472f4fd4b4c38a3e393868e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab68377acf2c8adf39f991dc425297c09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heredoc_8c.html#ab68377acf2c8adf39f991dc425297c09">heredoc_input</a> (<a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *temp, <a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_cmd)</td></tr>
 <tr class="memdesc:ab68377acf2c8adf39f991dc425297c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">it's where we open the heredoc and start writing inside our pipe each time we check if it's the word allowing to stop the heredoc or not we are going to keep only the read part of the fd inside the node of redirection  <a href="heredoc_8c.html#ab68377acf2c8adf39f991dc425297c09">More...</a><br /></td></tr>
 <tr class="separator:ab68377acf2c8adf39f991dc425297c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,31 +114,6 @@ Functions</h2></td></tr>
 <tr class="separator:aa5260679719a4e1f862a6efd1f12cf85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab64ee253d325f2d25cf6d2e51bd00396"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab64ee253d325f2d25cf6d2e51bd00396">&#9670;&nbsp;</a></span>active_echoctl()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void active_echoctl </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>we have to activate back the echoctl to appear again when we are not inside an heredoc </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_ab64ee253d325f2d25cf6d2e51bd00396_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
 <a id="a3e1410633d8c1ad5b1441509a020b0d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e1410633d8c1ad5b1441509a020b0d4">&#9670;&nbsp;</a></span>close_fd_heredocs2()</h2>
 
@@ -184,7 +156,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a3e1410633d8c1ad5b1441509a020b0d4_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a3e1410633d8c1ad5b1441509a020b0d4_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -216,13 +189,14 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_aa5260679719a4e1f862a6efd1f12cf85_cgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_aa5260679719a4e1f862a6efd1f12cf85_cgraph.svg" width="100%" height="506"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="heredoc_8c_aa5260679719a4e1f862a6efd1f12cf85_icgraph.svg" width="479" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="heredoc_8c_aa5260679719a4e1f862a6efd1f12cf85_icgraph.svg" width="582" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -264,69 +238,150 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="heredoc_8c_ab68377acf2c8adf39f991dc425297c09_cgraph.svg" width="464" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="heredoc_8c_ab68377acf2c8adf39f991dc425297c09_cgraph.svg" width="650" height="275"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="heredoc_8c_ab68377acf2c8adf39f991dc425297c09_icgraph.svg" width="642" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_ab68377acf2c8adf39f991dc425297c09_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
 </div>
-<a id="a4fd8e3642e456e9a2f7fe4dc8f44ad43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fd8e3642e456e9a2f7fe4dc8f44ad43">&#9670;&nbsp;</a></span>remove_echoctl()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void remove_echoctl </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>remove the echoctl which are the symbol which appears when you press CTRL+C or CTRL+\ it's different here because we don't have to manage this in readline in particular but only here on here_doc because we are using GNL </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a4fd8e3642e456e9a2f7fe4dc8f44ad43_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
-<a id="a7ea78f2f2215fe1ed765af80a1b2893d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ea78f2f2215fe1ed765af80a1b2893d">&#9670;&nbsp;</a></span>sigint_heredoc()</h2>
+<a id="ae1fac908d63c4fd12485122128c0c0fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1fac908d63c4fd12485122128c0c0fd">&#9670;&nbsp;</a></span>read_gnl_heredoc()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void sigint_heredoc </td>
+          <td class="memname">static void read_gnl_heredoc </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>sig</em></td><td>)</td>
+          <td class="paramname"><em>fd</em>[2], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *&#160;</td>
+          <td class="paramname"><em>temp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
+          <td class="paramname"><em>top_cmd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>allow us to warn the process child heredoc it's time to stop and close the file descriptor </p>
+<p>function which allow me to do the loop to call GNL =&gt; there is also the management to leave with the signal the origin of this function is the norm limitation </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sig</td><td></td></tr>
+    <tr><td class="paramname">fd</td><td></td></tr>
+    <tr><td class="paramname">temp</td><td></td></tr>
+    <tr><td class="paramname">top_cmd</td><td></td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="heredoc_8c_ae1fac908d63c4fd12485122128c0c0fd_cgraph.svg" width="487" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a7ea78f2f2215fe1ed765af80a1b2893d_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_ae1fac908d63c4fd12485122128c0c0fd_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1e49e3a472f4fd4b4c38a3e393868e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e49e3a472f4fd4b4c38a3e393868e67">&#9670;&nbsp;</a></span>update_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int update_status </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>[2], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *&#160;</td>
+          <td class="paramname"><em>temp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
+          <td class="paramname"><em>top_cmd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the CTRL+C signal and setup the exit_code </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td></td></tr>
+    <tr><td class="paramname">fd</td><td></td></tr>
+    <tr><td class="paramname">temp</td><td></td></tr>
+    <tr><td class="paramname">top_cmd</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a1e49e3a472f4fd4b4c38a3e393868e67_cgraph.svg" width="464" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a1e49e3a472f4fd4b4c38a3e393868e67_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>

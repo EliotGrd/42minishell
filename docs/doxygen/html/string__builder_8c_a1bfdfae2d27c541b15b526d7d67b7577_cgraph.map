@@ -1,0 +1,4 @@
+<map id="str_buf_end" name="str_buf_end">
+<area shape="rect" id="node1" title="End and null terminate the string created in t_str_buf, reset the struct so it can be reused and retu..." alt="" coords="5,5,104,32"/>
+<area shape="rect" id="node2" href="$string__builder_8c.html#a54e602a5da87bd89687c69c2d86f34d2" title="Put char in the struct t_str_buf so we can build a string in the struct. The point is to create the s..." alt="" coords="152,5,255,32"/>
+</map>

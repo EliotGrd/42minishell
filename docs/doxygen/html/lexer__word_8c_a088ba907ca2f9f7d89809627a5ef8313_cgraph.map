@@ -1,0 +1,7 @@
+<map id="double_quoted_segment" name="double_quoted_segment">
+<area shape="rect" id="node1" title="Lexes a segment delimited by double quotes." alt="" coords="5,81,188,108"/>
+<area shape="rect" id="node2" href="$lexer__utils_8c.html#a6b132516dacc9599762b1fe7341a0f04" title="Advance one byte in the struct t_lexer to keep track of progress." alt="" coords="280,5,357,32"/>
+<area shape="rect" id="node3" href="$lexer__word_8c.html#a31c5ee7f4519eba6de3c2a29c59fe26c" title=" " alt="" coords="236,56,401,83"/>
+<area shape="rect" id="node4" href="$lexer__utils_8c.html#a855a36981b55d317a52d24560c0809bf" title="&quot;Peek&quot;, Look at the next character in the input string" alt="" coords="291,107,346,133"/>
+<area shape="rect" id="node5" href="$string__builder_8c.html#a54e602a5da87bd89687c69c2d86f34d2" title="Put char in the struct t_str_buf so we can build a string in the struct. The point is to create the s..." alt="" coords="267,157,370,184"/>
+</map>

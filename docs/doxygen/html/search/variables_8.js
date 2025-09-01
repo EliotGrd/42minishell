@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_207',['value',['../structs__env.html#aeed22f6fb6689d3a190d64d3e11d989f',1,'s_env']]]
+  ['previous_359',['previous',['../structs__cmd.html#a4dd338a53ba5f0c86affc8e5183a0975',1,'s_cmd::previous()'],['../structs__env.html#a3c5239da490d111bf0ba9b0b99a3a968',1,'s_env::previous()']]]
 ];

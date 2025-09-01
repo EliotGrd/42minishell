@@ -1,6 +1,13 @@
 <map id="launch_builtin" name="launch_builtin">
-<area shape="rect" id="node1" title="launch the builtin &#160;&#160;some of them are not present because we have to fork() them why ?..." alt="" coords="5,56,119,83"/>
-<area shape="rect" id="node2" href="$env_8c.html#ad7678c59b5365c776294bdeefd3d7583" title=" " alt="" coords="184,5,231,32"/>
-<area shape="rect" id="node3" href="$my__echo_8c.html#a5522916069f77552d810e207670e3170" title=" " alt="" coords="167,56,248,83"/>
-<area shape="rect" id="node4" href="$pwd_8c.html#ab62618359287b6604bd60852145b9726" title=" " alt="" coords="183,107,232,133"/>
+<area shape="rect" id="node1" title="launch the builtin &#160;&#160;some of them are not present because we have to fork() them why ?..." alt="" coords="5,107,119,133"/>
+<area shape="rect" id="node2" href="$cd_8c.html#a68ca1d5a8272f17815cfd7394a24ad19" title=" " alt="" coords="188,5,227,32"/>
+<area shape="rect" id="node4" href="$env_8c.html#ad7678c59b5365c776294bdeefd3d7583" title=" " alt="" coords="347,56,393,83"/>
+<area shape="rect" id="node5" href="$export_8c.html#ab409cd8fcc654b7e32155051ded49ff5" title=" " alt="" coords="175,107,239,133"/>
+<area shape="rect" id="node10" href="$my__echo_8c.html#a5522916069f77552d810e207670e3170" title=" " alt="" coords="167,157,248,184"/>
+<area shape="rect" id="node11" href="$pwd_8c.html#ab62618359287b6604bd60852145b9726" title=" " alt="" coords="183,208,232,235"/>
+<area shape="rect" id="node3" href="$lst__env__two_8c.html#a4d4a14327b2c3ff88099102b6bd77986" title=" " alt="" coords="301,5,439,32"/>
+<area shape="rect" id="node6" href="$lst__env_8c.html#a9c375db3cbfe2e87b52bae7ee7472eae" title=" " alt="" coords="303,107,437,133"/>
+<area shape="rect" id="node7" href="$lst__env_8c.html#a5976d1b2a8159220749fac94a83d5c95" title=" " alt="" coords="309,157,431,184"/>
+<area shape="rect" id="node9" href="$export_8c.html#a2db1828ad3293b53b14b47a11c636e51" title=" " alt="" coords="296,208,444,235"/>
+<area shape="rect" id="node8" href="$env__utils_8c.html#ac7b3f84bb622bdf477616c5b0022f035" title=" " alt="" coords="492,157,597,184"/>
 </map>

@@ -4,23 +4,30 @@
 <area shape="rect" id="node3" href="$redirection__multipipe_8c.html#a19e2c31eeb0eb25575df2277cbd7774e" title=" " alt="" coords="164,107,308,133"/>
 <area shape="rect" id="node7" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="175,157,297,184"/>
 <area shape="rect" id="node11" href="$lst__env_8c.html#a226ae0aa054e697998b2ecbc5d61d592" title=" " alt="" coords="177,208,295,235"/>
-<area shape="rect" id="node13" href="$execution__node_8c.html#a6cfdc545c2222bbb0ca1dfc8431f72a3" title="we are going to execute the command here we have a security about absolute path given =&gt; because it&#39;s..." alt="" coords="174,335,298,361"/>
-<area shape="rect" id="node4" href="$redirection__multipipe_8c.html#a3a0d7f695cf53df46301e14ffab77638" title=" " alt="" coords="356,5,475,32"/>
-<area shape="rect" id="node5" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="546,56,638,83"/>
-<area shape="rect" id="node6" href="$redirection__multipipe_8c.html#a5b749bc2b4088984c0efe1c479ae6ec8" title=" " alt="" coords="362,107,469,133"/>
-<area shape="rect" id="node8" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="375,157,456,184"/>
-<area shape="rect" id="node9" href="$lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" title=" " alt="" coords="529,157,655,184"/>
-<area shape="rect" id="node10" href="$lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" title=" " alt="" coords="709,157,792,184"/>
-<area shape="rect" id="node12" href="$lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" title=" " alt="" coords="377,208,454,235"/>
-<area shape="rect" id="node14" href="$execution_8c.html#a3acc0bb56da881cc8609ca9e94ec8e93" title="detect if it&#39;s a builtin with strncmp() but the real question is &quot;is it a builtin I have to launch in..." alt="" coords="367,259,464,285"/>
-<area shape="rect" id="node15" href="$execution_8c.html#a8b2bd9dba90bfc9b2ead44af5e630315" title="launch the builtin &#160;&#160;some of them are not present because we have to fork() them why ?..." alt="" coords="359,309,472,336"/>
-<area shape="rect" id="node19" href="$lst__env__two_8c.html#aafcce0b2f2958645e84ae23b14116680" title=" " alt="" coords="357,360,474,387"/>
-<area shape="rect" id="node22" href="$execution__node_8c.html#adc2c91230d4a0a1a1f98db2a888afcaa" title="error message management for the specific case of execution" alt="" coords="356,411,475,437"/>
-<area shape="rect" id="node23" href="$getenv_8c.html#a5d0cf05c2622983111dcfc0f179c5739" title=" " alt="" coords="365,461,466,488"/>
-<area shape="rect" id="node16" href="$env_8c.html#ad7678c59b5365c776294bdeefd3d7583" title=" " alt="" coords="569,208,615,235"/>
-<area shape="rect" id="node17" href="$my__echo_8c.html#a5522916069f77552d810e207670e3170" title=" " alt="" coords="551,259,633,285"/>
-<area shape="rect" id="node18" href="$pwd_8c.html#ab62618359287b6604bd60852145b9726" title=" " alt="" coords="567,309,617,336"/>
-<area shape="rect" id="node20" href="$env__utils_8c.html#a7cc35c974bce053dbba1c1ec1028f36b" title=" " alt="" coords="541,360,643,387"/>
-<area shape="rect" id="node21" href="$getenv_8c.html#a0250cce1862c20e31d0c0ece960bc3a0" title=" " alt="" coords="551,411,633,437"/>
-<area shape="rect" id="node24" href="$lst__env__two_8c.html#a4d4a14327b2c3ff88099102b6bd77986" title=" " alt="" coords="523,461,661,488"/>
+<area shape="rect" id="node13" href="$execution__node_8c.html#a6cfdc545c2222bbb0ca1dfc8431f72a3" title="we are going to execute the command here we have a security about absolute path given =&gt; because it&#39;s..." alt="" coords="174,385,298,412"/>
+<area shape="rect" id="node4" href="$redirection__multipipe_8c.html#a3a0d7f695cf53df46301e14ffab77638" title=" " alt="" coords="364,56,483,83"/>
+<area shape="rect" id="node5" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="555,56,647,83"/>
+<area shape="rect" id="node6" href="$redirection__multipipe_8c.html#a5b749bc2b4088984c0efe1c479ae6ec8" title=" " alt="" coords="370,5,477,32"/>
+<area shape="rect" id="node8" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="383,157,464,184"/>
+<area shape="rect" id="node9" href="$lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" title=" " alt="" coords="539,132,664,159"/>
+<area shape="rect" id="node10" href="$lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" title=" " alt="" coords="745,132,827,159"/>
+<area shape="rect" id="node12" href="$lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" title=" " alt="" coords="385,208,462,235"/>
+<area shape="rect" id="node14" href="$execution__node_8c.html#a74f4c34ebdc38c1fb50db2aa13f97b66" title=" " alt="" coords="356,385,491,412"/>
+<area shape="rect" id="node15" href="$execution__node_8c.html#adc2c91230d4a0a1a1f98db2a888afcaa" title="error message management for the specific case of execution" alt="" coords="542,436,661,463"/>
+<area shape="rect" id="node16" href="$execution_8c.html#a3acc0bb56da881cc8609ca9e94ec8e93" title="detect if it&#39;s a builtin with strncmp() but the real question is &quot;is it a builtin I have &#160;to launch i..." alt="" coords="375,335,472,361"/>
+<area shape="rect" id="node17" href="$execution_8c.html#a8b2bd9dba90bfc9b2ead44af5e630315" title="launch the builtin &#160;&#160;some of them are not present because we have to fork() them why ?..." alt="" coords="367,284,480,311"/>
+<area shape="rect" id="node28" href="$lst__env__two_8c.html#aafcce0b2f2958645e84ae23b14116680" title=" " alt="" coords="365,537,482,564"/>
+<area shape="rect" id="node31" href="$getenv_8c.html#a5d0cf05c2622983111dcfc0f179c5739" title=" " alt="" coords="373,487,474,513"/>
+<area shape="rect" id="node18" href="$cd_8c.html#a68ca1d5a8272f17815cfd7394a24ad19" title=" " alt="" coords="582,385,621,412"/>
+<area shape="rect" id="node20" href="$env_8c.html#ad7678c59b5365c776294bdeefd3d7583" title=" " alt="" coords="763,233,809,260"/>
+<area shape="rect" id="node21" href="$export_8c.html#ab409cd8fcc654b7e32155051ded49ff5" title=" " alt="" coords="569,284,633,311"/>
+<area shape="rect" id="node26" href="$my__echo_8c.html#a5522916069f77552d810e207670e3170" title=" " alt="" coords="561,335,642,361"/>
+<area shape="rect" id="node27" href="$pwd_8c.html#ab62618359287b6604bd60852145b9726" title=" " alt="" coords="577,183,626,209"/>
+<area shape="rect" id="node19" href="$lst__env__two_8c.html#a4d4a14327b2c3ff88099102b6bd77986" title=" " alt="" coords="717,461,855,488"/>
+<area shape="rect" id="node22" href="$lst__env_8c.html#a9c375db3cbfe2e87b52bae7ee7472eae" title=" " alt="" coords="719,284,853,311"/>
+<area shape="rect" id="node23" href="$lst__env_8c.html#a5976d1b2a8159220749fac94a83d5c95" title=" " alt="" coords="725,335,847,361"/>
+<area shape="rect" id="node25" href="$export_8c.html#a2db1828ad3293b53b14b47a11c636e51" title=" " alt="" coords="712,385,860,412"/>
+<area shape="rect" id="node24" href="$env__utils_8c.html#ac7b3f84bb622bdf477616c5b0022f035" title=" " alt="" coords="908,335,1013,361"/>
+<area shape="rect" id="node29" href="$env__utils_8c.html#a7cc35c974bce053dbba1c1ec1028f36b" title=" " alt="" coords="550,588,653,615"/>
+<area shape="rect" id="node30" href="$getenv_8c.html#a0250cce1862c20e31d0c0ece960bc3a0" title=" " alt="" coords="560,537,643,564"/>
 </map>

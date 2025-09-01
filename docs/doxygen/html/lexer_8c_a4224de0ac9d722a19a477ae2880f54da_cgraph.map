@@ -1,0 +1,6 @@
+<map id="lex_operator" name="lex_operator">
+<area shape="rect" id="node1" title="Make the operator in the global string a token." alt="" coords="5,56,109,83"/>
+<area shape="rect" id="node2" href="$lexer__utils_8c.html#a6b132516dacc9599762b1fe7341a0f04" title="Advance one byte in the struct t_lexer to keep track of progress." alt="" coords="169,5,247,32"/>
+<area shape="rect" id="node3" href="$token__utils_8c.html#a583251578e050c27ff17b5c7b40c8eef" title="Build a token." alt="" coords="157,56,259,83"/>
+<area shape="rect" id="node4" href="$lexer__utils_8c.html#a855a36981b55d317a52d24560c0809bf" title="&quot;Peek&quot;, Look at the next character in the input string" alt="" coords="181,107,235,133"/>
+</map>

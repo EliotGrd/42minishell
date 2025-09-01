@@ -59,11 +59,10 @@ char	*search_path(char *str, t_env *top_env)
 	{
 		result = join_path(split_envp[i++], str, '/');
 		if (!result)
-			return (free(path), ft_free_tab(split_envp), NULL);
+			return (ft_free((void **)&path), ft_free_tab(split_envp), NULL);
 		if (access(result, X_OK) == 0)
-			return (free(path), ft_free_tab(split_envp), result);
-		free(result);
-		result = NULL;
+			return (ft_free((void **)&path), ft_free_tab(split_envp), result);
+		ft_free((void **)&result);
 	}
-	return (free(path), ft_free_tab(split_envp), NULL);
+	return (ft_free((void **)&path), ft_free_tab(split_envp), NULL);
 }

@@ -1,0 +1,13 @@
+<map id="includes/parsing.h" name="includes/parsing.h">
+<area shape="rect" id="node1" title=" " alt="" coords="898,5,1038,32"/>
+<area shape="rect" id="node2" href="$lexer_8c.html" title=" " alt="" coords="5,80,136,107"/>
+<area shape="rect" id="node3" href="$lexer__utils_8c.html" title=" " alt="" coords="161,80,327,107"/>
+<area shape="rect" id="node4" href="$lexer__word_8c.html" title=" " alt="" coords="352,80,523,107"/>
+<area shape="rect" id="node5" href="$string__builder_8c.html" title=" " alt="" coords="547,80,735,107"/>
+<area shape="rect" id="node6" href="$token__utils_8c.html" title=" " alt="" coords="760,80,931,107"/>
+<area shape="rect" id="node7" href="$main_8c.html" title=" " alt="" coords="1265,155,1354,181"/>
+<area shape="rect" id="node8" href="$argv__builder_8c.html" title=" " alt="" coords="1006,80,1194,107"/>
+<area shape="rect" id="node9" href="$error_8c.html" title=" " alt="" coords="1219,80,1357,107"/>
+<area shape="rect" id="node10" href="$parser_8c.html" title=" " alt="" coords="1382,80,1530,107"/>
+<area shape="rect" id="node11" href="$parsing__helpers_8h.html" title=" " alt="" coords="1555,80,1749,107"/>
+</map>

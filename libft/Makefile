@@ -59,6 +59,10 @@ SRCS=./ft_isalpha.c \
      ./ft_printf_utils.c \
      ./ft_strndup.c \
      ./ft_free_tab.c \
+	 ./ft_free.c \
+	 ./ft_realloc.c \
+	 ./ft_strcmp.c \
+	 ./ft_iswspace.c
 
 BONUS_SRCS=./ft_lstnew_bonus.c \
 	   ./ft_lstadd_front_bonus.c \

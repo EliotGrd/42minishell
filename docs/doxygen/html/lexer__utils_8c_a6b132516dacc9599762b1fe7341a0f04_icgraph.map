@@ -1,0 +1,11 @@
+<map id="advance" name="advance">
+<area shape="rect" id="node1" title="Advance one byte in the struct t_lexer to keep track of progress." alt="" coords="601,132,679,159"/>
+<area shape="rect" id="node2" href="$lexer__word_8c.html#a088ba907ca2f9f7d89809627a5ef8313" title="Lexes a segment delimited by double quotes." alt="" coords="371,5,553,32"/>
+<area shape="rect" id="node3" href="$lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01" title="Lexes the string to create a WORD token." alt="" coords="226,107,307,133"/>
+<area shape="rect" id="node6" href="$lexer__word_8c.html#ad7d5fd37a954794c29d8d8b4807c233e" title="Handle backslash to escape next char correctly." alt="" coords="396,107,528,133"/>
+<area shape="rect" id="node7" href="$lexer_8c.html#a4224de0ac9d722a19a477ae2880f54da" title="Make the operator in the global string a token." alt="" coords="215,208,319,235"/>
+<area shape="rect" id="node8" href="$lexer__word_8c.html#ad9e7809fee584699717eb691257a6ded" title="Lexes a segment delimited by single quotes." alt="" coords="373,157,551,184"/>
+<area shape="rect" id="node9" href="$lexer__utils_8c.html#a0665b31ffb5665ad2a085f2b1a5e0e25" title="Skip whitespaces in the t_lexer struct." alt="" coords="211,259,323,285"/>
+<area shape="rect" id="node4" href="$lexer_8c.html#aced469451204cf536fd18b4cf94f6b91" title="Global lexing function, that traverses readline&#39;s string and separate in tokens." alt="" coords="108,208,163,235"/>
+<area shape="rect" id="node5" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,208,60,235"/>
+</map>

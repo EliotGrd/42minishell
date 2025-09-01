@@ -100,11 +100,61 @@ Functions</h2></td></tr>
 <tr class="memitem:adc2c91230d4a0a1a1f98db2a888afcaa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="execution__node_8c.html#adc2c91230d4a0a1a1f98db2a888afcaa">message_error</a> (char **temp_env, char *str, int n)</td></tr>
 <tr class="memdesc:adc2c91230d4a0a1a1f98db2a888afcaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">error message management for the specific case of execution  <a href="execution__node_8c.html#adc2c91230d4a0a1a1f98db2a888afcaa">More...</a><br /></td></tr>
 <tr class="separator:adc2c91230d4a0a1a1f98db2a888afcaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f4c34ebdc38c1fb50db2aa13f97b66"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="execution__node_8c.html#a74f4c34ebdc38c1fb50db2aa13f97b66">check_accessible</a> (char *str, char **temp_env)</td></tr>
+<tr class="separator:a74f4c34ebdc38c1fb50db2aa13f97b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cfdc545c2222bbb0ca1dfc8431f72a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="execution__node_8c.html#a6cfdc545c2222bbb0ca1dfc8431f72a3">execution_node</a> (char **str, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
 <tr class="memdesc:a6cfdc545c2222bbb0ca1dfc8431f72a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">we are going to execute the command here we have a security about absolute path given =&gt; because it's up to us to change information in specific case. if it's a builtin =&gt; we call the right function we have done the redirection verification and also the redirection set up  <a href="execution__node_8c.html#a6cfdc545c2222bbb0ca1dfc8431f72a3">More...</a><br /></td></tr>
 <tr class="separator:a6cfdc545c2222bbb0ca1dfc8431f72a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a74f4c34ebdc38c1fb50db2aa13f97b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f4c34ebdc38c1fb50db2aa13f97b66">&#9670;&nbsp;</a></span>check_accessible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int check_accessible </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>temp_env</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="execution__node_8c_a74f4c34ebdc38c1fb50db2aa13f97b66_cgraph.svg" width="312" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution__node_8c_a74f4c34ebdc38c1fb50db2aa13f97b66_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a6cfdc545c2222bbb0ca1dfc8431f72a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6cfdc545c2222bbb0ca1dfc8431f72a3">&#9670;&nbsp;</a></span>execution_node()</h2>
 
@@ -143,13 +193,14 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="execution__node_8c_a6cfdc545c2222bbb0ca1dfc8431f72a3_cgraph.svg" width="488" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution__node_8c_a6cfdc545c2222bbb0ca1dfc8431f72a3_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution__node_8c_a6cfdc545c2222bbb0ca1dfc8431f72a3_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution__node_8c_a6cfdc545c2222bbb0ca1dfc8431f72a3_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -206,7 +257,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution__node_8c_adc2c91230d4a0a1a1f98db2a888afcaa_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution__node_8c_adc2c91230d4a0a1a1f98db2a888afcaa_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>

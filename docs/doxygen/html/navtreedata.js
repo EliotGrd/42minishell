@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Minishell", "index.html", [
+    [ "42minishell", "index.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -36,7 +37,7 @@ var NAVTREE =
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
+        [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
@@ -49,7 +50,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"parsing__helpers_8h.html#a9f9516f7f412bb9019d1fe829f2395a3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

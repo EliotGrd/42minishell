@@ -1,16 +1,9 @@
 var searchData=
 [
-  ['pipe_73',['PIPE',['../minishell_8h.html#a07fb55fb8ca681eee25e1f632b6701ada9bc832fa28809fb974f6ce5bb0cc7117',1,'minishell.h']]],
-  ['pop_5fcmd_74',['pop_cmd',['../lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3',1,'pop_cmd(t_cmd **top):&#160;lst_cmd2.c'],['../minishell_8h.html#a8e2b63759f149b547e0d07f210ede9b3',1,'pop_cmd(t_cmd **top):&#160;lst_cmd2.c']]],
-  ['pop_5fenv_75',['pop_env',['../lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537',1,'pop_env(t_env **top_env):&#160;lst_env.c'],['../minishell_8h.html#a058c245b5f2ef22f9d2659f90e4d3537',1,'pop_env(t_env **top_env):&#160;lst_env.c']]],
-  ['pop_5fredir_76',['pop_redir',['../lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881',1,'pop_redir(t_redirect **top):&#160;lst_redir2.c'],['../minishell_8h.html#ade8f0bdda51d9bf348ebeb38fefba881',1,'pop_redir(t_redirect **top):&#160;lst_redir2.c']]],
-  ['previous_77',['previous',['../structs__cmd.html#a4dd338a53ba5f0c86affc8e5183a0975',1,'s_cmd::previous()'],['../structs__env.html#a3c5239da490d111bf0ba9b0b99a3a968',1,'s_env::previous()']]],
-  ['push_5fback_5fcmd_78',['push_back_cmd',['../minishell_8h.html#aed036fcdab112b64cbd705f26aee31e0',1,'push_back_cmd(t_cmd **top, t_cmd *new):&#160;lst_cmd.c'],['../lst__cmd_8c.html#aed036fcdab112b64cbd705f26aee31e0',1,'push_back_cmd(t_cmd **top, t_cmd *new):&#160;lst_cmd.c']]],
-  ['push_5fback_5fenv_79',['push_back_env',['../lst__env_8c.html#a5976d1b2a8159220749fac94a83d5c95',1,'push_back_env(t_env **top_env, t_env *new):&#160;lst_env.c'],['../minishell_8h.html#a5976d1b2a8159220749fac94a83d5c95',1,'push_back_env(t_env **top_env, t_env *new):&#160;lst_env.c']]],
-  ['push_5fback_5fredir_80',['push_back_redir',['../lst__redir_8c.html#a200162f5468246fd36d86c7bbff76be5',1,'push_back_redir(t_redirect **top, t_redirect *redirect):&#160;lst_redir.c'],['../minishell_8h.html#a200162f5468246fd36d86c7bbff76be5',1,'push_back_redir(t_redirect **top, t_redirect *redirect):&#160;lst_redir.c']]],
-  ['push_5fcmd_81',['push_cmd',['../lst__cmd_8c.html#a1e383507c07e33f9f5bba087cf333e2a',1,'push_cmd(t_cmd **top, t_cmd *new):&#160;lst_cmd.c'],['../minishell_8h.html#a1e383507c07e33f9f5bba087cf333e2a',1,'push_cmd(t_cmd **top, t_cmd *new):&#160;lst_cmd.c']]],
-  ['push_5fenv_82',['push_env',['../lst__env_8c.html#aa0ec74373fdd26e27c3949d60e65880a',1,'push_env(t_env **top_env, t_env *new):&#160;lst_env.c'],['../minishell_8h.html#aa0ec74373fdd26e27c3949d60e65880a',1,'push_env(t_env **top_env, t_env *new):&#160;lst_env.c']]],
-  ['push_5fredir_83',['push_redir',['../lst__redir_8c.html#abe08b903d56b57ff61e0d67266a50f28',1,'lst_redir.c']]],
-  ['pwd_84',['pwd',['../pwd_8c.html#ab62618359287b6604bd60852145b9726',1,'pwd(void):&#160;pwd.c'],['../minishell_8h.html#ab62618359287b6604bd60852145b9726',1,'pwd(void):&#160;pwd.c']]],
-  ['pwd_2ec_85',['pwd.c',['../pwd_8c.html',1,'']]]
+  ['one_5fcommand_109',['one_command',['../execution_8c.html#a4ef7db02a474eb1b198b2a25e1303118',1,'one_command(t_cmd *top_cmd, t_env *top_env):&#160;execution.c'],['../minishell_8h.html#a4ef7db02a474eb1b198b2a25e1303118',1,'one_command(t_cmd *top_cmd, t_env *top_env):&#160;execution.c']]],
+  ['one_5fcommand_5fexecve_110',['one_command_execve',['../execution_8c.html#ac70faaedddc427b5051b808a8de40da4',1,'one_command_execve(t_cmd *top_cmd, t_env *top_env):&#160;execution.c'],['../minishell_8h.html#ac70faaedddc427b5051b808a8de40da4',1,'one_command_execve(t_cmd *top_cmd, t_env *top_env):&#160;execution.c']]],
+  ['opening_5finfile_111',['opening_infile',['../minishell_8h.html#af14361e499107d3c8982a2e4057e253b',1,'minishell.h']]],
+  ['opening_5foutfile_112',['opening_outfile',['../minishell_8h.html#a8f13394f1f23e1575b37b1be4fb2801b',1,'minishell.h']]],
+  ['outfile_113',['OUTFILE',['../minishell_8h.html#a07fb55fb8ca681eee25e1f632b6701ada9f02e441fc12ca84a1130cad847524c0',1,'minishell.h']]],
+  ['outfile_5fappend_5fredirection_114',['outfile_append_redirection',['../redirection__verification_8c.html#ac61790fa82f2a9b6b904cd92135b6acb',1,'outfile_append_redirection(t_redirect *redir, t_cmd **top_stack, int type):&#160;redirection_verification.c'],['../minishell_8h.html#ac61790fa82f2a9b6b904cd92135b6acb',1,'outfile_append_redirection(t_redirect *redir, t_cmd **top_stack, int type):&#160;redirection_verification.c']]]
 ];

@@ -20,10 +20,9 @@ void	pop_cmd(t_cmd **top)
 	{
 		temp = *top;
 		(*top) = (*top)-> next;
-//		ft_free_tab(temp -> args);//dans mes tests c'est plus malloc c'est en dur
+		ft_free_tab(temp -> args);
 		destructor_redir(&temp -> redir);
-		free(temp);
-		temp = NULL;
+		ft_free((void **)&temp);
 	}
 }
 
@@ -31,4 +30,5 @@ void	destructor_cmd(t_cmd **top)
 {
 	while (*top)
 		pop_cmd(top);
+	*top = NULL;
 }

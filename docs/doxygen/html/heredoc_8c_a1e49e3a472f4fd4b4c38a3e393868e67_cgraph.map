@@ -1,0 +1,5 @@
+<map id="update_status" name="update_status">
+<area shape="rect" id="node1" title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the..." alt="" coords="5,31,120,57"/>
+<area shape="rect" id="node2" href="$heredoc_8c.html#a3e1410633d8c1ad5b1441509a020b0d4" title="allow us to close the file descriptors when we have fork() again the process" alt="" coords="168,5,319,32"/>
+<area shape="rect" id="node3" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="367,31,459,57"/>
+</map>

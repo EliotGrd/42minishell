@@ -1,0 +1,11 @@
+<map id="str_buf_putc" name="str_buf_putc">
+<area shape="rect" id="node1" title="Put char in the struct t_str_buf so we can build a string in the struct. The point is to create the s..." alt="" coords="571,132,673,159"/>
+<area shape="rect" id="node2" href="$lexer__word_8c.html#a088ba907ca2f9f7d89809627a5ef8313" title="Lexes a segment delimited by double quotes." alt="" coords="340,5,523,32"/>
+<area shape="rect" id="node3" href="$lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01" title="Lexes the string to create a WORD token." alt="" coords="211,107,292,133"/>
+<area shape="rect" id="node6" href="$lexer__word_8c.html#ad7d5fd37a954794c29d8d8b4807c233e" title="Handle backslash to escape next char correctly." alt="" coords="365,107,497,133"/>
+<area shape="rect" id="node7" href="$lexer__word_8c.html#ad9e7809fee584699717eb691257a6ded" title="Lexes a segment delimited by single quotes." alt="" coords="343,157,520,184"/>
+<area shape="rect" id="node8" href="$string__builder_8c.html#a1bfdfae2d27c541b15b526d7d67b7577" title="End and null terminate the string created in t_str_buf, reset the struct so it can be reused and retu..." alt="" coords="382,208,481,235"/>
+<area shape="rect" id="node9" href="$string__builder_8c.html#a4bb0bb42cbf7ca9f7feff204d3059306" title=" " alt="" coords="380,259,483,285"/>
+<area shape="rect" id="node4" href="$lexer_8c.html#aced469451204cf536fd18b4cf94f6b91" title="Global lexing function, that traverses readline&#39;s string and separate in tokens." alt="" coords="108,107,163,133"/>
+<area shape="rect" id="node5" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,107,60,133"/>
+</map>

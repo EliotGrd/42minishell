@@ -1,0 +1,62 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   argv_builder.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/27 19:39:24 by egiraud           #+#    #+#             */
+/*   Updated: 2025/08/27 22:57:43 by egiraud          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../../includes/parsing.h"
+
+// si mot ajouter au build
+// si redir creer un noeud
+
+void	argv_buf_init(t_argv_buf *avb)
+{
+	avb->argv = NULL;
+	avb->i = 0;
+	avb->cap = 0;
+}
+
+void	argv_buf_push(t_argv_buf *avb, char *str)
+{
+	if (avb->i + 1 >= avb->cap)
+	{
+		avb->cap += 1;
+		avb->argv = ft_realloc(avb->argv, sizeof(char *) * avb->i,
+				sizeof(char *) * avb->cap);
+	}
+	avb->argv[avb->i] = str;
+	avb->i++;
+}
+
+char	**argv_buf_end(t_argv_buf *avb)
+{
+	char **result;
+
+	avb->argv = ft_realloc(avb->argv, sizeof(char *) * avb->i,
+				sizeof(char *) * (avb->i + 1));
+	avb->argv[avb->i + 1] = 0;
+	result = avb->argv;
+	avb->argv = NULL;
+	avb->i = 0;
+	avb->cap = 0;
+	return (result);
+}
+
+void	argv_buf_free(t_argv_buf *avb)
+{
+	int n;
+
+	n = 0;
+	while (n < avb->i)
+	{
+		ft_free((void **)avb->argv[n]);
+		n++;
+	}
+	ft_free((void **)avb->argv);
+}

@@ -1,0 +1,9 @@
+<map id="sigint_heredoc" name="sigint_heredoc">
+<area shape="rect" id="node1" title="allow us to warn the process child heredoc it&#39;s time to stop and close the file descriptor" alt="" coords="787,31,904,57"/>
+<area shape="rect" id="node2" href="$heredoc_8c.html#ab68377acf2c8adf39f991dc425297c09" title="it&#39;s where we open the heredoc and start writing inside our pipe each time we check if it&#39;s the word ..." alt="" coords="624,31,739,57"/>
+<area shape="rect" id="node3" href="$heredoc_8c.html#aa5260679719a4e1f862a6efd1f12cf85" title="the function will go through all the commands and check the redirection if we encounter a heredoc we ..." alt="" coords="401,31,576,57"/>
+<area shape="rect" id="node4" href="$multipipe_8c.html#a3f78d597d08aaca5580b2c89f956a3a2" title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered..." alt="" coords="235,5,353,32"/>
+<area shape="rect" id="node7" href="$execution_8c.html#a4ef7db02a474eb1b198b2a25e1303118" title="here we check if it&#39;s a builtin where we have to fork or not we still need to do the redirection veri..." alt="" coords="235,56,353,83"/>
+<area shape="rect" id="node5" href="$execution_8c.html#a9dffeca3c2ff474e24c3e98ab856df76" title="first function of the execution part when we have something to do we have to deal with two cases ; if..." alt="" coords="108,31,187,57"/>
+<area shape="rect" id="node6" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,31,60,57"/>
+</map>

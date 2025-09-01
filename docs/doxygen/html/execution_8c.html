@@ -102,7 +102,8 @@ Functions</h2></td></tr>
  some of them are not present because we have to fork() them why ? because we can have redirection, redirection are done in a fork process  <a href="execution_8c.html#a8b2bd9dba90bfc9b2ead44af5e630315">More...</a><br /></td></tr>
 <tr class="separator:a8b2bd9dba90bfc9b2ead44af5e630315"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3acc0bb56da881cc8609ca9e94ec8e93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="execution_8c.html#a3acc0bb56da881cc8609ca9e94ec8e93">is_it_builtin</a> (char *str)</td></tr>
-<tr class="memdesc:a3acc0bb56da881cc8609ca9e94ec8e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">detect if it's a builtin with strncmp() but the real question is "is it a builtin I have to launch in a fork process or not ?"  <a href="execution_8c.html#a3acc0bb56da881cc8609ca9e94ec8e93">More...</a><br /></td></tr>
+<tr class="memdesc:a3acc0bb56da881cc8609ca9e94ec8e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">detect if it's a builtin with strncmp() but the real question is "is it a builtin I have 
+to launch in a fork process or not ?"  <a href="execution_8c.html#a3acc0bb56da881cc8609ca9e94ec8e93">More...</a><br /></td></tr>
 <tr class="separator:a3acc0bb56da881cc8609ca9e94ec8e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30cac5c7712d6462192a55849ea237f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="execution_8c.html#a30cac5c7712d6462192a55849ea237f2">is_it_builtin_nonfork</a> (char *str)</td></tr>
 <tr class="memdesc:a30cac5c7712d6462192a55849ea237f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ici ce sont les builtin qu'on doit pas fork dans le cas d'un one_command  <a href="execution_8c.html#a30cac5c7712d6462192a55849ea237f2">More...</a><br /></td></tr>
@@ -158,6 +159,12 @@ Here is the call graph for this function:</div>
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution_8c_a9dffeca3c2ff474e24c3e98ab856df76_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_a9dffeca3c2ff474e24c3e98ab856df76_icgraph.svg" width="192" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -177,7 +184,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>detect if it's a builtin with strncmp() but the real question is "is it a builtin I have to launch in a fork process or not ?" </p>
+<p>detect if it's a builtin with strncmp() but the real question is "is it a builtin I have 
+to launch in a fork process or not ?" </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>= the command to check </td></tr>
@@ -188,7 +196,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution_8c_a3acc0bb56da881cc8609ca9e94ec8e93_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution_8c_a3acc0bb56da881cc8609ca9e94ec8e93_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -220,7 +229,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_a30cac5c7712d6462192a55849ea237f2_icgraph.svg" width="459" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_a30cac5c7712d6462192a55849ea237f2_icgraph.svg" width="562" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -264,13 +274,14 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_a8b2bd9dba90bfc9b2ead44af5e630315_cgraph.svg" width="254" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_a8b2bd9dba90bfc9b2ead44af5e630315_cgraph.svg" width="603" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution_8c_a8b2bd9dba90bfc9b2ead44af5e630315_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution_8c_a8b2bd9dba90bfc9b2ead44af5e630315_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -319,7 +330,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_a4ef7db02a474eb1b198b2a25e1303118_icgraph.svg" width="256" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_a4ef7db02a474eb1b198b2a25e1303118_icgraph.svg" width="359" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -368,7 +380,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_ac70faaedddc427b5051b808a8de40da4_icgraph.svg" width="475" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_ac70faaedddc427b5051b808a8de40da4_icgraph.svg" width="578" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>

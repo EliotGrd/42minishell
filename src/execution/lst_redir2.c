@@ -20,8 +20,8 @@ void	pop_redir(t_redirect **top)
 	{
 		temp = *top;
 		(*top) = (*top)-> next;
-	//	free(temp -> file);//pas free car dans mes tests pour le moment c'est en dur
-		free(temp);
+		ft_free((void **)&temp -> file);
+		ft_free((void **)&temp);
 	}
 }
 

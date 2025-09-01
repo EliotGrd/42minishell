@@ -1,0 +1,5 @@
+<map id="read_gnl_heredoc" name="read_gnl_heredoc">
+<area shape="rect" id="node1" title="function which allow me to do the loop to call GNL =&gt; there is also the management to leave with the ..." alt="" coords="5,31,143,57"/>
+<area shape="rect" id="node2" href="$heredoc_8c.html#a3e1410633d8c1ad5b1441509a020b0d4" title="allow us to close the file descriptors when we have fork() again the process" alt="" coords="191,5,341,32"/>
+<area shape="rect" id="node3" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="389,31,481,57"/>
+</map>

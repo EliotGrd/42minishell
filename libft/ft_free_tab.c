@@ -20,7 +20,9 @@ void	ft_free_tab(char **result)
 	while (result[i] != NULL)
 	{
 		free(result[i]);
+		result[i] = NULL;
 		i++;
 	}
 	free(result);
+	result = NULL;
 }

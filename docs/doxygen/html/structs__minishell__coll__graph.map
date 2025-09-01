@@ -1,0 +1,7 @@
+<map id="s_minishell" name="s_minishell">
+<area shape="rect" id="node1" title=" " alt="" coords="169,187,265,213"/>
+<area shape="rect" id="node2" href="$structs__cmd.html" title=" " alt="" coords="17,96,81,123"/>
+<area shape="rect" id="node3" href="$structs__redirect.html" title=" " alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node4" href="$structs__env.html" title=" " alt="" coords="187,96,247,123"/>
+<area shape="rect" id="node5" href="$structs__token.html" title=" " alt="" coords="353,96,425,123"/>
+</map>

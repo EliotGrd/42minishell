@@ -14,6 +14,7 @@
 # define MINISHELL_H
 
 # include "../libft/libft.h"
+//# include "parsing.h"
 # include <unistd.h>
 # include <fcntl.h>
 # include <signal.h>
@@ -72,6 +73,14 @@ typedef struct s_env
 	struct s_env	*previous;
 	struct s_env	*next;
 }	t_env;
+
+typedef struct s_minishell
+{
+	t_cmd *top_cmd;
+	t_env *top_env;
+	struct s_token *top_tok;
+
+} t_minishell;
 
 /*function for getting env path the right way and execution*/
 char	*search_path(char *str, t_env *envp);

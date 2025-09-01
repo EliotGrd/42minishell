@@ -1,0 +1,4 @@
+<map id="str_buf_puts" name="str_buf_puts">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$string__builder_8c.html#a54e602a5da87bd89687c69c2d86f34d2" title="Put char in the struct t_str_buf so we can build a string in the struct. The point is to create the s..." alt="" coords="156,5,259,32"/>
+</map>

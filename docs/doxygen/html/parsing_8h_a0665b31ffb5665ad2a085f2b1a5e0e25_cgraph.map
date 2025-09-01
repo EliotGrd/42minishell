@@ -1,0 +1,4 @@
+<map id="skip_wspaces" name="skip_wspaces">
+<area shape="rect" id="node1" title="Skip whitespaces in the t_lexer struct." alt="" coords="5,5,117,32"/>
+<area shape="rect" id="node2" href="$lexer__utils_8c.html#a6b132516dacc9599762b1fe7341a0f04" title="Advance one byte in the struct t_lexer to keep track of progress." alt="" coords="165,5,243,32"/>
+</map>
