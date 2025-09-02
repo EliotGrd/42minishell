@@ -28,7 +28,7 @@ void	argv_buf_push(t_argv_buf *avb, char *str)
 	{
 		avb->cap += 1;
 		//avb->argv = ft_realloc(avb->argv, sizeof(char *) * avb->i,
-				//sizeof(char *) * avb->cap);
+		//		sizeof(char *) * avb->cap);
 		avb->argv = realloc(avb->argv, sizeof(char *) * avb->cap);
 	}
 	avb->argv[avb->i] = str;
@@ -40,9 +40,9 @@ char	**argv_buf_end(t_argv_buf *avb)
 	char **result;
 
 	//avb->argv = ft_realloc(avb->argv, sizeof(char *) * avb->i,
-	//		sizeof(char *) * (avb->i + 1));
-	avb->argv = realloc(avb->argv, sizeof(char *) * avb->i + 1);
-	avb->argv[avb->i - 1] = 0;
+	//		sizeof(char *) * (avb->i + 2));
+	avb->argv = realloc(avb->argv, sizeof(char *) * (avb->i + 1));
+	avb->argv[avb->i] = 0;
 	result = avb->argv;
 	avb->argv = NULL;
 	avb->i = 0;

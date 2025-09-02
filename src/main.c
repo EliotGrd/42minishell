@@ -24,6 +24,43 @@ void	init_minishell(t_minishell *minishell, char **envp)
 	set_up_env(&minishell->top_env, envp);
 }
 
+void	debug_tok(t_minishell *msh)
+{
+	t_token *toktemp = msh->top_tok;
+	for (;toktemp;toktemp = toktemp->next)
+	{
+		printf("[TOKEN] : %s %d\n", toktemp->lexeme, toktemp->type);
+	}
+	printf("\n");
+}
+
+void	debug_cmd(t_minishell *msh)
+{
+	int i = 0;
+	t_cmd *cur = msh->top_cmd;
+	t_redirect *redir;
+	while (cur)
+	{
+		while (cur->args[i])
+		{
+			printf("[ARGS][%d] : %s\n", i, cur->args[i]);
+			i++;
+		}
+		if (cur->redir)
+		{
+			while (cur->redir->next)
+			{
+				redir = cur->redir;
+				printf("[REDIR] : %s %d\n", redir->file, redir->type);
+				redir = redir->next;
+			}
+		}
+		i = 0;
+		cur = cur->next;
+	}
+	printf("\n");
+}
+
 int	main(int argc, char **argv, char **envp)
 {
 	banner();
@@ -40,10 +77,12 @@ int	main(int argc, char **argv, char **envp)
 			signal(SIGINT, sigint_handler);
 			signal(SIGQUIT, SIG_IGN);	
 			line = readline("CHAT$> ");
-			ft_printf("line : %s\n", line);
+			ft_printf("line : %s\n\n", line);
 			if (line == NULL)
 			{
 				//faudra call la fonction exit ou de destruction global
+				destructor_cmd(&minishell.top_cmd);
+				destructor_env(&minishell.top_env);
 				ft_printf("Exit\n");
 				break;
 			}
@@ -51,13 +90,8 @@ int	main(int argc, char **argv, char **envp)
 			{
 				add_history(line);
 				minishell.top_tok = lexer(line);
-
-				//t_token *toktemp = minishell.top_tok;
-				//for (;toktemp;toktemp = toktemp->next)
-				//{
-				//	printf("%s\n", toktemp->lexeme);
-				//	printf("%d\n", toktemp->type);
-				//}
+				
+				//debug_tok(&minishell);	
 				
 				if (minishell.top_tok)
 				{
@@ -65,11 +99,14 @@ int	main(int argc, char **argv, char **envp)
 				//	exit(0);
 				}
 
+				//debug_cmd(&minishell);
+				
 				if (minishell.top_cmd)
 					executor(minishell.top_cmd, minishell.top_env);			
 			}
 			//ici le destructor cree un probleme
-			destructor_cmd(&minishell.top_cmd); 
+			destructor_cmd(&minishell.top_cmd);
+			destructor_env(&minishell.top_env);
 			ft_free((void **)&line);
 		}
 	}

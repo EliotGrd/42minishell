@@ -67,12 +67,12 @@ void	free_tokens(t_token *token)
 	while (token)
 	{
 		temp = token->next;
-		//ft_free((void **)&token->lexeme);
+		ft_free((void **)&token->lexeme);
 		//ft_printf("%s, %p\n", token->lexeme, &token->lexeme);
-		free(token->lexeme);
-		//ft_free((void **)&token);
+		//free(token->lexeme);
+		ft_free((void **)&token);
 		//ft_printf("%p\n", &token);
-		free(token);
+		//free(token);
 		token = temp;
 	}
 }

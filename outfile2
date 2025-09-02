@@ -40,7 +40,7 @@ OBJ = $(addprefix $(OBJ_PATH), $(SRC:.c=.o))
 DPD = $(addprefix $(OBJ_PATH), $(SRC:.c=.d))
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -MMD -g
+CFLAGS = -Wall -Wextra -Werror -MMD -g -fsanitize=address
 INCS = includes/minishell.h includes/parsing.h includes/parsing_helpers.h
 INC = -Iincludes -I$(LIBFT_PATH)/includes
 

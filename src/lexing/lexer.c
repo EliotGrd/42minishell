@@ -73,6 +73,8 @@ t_token	*lexer(char *line)
 	t_token *tail;
 	t_token	*current;
 
+	head = NULL;
+	tail = NULL;
 	lex_init(&lex, line);
 	skip_wspaces(&lex);
 	while (lex.c)

@@ -35,17 +35,17 @@ int	parse_redir(t_tokcursor *c, t_cmd *cur_cmd)
 	if (c->current->next->type != WORD || !c->current)
 		return (0);
 	if (!cur_cmd->redir)
-		cur_cmd->redir = create_node_redir(c->current->next->lexeme,
+		cur_cmd->redir = create_node_redir(ft_strdup(c->current->next->lexeme),
 				c->current->type);
 	else
 	{
 		tail = cur_cmd->redir;
 		while (tail->next)
 			tail = tail->next;
-		tail->next = create_node_redir(c->current->next->lexeme,
+		tail->next = create_node_redir(ft_strdup(c->current->next->lexeme),
 				c->current->type);
 	}
-	cur_next(c);
+	//cur_next(c);
 	cur_next(c);
 	return (1);
 }
