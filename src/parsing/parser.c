@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 17:16:42 by egiraud           #+#    #+#             */
-/*   Updated: 2025/08/30 19:10:02 by egiraud          ###   ########.fr       */
+/*   Updated: 2025/09/02 14:20:43 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	parse_cmd(t_tokcursor *c, t_cmd *cur_cmd)
 	{
 		if (c->current->type == WORD)
 		{
-			argv_buf_push(&avb, ft_strdup(c->current->lexeme));
+			argv_buf_push(&avb, c->current->lexeme);
 			empty = 0;
 		}
 		else if (is_token_redir(c->current))
@@ -88,8 +88,8 @@ t_cmd	*parser(t_token *head)
 	t_cmd		*cmd_node;
 
 	c.current = head;
-	cmd_node = create_node_cmd(0);
-	cmd_head = cmd_node;
+	cmd_node = create_node_cmd(0);//ici check de secu a faire
+	cmd_head = NULL; //cmd_node;
 	while (c.current->type != END)
 	{
 		if (c.current->type == WORD)
@@ -104,14 +104,14 @@ t_cmd	*parser(t_token *head)
 		}
 		else if (c.current->type == PIPE)
 		{
-			if (c.current->next->type == PIPE || c.current->next->type == END
-				|| c.current)
+			if (c.current->next->type == PIPE || c.current->next->type == END)
 				syntax_error(c.current->next, head, cmd_head);
-			cmd_node->next = create_node_cmd(0);
-			cmd_node = cmd_node->next;
+			push_back_cmd(&cmd_head, cmd_node);
+			cmd_node = create_node_cmd(0);//securite a faire
+			cur_next(&c);//ajout de ma part
 		}
-		cur_next(&c);
 	}
+	push_back_cmd(&cmd_head, cmd_node);//pas sur de celui la
 	free_tokens(head);
 	return (cmd_head);
 }

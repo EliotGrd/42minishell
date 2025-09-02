@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:49:45 by bsuger            #+#    #+#             */
-/*   Updated: 2025/08/30 12:02:38 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/02 14:27:01 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ int	execution_node(char **str, t_env *top_env)
 			return (message_error(temp_env, str[0], 3), g_exit_code = 127);
 	}
 	execve(binary, str, temp_env);
+	//est ce que je dois free binary en cas de fail ? 
 	perror("Error");
 	return (0);
 }

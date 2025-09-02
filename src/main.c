@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:37:57 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/01 13:01:31 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/02 14:27:53 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	main(int argc, char **argv, char **envp)
 				break;
 			}
 			if (line && *line)
-				{
+			{
 				add_history(line);
 				minishell.top_tok = lexer(line);
 				if (minishell.top_tok)
@@ -56,6 +56,7 @@ int	main(int argc, char **argv, char **envp)
 				if (minishell.top_cmd)
 					executor(minishell.top_cmd, minishell.top_env);			
 			}
+			//ici le destructor cree un probleme
 			destructor_cmd(&minishell.top_cmd); 
 			ft_free((void **)&line);
 		}
