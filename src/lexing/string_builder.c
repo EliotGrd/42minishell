@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 23:17:41 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/02 14:01:06 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/02 17:07:53 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ void	str_buf_putc(t_str_buf *sb, char c)
 			sb->cap = 16;
 		else
 			sb->cap *= 2;
-		sb->str = ft_realloc(sb->str, sb->len, sb->cap);
+		//sb->str = ft_realloc(sb->str, sb->len, sb->cap);
+		sb->str = realloc(sb->str, sb->cap * sizeof(char));
 	}
 	sb->str[sb->len] = c;
 	sb->len++;

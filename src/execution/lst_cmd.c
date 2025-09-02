@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 08:52:42 by bsuger            #+#    #+#             */
-/*   Updated: 2025/08/19 15:38:45 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/02 16:21:13 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ t_cmd	*create_node_cmd(char **str)
 {
 	t_cmd	*new;
 
+	(void)str;
 	new = malloc(sizeof(t_cmd));
 	if (!new)
 		return (NULL);
@@ -26,7 +27,7 @@ t_cmd	*create_node_cmd(char **str)
 	new -> fd_out = -1;
 	new -> fd[0] = -1;
 	new -> fd[1] = -1;
-	new -> args = str;
+	new -> args = NULL;
 	return (new);
 }
 

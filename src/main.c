@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:37:57 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/02 14:27:53 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/02 17:17:06 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,20 @@ int	main(int argc, char **argv, char **envp)
 			{
 				add_history(line);
 				minishell.top_tok = lexer(line);
+
+				//t_token *toktemp = minishell.top_tok;
+				//for (;toktemp;toktemp = toktemp->next)
+				//{
+				//	printf("%s\n", toktemp->lexeme);
+				//	printf("%d\n", toktemp->type);
+				//}
+				
 				if (minishell.top_tok)
+				{
 					minishell.top_cmd = parser(minishell.top_tok);
+				//	exit(0);
+				}
+
 				if (minishell.top_cmd)
 					executor(minishell.top_cmd, minishell.top_env);			
 			}

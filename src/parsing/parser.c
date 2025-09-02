@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 17:16:42 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/02 14:20:43 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/02 17:26:44 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	parse_cmd(t_tokcursor *c, t_cmd *cur_cmd)
 	{
 		if (c->current->type == WORD)
 		{
-			argv_buf_push(&avb, c->current->lexeme);
+			argv_buf_push(&avb, ft_strdup(c->current->lexeme));
 			empty = 0;
 		}
 		else if (is_token_redir(c->current))
