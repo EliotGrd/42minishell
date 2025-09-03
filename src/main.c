@@ -101,6 +101,8 @@ int	main(int argc, char **argv, char **envp)
 
 				//debug_cmd(&minishell);
 				
+				if (minishell.top_cmd) //a voir comment faire en fonction des cas d'erreur meme si aucune erreur connue possible durant la partie expand de mon cote
+					expand_manager(minishell.top_cmd, &minishell);
 				if (minishell.top_cmd)
 					executor(minishell.top_cmd, minishell.top_env);
 				ft_printf("exit code : %d\n", g_exit_code);

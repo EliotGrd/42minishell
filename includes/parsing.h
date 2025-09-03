@@ -41,6 +41,12 @@ typedef struct s_lexer
 	char 			c; ///< current line[i] to keep track of progress
 }					t_lexer;
 
+typedef struct s_expand
+{
+	int	inquotes;
+	int	qstate;
+}	t_expand;
+
 /* Lexing */
 t_token				*lexer(char *input);
 t_token				*lex_word(t_lexer *lex);
@@ -64,6 +70,7 @@ void	lexing_error(int errcode, t_token *head);
 
 t_cmd	*parser(t_token *head);
 /* Expand */
+void	expand_manager(t_cmd *head, t_minishell *msh);
 // will see
 
 /* AST to Linked List */

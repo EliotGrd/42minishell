@@ -13,7 +13,8 @@
 #include "../../includes/parsing.h"
 
 /*
- * PENSER A RENVOYER DES LINKED LISTS VIDES EN ERROR 
+ * PENSER A RENVOYER DES LINKED LISTS VIDES EN ERROR
+ * error unclosed quotes ? ou pas laisser comme ca
  */
 
 

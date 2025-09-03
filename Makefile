@@ -12,6 +12,7 @@ SRC = \
 	  lexing/token_utils.c \
 	  parsing/argv_builder.c parsing/error.c \
 	  parsing/parser.c\
+	  expand/expand.c\
 	  execution/lst_cmd.c \
 	  execution/lst_cmd2.c \
 	  execution/execution_node.c \
