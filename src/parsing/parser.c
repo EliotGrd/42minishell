@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 17:16:42 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/02 17:26:44 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/03 10:59:11 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ int	is_token_redir(t_token *token)
 
 int	parse_redir(t_tokcursor *c, t_cmd *cur_cmd)
 {
-	t_redirect	*node;
+	//t_redirect	*node;
 	t_redirect	*tail;
 
-	node = create_node_redir(0, c->current->type);
+	//node = create_node_redir(0, c->current->type);
 	if (c->current->next->type != WORD || !c->current)
 		return (0);
 	if (!cur_cmd->redir)

@@ -1,2 +1,20 @@
+total 132
+drwxr-xr-x  7 bsuger 2025_paris    186 Sep  3 09:28 .
+drwxr-xr-x 13 bsuger 2025_paris    198 Sep  3 09:19 ..
+drwxr-xr-x  3 bsuger 2025_paris     21 Sep  3 09:19 docs
+-rw-r--r--  1 bsuger 2025_paris    858 Sep  3 09:19 Doxyfile
+drwxr-xr-x  8 bsuger 2025_paris    163 Sep  3 09:19 .git
+-rw-r--r--  1 bsuger 2025_paris    332 Sep  3 09:19 ignore.supp
+drwxr-xr-x  2 bsuger 2025_paris     67 Sep  3 09:19 includes
+drwxr-xr-x  2 bsuger 2025_paris   4096 Sep  3 09:19 libft
+-rw-r--r--  1 bsuger 2025_paris   2724 Sep  3 09:19 Makefile
+-rwxr-xr-x  1 bsuger 2025_paris 102744 Sep  3 09:28 minishell
+-rw-r--r--  1 bsuger 2025_paris      0 Sep  3 09:30 outfile
+-rw-r--r--  1 bsuger 2025_paris   2743 Sep  3 09:19 outfile2
+-rw-r--r--  1 bsuger 2025_paris     34 Sep  3 09:19 README.md
+drwxr-xr-x  7 bsuger 2025_paris     92 Sep  3 09:28 src
 99
-     99     287    2724
+99
+99
+99
+99
