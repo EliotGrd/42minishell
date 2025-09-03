@@ -1,5 +1,5 @@
 <h1 align="center">
-	Pipex
+	Minishell
 </h1>
 <p align="center">
 	A prelude to minishell, reproduct pipes and basic exec
