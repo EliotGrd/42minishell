@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/08/30 16:27:27 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/03 13:20:39 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ int	one_command_execve(t_cmd *top_cmd, t_env *top_env)
 		execution_node(top_cmd -> args, top_env);
 		destructor_env(&top_env);
 		destructor_cmd(&top_cmd);
-		exit(EXIT_FAILURE);
+		exit(g_exit_code);
 	}
 	ft_close_fd(&top_cmd -> fd_in);
 	ft_close_fd(&top_cmd -> fd_out);
@@ -108,7 +108,7 @@ int	one_command_execve(t_cmd *top_cmd, t_env *top_env)
 		g_exit_code = WEXITSTATUS(status);
 	else if (WIFSIGNALED(status))
 		g_exit_code = 128 + WTERMSIG(status);
-	return (0);
+	return (g_exit_code);
 }
 
 /**

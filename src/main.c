@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:37:57 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/02 17:17:06 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/03 11:01:04 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,11 +102,12 @@ int	main(int argc, char **argv, char **envp)
 				//debug_cmd(&minishell);
 				
 				if (minishell.top_cmd)
-					executor(minishell.top_cmd, minishell.top_env);			
+					executor(minishell.top_cmd, minishell.top_env);
+				ft_printf("exit code : %d\n", g_exit_code);
 			}
 			//ici le destructor cree un probleme
 			destructor_cmd(&minishell.top_cmd);
-			destructor_env(&minishell.top_env);
+			//destructor_env(&minishell.top_env);
 			ft_free((void **)&line);
 		}
 	}
