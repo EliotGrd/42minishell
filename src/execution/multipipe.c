@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/02 10:12:24 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/04 11:33:44 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,7 @@ int	multipipe_cmd(t_cmd *top_stack, t_env *top_env)
 
 	temp = top_stack;
 	if (here_doc_management(top_stack) == -1)
-		return (destructor_cmd(&top_stack), -1);
+		return (-1);
 	while (temp)
 	{
 		if (redirection_verification(&temp) != -1)
@@ -140,8 +140,10 @@ int	multipipe_cmd(t_cmd *top_stack, t_env *top_env)
 		(ft_close_fd(&temp -> fd_in), ft_close_fd(&temp -> fd_out));
 		temp = temp -> next;
 	}
-	while (waitpid(-1, &status, 0) > 0)//changer 0 => WNOHANG 
-		;
+	while (waitpid(-1, &status, 0) > 0)
+	{
+		ft_printf("%d\n", status);
+	}
 	if (WIFEXITED(status))
 		g_exit_code = WEXITSTATUS(status);
 	else if (WIFSIGNALED(status))

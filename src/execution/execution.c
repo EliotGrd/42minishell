@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/03 15:39:57 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/04 11:02:09 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,7 @@ int	one_command_execve(t_cmd *top_cmd, t_env *top_env)
 int	one_command(t_cmd *top_cmd, t_env *top_env)
 {
 	if (here_doc_management(top_cmd) == -1)
-		return (destructor_cmd(&top_cmd), -1);
+		return (-1);
 	if (redirection_verification(&top_cmd) != -1)
 	{
 		if (is_it_builtin_nonfork(top_cmd -> args[0]))
