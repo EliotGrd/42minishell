@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/05 09:56:42 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/05 11:38:08 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,7 +133,9 @@ int	multipipe_cmd(t_cmd *top_stack, t_env *top_env)
 	{
 		if (redirection_verification(&temp) != -1)
 		{
-			if (multipipe_intermediary_cmd(temp, top_stack, top_env, &last) == -1)
+			if (temp -> args == NULL)//pour gere le cas ou j'ai pas d'args
+				;
+			else if (multipipe_intermediary_cmd(temp, top_stack, top_env, &last) == -1)
 				exit(EXIT_FAILURE);//voir ce qu'il faut faire dans ce cas
 		}
 		else

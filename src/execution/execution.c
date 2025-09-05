@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/04 11:02:09 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/05 11:00:27 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,7 +128,9 @@ int	one_command(t_cmd *top_cmd, t_env *top_env)
 		return (-1);
 	if (redirection_verification(&top_cmd) != -1)
 	{
-		if (is_it_builtin_nonfork(top_cmd -> args[0]))
+		if (top_cmd -> args == NULL)
+			;
+		else if (is_it_builtin_nonfork(top_cmd -> args[0]))
 			launch_builtin(top_cmd -> args, top_env);
 		else
 			one_command_execve(top_cmd, top_env);
