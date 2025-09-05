@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/04 11:33:44 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/05 09:56:42 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,17 +64,15 @@ void	execute_child(t_cmd *top_stack, t_cmd *temp, t_env *top_env)
  * @param top_env 
  * @return 
  */
-int	multipipe_intermediary_cmd(t_cmd *temp, t_cmd *top_stack, t_env *top_env)
+int	multipipe_intermediary_cmd(t_cmd *temp, t_cmd *top_stack, t_env *top_env, pid_t *last)
 {
-	int	childprocess;
-
 	if (temp -> next != NULL)
 		if (pipe(temp -> fd) == -1)
 			return (-1);
-	childprocess = fork();
-	if (childprocess == -1)
+	*last = fork();
+	if (*last == -1)
 		return (-1);
-	if (childprocess == 0)
+	if (*last == 0)
 		execute_child(top_stack, temp, top_env);
 	else
 	{
@@ -124,7 +122,10 @@ int	multipipe_cmd(t_cmd *top_stack, t_env *top_env)
 {
 	int		status;
 	t_cmd	*temp;
+	pid_t	last;
+	pid_t	n;
 
+	n = 1;
 	temp = top_stack;
 	if (here_doc_management(top_stack) == -1)
 		return (-1);
@@ -132,7 +133,7 @@ int	multipipe_cmd(t_cmd *top_stack, t_env *top_env)
 	{
 		if (redirection_verification(&temp) != -1)
 		{
-			if (multipipe_intermediary_cmd(temp, top_stack, top_env) == -1)
+			if (multipipe_intermediary_cmd(temp, top_stack, top_env, &last) == -1)
 				exit(EXIT_FAILURE);//voir ce qu'il faut faire dans ce cas
 		}
 		else
@@ -140,13 +141,16 @@ int	multipipe_cmd(t_cmd *top_stack, t_env *top_env)
 		(ft_close_fd(&temp -> fd_in), ft_close_fd(&temp -> fd_out));
 		temp = temp -> next;
 	}
-	while (waitpid(-1, &status, 0) > 0)
+	while (n > 0)//surement ca a exporte pour norme
 	{
-		ft_printf("%d\n", status);
+		if (n == last)
+		{
+			if (WIFEXITED(status))
+				g_exit_code = WEXITSTATUS(status);
+			else if (WIFSIGNALED(status))
+				g_exit_code = 128 + WTERMSIG(status);
+		}
+		n = waitpid(-1, &status, 0);
 	}
-	if (WIFEXITED(status))
-		g_exit_code = WEXITSTATUS(status);
-	else if (WIFSIGNALED(status))
-		g_exit_code = 128 + WTERMSIG(status);
 	return (1);
 }
