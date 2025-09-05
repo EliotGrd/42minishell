@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 16:36:33 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/03 17:30:47 by egiraud          ###   ########.fr       */
+/*   Updated: 2025/09/05 14:11:17 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,9 @@ void	handle_dollar(t_lexer *lex, t_str_buf *sb, t_expand *exp, t_minishell *msh)
 				advance(lex, 1);
 			}
 			temp = str_buf_end(&sb_env);
-			expand = research_key_env(msh->top_env, temp);
+			expand = research_key_env(msh->top_env, temp);//erreur detecte ici car il peut y avoir un NULL du coup segfault
+			if (!expand)//correction de l'erreur
+				return (ft_free((void **)&temp));
 			str_buf_puts(sb, expand);
 			advance(lex, 1);
 			ft_free((void **)&temp);

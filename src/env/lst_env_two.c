@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 14:22:48 by bsuger            #+#    #+#             */
-/*   Updated: 2025/08/18 09:30:23 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/05 13:59:29 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ char	**split_env(char *envp)
 
 char	*research_key_env(t_env *top_env, char *search)
 {
+	if (ft_strlen(search) == 0)
+		return (NULL);
 	while (top_env)
 	{
 		if (ft_strncmp(search, top_env -> key, ft_strlen(search) + 1) == 0)

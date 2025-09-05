@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 09:33:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/03 13:32:12 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/05 14:08:05 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,10 @@ int	export(char **str, t_env *top_env)
 	if (temporary == NULL)//il a pas trouve faut cree un noeud et l'add
 	{
 		extract_key = ft_strdup(extract_key);
-		extract_value = ft_strdup(extract_value);
+		if (extract_value == NULL)
+			extract_value = ft_strdup("");
+		else
+			extract_value = ft_strdup(extract_value);
 		//securite des 2 en meme temps avec ft_free a ajouter comme ca serat mieux
 		temporary = create_node_env(extract_key, extract_value);
 		//safety surmement ici et bien tester avec un env vide mais normalement c'est good
