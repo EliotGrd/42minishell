@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:49:45 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/06 09:33:13 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/06 11:11:58 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@
  */
 static void	message_error(char **temp_env, char *str, int n)
 {
-	ft_free_tab(temp_env);
+	if (temp_env && *temp_env)
+		ft_free_tab(temp_env);
 	if (n == 0)
 	{
 		ft_putstr_fd("CHATS: ", 2);
@@ -80,7 +81,7 @@ int	execution_node(char **str, t_minishell *minishell)
 	char		*binary;
 
 	temp_env = lst_to_tab_env(minishell -> top_env);
-	if (!temp_env)
+	if (!temp_env && minishell -> top_env != NULL)
 		return (-1);//a voir comment gere pour bien quitter 
 	//mais dasn un fork donc surement exit()
 	if (is_it_builtin(str[0]))
