@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:49:45 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/03 11:38:39 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/06 09:33:13 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,17 +74,17 @@ static int	check_accessible(char *str, char **temp_env)
  * @param top_env 
  * @return 
  */
-int	execution_node(char **str, t_env *top_env)
+int	execution_node(char **str, t_minishell *minishell)
 {
 	char		**temp_env;
 	char		*binary;
 
-	temp_env = lst_to_tab_env(top_env);
+	temp_env = lst_to_tab_env(minishell -> top_env);
 	if (!temp_env)
 		return (-1);//a voir comment gere pour bien quitter 
 	//mais dasn un fork donc surement exit()
 	if (is_it_builtin(str[0]))
-		(launch_builtin(str, top_env), exit(EXIT_SUCCESS));
+		(launch_builtin(str, minishell), exit(EXIT_SUCCESS));
 	else if (ft_strchr(str[0], '/'))
 	{
 		if (check_accessible(str[0], temp_env) != 0)
@@ -93,7 +93,7 @@ int	execution_node(char **str, t_env *top_env)
 	}
 	else
 	{
-		binary = search_path(str[0], top_env);
+		binary = search_path(str[0], minishell -> top_env);
 		if (!binary)
 			return (message_error(temp_env, str[0], 3), g_exit_code = 127);
 	}

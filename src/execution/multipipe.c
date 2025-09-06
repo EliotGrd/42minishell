@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/05 15:28:29 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/06 09:40:21 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,13 @@ void	close_fd_heredocs(t_cmd *top_stack, t_cmd *current)
 	}
 }
 
-void	execute_child(t_cmd *top_stack, t_cmd *temp, t_env *top_env)
+void	execute_child(t_cmd *temp, t_minishell *minishell)
 {
 	command_redirect(temp);
-	close_fd_heredocs(top_stack, temp);
-	execution_node(temp-> args, top_env);
-	destructor_env(&top_env);//pas sur que ca soit necessaire
-	destructor_cmd(&top_stack);//mais le mettre ne casse rien
+	close_fd_heredocs(minishell -> top_cmd, temp);
+	execution_node(temp-> args, minishell);
+	destructor_env(&minishell -> top_env);//pas sur que ca soit necessaire
+	destructor_cmd(&minishell -> top_cmd);//mais le mettre ne casse rien
 	exit(EXIT_FAILURE);
 }
 
@@ -64,7 +64,7 @@ void	execute_child(t_cmd *top_stack, t_cmd *temp, t_env *top_env)
  * @param top_env 
  * @return 
  */
-int	multipipe_intermediary_cmd(t_cmd *temp, t_cmd *top_stack, t_env *top_env, pid_t *last)
+int	multipipe_intermediary_cmd(t_cmd *temp, t_minishell *minishell, pid_t *last)
 {
 	if (temp -> next != NULL)
 		if (pipe(temp -> fd) == -1)
@@ -73,7 +73,7 @@ int	multipipe_intermediary_cmd(t_cmd *temp, t_cmd *top_stack, t_env *top_env, pi
 	if (*last == -1)
 		return (-1);
 	if (*last == 0)
-		execute_child(top_stack, temp, top_env);
+		execute_child(temp, minishell);
 	else
 	{
 		if (temp -> previous != NULL)
@@ -118,7 +118,7 @@ void	close_redir_temp(t_cmd *temp)
  * @param top_env 
  * @return 
  */
-int	multipipe_cmd(t_cmd *top_stack, t_env *top_env)
+int	multipipe_cmd(t_minishell *minishell)
 {
 	int		status;
 	t_cmd	*temp;
@@ -126,8 +126,8 @@ int	multipipe_cmd(t_cmd *top_stack, t_env *top_env)
 	pid_t	n;
 
 	n = 1;
-	temp = top_stack;
-	if (here_doc_management(top_stack) == -1)
+	temp = minishell -> top_cmd;
+	if (here_doc_management(minishell -> top_cmd) == -1)
 		return (-1);
 	while (temp)
 	{
@@ -135,7 +135,7 @@ int	multipipe_cmd(t_cmd *top_stack, t_env *top_env)
 		{
 			if (temp -> args == NULL)//pour gere le cas ou j'ai pas d'args
 				;
-			else if (multipipe_intermediary_cmd(temp, top_stack, top_env, &last) == -1)
+			else if (multipipe_intermediary_cmd(temp, minishell, &last) == -1)
 				exit(EXIT_FAILURE);//voir ce qu'il faut faire dans ce cas
 		}
 		else
