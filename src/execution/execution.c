@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/05 16:25:01 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/06 10:00:07 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,20 @@
  * @param top_env 
  * @return 
  */
-int	launch_builtin(char **str, t_env *top_env)
+int	launch_builtin(char **str, t_minishell *minishell)
 {
 	if (ft_strncmp(str[0], "echo", ft_strlen(str[0]) + 1) == 0)
 		my_echo(++str);
 	else if (ft_strncmp(str[0], "pwd", ft_strlen(str[0]) + 1) == 0)
 		pwd();
 	else if (ft_strncmp(str[0], "cd", ft_strlen(str[0]) + 1) == 0)
-		cd(str, top_env);
+		cd(str, minishell -> top_env);
 	else if (ft_strncmp(str[0], "env", ft_strlen(str[0]) + 1) == 0)
-		env(top_env);
+		env(minishell -> top_env);
 	else if (ft_strncmp(str[0], "unset", ft_strlen(str[0]) + 1) == 0)
-		unset(&top_env, str[1]);
+		unset(minishell, str[1]);
 	else if (ft_strncmp(str[0], "export", ft_strlen(str[0]) + 1) == 0)
-		export(str, top_env);
+		export(str, minishell -> top_env);
 	else if (ft_strncmp(str[0], "exit", ft_strlen(str[0]) + 1) == 0)
 		ft_printf("exit\n");
 	return (0);
@@ -84,7 +84,7 @@ int	is_it_builtin_nonfork(char *str)
  * @param top_env 
  * @return 
  */
-int	one_command_execve(t_cmd *top_cmd, t_env *top_env)
+int	one_command_execve(t_minishell *minishell)
 {
 	int		status;
 	pid_t	childprocess;
@@ -94,14 +94,14 @@ int	one_command_execve(t_cmd *top_cmd, t_env *top_env)
 		return (-1);
 	if (childprocess == 0)
 	{
-		command_redirect(top_cmd);
-		execution_node(top_cmd -> args, top_env);
-		destructor_env(&top_env);
-		destructor_cmd(&top_cmd);
+		command_redirect(minishell -> top_cmd);
+		execution_node(minishell -> top_cmd -> args, minishell);
+		destructor_env(&minishell -> top_env);
+		destructor_cmd(&minishell -> top_cmd);
 		exit(g_exit_code);
 	}
-	ft_close_fd(&top_cmd -> fd_in);
-	ft_close_fd(&top_cmd -> fd_out);
+	ft_close_fd(&minishell -> top_cmd -> fd_in);
+	ft_close_fd(&minishell -> top_cmd -> fd_out);
 	while (waitpid(-1, &status, 0) > 0)
 		;
 	if (WIFEXITED(status))
@@ -122,21 +122,21 @@ int	one_command_execve(t_cmd *top_cmd, t_env *top_env)
  * @param top_env 
  * @return 
  */
-int	one_command(t_cmd *top_cmd, t_env *top_env)
+int	one_command(t_minishell *minishell)
 {
-	if (here_doc_management(top_cmd) == -1)
+	if (here_doc_management(minishell -> top_cmd) == -1)
 		return (-1);
-	if (redirection_verification(&top_cmd) != -1)
+	if (redirection_verification(&minishell -> top_cmd) != -1)
 	{
-		if (top_cmd -> args == NULL)
+		if (minishell -> top_cmd -> args == NULL)
 			;
-		else if (is_it_builtin_nonfork(top_cmd -> args[0]))
-			launch_builtin(top_cmd -> args, top_env);
+		else if (is_it_builtin_nonfork(minishell ->top_cmd -> args[0]))
+			launch_builtin(minishell -> top_cmd -> args, minishell);
 		else
-			one_command_execve(top_cmd, top_env);
+			one_command_execve(minishell);
 	}
 	else
-		close_redir_temp(top_cmd);//ferme heredoc si un probleme avant
+		close_redir_temp(minishell -> top_cmd);
 	return (0);
 }
 
@@ -150,11 +150,11 @@ int	one_command(t_cmd *top_cmd, t_env *top_env)
  * @param top_cmd 
  * @param top_env 
  */
-void	executor(t_cmd *top_cmd, t_env *top_env)
+void	executor(t_minishell *minishell)
 {
 	g_exit_code = 0;
-	if (cmd_lst_size(top_cmd) == 1)
-		one_command(top_cmd, top_env);
+	if (cmd_lst_size(minishell -> top_cmd) == 1)
+		one_command(minishell);
 	else
-		multipipe_cmd(top_cmd, top_env);
+		multipipe_cmd(minishell);
 }

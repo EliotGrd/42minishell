@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:37:57 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/06 08:46:37 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/06 08:49:26 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int	main(int argc, char **argv, char **envp)
 				if (minishell.top_cmd) //a voir comment faire en fonction des cas d'erreur meme si aucune erreur connue possible durant la partie expand de mon cote
 					expand_manager(minishell.top_cmd, &minishell);
 				if (minishell.top_cmd)
-					executor(minishell.top_cmd, minishell.top_env);
+					executor(&minishell);
 			}
 			//ici le destructor cree un probleme
 			destructor_cmd(&minishell.top_cmd);

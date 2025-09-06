@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 08:21:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/05 16:24:39 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/06 09:58:31 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ typedef struct	s_cmd
 	struct	s_cmd	*next;
 	char		**args;
 	t_redirect	*redir;
-	int		fd_in;//pour les redir
-	int		fd_out;//pour les redir
+	int		fd_in;
+	int		fd_out;
 	int		fd[2];
 
 }	t_cmd;
@@ -84,7 +84,6 @@ typedef struct s_minishell
 
 /*function for getting env path the right way and execution*/
 char	*search_path(char *str, t_env *envp);
-int	execution_node(char **str, t_env *top_env);
 
 /*function opening files*/
 void	opening_infile(char *argv);
@@ -122,16 +121,16 @@ t_redirect	*create_node_redir(char *str, t_type type);
 
 
 /*functions for execution*/
-int	execution_node(char **str, t_env *top_env);
-void	execute_child(t_cmd *top_stack, t_cmd *emp, t_env *top_env);
-int	multipipe_cmd(t_cmd *top_stack, t_env *top_env);
+int	execution_node(char **str, t_minishell *minishell);
+void	execute_child(t_cmd *emp, t_minishell *minishell);
+int	multipipe_cmd(t_minishell *minishell);
 void	close_fd_parent(t_cmd *top_stack);
 void	command_redirect(t_cmd *top_stack);
-int	launch_builtin(char **str, t_env *top_env);
+int	launch_builtin(char **str, t_minishell *minishell);
 int	is_it_builtin(char *str);
-int	one_command(t_cmd *top_cmd, t_env *top_env);
-void	executor(t_cmd *top_cmd, t_env *top_env);
-int	one_command_execve(t_cmd *top_cmd, t_env *top_env);
+int	one_command(t_minishell *minishell);
+void	executor(t_minishell *minishell);
+int	one_command_execve(t_minishell *minishell);
 void	fail_previous(void);
 void	close_previous(t_cmd *top_stack);
 
@@ -145,7 +144,7 @@ int	outfile_append_redirection(t_redirect *redir, t_cmd **top_stack, int type);
 /*BUILTIN*/
 void	env(t_env *top_env);
 void	pwd(void);
-void	unset(t_env **top_env, char *key);
+void	unset(t_minishell *minishell, char *key);
 int	my_echo(char **argv);
 int	cd(char **argv, t_env *top_env);
 int	export(char **str, t_env *top_env);
