@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 08:21:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/06 09:58:31 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/06 10:48:09 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,7 +147,7 @@ void	pwd(void);
 void	unset(t_minishell *minishell, char *key);
 int	my_echo(char **argv);
 int	cd(char **argv, t_env *top_env);
-int	export(char **str, t_env *top_env);
+int	export(char **str, t_minishell *minishell);
 
 /*heredoc document*/
 int	here_doc_management(t_cmd *top_cmd);
