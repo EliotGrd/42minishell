@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 14:18:51 by bsuger            #+#    #+#             */
-/*   Updated: 2025/08/04 11:54:16 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/05 16:15:01 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	unset(t_env **top_env, char *key)
 	t_env	*temp;
 
 	temp = *top_env;
+	if (key == NULL)//securite add
+		return ;
 	while (temp)
 	{
 		if (ft_strncmp(key, temp -> key, ft_strlen(key) + 1) == 0)

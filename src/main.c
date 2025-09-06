@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:37:57 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/05 11:18:49 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/06 08:46:37 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int	main(int argc, char **argv, char **envp)
 	(void)argc;
 	(void)argv;
 	init_minishell(&minishell, envp);
+
 	if (isatty(STDIN_FILENO) && isatty(STDOUT_FILENO))
 	{
 		while(1)

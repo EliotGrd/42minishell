@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/05 11:00:27 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/05 16:25:01 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	launch_builtin(char **str, t_env *top_env)
 	else if (ft_strncmp(str[0], "env", ft_strlen(str[0]) + 1) == 0)
 		env(top_env);
 	else if (ft_strncmp(str[0], "unset", ft_strlen(str[0]) + 1) == 0)
-		ft_printf("unset\n");
+		unset(&top_env, str[1]);
 	else if (ft_strncmp(str[0], "export", ft_strlen(str[0]) + 1) == 0)
 		export(str, top_env);
 	else if (ft_strncmp(str[0], "exit", ft_strlen(str[0]) + 1) == 0)
