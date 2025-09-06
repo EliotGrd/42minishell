@@ -6,13 +6,13 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 09:33:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/06 10:48:19 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/06 16:28:55 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static t_env *research_node_env(t_env *top_env, char *search)
+t_env *research_node_env(t_env *top_env, char *search)
 {
 	while (top_env)
 	{

@@ -6,19 +6,46 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:08:46 by bsuger            #+#    #+#             */
-/*   Updated: 2025/08/30 11:09:38 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/06 16:35:56 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int	cd(char **argv, t_env *top_env)
+static void	update_pwd(char *key, t_minishell *minishell)
+{
+	int		i;
+	t_env	*temp;
+	char	*buf;
+
+	i = 30;
+	temp = research_node_env(minishell -> top_env, key);
+	if (!temp)
+		return ;
+	buf = malloc(i);
+	if (!buf)
+		return ;
+	while (getcwd(buf, i) == NULL && errno == ERANGE)
+	{
+		free(buf);
+		buf = NULL;
+		i *= 10;
+		buf = malloc(i);
+		if (!buf)
+			return ;
+		getcwd(buf, i);
+	}
+	temp -> value = buf;
+}
+
+int	cd(char **argv, t_minishell *minishell)
 {
 	char	*home;
-
+	
+	update_pwd("OLDPWD", minishell);
 	if (argv[1] == NULL)
 	{
-		home = research_key_env(top_env, "HOME");
+		home = research_key_env(minishell -> top_env, "HOME");
 		if (home == NULL)
 		{
 			ft_putstr_fd("HOME is not set\n", 2);
@@ -34,5 +61,6 @@ int	cd(char **argv, t_env *top_env)
 		if (chdir(argv[1]) == -1)
 			perror("CHAT$> ");
 	}
+	update_pwd("PWD", minishell);
 	return (0);
 }
