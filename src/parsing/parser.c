@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 17:16:42 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/03 10:59:11 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/08 15:24:25 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ t_cmd	*parser(t_token *head)
 	c.current = head;
 	cmd_node = create_node_cmd(0);//ici check de secu a faire
 	cmd_head = NULL; //cmd_node;
-	while (c.current->type != END)
+	while (c.current != NULL && c.current->type != END)
 	{
 		if (c.current->type == WORD)
 		{
@@ -100,15 +100,24 @@ t_cmd	*parser(t_token *head)
 		else if (is_token_redir(c.current))
 		{
 			if (!parse_redir(&c, cmd_node))
+			{
 				syntax_error(c.current, head, cmd_head);
+				c.current = NULL;//ajout de ma part
+				head = NULL;//ajout de ma part
+				cmd_node = NULL;//ajout de ma part
+			}
 		}
 		else if (c.current->type == PIPE)
 		{
 			if (c.current->next->type == PIPE || c.current->next->type == END)
-				syntax_error(c.current->next, head, cmd_head);
-			push_back_cmd(&cmd_head, cmd_node);
-			cmd_node = create_node_cmd(0);//securite a faire
-			cur_next(&c);//ajout de ma part
+				(syntax_error(c.current->next, head, cmd_head), head = NULL, c.current = NULL, cmd_node = NULL, cmd_head = NULL);
+			if (cmd_head != NULL)
+			{
+				push_back_cmd(&cmd_head, cmd_node);
+				cmd_node = create_node_cmd(0);//securite a faire
+			}
+			if (c.current != NULL)
+				cur_next(&c);
 		}
 	}
 	push_back_cmd(&cmd_head, cmd_node);//pas sur de celui la
