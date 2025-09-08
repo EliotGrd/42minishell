@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 17:16:42 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/08 15:24:25 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/08 15:36:51 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	parse_redir(t_tokcursor *c, t_cmd *cur_cmd)
 		tail->next = create_node_redir(ft_strdup(c->current->next->lexeme),
 				c->current->type);
 	}
-	//cur_next(c);
+	cur_next(c);//temp pour comprendre l'erreur
 	cur_next(c);
 	return (1);
 }

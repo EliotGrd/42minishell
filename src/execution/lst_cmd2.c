@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 08:54:33 by bsuger            #+#    #+#             */
-/*   Updated: 2025/08/30 12:15:36 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/08 15:48:03 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ void	pop_cmd(t_cmd **top)
 	{
 		temp = *top;
 		(*top) = (*top)-> next;
-		ft_free_tab(temp -> args);
+		if (temp -> args != NULL)
+			ft_free_tab(temp -> args);
 		destructor_redir(&temp -> redir);
 		ft_free((void **)&temp);
 	}

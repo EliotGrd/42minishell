@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 16:36:33 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/05 16:27:05 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/08 15:42:41 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ void	expand_manager(t_cmd *head, t_minishell *msh)
 	cur = head;
 	while (cur)
 	{
-		while (cur->args[i])
+		while (cur -> args && cur->args[i])
 		{
 			cur->args[i] = expand_word(cur->args[i], msh);
 			i++;
