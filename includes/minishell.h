@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 08:21:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/06 16:35:03 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/08 16:44:33 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,6 +155,7 @@ int	heredoc_input(t_redirect *temp, t_cmd *top_cmd);
 
 /*signals*/
 void	sigint_handler(int sig);
+void	sigint_handler2(int sig);
 void	sigint_heredoc(int sig);
 
 /*function utils*/

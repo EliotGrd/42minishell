@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/06 10:03:33 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/08 16:27:42 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ void	execute_child(t_cmd *temp, t_minishell *minishell)
 {
 	command_redirect(temp);
 	close_fd_heredocs(minishell -> top_cmd, temp);
+	signal(SIGINT, SIG_DFL);//test de reset 
+	signal(SIGQUIT, SIG_DFL);//test de reset
 	execution_node(temp-> args, minishell);
 	destructor_env(&minishell -> top_env);//pas sur que ca soit necessaire
 	destructor_cmd(&minishell -> top_cmd);//mais le mettre ne casse rien

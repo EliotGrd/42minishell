@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/06 16:35:33 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/08 16:50:49 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ int	one_command_execve(t_minishell *minishell)
 	pid_t	childprocess;
 
 	childprocess = fork();
+	signal(SIGINT, sigint_handler2);
 	if (childprocess == -1)
 		return (-1);
 	if (childprocess == 0)
