@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/10 10:07:52 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/10 11:31:07 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,9 @@ void	close_fd_heredocs(t_cmd *top_stack, t_cmd *current)
 
 void	execute_child(t_cmd *temp, t_minishell *minishell)
 {
+	signal(SIGQUIT, sigquit_handler);//pour biensigquit
 	command_redirect(temp);
 	close_fd_heredocs(minishell -> top_cmd, temp);
-	signal(SIGINT, SIG_DFL);//test de reset 
-	signal(SIGQUIT, SIG_DFL);//test de reset
 	execution_node(temp-> args, minishell);
 	destructor_env(&minishell -> top_env);//pas sur que ca soit necessaire
 	destructor_cmd(&minishell -> top_cmd);//mais le mettre ne casse rien
@@ -72,12 +71,11 @@ int	multipipe_intermediary_cmd(t_cmd *temp, t_minishell *minishell, pid_t *last)
 		if (pipe(temp -> fd) == -1)
 			return (-1);
 	*last = fork();
+	//signal(SIGINT, sigint_handler2);//pour bien remettre le readline 
 	if (*last == -1)
 		return (-1);
 	if (*last == 0)
-	{
 		execute_child(temp, minishell);
-	}
 	else
 	{
 		if (temp -> previous != NULL)

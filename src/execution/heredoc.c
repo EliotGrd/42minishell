@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:39:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/08/30 14:56:07 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/10 12:43:42 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,11 @@ static void	read_gnl_heredoc(int fd[2], t_redirect *temp, t_cmd *top_cmd)
 	{
 		write(1, ">", 1);
 		line = get_next_line(STDIN_FILENO);
-		if (g_exit_code == 130)
+		if (g_exit_code == 130 || g_exit_code == 131)
 		{
 			(ft_close_fd(&fd[0]), ft_close_fd(&fd[1]));
 			close_fd_heredocs2(temp, top_cmd);
-			exit(130);
+			exit(g_exit_code);
 		}
 		if (!line)
 		{
@@ -96,13 +96,13 @@ static int	update_status(int status, int fd[2],
 	if (WIFEXITED(status))
 	{
 		if (WEXITSTATUS(status) == 130)
-		{
 			g_exit_code = 130;
-			ft_close_fd(&fd[0]);
-			ft_close_fd(&fd[1]);
-			close_fd_heredocs2(temp, top_cmd);
-			return (-1);
-		}
+		else if (WEXITSTATUS(status) == 131)
+			g_exit_code = 131;
+		ft_close_fd(&fd[0]);
+		ft_close_fd(&fd[1]);
+		close_fd_heredocs2(temp, top_cmd);
+		return (-1);
 	}
 	return (0);
 }
@@ -135,6 +135,7 @@ int	heredoc_input(t_redirect *temp, t_cmd *top_cmd)
 	if (childpid == 0)
 	{
 		signal(SIGINT, sigint_heredoc);
+		signal(SIGQUIT, sigquit_handler);
 		ft_close_fd(&fd[0]);
 		remove_echoctl();
 		read_gnl_heredoc(fd, temp, top_cmd);

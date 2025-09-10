@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/10 09:18:00 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/10 10:54:31 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,8 +96,7 @@ int	one_command_execve(t_minishell *minishell)
 		return (-1);
 	if (childprocess == 0)
 	{
-		//mystere ca fait fonctionner aussi le sigquit dans le multipipe....
-		signal(SIGQUIT, SIG_DFL);//temporaire avant de faire mon handler
+		signal(SIGQUIT, sigquit_handler);//sigquit
 		command_redirect(minishell -> top_cmd);
 		execution_node(minishell -> top_cmd -> args, minishell);
 		destructor_env(&minishell -> top_env);
