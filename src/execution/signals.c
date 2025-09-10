@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 12:16:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/08 16:44:50 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/10 10:01:13 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@ void	sigint_handler(int sig)
 	rl_redisplay();
 }
 
+/**
+ * @brief allow us to don't create issue when a child process with
+ * readline 
+ *
+ * @param sig 
+ */
 void	sigint_handler2(int sig)
 {
 	(void) sig;

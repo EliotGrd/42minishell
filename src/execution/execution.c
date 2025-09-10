@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/08 16:50:49 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/10 09:18:00 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,10 +91,13 @@ int	one_command_execve(t_minishell *minishell)
 
 	childprocess = fork();
 	signal(SIGINT, sigint_handler2);
+	//ici je pense mettre le sigquit
 	if (childprocess == -1)
 		return (-1);
 	if (childprocess == 0)
 	{
+		//mystere ca fait fonctionner aussi le sigquit dans le multipipe....
+		signal(SIGQUIT, SIG_DFL);//temporaire avant de faire mon handler
 		command_redirect(minishell -> top_cmd);
 		execution_node(minishell -> top_cmd -> args, minishell);
 		destructor_env(&minishell -> top_env);

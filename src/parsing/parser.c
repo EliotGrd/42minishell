@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 17:16:42 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/08 15:36:51 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/10 09:58:09 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,11 +111,8 @@ t_cmd	*parser(t_token *head)
 		{
 			if (c.current->next->type == PIPE || c.current->next->type == END)
 				(syntax_error(c.current->next, head, cmd_head), head = NULL, c.current = NULL, cmd_node = NULL, cmd_head = NULL);
-			if (cmd_head != NULL)
-			{
-				push_back_cmd(&cmd_head, cmd_node);
-				cmd_node = create_node_cmd(0);//securite a faire
-			}
+			push_back_cmd(&cmd_head, cmd_node);
+			cmd_node = create_node_cmd(0);//securite a faire
 			if (c.current != NULL)
 				cur_next(&c);
 		}

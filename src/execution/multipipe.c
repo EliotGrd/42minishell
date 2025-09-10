@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/08 16:27:42 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/10 10:07:52 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,9 @@ int	multipipe_intermediary_cmd(t_cmd *temp, t_minishell *minishell, pid_t *last)
 	if (*last == -1)
 		return (-1);
 	if (*last == 0)
+	{
 		execute_child(temp, minishell);
+	}
 	else
 	{
 		if (temp -> previous != NULL)
