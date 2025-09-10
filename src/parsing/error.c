@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 18:07:49 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/08 14:47:09 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/10 13:42:07 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	parsing_destructor(t_token *tok_head, t_cmd *cmd_head)
 		free_tokens(tok_head);
 	if (cmd_head)
 		destructor_cmd(&cmd_head);
-	cmd_head = NULL;
 }
 
 void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head)

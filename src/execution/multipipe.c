@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/10 11:31:07 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/10 13:15:01 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	multipipe_intermediary_cmd(t_cmd *temp, t_minishell *minishell, pid_t *last)
 		if (pipe(temp -> fd) == -1)
 			return (-1);
 	*last = fork();
-	//signal(SIGINT, sigint_handler2);//pour bien remettre le readline 
+	signal(SIGINT, sigint_handler2);//pour bien remettre le readline 
 	if (*last == -1)
 		return (-1);
 	if (*last == 0)
@@ -80,7 +80,7 @@ int	multipipe_intermediary_cmd(t_cmd *temp, t_minishell *minishell, pid_t *last)
 	{
 		if (temp -> previous != NULL)
 			close_fd_parent(temp);
-		ft_close_fd(&temp -> fd[1]);
+		//ft_close_fd(&temp -> fd[1]);//cette ligne serait inutile ? 
 	}
 	return (0);
 }

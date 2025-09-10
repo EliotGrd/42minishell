@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 17:16:42 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/10 09:58:09 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/10 14:20:42 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ t_cmd	*parser(t_token *head)
 
 	c.current = head;
 	cmd_node = create_node_cmd(0);//ici check de secu a faire
-	cmd_head = NULL; //cmd_node;
+	cmd_head = NULL;
 	while (c.current != NULL && c.current->type != END)
 	{
 		if (c.current->type == WORD)
@@ -104,13 +104,14 @@ t_cmd	*parser(t_token *head)
 				syntax_error(c.current, head, cmd_head);
 				c.current = NULL;//ajout de ma part
 				head = NULL;//ajout de ma part
+				free(cmd_node);//ajout de ma part
 				cmd_node = NULL;//ajout de ma part
 			}
 		}
 		else if (c.current->type == PIPE)
 		{
 			if (c.current->next->type == PIPE || c.current->next->type == END)
-				(syntax_error(c.current->next, head, cmd_head), head = NULL, c.current = NULL, cmd_node = NULL, cmd_head = NULL);
+				(syntax_error(c.current->next, head, cmd_head), head = NULL, c.current = NULL, free(cmd_node), cmd_node = NULL, cmd_head = NULL);
 			push_back_cmd(&cmd_head, cmd_node);
 			cmd_node = create_node_cmd(0);//securite a faire
 			if (c.current != NULL)
