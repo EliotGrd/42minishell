@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/10 10:54:31 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/10 12:59:37 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int	launch_builtin(char **str, t_minishell *minishell)
 		export(str, minishell);
 	else if (ft_strncmp(str[0], "exit", ft_strlen(str[0]) + 1) == 0)
 		ft_printf("exit\n");
+	else if (ft_strncmp(str[0], ":", ft_strlen(str[0]) + 1) == 0)
+		exit(0);
 	return (0);
 }
 
@@ -54,7 +56,8 @@ int	is_it_builtin(char *str)
 		|| ft_strncmp(str, "env", ft_strlen(str) + 1) == 0
 		|| ft_strncmp(str, "unset", ft_strlen(str) + 1) == 0
 		|| ft_strncmp(str, "exit", ft_strlen(str) + 1) == 0
-		|| ft_strncmp(str, "export", ft_strlen(str) + 1) == 0)
+		|| ft_strncmp(str, "export", ft_strlen(str) + 1) == 0
+		|| ft_strncmp(str, ":", ft_strlen(str) + 1) == 0)
 		return (1);
 	return (0);
 }
