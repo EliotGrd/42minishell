@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:49:45 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/11 09:24:18 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/11 11:48:49 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,12 +80,12 @@ int	execution_node(char **str, t_minishell *minishell)
 	char		**temp_env;
 	char		*binary;
 
+	if (is_it_builtin(str[0]))
+		(launch_builtin(str, minishell), destructor_env(&minishell -> top_env), destructor_cmd(&minishell -> top_cmd), exit(EXIT_SUCCESS));
 	temp_env = lst_to_tab_env(minishell -> top_env);
 	if (!temp_env && minishell -> top_env != NULL)
 		return (-1);//a voir comment gere pour bien quitter 
-	//mais dasn un fork donc surement exit()
-	if (is_it_builtin(str[0]))
-		(launch_builtin(str, minishell), exit(EXIT_SUCCESS));
+	//mais dasn un fork donc surement exit() avec la destructor
 	else if (ft_strchr(str[0], '/'))
 	{
 		if (check_accessible(str[0], temp_env) != 0)
