@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 14:22:48 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/05 13:59:29 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/11 09:39:54 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	set_up_env(t_env **top_env, char **envp)
 		if (!temp)
 			return (destructor_env(top_env), *top_env = NULL, 1);
 		node_env = create_node_env(temp[0], temp[1]);
-		free(temp);
+		free(temp); 
 		temp = NULL;
 		if (!node_env)
 			return (destructor_env(top_env), *top_env = NULL, 1);

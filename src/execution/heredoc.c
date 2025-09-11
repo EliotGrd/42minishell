@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:39:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/11 08:53:48 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/11 11:14:55 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ static int	update_status(int status, int fd[2],
  * @return
  */
 
-int	heredoc_input(t_redirect *temp, t_cmd *top_cmd)
+int	heredoc_input(t_redirect *temp, t_minishell *minishell)
 {
 	int			fd[2];
 	int			status;
@@ -141,13 +141,15 @@ int	heredoc_input(t_redirect *temp, t_cmd *top_cmd)
 		signal(SIGQUIT, sigquit_handler);
 		ft_close_fd(&fd[0]);
 		remove_echoctl();
-		read_gnl_heredoc(fd, temp, top_cmd);
+		read_gnl_heredoc(fd, temp, minishell -> top_cmd);
 		ft_close_fd(&fd[1]);
-		close_fd_heredocs2(temp, top_cmd);
+		close_fd_heredocs2(temp, minishell -> top_cmd);
+		destructor_env(&minishell -> top_env);
+		destructor_cmd(&minishell -> top_cmd);
 		exit(0);
 	}
 	(ft_close_fd(&fd[1]), waitpid(childpid, &status, 0));
-	if (update_status(status, fd, temp, top_cmd) == -1)
+	if (update_status(status, fd, temp, minishell -> top_cmd) == -1)
 		return (-1);
 	return (fd[0]);
 }
@@ -160,12 +162,12 @@ int	heredoc_input(t_redirect *temp, t_cmd *top_cmd)
  * @param top_cmd 
  * @return 
  */
-int	here_doc_management(t_cmd *top_cmd)
+int	here_doc_management(t_minishell *minishell)
 {
 	t_cmd		*temp_cmd;
 	t_redirect	*temp_redir;
 
-	temp_cmd = top_cmd;
+	temp_cmd = minishell -> top_cmd;
 	while (temp_cmd)
 	{
 		temp_redir = temp_cmd -> redir;
@@ -173,7 +175,7 @@ int	here_doc_management(t_cmd *top_cmd)
 		{
 			if (temp_redir -> type == HERE_DOC)
 			{
-				temp_redir -> fd = heredoc_input(temp_redir, top_cmd);
+				temp_redir -> fd = heredoc_input(temp_redir, minishell);
 				if (temp_redir -> fd == -1)
 					return (-1);
 			}

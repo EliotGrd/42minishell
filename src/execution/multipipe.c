@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/10 13:15:01 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/11 10:59:08 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,7 @@ int	multipipe_cmd(t_minishell *minishell)
 
 	n = 1;
 	temp = minishell -> top_cmd;
-	if (here_doc_management(minishell -> top_cmd) == -1)
+	if (here_doc_management(minishell) == -1)
 		return (-1);
 	while (temp)
 	{

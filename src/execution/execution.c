@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/10 12:59:37 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/11 10:58:38 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,7 @@ int	one_command_execve(t_minishell *minishell)
  */
 int	one_command(t_minishell *minishell)
 {
-	if (here_doc_management(minishell -> top_cmd) == -1)
+	if (here_doc_management(minishell) == -1)
 		return (-1);
 	if (redirection_verification(&minishell -> top_cmd) != -1)
 	{

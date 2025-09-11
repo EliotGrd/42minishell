@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 08:21:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/10 10:22:24 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/11 11:14:57 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,8 +150,8 @@ int	cd(char **argv, t_minishell *minishell);
 int	export(char **str, t_minishell *minishell);
 
 /*heredoc document*/
-int	here_doc_management(t_cmd *top_cmd);
-int	heredoc_input(t_redirect *temp, t_cmd *top_cmd);
+int	here_doc_management(t_minishell *minishell);
+int	heredoc_input(t_redirect *temp, t_minishell *minishell);
 
 /*signals*/
 void	sigint_handler(int sig);
