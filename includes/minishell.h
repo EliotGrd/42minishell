@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 08:21:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/11 11:14:57 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/11 14:00:16 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,7 @@ int	infile_redirection(t_redirect *redir, t_cmd **top_stack);
 int	outfile_append_redirection(t_redirect *redir, t_cmd **top_stack, int type);
 
 /*BUILTIN*/
-void	env(t_env *top_env);
+int	env(t_env *top_env, char **str);
 void	pwd(void);
 void	unset(t_minishell *minishell, char *key);
 int	my_echo(char **argv);

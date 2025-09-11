@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:49:45 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/11 11:48:49 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/11 14:12:40 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	execution_node(char **str, t_minishell *minishell)
 	char		*binary;
 
 	if (is_it_builtin(str[0]))
-		(launch_builtin(str, minishell), destructor_env(&minishell -> top_env), destructor_cmd(&minishell -> top_cmd), exit(EXIT_SUCCESS));
+		(launch_builtin(str, minishell), destructor_env(&minishell -> top_env), destructor_cmd(&minishell -> top_cmd), exit(0));
 	temp_env = lst_to_tab_env(minishell -> top_env);
 	if (!temp_env && minishell -> top_env != NULL)
 		return (-1);//a voir comment gere pour bien quitter 
