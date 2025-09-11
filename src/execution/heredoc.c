@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:39:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/10 13:17:37 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/11 08:53:48 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,10 +99,13 @@ static int	update_status(int status, int fd[2],
 			g_exit_code = 130;
 		else if (WEXITSTATUS(status) == 131)
 			g_exit_code = 131;
-		ft_close_fd(&fd[0]);
-		ft_close_fd(&fd[1]);
-		close_fd_heredocs2(temp, top_cmd);
-		return (-1);
+		if (g_exit_code == 130 || g_exit_code == 131)
+		{
+			ft_close_fd(&fd[0]);
+			ft_close_fd(&fd[1]);
+			close_fd_heredocs2(temp, top_cmd);
+			return (-1);
+		}
 	}
 	return (0);
 }
