@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/11 14:04:42 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/11 15:30:39 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,21 @@
 int	launch_builtin(char **str, t_minishell *minishell)
 {
 	if (ft_strncmp(str[0], "echo", ft_strlen(str[0]) + 1) == 0)
-		my_echo(++str);
+		return (my_echo(++str));
 	else if (ft_strncmp(str[0], "pwd", ft_strlen(str[0]) + 1) == 0)
-		pwd();
+		return (pwd());
 	else if (ft_strncmp(str[0], "cd", ft_strlen(str[0]) + 1) == 0)
-		cd(str, minishell);
+		return(cd(str, minishell));
 	else if (ft_strncmp(str[0], "env", ft_strlen(str[0]) + 1) == 0)
 		return(env(minishell -> top_env, str));
 	else if (ft_strncmp(str[0], "unset", ft_strlen(str[0]) + 1) == 0)
-		unset(minishell, str[1]);
+		return(unset(minishell, str[1]));
 	else if (ft_strncmp(str[0], "export", ft_strlen(str[0]) + 1) == 0)
-		export(str, minishell);
+		return(export(str, minishell));
 	else if (ft_strncmp(str[0], "exit", ft_strlen(str[0]) + 1) == 0)
 		ft_printf("exit\n");
 	else if (ft_strncmp(str[0], ":", ft_strlen(str[0]) + 1) == 0)
-		exit(0);
+		exit(0);//exit ? mais si c'est pas un child process ?
 	return (0);
 }
 
@@ -137,7 +137,7 @@ int	one_command(t_minishell *minishell)
 		if (minishell -> top_cmd -> args == NULL)
 			;
 		else if (is_it_builtin_nonfork(minishell ->top_cmd -> args[0]))
-			launch_builtin(minishell -> top_cmd -> args, minishell);
+			g_exit_code = launch_builtin(minishell -> top_cmd -> args, minishell);
 		else
 			one_command_execve(minishell);
 	}

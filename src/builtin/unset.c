@@ -6,19 +6,19 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 14:18:51 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/06 09:58:28 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/11 15:30:56 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void	unset(t_minishell *minishell, char *key)
+int	unset(t_minishell *minishell, char *key)
 {
 	t_env	*temp;
 
 	temp = minishell -> top_env;
 	if (key == NULL)//securite add
-		return ;
+		return (0);
 	while (temp)
 	{
 		if (ft_strncmp(key, temp -> key, ft_strlen(key) + 1) == 0)
@@ -26,7 +26,7 @@ void	unset(t_minishell *minishell, char *key)
 		temp = temp -> next;
 	}
 	if (temp == NULL)
-		return ;
+		return (0);
 	if (temp -> previous != NULL)
 		temp -> previous -> next = temp -> next;
 	else
@@ -36,4 +36,5 @@ void	unset(t_minishell *minishell, char *key)
 	free(temp -> key);
 	free(temp -> value);
 	free(temp);
+	return (0);
 }
