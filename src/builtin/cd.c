@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:08:46 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/11 14:50:56 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/12 08:41:58 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,22 @@ static void	update_pwd(char *key, t_minishell *minishell)
 	temp -> value = buf;
 }
 
+static int	len(char **argv)
+{
+	int	i;
+
+	i = 0;
+	while (argv[i])
+		i++;
+	return (i);
+}
+
 int	cd(char **argv, t_minishell *minishell)
 {
 	char	*home;
-	
+
+	if (len(argv + 1) > 1)
+		return (ft_putstr_fd("Too much arguments\n", 2), 1);
 	update_pwd("OLDPWD", minishell);
 	if (argv[1] == NULL)
 	{

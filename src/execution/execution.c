@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/11 15:30:39 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/12 08:22:57 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	launch_builtin(char **str, t_minishell *minishell)
 	else if (ft_strncmp(str[0], "exit", ft_strlen(str[0]) + 1) == 0)
 		ft_printf("exit\n");
 	else if (ft_strncmp(str[0], ":", ft_strlen(str[0]) + 1) == 0)
-		exit(0);//exit ? mais si c'est pas un child process ?
+		return(0);
 	return (0);
 }
 
