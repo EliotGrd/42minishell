@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 14:07:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/03 16:56:15 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/12 11:19:26 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	my_echo(char **argv)
 
 	i = 0;
 	n = 0;
-	if (ft_strncmp(argv[0], "-n", ft_strlen(argv[0]) + 1) == 0)
+	if (ft_strcmp(argv[0], "-n") == 0)
 	{
 		i++;
 		n++;
@@ -31,7 +31,7 @@ int	my_echo(char **argv)
 			write(1, " ", 1);
 		i++;
 	}
-	if (!n)
+	if (n == 0)
 		write(1, "\n", 1);
 	return (0);
 }
