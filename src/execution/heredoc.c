@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:39:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/11 13:44:32 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/12 13:34:13 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	close_fd_heredocs2(t_redirect *current, t_cmd *top_stack)
  * @param temp 
  * @param top_cmd 
  */
-static void	read_gnl_heredoc(int fd[2], t_redirect *temp, t_cmd *top_cmd)
+static void	read_gnl_heredoc(int fd[2], t_redirect *temp, t_cmd *top_cmd, t_minishell *minishell)
 {
 	char	*line;
 
@@ -61,6 +61,8 @@ static void	read_gnl_heredoc(int fd[2], t_redirect *temp, t_cmd *top_cmd)
 		{
 			(ft_close_fd(&fd[0]), ft_close_fd(&fd[1]));
 			close_fd_heredocs2(temp, top_cmd);
+			destructor_env(&minishell -> top_env);
+			destructor_cmd(&minishell -> top_cmd);
 			exit(g_exit_code);
 		}
 		if (!line)
@@ -141,7 +143,7 @@ int	heredoc_input(t_redirect *temp, t_minishell *minishell)
 		signal(SIGQUIT, sigquit_handler);
 		ft_close_fd(&fd[0]);
 		remove_echoctl();
-		read_gnl_heredoc(fd, temp, minishell -> top_cmd);
+		read_gnl_heredoc(fd, temp, minishell -> top_cmd, minishell);
 		ft_close_fd(&fd[1]);
 		close_fd_heredocs2(temp, minishell -> top_cmd);
 		destructor_env(&minishell -> top_env);
