@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:08:46 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/12 14:15:38 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/13 09:25:32 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	update_pwd(char *key, t_minishell *minishell)
 	temp -> value = buf;
 }
 
-static int	len(char **argv)
+int	len(char **argv)
 {
 	int	i;
 

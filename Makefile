@@ -35,7 +35,9 @@ SRC = \
 	  builtin/my_echo.c \
 	  builtin/pwd.c \
 	  builtin/cd.c \
-	  builtin/export.c
+	  builtin/export.c \
+	  builtin/exit.c
+
 SRCS = $(addprefix $(SRC_PATH), $(SRC))
 OBJ = $(addprefix $(OBJ_PATH), $(SRC:.c=.o))
 DPD = $(addprefix $(OBJ_PATH), $(SRC:.c=.d))

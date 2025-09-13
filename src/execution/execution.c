@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/12 08:22:57 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/13 10:06:48 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	launch_builtin(char **str, t_minishell *minishell)
 	else if (ft_strncmp(str[0], "export", ft_strlen(str[0]) + 1) == 0)
 		return(export(str, minishell));
 	else if (ft_strncmp(str[0], "exit", ft_strlen(str[0]) + 1) == 0)
-		ft_printf("exit\n");
+		my_exit(++str, minishell);
 	else if (ft_strncmp(str[0], ":", ft_strlen(str[0]) + 1) == 0)
 		return(0);
 	return (0);
