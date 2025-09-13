@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/13 10:06:48 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/13 13:48:50 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,6 +143,7 @@ int	one_command(t_minishell *minishell)
 	}
 	else
 		close_redir_temp(minishell -> top_cmd);
+	//ici la mise a jour du $_ car c'est sur que je suis arrive au bout de la cmd
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/11 10:59:08 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/13 16:00:20 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,5 +156,6 @@ int	multipipe_cmd(t_minishell *minishell)
 		}
 		n = waitpid(-1, &status, 0);
 	}
+	//ici la mise a jour de $_ car je suis sur que je suis arrive au bout
 	return (1);
 }

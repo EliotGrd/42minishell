@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:39:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/13 10:04:39 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/13 16:00:10 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,60 @@ void	close_fd_heredocs2(t_redirect *current, t_cmd *top_stack)
 		tmp = tmp -> next;
 	}
 }
+
+int	write_to_heredoc(int *fd, char *line, t_minishell *minishell)
+{
+	t_env	*temp;
+	char	*ptr;
+	char	*key;
+
+	if (ft_strchr(line, '$') == NULL)
+		write(*fd, line, ft_strlen(line));
+	else
+	{
+		while (*line)
+		{
+			while (*line && *line != '$')
+			{
+				write(*fd, line, 1);
+				line++;
+			}
+			if (ft_isalnum(*(line + 1)) || *(line + 1) == '_')
+			{
+				ptr = ++line;
+				while (*ptr && (ft_isalnum(*ptr) || *ptr == '_'))
+					ptr++;
+				key = ft_strndup(line, ptr - line);
+				if (!key)
+					return (1);//a voir comment bien quitter dans ce cas la
+				temp = research_node_env(minishell -> top_env, key);
+				free(key);
+				if (temp != NULL)
+					write(*fd, temp -> value, ft_strlen(temp -> value));
+				line = ptr;
+			}
+			else
+			{
+				write(*fd, line, 1);
+				line++;
+			}
+
+
+
+
+			//line++;
+		}
+	}
+	return (0);
+
+
+
+
+
+	free(line);
+}
+
+
 
 /**
  * @brief function which allow me to do the loop 
@@ -76,7 +130,9 @@ static void	read_gnl_heredoc(int fd[2], t_redirect *temp, t_cmd *top_cmd, t_mini
 			(free(line), get_next_line(-1));
 			break ;
 		}
-		(write(fd[1], line, ft_strlen(line)), free(line));
+		//ou ici je dois expand possible au moment d'ecrire ca va etre plus facile a exporter
+		write_to_heredoc(&fd[1], line, minishell);
+		//(write(fd[1], line, ft_strlen(line)), free(line));
 	}
 }
 
