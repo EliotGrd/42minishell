@@ -6,11 +6,23 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 14:07:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/12 11:19:26 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/13 11:07:08 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+static int	check_option_echo(char *str)
+{
+	++str;
+	while(*str)
+	{
+		if (*str != 'n' && *str != 'e')
+			return (0);
+		str++;
+	}
+	return (1);
+}
 
 int	my_echo(char **argv)
 {
@@ -19,10 +31,10 @@ int	my_echo(char **argv)
 
 	i = 0;
 	n = 0;
-	if (ft_strcmp(argv[0], "-n") == 0)
+	while (argv[i][0] == '-' && check_option_echo(argv[i]))
 	{
+		n = 1;
 		i++;
-		n++;
 	}
 	while (argv[i])
 	{
