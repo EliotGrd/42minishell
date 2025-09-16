@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:39:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/13 16:00:10 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/16 09:16:20 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,6 +132,7 @@ static void	read_gnl_heredoc(int fd[2], t_redirect *temp, t_cmd *top_cmd, t_mini
 		}
 		//ou ici je dois expand possible au moment d'ecrire ca va etre plus facile a exporter
 		write_to_heredoc(&fd[1], line, minishell);
+		free(line);// que je faisais dans mon ancienne version (ligne du dessous)
 		//(write(fd[1], line, ft_strlen(line)), free(line));
 	}
 }
