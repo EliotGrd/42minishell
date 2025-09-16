@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:39:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/16 09:16:20 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/16 14:13:52 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	write_to_heredoc(int *fd, char *line, t_minishell *minishell)
 				write(*fd, line, 1);
 				line++;
 			}
-			if (ft_isalnum(*(line + 1)) || *(line + 1) == '_')
+			if (*line && *(line + 1) && (ft_isalnum(*(line + 1)) || *(line + 1) == '_'))
 			{
 				ptr = ++line;
 				while (*ptr && (ft_isalnum(*ptr) || *ptr == '_'))
@@ -70,15 +70,11 @@ int	write_to_heredoc(int *fd, char *line, t_minishell *minishell)
 					write(*fd, temp -> value, ft_strlen(temp -> value));
 				line = ptr;
 			}
-			else
+			else if (*line)
 			{
 				write(*fd, line, 1);
 				line++;
 			}
-
-
-
-
 			//line++;
 		}
 	}
