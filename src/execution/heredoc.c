@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:39:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/16 14:13:52 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/16 14:20:53 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,19 +75,10 @@ int	write_to_heredoc(int *fd, char *line, t_minishell *minishell)
 				write(*fd, line, 1);
 				line++;
 			}
-			//line++;
 		}
 	}
 	return (0);
-
-
-
-
-
-	free(line);
 }
-
-
 
 /**
  * @brief function which allow me to do the loop 
@@ -128,8 +119,7 @@ static void	read_gnl_heredoc(int fd[2], t_redirect *temp, t_cmd *top_cmd, t_mini
 		}
 		//ou ici je dois expand possible au moment d'ecrire ca va etre plus facile a exporter
 		write_to_heredoc(&fd[1], line, minishell);
-		free(line);// que je faisais dans mon ancienne version (ligne du dessous)
-		//(write(fd[1], line, ft_strlen(line)), free(line));
+		free(line);//peut etre le mettre dans write to heredoc pour la norme
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/16 12:45:58 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/16 15:07:13 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,6 +148,41 @@ int	one_command(t_minishell *minishell)
 }
 
 /**
+ * @brief just a function to update the _ (underscore env variable)
+ * not really necessary in minishell but in doubt i set it up 
+ * because it was kind of easy
+ * @param minishell 
+ * @return 
+ */
+int	update_underscore(t_minishell *minishell)
+{
+	int	i;
+	t_env	*temp;
+	char	*str;
+	char	**argv;
+
+	i = 0;
+	argv = minishell -> top_cmd -> args;
+	while (argv[i])
+	{
+		if (argv[i + 1] != NULL)
+			i++;
+		else
+			break ;
+	}
+	temp = research_node_env(minishell -> top_env, "_");
+	if (temp != NULL)
+	{
+		str = ft_strdup(argv[i]);
+		if (!str)
+			return (1);
+		free(temp -> value);
+		temp -> value = str;
+	}
+	return (0);
+}
+
+/**
  * @brief first function of the execution part when we have something to do
  * we have to deal with two cases ; if we have only one command and more 
  * why ? because in the case of one command + with 
@@ -164,4 +199,6 @@ void	executor(t_minishell *minishell)
 		one_command(minishell);
 	else
 		multipipe_cmd(minishell);
+	if (g_exit_code != 130)
+		update_underscore(minishell);
 }
