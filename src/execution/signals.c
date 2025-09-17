@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 12:16:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/10 12:46:42 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/17 08:20:13 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	sigint_handler(int sig)
 	rl_replace_line("", 0);
 	rl_on_new_line();
 	rl_redisplay();
+	g_exit_code = 130;
 }
 
 /**
