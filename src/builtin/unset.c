@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 14:18:51 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/11 15:30:56 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/17 15:15:50 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,17 @@ int	unset(t_minishell *minishell, char *key)
 	free(temp);
 	return (0);
 }
+
+int	unset_call(t_minishell *minishell, char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		unset(minishell, str[i]);
+		i++;
+	}
+	return (0);
+}
+

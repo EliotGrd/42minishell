@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 08:21:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/13 09:48:02 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/17 15:15:41 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,6 +149,7 @@ int	my_echo(char **argv);
 int	cd(char **argv, t_minishell *minishell);
 int	export(char **str, t_minishell *minishell);
 int	my_exit(char **argv, t_minishell *minishell);
+int	unset_call(t_minishell *minishell, char **str);
 
 /*heredoc document*/
 int	here_doc_management(t_minishell *minishell);
