@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 09:33:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/06 16:28:55 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/17 14:23:25 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	export(char **str, t_minishell *minishell)
 		return (1);
 	extract_key = ft_strtok(str[1], "=");
 	extract_value = ft_strtok(NULL, "=");//c'est ca qu'il faut expand et de-quotes
+	if (extract_key == NULL)
+		return (1);
 	ft_printf("extract key %s\nextract value %s\n", extract_key, extract_value);//temp
 	temporary = research_node_env(minishell -> top_env, str[1]);
 	if (temporary == NULL)//il a pas trouve faut cree un noeud et l'add

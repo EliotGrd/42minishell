@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:08:46 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/13 09:25:32 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/17 14:28:36 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,20 @@ int	cd(char **argv, t_minishell *minishell)
 			return (1);
 		}
 		if (chdir(home) == -1)
-
+		{
 			perror("CHAT$ ");
+			return (1);
+		}
 		free(home);
 		return (1);
 	}
 	else
 	{
 		if (chdir(argv[1]) == -1)
+		{
 			perror("CHAT$ ");
+			return (1);
+		}
 	}
 	update_pwd("PWD", minishell);
 	return (0);
