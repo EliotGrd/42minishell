@@ -71,6 +71,8 @@ void	lexing_error(int errcode, t_token *head);
 t_cmd	*parser(t_token *head);
 /* Expand */
 void	expand_manager(t_cmd *head, t_minishell *msh);
+int is_valid_for_key(char c);
+int	is_key_valid(char *str);
 // will see
 
 /* AST to Linked List */

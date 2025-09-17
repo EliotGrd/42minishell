@@ -12,6 +12,31 @@
 
 #include "../../includes/parsing.h"
 
+int is_valid_for_key(char c)
+{
+	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90) || (c >= 48 && c <= 57) || c == 95)
+		return (1);
+	return (0);
+}
+
+int	is_key_valid(char *str)
+{
+	int i;
+
+	i = 0;
+	if (!str)
+		return (0);
+	if (str[0] >= 48 && str[0] <= 57)
+		return (0);
+	while (str[i] && str[i] != '=')
+	{
+		if (!is_valid_for_key(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 void	handle_quotes(t_lexer *lex, t_str_buf *sb, t_expand *exp)
 {
 	if (exp->inquotes == 0)
@@ -59,17 +84,23 @@ void	handle_dollar(t_lexer *lex, t_str_buf *sb, t_expand *exp, t_minishell *msh)
 		if (exp->qstate != 1)
 		{
 			advance(lex, 1);
-			while (lex->c != ' ' && lex->c != '\'' && lex->c != '"' && lex->c)
+			//while (lex->c != ' ' && lex->c != '\'' && lex->c != '"' && lex->c)
+			if (lex->c >= 48 && lex->c <= 57)
+				(str_buf_putc(&sb_env, lex->c), advance(lex, 1));
+			else
 			{
-				str_buf_putc(&sb_env, lex->c);
-				advance(lex, 1);
+				while (lex->c && is_valid_for_key(lex->c))
+				{
+					str_buf_putc(&sb_env, lex->c);
+					advance(lex, 1);
+				}
 			}
 			temp = str_buf_end(&sb_env);
 			expand = research_key_env(msh->top_env, temp);//erreur detecte ici car il peut y avoir un NULL du coup segfault
 			if (!expand)//correction de l'erreur
 				return (ft_free((void **)&temp));
 			str_buf_puts(sb, expand);
-			advance(lex, 1);
+			//advance(lex, 1);
 			ft_free((void **)&temp);
 			ft_free((void **)&expand);
 		}
