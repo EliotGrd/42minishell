@@ -45,7 +45,7 @@ int	parse_redir(t_tokcursor *c, t_cmd *cur_cmd)
 		tail->next = create_node_redir(ft_strdup(c->current->next->lexeme),
 				c->current->type);
 	}
-	cur_next(c);//temp pour comprendre l'erreur
+	//cur_next(c);//temp pour comprendre l'erreur
 	cur_next(c);
 	return (1);
 }
@@ -107,6 +107,7 @@ t_cmd	*parser(t_token *head)
 				free(cmd_node);//ajout de ma part
 				cmd_node = NULL;//ajout de ma part
 			}
+			cur_next(&c);
 		}
 		else if (c.current->type == PIPE)
 		{
