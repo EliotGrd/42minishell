@@ -68,6 +68,8 @@ void	handle_dollar(t_lexer *lex, t_str_buf *sb, t_expand *exp, t_minishell *msh)
 	char *temp;
 	char *expand;
 
+	if (!is_valid_for_key(peek(lex)) && peek(lex) != '?' && peek(lex) != '\'' && peek(lex) != '"')
+		return (str_buf_putc(sb, lex->c), advance(lex, 1));
 	str_buf_init(&sb_env);
 	if (peek(lex) == '?')
 	{
@@ -98,10 +100,10 @@ void	handle_dollar(t_lexer *lex, t_str_buf *sb, t_expand *exp, t_minishell *msh)
 			temp = str_buf_end(&sb_env);
 			expand = research_key_env(msh->top_env, temp);//erreur detecte ici car il peut y avoir un NULL du coup segfault
 			if (!expand)//correction de l'erreur
-				return (ft_free((void **)&temp));
+				return (ft_free((void **)&temp));//ici benjamin a bidouille donc faire attention a si ca pose pas de pb quand expand ressort NULL
+			//ft_free((void **)&temp);
 			str_buf_puts(sb, expand);
 			//advance(lex, 1);
-			ft_free((void **)&temp);
 			ft_free((void **)&expand);
 		}
 		else
