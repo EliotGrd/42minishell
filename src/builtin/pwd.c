@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 08:22:12 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/12 14:50:50 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/18 17:16:40 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ int	pwd(void)
 		buf = malloc(i);
 		if (!buf)
 			return (1);
-		getcwd(buf, i);
 	}
-	ft_printf("%s\n", buf);
+	if (buf && getcwd(buf, i) != NULL)
+		ft_printf("%s\n", buf);
 	free(buf);
 	return (0);
 }
