@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/17 15:15:59 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/18 08:08:35 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,6 +163,8 @@ int	update_underscore(t_minishell *minishell)
 
 	i = 0;
 	argv = minishell -> top_cmd -> args;
+	if (minishell -> top_cmd -> args == NULL)
+		return (1);
 	while (argv[i])
 	{
 		if (argv[i + 1] != NULL)
