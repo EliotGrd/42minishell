@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 09:33:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/17 15:41:15 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/18 15:15:22 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,39 +23,88 @@ t_env *research_node_env(t_env *top_env, char *search)
 	return (NULL);
 }
 
-int	export(char **str, t_minishell *minishell)
+int	check_validity_key(char *key)
+{
+	if (ft_isalpha(key[0]) != 1)
+		return (1);
+	key++;
+	while (*key)
+	{
+		if (ft_isalnum(*key) == 0 && *key != '_')
+			return (1);
+		key++;
+	}
+	return (0);
+}
+
+int	export_env_update(t_minishell *minishell, char *extract_key, char *extract_value)
 {
 	t_env	*temporary;
-	char	*extract_key;
-	char	*extract_value;
 
-	if (str[1] == NULL || ft_strchr(str[1], '=') == NULL)
-		return (1);
-	extract_key = ft_strtok(str[1], "=");
-	extract_value = ft_strtok(NULL, "=");//c'est ca qu'il faut expand et de-quotes
-	if (extract_key == NULL)
-		return (1);
-	ft_printf("extract key %s\nextract value %s\n", extract_key, extract_value);//temp
-	temporary = research_node_env(minishell -> top_env, str[1]);
-	if (temporary == NULL)//il a pas trouve faut cree un noeud et l'add
+	temporary = research_node_env(minishell -> top_env, extract_key);
+	if (temporary == NULL)
 	{
 		extract_key = ft_strdup(extract_key);
-		if (extract_value == NULL)
+		if (extract_value == NULL)//la ca va peut etre \0 plutot
 			extract_value = ft_strdup("");
 		else
 			extract_value = ft_strdup(extract_value);
-		//securite des 2 en meme temps avec ft_free a ajouter comme ca serat mieux
+		if (extract_key == NULL || extract_value == NULL)
+			return (ft_free((void **)&extract_key), ft_free((void **)&extract_value), 1);
 		temporary = create_node_env(extract_key, extract_value);
-		//safety surmement ici et bien tester avec un env vide mais normalement c'est good
+		if (temporary == NULL)
+			return (ft_free((void **)&extract_key), ft_free((void **)&extract_value), 1);
 		push_back_env(&minishell -> top_env, temporary);
 	}
-	else //il y a trouve un noeud il faut l'update
+	else
 	{
 		extract_value = ft_strdup(extract_value);
- 		//safety a faire du ft_strdup => est ce qu'on termine le terminal ? ou juste j'ajoute "" ?
+		if (!extract_value)
+			return (1);
 		free(temporary -> value);
 		temporary -> value = extract_value;
 	}
 	return (0);
 }
 
+int	export(t_minishell *minishell, char *str)
+{
+	char	*extract_key;
+	char	*extract_value;
+
+	if (ft_strlen(str) == 1)
+	{
+		if (ft_isalpha(*str) == 0 && *str != '_')
+			return (ft_putstr_fd("invalid identifier\n", 2), 1);
+	}
+	else if (ft_strchr(str, '='))
+	{
+		extract_key = ft_strtok(str, "=");
+		extract_value = &str[ft_strlen(extract_key) + 1];//ou +2 ?
+		if (check_validity_key(extract_key))
+			return (ft_putstr_fd("invalid identifier\n", 2), 1);
+		if (export_env_update(minishell, extract_key, extract_value))
+			return (ft_putstr_fd("error env\n", 2), 1);
+	}
+	else
+	{
+		if (check_validity_key(str))
+			return (ft_putstr_fd("invalid identifier\n", 2), 1);
+	}
+	return (0);
+}
+
+
+int	export_call(t_minishell *minishell, char **str)
+{
+	int	exitcode;
+	
+	exitcode = 0;
+	while (*str != NULL)
+	{
+		if (export(minishell, *str))
+			exitcode = 1;
+		str++;
+	}
+	return (exitcode);
+}
