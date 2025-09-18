@@ -143,10 +143,10 @@ void	expand_manager(t_cmd *head, t_minishell *msh)
 	t_redirect *cur_redir;
 	int	i;
 
-	i = 0;
 	cur = head;
 	while (cur)
 	{
+		i = 0;
 		while (cur -> args && cur->args[i])
 		{
 			cur->args[i] = expand_word(cur->args[i], msh);

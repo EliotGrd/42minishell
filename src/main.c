@@ -48,7 +48,7 @@ void	debug_cmd(t_minishell *msh)
 		}
 		if (cur->redir)
 		{
-			while (cur->redir->next)
+			while (cur->redir)
 			{
 				redir = cur->redir;
 				printf("[REDIR] : %s %d\n", redir->file, redir->type);
