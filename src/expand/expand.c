@@ -104,6 +104,7 @@ void	handle_dollar(t_lexer *lex, t_str_buf *sb, t_expand *exp, t_minishell *msh)
 			//ft_free((void **)&temp);
 			str_buf_puts(sb, expand);
 			//advance(lex, 1);
+			ft_free((void **)&temp);
 			ft_free((void **)&expand);
 		}
 		else
