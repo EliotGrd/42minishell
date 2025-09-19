@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 09:33:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/18 15:15:22 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/19 08:15:35 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ int	export(t_minishell *minishell, char *str)
 	char	*extract_key;
 	char	*extract_value;
 
+	if (str[0] == '=')
+		return (ft_putstr_fd("invalid identifier\n", 2), 1);
 	if (ft_strlen(str) == 1)
 	{
 		if (ft_isalpha(*str) == 0 && *str != '_')
