@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 08:45:55 by bsuger            #+#    #+#             */
-/*   Updated: 2025/08/30 12:15:24 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/20 12:05:28 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	pop_redir(t_redirect **top)
 	if (*top)
 	{
 		temp = *top;
+		ft_close_fd(&temp -> fd);
 		(*top) = (*top)-> next;
 		ft_free((void **)&temp -> file);
 		ft_free((void **)&temp);

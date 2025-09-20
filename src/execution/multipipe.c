@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/17 16:44:24 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/20 16:09:01 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,15 @@ void	close_fd_heredocs(t_cmd *top_stack, t_cmd *current)
 
 void	execute_child(t_cmd *temp, t_minishell *minishell)
 {
-	signal(SIGQUIT, sigquit_handler);//pour biensigquit
-	command_redirect(temp);
+	signal(SIGQUIT, sigquit_handler);
+	if (command_redirect(temp) == 0)
+	{
+		close_fd_heredocs(minishell -> top_cmd, temp);
+		execution_node(temp-> args, minishell);
+	}
 	close_fd_heredocs(minishell -> top_cmd, temp);
-	execution_node(temp-> args, minishell);
-	destructor_env(&minishell -> top_env);//pas sur que ca soit necessaire
-	destructor_cmd(&minishell -> top_cmd);//mais le mettre ne casse rien
+	destructor_env(&minishell -> top_env);
+	destructor_cmd(&minishell -> top_cmd);
 	exit(EXIT_FAILURE);
 }
 
@@ -71,7 +74,7 @@ int	multipipe_intermediary_cmd(t_cmd *temp, t_minishell *minishell, pid_t *last)
 		if (pipe(temp -> fd) == -1)
 			return (-1);
 	*last = fork();
-	signal(SIGINT, sigint_handler2);//pour bien remettre le readline 
+	signal(SIGINT, sigint_handler2); 
 	if (*last == -1)
 		return (-1);
 	if (*last == 0)
@@ -79,8 +82,7 @@ int	multipipe_intermediary_cmd(t_cmd *temp, t_minishell *minishell, pid_t *last)
 	else
 	{
 		if (temp -> previous != NULL)
-			close_fd_parent(temp);
-		//ft_close_fd(&temp -> fd[1]);//cette ligne serait inutile ? 
+			close_fd_parent(temp); 
 	}
 	return (0);
 }
@@ -135,19 +137,20 @@ int	multipipe_cmd(t_minishell *minishell)
 	{
 		if (redirection_verification(&temp) != -1)
 		{
+			g_exit_code = 0;
 			if (temp -> args == NULL)//pour gere le cas ou j'ai pas d'args
 				;
 			else if (multipipe_intermediary_cmd(temp, minishell, &last) == -1)
-				exit(EXIT_FAILURE);//voir ce qu'il faut faire dans ce cas
+				exit(EXIT_FAILURE);//voir ce qu'il faut faire dans ce cas surement
 		}
 		else
-			close_redir_temp(temp);
+			(close_redir_temp(temp), g_exit_code = 1);
 		(ft_close_fd(&temp -> fd_in), ft_close_fd(&temp -> fd_out));
 		temp = temp -> next;
 	}
 	while (n > 0)//surement ca a exporte pour norme
 	{
-		if (n == last)
+		if (n == last && g_exit_code == 0)
 		{
 			if (WIFEXITED(status))
 				g_exit_code = WEXITSTATUS(status);
@@ -156,6 +159,5 @@ int	multipipe_cmd(t_minishell *minishell)
 		}
 		n = waitpid(-1, &status, 0);
 	}
-	//ici la mise a jour de $_ car je suis sur que je suis arrive au bout
 	return (1);
 }

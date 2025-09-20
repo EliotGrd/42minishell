@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 08:21:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/18 11:16:50 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/20 16:17:28 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,7 @@ int	execution_node(char **str, t_minishell *minishell);
 void	execute_child(t_cmd *emp, t_minishell *minishell);
 int	multipipe_cmd(t_minishell *minishell);
 void	close_fd_parent(t_cmd *top_stack);
-void	command_redirect(t_cmd *top_stack);
+int	command_redirect(t_cmd *top_stack);
 int	launch_builtin(char **str, t_minishell *minishell);
 int	is_it_builtin(char *str);
 int	one_command(t_minishell *minishell);

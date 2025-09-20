@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:39:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/16 16:20:21 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/20 13:50:19 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int	write_to_heredoc(int *fd, char *line, t_minishell *minishell)
  * @param temp 
  * @param top_cmd 
  */
-static void	read_gnl_heredoc(int fd[2], t_redirect *temp, t_cmd *top_cmd, t_minishell *minishell)
+static void	read_gnl_heredoc(t_redirect *temp, t_cmd *top_cmd, t_minishell *minishell, int op)
 {
 	char	*line;
 
@@ -100,7 +100,7 @@ static void	read_gnl_heredoc(int fd[2], t_redirect *temp, t_cmd *top_cmd, t_mini
 		line = get_next_line(STDIN_FILENO);
 		if (g_exit_code == 130 || g_exit_code == 131)
 		{
-			(ft_close_fd(&fd[0]), ft_close_fd(&fd[1]));
+			ft_close_fd(&op);
 			close_fd_heredocs2(temp, top_cmd);
 			destructor_env(&minishell -> top_env);
 			destructor_cmd(&minishell -> top_cmd);
@@ -117,9 +117,8 @@ static void	read_gnl_heredoc(int fd[2], t_redirect *temp, t_cmd *top_cmd, t_mini
 			(free(line), get_next_line(-1));
 			break ;
 		}
-		//ou ici je dois expand possible au moment d'ecrire ca va etre plus facile a exporter
-		write_to_heredoc(&fd[1], line, minishell);
-		free(line);//peut etre le mettre dans write to heredoc pour la norme
+		write_to_heredoc(&op, line, minishell);
+		free(line);
 	}
 }
 
@@ -135,8 +134,7 @@ static void	read_gnl_heredoc(int fd[2], t_redirect *temp, t_cmd *top_cmd, t_mini
  * @param top_cmd 
  * @return 
  */
-static int	update_status(int status, int fd[2],
-			t_redirect *temp, t_cmd *top_cmd)
+static int	update_status(int status, t_redirect *temp, t_cmd *top_cmd)
 {
 	if (WIFEXITED(status))
 	{
@@ -146,8 +144,6 @@ static int	update_status(int status, int fd[2],
 			g_exit_code = 131;
 		if (g_exit_code == 130 || g_exit_code == 131)
 		{
-			ft_close_fd(&fd[0]);
-			ft_close_fd(&fd[1]);
 			close_fd_heredocs2(temp, top_cmd);
 			return (-1);
 		}
@@ -169,12 +165,12 @@ static int	update_status(int status, int fd[2],
 
 int	heredoc_input(t_redirect *temp, t_minishell *minishell)
 {
-	int			fd[2];
 	int			status;
 	pid_t		childpid;
 
 	g_exit_code = 0;
-	if (pipe(fd) == -1)
+	int op = open("./test.txt",O_CREAT | O_WRONLY | O_TRUNC, 0644);
+	if (op < 0)
 		return (-1);
 	childpid = fork();
 	if (childpid == -1)
@@ -184,19 +180,22 @@ int	heredoc_input(t_redirect *temp, t_minishell *minishell)
 	{
 		signal(SIGINT, sigint_heredoc);
 		signal(SIGQUIT, sigquit_handler);
-		ft_close_fd(&fd[0]);
 		remove_echoctl();
-		read_gnl_heredoc(fd, temp, minishell -> top_cmd, minishell);
-		ft_close_fd(&fd[1]);
+		read_gnl_heredoc(temp, minishell -> top_cmd, minishell, op);
+		ft_close_fd(&op);
 		close_fd_heredocs2(temp, minishell -> top_cmd);
-		destructor_env(&minishell -> top_env);
-		destructor_cmd(&minishell -> top_cmd);
+		(destructor_env(&minishell -> top_env), destructor_cmd(&minishell -> top_cmd));
 		exit(0);
 	}
-	(ft_close_fd(&fd[1]), waitpid(childpid, &status, 0));
-	if (update_status(status, fd, temp, minishell -> top_cmd) == -1)
-		return (-1);
-	return (fd[0]);
+	waitpid(childpid, &status, 0);
+	if (update_status(status, temp, minishell -> top_cmd) == -1)
+		return (ft_close_fd(&op), unlink("./test.txt"), -1);
+	ft_close_fd(&op);
+	op = open("./test.txt",O_RDONLY, 0644);
+	if (op < 0)
+		return (unlink("./test.txt"), -1);
+	unlink("./test.txt");
+	return (op);
 }
 
 /**
