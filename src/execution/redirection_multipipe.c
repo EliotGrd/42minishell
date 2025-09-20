@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:44:13 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/11 08:53:52 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/20 16:16:13 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,17 +79,19 @@ void	close_previous(t_cmd *top_stack)
  * and the previous node fd
  * @param top_stack 
  */
-void	command_redirect(t_cmd *top_stack)
+int	command_redirect(t_cmd *top_stack)
 {
 	if (top_stack -> fd_in >= 0)
 	{
-		dup2(top_stack -> fd_in, STDIN_FILENO);
+		if (dup2(top_stack -> fd_in, STDIN_FILENO) < 0)
+			return (-1);
 		ft_close_fd(&top_stack -> fd_in);
 	}
 	else if (top_stack -> previous && top_stack -> previous -> fd[0] >= 0)
 	{
 		ft_close_fd(&top_stack -> previous -> fd[1]);
-		dup2(top_stack -> previous -> fd[0], STDIN_FILENO);
+		if (dup2(top_stack -> previous -> fd[0], STDIN_FILENO) < 0)
+			return (-1);
 		ft_close_fd(&top_stack -> previous -> fd[0]);
 	}
 	else if (top_stack -> previous)
@@ -97,11 +99,16 @@ void	command_redirect(t_cmd *top_stack)
 	ft_close_fd(&top_stack -> fd[0]);
 	if (top_stack -> fd_out >= 0)
 	{
-		dup2(top_stack -> fd_out, STDOUT_FILENO);
+		if (dup2(top_stack -> fd_out, STDOUT_FILENO) < 0)
+			return (-1);
 		ft_close_fd(&top_stack -> fd_out);
 	}
 	else if (top_stack -> next)
-		dup2(top_stack -> fd[1], STDOUT_FILENO);
+	{
+		if (dup2(top_stack -> fd[1], STDOUT_FILENO) < 0)
+			return (-1);
+	}
 	ft_close_fd(&top_stack -> fd[1]);
 	close_previous(top_stack);
+	return (0);
 }

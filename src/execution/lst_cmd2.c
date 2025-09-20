@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 08:54:33 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/08 15:48:03 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/20 12:27:30 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	pop_cmd(t_cmd **top)
 	if (*top)
 	{
 		temp = *top;
+		ft_close_fd(&temp -> fd[0]);
+		ft_close_fd(&temp -> fd[1]);
 		(*top) = (*top)-> next;
 		if (temp -> args != NULL)
 			ft_free_tab(temp -> args);

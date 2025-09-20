@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/18 13:14:04 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/20 16:09:27 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,14 +94,13 @@ int	one_command_execve(t_minishell *minishell)
 
 	childprocess = fork();
 	signal(SIGINT, sigint_handler2);
-	//ici je pense mettre le sigquit
 	if (childprocess == -1)
 		return (-1);
 	if (childprocess == 0)
 	{
-		signal(SIGQUIT, sigquit_handler);//sigquit
-		command_redirect(minishell -> top_cmd);
-		execution_node(minishell -> top_cmd -> args, minishell);
+		signal(SIGQUIT, sigquit_handler);
+		if (command_redirect(minishell -> top_cmd) == 0)
+			execution_node(minishell -> top_cmd -> args, minishell);
 		destructor_env(&minishell -> top_env);
 		destructor_cmd(&minishell -> top_cmd);
 		exit(g_exit_code);
@@ -142,7 +141,7 @@ int	one_command(t_minishell *minishell)
 			one_command_execve(minishell);
 	}
 	else
-		close_redir_temp(minishell -> top_cmd);
+		(close_redir_temp(minishell -> top_cmd), g_exit_code = 1);
 	//ici la mise a jour du $_ car c'est sur que je suis arrive au bout de la cmd
 	return (0);
 }
