@@ -98,12 +98,13 @@ void	handle_dollar(t_lexer *lex, t_str_buf *sb, t_expand *exp, t_minishell *msh)
 				}
 			}
 			temp = str_buf_end(&sb_env);
-			expand = research_key_env(msh->top_env, temp);//erreur detecte ici car il peut y avoir un NULL du coup segfault
-			if (!expand)//correction de l'erreur
-				return (ft_free((void **)&temp));//ici benjamin a bidouille donc faire attention a si ca pose pas de pb quand expand ressort NULL
-			//ft_free((void **)&temp);
+			expand = research_key_env(msh->top_env, temp);
+			if (!expand)
+			{
+				msh->index_rm_exp = exp->argvindex;
+				return (ft_free((void **)&temp)/*, str_buf_free(sb), advance(lex, 1)*/); //verif si y a pas plus a free genre SB
+			}
 			str_buf_puts(sb, expand);
-			//advance(lex, 1);
 			ft_free((void **)&temp);
 			ft_free((void **)&expand);
 		}
@@ -112,14 +113,21 @@ void	handle_dollar(t_lexer *lex, t_str_buf *sb, t_expand *exp, t_minishell *msh)
 	}
 }
 
-char *expand_word(char *str, t_minishell *msh)
+static void	init_expand(t_expand *exp)
+{
+	exp->inquotes = 0;
+	exp->qstate = 0;
+	exp->argvindex = 0;
+}
+
+char *expand_word(char *str, t_minishell *msh, int argvindex)
 {
 	t_expand exp;
 	t_lexer lex;
 	t_str_buf sb;
 
-	exp.inquotes = 0;
-	exp.qstate = 0;
+	init_expand(&exp);
+	exp.argvindex = argvindex;
 	lex_init(&lex, str);
 	str_buf_init(&sb);
 	while (lex.c)
@@ -140,6 +148,43 @@ char *expand_word(char *str, t_minishell *msh)
 	return (str_buf_end(&sb));
 }
 
+static void	argv_remove_index(char **argv, t_minishell *msh)
+{
+	int	i;
+
+	if (!argv)
+		return;
+	if (argv[msh->index_rm_exp][0] != '$' && argv[msh->index_rm_exp][0])
+	{
+		msh->index_rm_exp = -1;
+		return ;
+	}
+	ft_free((void **)&argv[msh->index_rm_exp]);
+	i = msh->index_rm_exp + 1;
+	argv[msh->index_rm_exp] = argv[i];
+	while (argv[i])
+	{
+		argv[i] = argv[i + 1];
+		i++;
+	}
+	msh->index_rm_exp = -1;
+}
+
+void	exp_redir_error(t_minishell *msh, t_redirect redir )
+{
+	write(2, "ambiguous redirect\n", 19);
+	(void)redir;
+	//error bash: $MACHIN: ambiguous redirect mais need free etc
+	msh->index_rm_exp = -1;
+	//skip exec
+}
+
+/**
+ * @brief 
+ *
+ * @param head 
+ * @param msh 
+ */
 void	expand_manager(t_cmd *head, t_minishell *msh)
 {
 	t_cmd *cur;
@@ -152,13 +197,17 @@ void	expand_manager(t_cmd *head, t_minishell *msh)
 		i = 0;
 		while (cur -> args && cur->args[i])
 		{
-			cur->args[i] = expand_word(cur->args[i], msh);
+			cur->args[i] = expand_word(cur->args[i], msh, i);
+			if (msh->index_rm_exp > -1)
+				argv_remove_index(cur->args, msh);
 			i++;
 		}
 		cur_redir = cur->redir;
 		while (cur_redir)
 		{
-			cur_redir->file = expand_word(cur_redir->file, msh);
+			cur_redir->file = expand_word(cur_redir->file, msh, 0);
+			if (msh->index_rm_exp > -1)
+				exp_redir_error(msh, *cur_redir);
 			cur_redir = cur_redir -> next;
 		}
 		cur = cur->next;

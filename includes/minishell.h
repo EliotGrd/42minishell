@@ -79,7 +79,7 @@ typedef struct s_minishell
 	t_cmd *top_cmd;
 	t_env *top_env;
 	struct s_token *top_tok;
-
+	int index_rm_exp;
 } t_minishell;
 
 /*function for getting env path the right way and execution*/

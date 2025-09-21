@@ -45,6 +45,7 @@ typedef struct s_expand
 {
 	int	inquotes;
 	int	qstate;
+	int argvindex;
 }	t_expand;
 
 /* Lexing */
