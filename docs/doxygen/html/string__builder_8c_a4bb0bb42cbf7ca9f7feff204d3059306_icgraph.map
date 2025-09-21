@@ -1,0 +1,8 @@
+<map id="str_buf_puts" name="str_buf_puts">
+<area shape="rect" id="node1" title="Put a null terminated string in the t_str_buf struct." alt="" coords="773,31,876,57"/>
+<area shape="rect" id="node2" href="$expand__dollar_8c.html#a1cf0ce389e469994b9ddb06a944e531e" title="Handle $? to expand on current error code." alt="" coords="607,5,725,32"/>
+<area shape="rect" id="node3" href="$expand__dollar_8c.html#ac3e15865744ed2c1300a5cb96f24e33d" title="Manages all possibilities with expand : $?, known and unknown env variable." alt="" coords="448,31,559,57"/>
+<area shape="rect" id="node4" href="$expand__word_8c.html#a0ec378990f411456436a9bb6a71babfc" title="Scans the word to dequote/expand and build correct output." alt="" coords="291,31,400,57"/>
+<area shape="rect" id="node5" href="$expand_8c.html#a53c53e75b0ad8c8888217cd918304b8b" title="Iterate over every args and redir of each command to expand and dequote what needs to be." alt="" coords="108,31,243,57"/>
+<area shape="rect" id="node6" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,31,60,57"/>
+</map>

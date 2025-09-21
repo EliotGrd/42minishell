@@ -1,0 +1,6 @@
+<map id="one_command_execve" name="one_command_execve">
+<area shape="rect" id="node1" title="in this function we do the fork to create a child process we do the redirection if we need to" alt="" coords="401,5,572,32"/>
+<area shape="rect" id="node2" href="$execution_8c.html#a38335028b2bc7aa436f8f79a3753ce5e" title="here we check if it&#39;s a builtin where we have to fork or not we still need to do the redirection veri..." alt="" coords="235,5,353,32"/>
+<area shape="rect" id="node3" href="$execution_8c.html#a9542b61daba3eb4d45c8887c5648b2f6" title="first function of the execution part when we have something to do we have to deal with two cases ; if..." alt="" coords="108,5,187,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,5,60,32"/>
+</map>

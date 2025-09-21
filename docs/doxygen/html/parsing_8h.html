@@ -95,8 +95,7 @@ $(document).ready(function(){initNavTree('parsing_8h.html',''); initResizable();
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for parsing.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing_8h__incl.svg" width="100%" height="496"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing_8h__incl.svg" width="100%" height="496"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -115,6 +114,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__lexer.html">s_lexer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__expand.html">s_expand</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -124,6 +125,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a00b1b91326ce45c94bb1928fb8617b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad557a756816c4d6761218fc3d8af61d2"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structs__lexer.html">s_lexer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a></td></tr>
 <tr class="separator:ad557a756816c4d6761218fc3d8af61d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91834e8448f6316d53acafaea68dd14"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structs__expand.html">s_expand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing_8h.html#af91834e8448f6316d53acafaea68dd14">t_expand</a></td></tr>
+<tr class="separator:af91834e8448f6316d53acafaea68dd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -163,12 +166,42 @@ Functions</h2></td></tr>
 <tr class="separator:a504166f8c7680aafbdfdb58ab412d498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f5f1cfa591c395b88733e1134d8de3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing_8h.html#a8f5f1cfa591c395b88733e1134d8de3d">syntax_error</a> (<a class="el" href="structt__token.html">t_token</a> *tok, <a class="el" href="structt__token.html">t_token</a> *tok_head, <a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *cmd_head)</td></tr>
 <tr class="separator:a8f5f1cfa591c395b88733e1134d8de3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cbc08f00af3f516acb081d28b384238"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing_8h.html#a6cbc08f00af3f516acb081d28b384238">exp_redir_error</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *msh, <a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> redir)</td></tr>
+<tr class="separator:a6cbc08f00af3f516acb081d28b384238"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1b4c6895ba27744498434d42b9a2e53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing_8h.html#ac1b4c6895ba27744498434d42b9a2e53">lexing_error</a> (int errcode, <a class="el" href="structt__token.html">t_token</a> *head)</td></tr>
 <tr class="separator:ac1b4c6895ba27744498434d42b9a2e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a302af903b3f87eaaff83762f60c2d8cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing_8h.html#a302af903b3f87eaaff83762f60c2d8cb">parser</a> (<a class="el" href="structt__token.html">t_token</a> *head)</td></tr>
 <tr class="separator:a302af903b3f87eaaff83762f60c2d8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c53e75b0ad8c8888217cd918304b8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing_8h.html#a53c53e75b0ad8c8888217cd918304b8b">expand_manager</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *head, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *msh)</td></tr>
+<tr class="memdesc:a53c53e75b0ad8c8888217cd918304b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over every args and redir of each command to expand and dequote what needs to be.  <a href="parsing_8h.html#a53c53e75b0ad8c8888217cd918304b8b">More...</a><br /></td></tr>
+<tr class="separator:a53c53e75b0ad8c8888217cd918304b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec378990f411456436a9bb6a71babfc"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing_8h.html#a0ec378990f411456436a9bb6a71babfc">expand_word</a> (char *str, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *msh, int argvindex)</td></tr>
+<tr class="memdesc:a0ec378990f411456436a9bb6a71babfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans the word to dequote/expand and build correct output.  <a href="parsing_8h.html#a0ec378990f411456436a9bb6a71babfc">More...</a><br /></td></tr>
+<tr class="separator:a0ec378990f411456436a9bb6a71babfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e15865744ed2c1300a5cb96f24e33d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing_8h.html#ac3e15865744ed2c1300a5cb96f24e33d">handle_dollar</a> (<a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *lex, <a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb, <a class="el" href="parsing_8h.html#af91834e8448f6316d53acafaea68dd14">t_expand</a> *exp, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *msh)</td></tr>
+<tr class="memdesc:ac3e15865744ed2c1300a5cb96f24e33d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages all possibilities with expand : $?, known and unknown env variable.  <a href="parsing_8h.html#ac3e15865744ed2c1300a5cb96f24e33d">More...</a><br /></td></tr>
+<tr class="separator:ac3e15865744ed2c1300a5cb96f24e33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19e46ed1e16f9b3f3b1e8961163feedc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing_8h.html#a19e46ed1e16f9b3f3b1e8961163feedc">is_valid_for_key</a> (char c)</td></tr>
+<tr class="memdesc:a19e46ed1e16f9b3f3b1e8961163feedc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a given char is a valid character for the key of an env variable.  <a href="parsing_8h.html#a19e46ed1e16f9b3f3b1e8961163feedc">More...</a><br /></td></tr>
+<tr class="separator:a19e46ed1e16f9b3f3b1e8961163feedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeedf35e5a624e3dd471c2c13fd6e641d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing_8h.html#aeedf35e5a624e3dd471c2c13fd6e641d">is_key_valid</a> (char *str)</td></tr>
+<tr class="separator:aeedf35e5a624e3dd471c2c13fd6e641d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a id="af91834e8448f6316d53acafaea68dd14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91834e8448f6316d53acafaea68dd14">&#9670;&nbsp;</a></span>t_expand</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structs__expand.html">s_expand</a> <a class="el" href="parsing_8h.html#af91834e8448f6316d53acafaea68dd14">t_expand</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad557a756816c4d6761218fc3d8af61d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad557a756816c4d6761218fc3d8af61d2">&#9670;&nbsp;</a></span>t_lexer</h2>
 
@@ -242,7 +275,7 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing_8h_a6b132516dacc9599762b1fe7341a0f04_icgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing_8h_a6b132516dacc9599762b1fe7341a0f04_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -292,8 +325,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_abe4c47d3831fc3c644e4b78391dfa502_icgraph.svg" width="330" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_abe4c47d3831fc3c644e4b78391dfa502_icgraph.svg" width="330" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -316,7 +348,138 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a2e2699d47ad80d706e124c654b57b375_icgraph.svg" width="587" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a2e2699d47ad80d706e124c654b57b375_icgraph.svg" width="587" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6cbc08f00af3f516acb081d28b384238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cbc08f00af3f516acb081d28b384238">&#9670;&nbsp;</a></span>exp_redir_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void exp_redir_error </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>msh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a>&#160;</td>
+          <td class="paramname"><em>redir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a6cbc08f00af3f516acb081d28b384238_icgraph.svg" width="418" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a53c53e75b0ad8c8888217cd918304b8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53c53e75b0ad8c8888217cd918304b8b">&#9670;&nbsp;</a></span>expand_manager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void expand_manager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
+          <td class="paramname"><em>head</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>msh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterate over every args and redir of each command to expand and dequote what needs to be. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing_8h_a53c53e75b0ad8c8888217cd918304b8b_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a53c53e75b0ad8c8888217cd918304b8b_icgraph.svg" width="248" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0ec378990f411456436a9bb6a71babfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec378990f411456436a9bb6a71babfc">&#9670;&nbsp;</a></span>expand_word()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* expand_word </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>msh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argvindex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Scans the word to dequote/expand and build correct output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>Input that need dequote/expand </td></tr>
+    <tr><td class="paramname">argvindex</td><td>Current av index to keep track on which string I need to delete on not found env variable </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the new string expanded and dequoted </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing_8h_a0ec378990f411456436a9bb6a71babfc_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a0ec378990f411456436a9bb6a71babfc_icgraph.svg" width="406" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -348,7 +511,60 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_ab3d9f0b7ddaf8661f8a3b3243d33bce7_icgraph.svg" width="666" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_ab3d9f0b7ddaf8661f8a3b3243d33bce7_icgraph.svg" width="666" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac3e15865744ed2c1300a5cb96f24e33d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e15865744ed2c1300a5cb96f24e33d">&#9670;&nbsp;</a></span>handle_dollar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handle_dollar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *&#160;</td>
+          <td class="paramname"><em>lex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parsing_8h.html#af91834e8448f6316d53acafaea68dd14">t_expand</a> *&#160;</td>
+          <td class="paramname"><em>exp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>msh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Manages all possibilities with expand : $?, known and unknown env variable. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_ac3e15865744ed2c1300a5cb96f24e33d_cgraph.svg" width="610" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_ac3e15865744ed2c1300a5cb96f24e33d_icgraph.svg" width="564" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -374,9 +590,26 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a36667927c23670d83624ca9049adfc2d_icgraph.svg" width="476" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a36667927c23670d83624ca9049adfc2d_icgraph.svg" width="476" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
+<a id="aeedf35e5a624e3dd471c2c13fd6e641d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeedf35e5a624e3dd471c2c13fd6e641d">&#9670;&nbsp;</a></span>is_key_valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int is_key_valid </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -398,7 +631,33 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a504166f8c7680aafbdfdb58ab412d498_icgraph.svg" width="479" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a504166f8c7680aafbdfdb58ab412d498_icgraph.svg" width="479" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a19e46ed1e16f9b3f3b1e8961163feedc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19e46ed1e16f9b3f3b1e8961163feedc">&#9670;&nbsp;</a></span>is_valid_for_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int is_valid_for_key </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if a given char is a valid character for the key of an env variable. </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns 1 if char valid, 0 if invalid </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing_8h_a19e46ed1e16f9b3f3b1e8961163feedc_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -434,7 +693,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a5226e7cc8fd04bded427425b8bee4439_icgraph.svg" width="287" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a5226e7cc8fd04bded427425b8bee4439_icgraph.svg" width="524" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -461,14 +720,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a4093905b7d1dfe02710752ee5da8fe01_cgraph.svg" width="536" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a4093905b7d1dfe02710752ee5da8fe01_cgraph.svg" width="536" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a4093905b7d1dfe02710752ee5da8fe01_icgraph.svg" width="298" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a4093905b7d1dfe02710752ee5da8fe01_icgraph.svg" width="298" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -500,14 +757,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing_8h_a050765808030dae001e2dc9c076fee4f_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing_8h_a050765808030dae001e2dc9c076fee4f_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a050765808030dae001e2dc9c076fee4f_icgraph.svg" width="168" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a050765808030dae001e2dc9c076fee4f_icgraph.svg" width="168" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -584,8 +839,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a583251578e050c27ff17b5c7b40c8eef_icgraph.svg" width="470" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a583251578e050c27ff17b5c7b40c8eef_icgraph.svg" width="470" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -614,8 +868,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a302af903b3f87eaaff83762f60c2d8cb_icgraph.svg" width="176" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a302af903b3f87eaaff83762f60c2d8cb_icgraph.svg" width="176" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -641,7 +894,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a855a36981b55d317a52d24560c0809bf_icgraph.svg" width="654" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing_8h_a855a36981b55d317a52d24560c0809bf_icgraph.svg" width="100%" height="437"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -667,14 +920,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a0665b31ffb5665ad2a085f2b1a5e0e25_cgraph.svg" width="248" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a0665b31ffb5665ad2a085f2b1a5e0e25_cgraph.svg" width="248" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a0665b31ffb5665ad2a085f2b1a5e0e25_icgraph.svg" width="328" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a0665b31ffb5665ad2a085f2b1a5e0e25_icgraph.svg" width="328" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -713,14 +964,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing_8h_a8f5f1cfa591c395b88733e1134d8de3d_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing_8h_a8f5f1cfa591c395b88733e1134d8de3d_cgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a8f5f1cfa591c395b88733e1134d8de3d_icgraph.svg" width="328" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing_8h_a8f5f1cfa591c395b88733e1134d8de3d_icgraph.svg" width="328" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

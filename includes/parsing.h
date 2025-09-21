@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 22:48:29 by egiraud           #+#    #+#             */
-/*   Updated: 2025/08/30 18:31:34 by egiraud          ###   ########.fr       */
+/*   Updated: 2025/09/21 20:26:25 by egiraud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,16 +66,20 @@ void				cur_next(t_tokcursor *c);
 int					is_token_redir(t_token *token);
 
 void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head);
+void	exp_redir_error(t_minishell *msh, t_redirect redir);
 void	lexing_error(int errcode, t_token *head);
+
 /* Parsing */
 
 t_cmd	*parser(t_token *head);
+
 /* Expand */
 void	expand_manager(t_cmd *head, t_minishell *msh);
+char	*expand_word(char *str, t_minishell *msh, int argvindex);
+
+void	handle_dollar(t_lexer *lex, t_str_buf *sb, t_expand *exp, t_minishell *msh);
+
 int is_valid_for_key(char c);
 int	is_key_valid(char *str);
-// will see
-
-/* AST to Linked List */
 
 #endif

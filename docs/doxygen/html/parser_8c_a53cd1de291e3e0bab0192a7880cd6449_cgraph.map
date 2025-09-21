@@ -1,9 +1,9 @@
 <map id="parse_cmd" name="parse_cmd">
 <area shape="rect" id="node1" title=" " alt="" coords="5,157,99,184"/>
-<area shape="rect" id="node2" href="$argv__builder_8c.html#a5f4104276b4a0d98dde31f75622668b4" title=" " alt="" coords="150,5,261,32"/>
-<area shape="rect" id="node3" href="$argv__builder_8c.html#a182f853e31c31af45e572979074a4d99" title=" " alt="" coords="149,56,261,83"/>
+<area shape="rect" id="node2" href="$argv__builder_8c.html#a5f4104276b4a0d98dde31f75622668b4" title="Ends and null terminate the argv so it can be used." alt="" coords="150,5,261,32"/>
+<area shape="rect" id="node3" href="$argv__builder_8c.html#a182f853e31c31af45e572979074a4d99" title="Free each string of the argv then the global array." alt="" coords="149,56,261,83"/>
 <area shape="rect" id="node4" href="$argv__builder_8c.html#aee97e8a2ae269ee4063d3ea917e93ffc" title=" " alt="" coords="152,107,259,133"/>
-<area shape="rect" id="node5" href="$argv__builder_8c.html#a9f9516f7f412bb9019d1fe829f2395a3" title=" " alt="" coords="147,157,264,184"/>
+<area shape="rect" id="node5" href="$argv__builder_8c.html#a9f9516f7f412bb9019d1fe829f2395a3" title="Tool to build an argv with a buffer that reallocates when more memory is needed and add a string to t..." alt="" coords="147,157,264,184"/>
 <area shape="rect" id="node6" href="$parser_8c.html#a2e2699d47ad80d706e124c654b57b375" title=" " alt="" coords="342,233,421,260"/>
 <area shape="rect" id="node7" href="$parser_8c.html#a504166f8c7680aafbdfdb58ab412d498" title=" " alt="" coords="149,259,262,285"/>
 <area shape="rect" id="node8" href="$parser_8c.html#a196c06f986a99e4ad591e374a4bb6339" title=" " alt="" coords="158,309,253,336"/>

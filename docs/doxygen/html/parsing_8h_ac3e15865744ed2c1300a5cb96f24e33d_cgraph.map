@@ -1,0 +1,12 @@
+<map id="handle_dollar" name="handle_dollar">
+<area shape="rect" id="node1" title="Manages all possibilities with expand : $?, known and unknown env variable." alt="" coords="5,208,116,235"/>
+<area shape="rect" id="node2" href="$lexer__utils_8c.html#a6b132516dacc9599762b1fe7341a0f04" title="Advance one byte in the struct t_lexer to keep track of progress." alt="" coords="363,5,441,32"/>
+<area shape="rect" id="node3" href="$expand__dollar_8c.html#a1cf0ce389e469994b9ddb06a944e531e" title="Handle $? to expand on current error code." alt="" coords="174,56,293,83"/>
+<area shape="rect" id="node4" href="$string__builder_8c.html#a54e602a5da87bd89687c69c2d86f34d2" title="Put char in the struct t_str_buf so we can build a string in the struct. The point is to create the s..." alt="" coords="501,132,604,159"/>
+<area shape="rect" id="node5" href="$string__builder_8c.html#a4bb0bb42cbf7ca9f7feff204d3059306" title="Put a null terminated string in the t_str_buf struct." alt="" coords="351,107,453,133"/>
+<area shape="rect" id="node6" href="$expand_8c.html#a19e46ed1e16f9b3f3b1e8961163feedc" title="Checks if a given char is a valid character for the key of an env variable." alt="" coords="170,208,297,235"/>
+<area shape="rect" id="node7" href="$lexer__utils_8c.html#a855a36981b55d317a52d24560c0809bf" title="&quot;Peek&quot;, Look at the next character in the input string" alt="" coords="206,259,261,285"/>
+<area shape="rect" id="node8" href="$lst__env__two_8c.html#a4d4a14327b2c3ff88099102b6bd77986" title=" " alt="" coords="164,309,303,336"/>
+<area shape="rect" id="node9" href="$string__builder_8c.html#a1bfdfae2d27c541b15b526d7d67b7577" title="End and null terminate the string created in t_str_buf, reset the struct so it can be reused and retu..." alt="" coords="353,284,451,311"/>
+<area shape="rect" id="node10" href="$string__builder_8c.html#a2ff0766da574e4904598f3119c7d3749" title=" " alt="" coords="186,411,281,437"/>
+</map>

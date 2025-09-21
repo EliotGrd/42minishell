@@ -1,6 +1,9 @@
 <map id="str_buf_end" name="str_buf_end">
-<area shape="rect" id="node1" title="End and null terminate the string created in t_str_buf, reset the struct so it can be reused and retu..." alt="" coords="340,5,439,32"/>
-<area shape="rect" id="node2" href="$lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01" title="Lexes the string to create a WORD token." alt="" coords="211,5,292,32"/>
-<area shape="rect" id="node3" href="$lexer_8c.html#aced469451204cf536fd18b4cf94f6b91" title="Global lexing function, that traverses readline&#39;s string and separate in tokens." alt="" coords="108,5,163,32"/>
-<area shape="rect" id="node4" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title="End and null terminate the string created in t_str_buf, reset the struct so it can be reused and retu..." alt="" coords="607,22,705,49"/>
+<area shape="rect" id="node2" href="$expand__word_8c.html#a0ec378990f411456436a9bb6a71babfc" title="Scans the word to dequote/expand and build correct output." alt="" coords="291,22,400,49"/>
+<area shape="rect" id="node5" href="$expand__dollar_8c.html#ac3e15865744ed2c1300a5cb96f24e33d" title="Manages all possibilities with expand : $?, known and unknown env variable." alt="" coords="448,22,559,49"/>
+<area shape="rect" id="node6" href="$lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01" title="Lexes the string to create a WORD token." alt="" coords="463,73,544,99"/>
+<area shape="rect" id="node3" href="$expand_8c.html#a53c53e75b0ad8c8888217cd918304b8b" title="Iterate over every args and redir of each command to expand and dequote what needs to be." alt="" coords="108,22,243,49"/>
+<area shape="rect" id="node4" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,47,60,74"/>
+<area shape="rect" id="node7" href="$lexer_8c.html#aced469451204cf536fd18b4cf94f6b91" title="Global lexing function, that traverses readline&#39;s string and separate in tokens." alt="" coords="148,73,203,99"/>
 </map>

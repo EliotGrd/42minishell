@@ -6,14 +6,11 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 19:39:24 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/19 10:36:01 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/21 22:01:08 by egiraud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/parsing.h"
-
-// si mot ajouter au build
-// si redir creer un noeud
 
 void	argv_buf_init(t_argv_buf *avb)
 {
@@ -22,6 +19,13 @@ void	argv_buf_init(t_argv_buf *avb)
 	avb->cap = 0;
 }
 
+/**
+ * @brief Tool to build an argv with a buffer that reallocates when 
+ * more memory is needed and add a string to the newly created argv
+ *
+ * @param avb 
+ * @param str 
+ */
 void	argv_buf_push(t_argv_buf *avb, char *str)
 {
 	if (avb->i + 1 >= avb->cap)
@@ -35,6 +39,11 @@ void	argv_buf_push(t_argv_buf *avb, char *str)
 	avb->i++;
 }
 
+/**
+ * @brief Ends and null terminate the argv so it can be used
+ *
+ * @return Returns the built argv
+ */
 char	**argv_buf_end(t_argv_buf *avb)
 {
 	char **result;
@@ -50,6 +59,10 @@ char	**argv_buf_end(t_argv_buf *avb)
 	return (result);
 }
 
+/**
+ * @brief Free each string of the argv then the global array
+ *
+ */
 void	argv_buf_free(t_argv_buf *avb)
 {
 	int n;

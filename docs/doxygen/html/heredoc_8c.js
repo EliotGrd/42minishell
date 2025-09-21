@@ -1,8 +1,9 @@
 var heredoc_8c =
 [
     [ "close_fd_heredocs2", "heredoc_8c.html#a3e1410633d8c1ad5b1441509a020b0d4", null ],
-    [ "here_doc_management", "heredoc_8c.html#aa5260679719a4e1f862a6efd1f12cf85", null ],
-    [ "heredoc_input", "heredoc_8c.html#ab68377acf2c8adf39f991dc425297c09", null ],
-    [ "read_gnl_heredoc", "heredoc_8c.html#ae1fac908d63c4fd12485122128c0c0fd", null ],
-    [ "update_status", "heredoc_8c.html#a1e49e3a472f4fd4b4c38a3e393868e67", null ]
+    [ "here_doc_management", "heredoc_8c.html#a17337782f10170a6f2f9188bf557de0f", null ],
+    [ "heredoc_input", "heredoc_8c.html#a0b4a5d07e8877b06b8977b47a6d51930", null ],
+    [ "read_gnl_heredoc", "heredoc_8c.html#aa11261ffe1d93fd87488514776e2df34", null ],
+    [ "update_status", "heredoc_8c.html#a62f285b689f1045264be19c5467c1781", null ],
+    [ "write_to_heredoc", "heredoc_8c.html#a62cf028a22b96be266416a01e88726f0", null ]
 ];

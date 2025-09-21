@@ -97,21 +97,23 @@ Include dependency graph for unset.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9f3a931b6e1e798b91f27ec7493e17fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unset_8c.html#a9f3a931b6e1e798b91f27ec7493e17fe">unset</a> (<a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> **top_env, char *key)</td></tr>
-<tr class="separator:a9f3a931b6e1e798b91f27ec7493e17fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b3bbc6cfa6ff293119825a11324fb9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unset_8c.html#a4b3bbc6cfa6ff293119825a11324fb9f">unset</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell, char *key)</td></tr>
+<tr class="separator:a4b3bbc6cfa6ff293119825a11324fb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcfd4d5a4f0408bdc748ce044e5ce08c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unset_8c.html#abcfd4d5a4f0408bdc748ce044e5ce08c">unset_call</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell, char **str)</td></tr>
+<tr class="separator:abcfd4d5a4f0408bdc748ce044e5ce08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9f3a931b6e1e798b91f27ec7493e17fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f3a931b6e1e798b91f27ec7493e17fe">&#9670;&nbsp;</a></span>unset()</h2>
+<a id="a4b3bbc6cfa6ff293119825a11324fb9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b3bbc6cfa6ff293119825a11324fb9f">&#9670;&nbsp;</a></span>unset()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void unset </td>
+          <td class="memname">int unset </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> **&#160;</td>
-          <td class="paramname"><em>top_env</em>, </td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -126,6 +128,52 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="unset_8c_a4b3bbc6cfa6ff293119825a11324fb9f_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abcfd4d5a4f0408bdc748ce044e5ce08c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcfd4d5a4f0408bdc748ce044e5ce08c">&#9670;&nbsp;</a></span>unset_call()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int unset_call </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="unset_8c_abcfd4d5a4f0408bdc748ce044e5ce08c_cgraph.svg" width="206" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="unset_8c_abcfd4d5a4f0408bdc748ce044e5ce08c_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>

@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 23:17:41 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/02 17:07:53 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/21 21:46:40 by egiraud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ void	str_buf_putc(t_str_buf *sb, char c)
 			sb->cap = 16;
 		else
 			sb->cap *= 2;
-		sb->str = ft_realloc(sb->str, sb->len, sb->cap);
-		//sb->str = realloc(sb->str, sb->cap * sizeof(char));
+		//sb->str = ft_realloc(sb->str, sb->len, sb->cap);
+		sb->str = realloc(sb->str, sb->cap * sizeof(char));
 	}
 	sb->str[sb->len] = c;
 	sb->len++;
@@ -58,6 +58,10 @@ void	str_buf_putn(t_str_buf *sb, char *str, size_t size)
 	sb->len += size;
 }
 
+/**
+ * @brief Put a null terminated string in the t_str_buf struct
+ *
+ */
 void	str_buf_puts(t_str_buf *sb, char *str)
 {
 	while (*str)

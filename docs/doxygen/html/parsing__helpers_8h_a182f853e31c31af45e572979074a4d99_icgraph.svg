@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Free each string of the argv then the global array.">
 <polygon fill="#bfbfbf" stroke="black" points="266,-0.5 266,-19.5 350,-19.5 350,-0.5 266,-0.5"/>
 <text text-anchor="middle" x="308" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">argv_buf_free</text>
 </a>

@@ -1,8 +1,8 @@
 <map id="close_fd_heredocs" name="close_fd_heredocs">
 <area shape="rect" id="node1" title="as we are going to fork and create process, the new process will have inherited of all the opened fd...." alt="" coords="819,5,961,32"/>
-<area shape="rect" id="node2" href="$multipipe_8c.html#a43baea25481fdd02ce42e4d249f12353" title=" " alt="" coords="660,5,771,32"/>
-<area shape="rect" id="node3" href="$multipipe_8c.html#af32b88ab44b94650a0bb6f805f70a805" title="it&#39;s where the fork happen and sent to be execute" alt="" coords="401,5,612,32"/>
-<area shape="rect" id="node4" href="$multipipe_8c.html#a3f78d597d08aaca5580b2c89f956a3a2" title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered..." alt="" coords="235,5,353,32"/>
-<area shape="rect" id="node5" href="$execution_8c.html#a9dffeca3c2ff474e24c3e98ab856df76" title="first function of the execution part when we have something to do we have to deal with two cases ; if..." alt="" coords="108,5,187,32"/>
+<area shape="rect" id="node2" href="$multipipe_8c.html#a461ae962ce9a1aee7221ac4b9c581f98" title=" " alt="" coords="660,5,771,32"/>
+<area shape="rect" id="node3" href="$multipipe_8c.html#af31c329200501f497cd102a470450103" title="it&#39;s where the fork happen and sent to be execute" alt="" coords="401,5,612,32"/>
+<area shape="rect" id="node4" href="$multipipe_8c.html#aa4f1c217eeb689ecbc622baecd2c5dec" title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered..." alt="" coords="235,5,353,32"/>
+<area shape="rect" id="node5" href="$execution_8c.html#a9542b61daba3eb4d45c8887c5648b2f6" title="first function of the execution part when we have something to do we have to deal with two cases ; if..." alt="" coords="108,5,187,32"/>
 <area shape="rect" id="node6" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,5,60,32"/>
 </map>

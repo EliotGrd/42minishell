@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Minishell: 42minishell</title>
+<title>Minishell: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,10 +83,27 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">42minishell </div>  </div>
+<div class="title">Minishell Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a>Minishell ma gueule </p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> </p><h1 align="center">Minishell </h1>
+<p align="center"></p>
+<p>Reproduce some core features of a shell </p>
+<h2><a class="anchor" id="autotoc_md0"></a>
+📊 How it works ?</h2>
+<p>The project aims to reproduce a bunch of shell functionalities, so you need to be well informed of what is a shell and how to use one. <br  />
+ The subject ask us to : Wait for user input with readline, handle the command input and launch the corresponding executable based on the PATH environnement variable. Chain commands with pipes. <br  />
+ Handle environement variables (<code>$...</code>) which should expand correclty to their values and <code>$?</code>. <br  />
+ Handle ctrl-C, ctrl-D and ctrl-\ like bash does. <br  />
+ Implement the basics redirections <code>&lt;</code>, <code>&gt;</code> and also <code>&lt;&lt;</code> (heredoc) and <code>&gt;&gt;</code>. <br  />
+ Handles quotes and double quotes but no other special characters as <code>;</code> or <code>\</code>. <br  />
+ And finally reproduce some built-ins : echo, cd, pwd, export, unset, env and exit. <br  />
+</p>
+<p>To achieve this goal with my teammate <a href="https://github.com/BenjaminSuger/">github.com/BenjaminSuger</a> </p>
+<h2><a class="anchor" id="autotoc_md1"></a>
+🖐️ How to use ?</h2>
+<p>Git clone the repo, make and you're done !\ Some usage examples are shown above, and feel free to try every command you want.. but these commands must have an executable that we can find on the $PATH (you can try <code>whereis cmd</code> to see if the command is valid for pipex). <br  />
+ </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

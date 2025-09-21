@@ -25,8 +25,9 @@
 var NAVTREE =
 [
   [ "Minishell", "index.html", [
-    [ "42minishell", "index.html", null ],
     [ "Classes", "annotated.html", [
+      [ "📊 How it works ?", "index.html#autotoc_md0", null ],
+      [ "🖐️ How to use ?", "index.html#autotoc_md1", null ],
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Members", "functions.html", [
@@ -38,7 +39,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", null ],
+        [ "Functions", "globals_func.html", "globals_func" ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
@@ -51,7 +52,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"parsing__helpers_8h.html#a9f9516f7f412bb9019d1fe829f2395a3"
+"minishell_8h.html#af14361e499107d3c8982a2e4057e253b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -100,17 +100,17 @@ Functions</h2></td></tr>
 <tr class="memitem:ac70e2499b8aeb789658ff4596ded7221"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="multipipe_8c.html#ac70e2499b8aeb789658ff4596ded7221">close_fd_heredocs</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_stack, <a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *current)</td></tr>
 <tr class="memdesc:ac70e2499b8aeb789658ff4596ded7221"><td class="mdescLeft">&#160;</td><td class="mdescRight">as we are going to fork and create process, the new process will have inherited of all the opened fd. Which is a problem because we don't need all the file descriptor open =&gt; so te be sure we are going to close all the heredoc not useful in our situation  <a href="multipipe_8c.html#ac70e2499b8aeb789658ff4596ded7221">More...</a><br /></td></tr>
 <tr class="separator:ac70e2499b8aeb789658ff4596ded7221"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43baea25481fdd02ce42e4d249f12353"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="multipipe_8c.html#a43baea25481fdd02ce42e4d249f12353">execute_child</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_stack, <a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *temp, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="separator:a43baea25481fdd02ce42e4d249f12353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af32b88ab44b94650a0bb6f805f70a805"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="multipipe_8c.html#af32b88ab44b94650a0bb6f805f70a805">multipipe_intermediary_cmd</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *temp, <a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_stack, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="memdesc:af32b88ab44b94650a0bb6f805f70a805"><td class="mdescLeft">&#160;</td><td class="mdescRight">it's where the fork happen and sent to be execute  <a href="multipipe_8c.html#af32b88ab44b94650a0bb6f805f70a805">More...</a><br /></td></tr>
-<tr class="separator:af32b88ab44b94650a0bb6f805f70a805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a461ae962ce9a1aee7221ac4b9c581f98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="multipipe_8c.html#a461ae962ce9a1aee7221ac4b9c581f98">execute_child</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *temp, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="separator:a461ae962ce9a1aee7221ac4b9c581f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31c329200501f497cd102a470450103"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="multipipe_8c.html#af31c329200501f497cd102a470450103">multipipe_intermediary_cmd</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *temp, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell, pid_t *last)</td></tr>
+<tr class="memdesc:af31c329200501f497cd102a470450103"><td class="mdescLeft">&#160;</td><td class="mdescRight">it's where the fork happen and sent to be execute  <a href="multipipe_8c.html#af31c329200501f497cd102a470450103">More...</a><br /></td></tr>
+<tr class="separator:af31c329200501f497cd102a470450103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b21b82386f20636501d279a66b7260d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="multipipe_8c.html#a9b21b82386f20636501d279a66b7260d">close_redir_temp</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *temp)</td></tr>
 <tr class="memdesc:a9b21b82386f20636501d279a66b7260d"><td class="mdescLeft">&#160;</td><td class="mdescRight">in the case of an error in the redirection, we have a case where the here_doc opened in a previous situation is still open (the error happening before we go check the fd open of the heredoc). So if something happen we have to close that dangling fd  <a href="multipipe_8c.html#a9b21b82386f20636501d279a66b7260d">More...</a><br /></td></tr>
 <tr class="separator:a9b21b82386f20636501d279a66b7260d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f78d597d08aaca5580b2c89f956a3a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="multipipe_8c.html#a3f78d597d08aaca5580b2c89f956a3a2">multipipe_cmd</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_stack, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="memdesc:a3f78d597d08aaca5580b2c89f956a3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">management of the multipipe (= name when we have at least one pipe) First step is to manage the heredoc Then we are going to go throught each node of the linked list of command Each time we check the redirection =&gt; to manage error and create documents If no error =&gt; sent to execute (fork will happen anyway)  <a href="multipipe_8c.html#a3f78d597d08aaca5580b2c89f956a3a2">More...</a><br /></td></tr>
-<tr class="separator:a3f78d597d08aaca5580b2c89f956a3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f1c217eeb689ecbc622baecd2c5dec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="multipipe_8c.html#aa4f1c217eeb689ecbc622baecd2c5dec">multipipe_cmd</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="memdesc:aa4f1c217eeb689ecbc622baecd2c5dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">management of the multipipe (= name when we have at least one pipe) First step is to manage the heredoc Then we are going to go throught each node of the linked list of command Each time we check the redirection =&gt; to manage error and create documents If no error =&gt; sent to execute (fork will happen anyway)  <a href="multipipe_8c.html#aa4f1c217eeb689ecbc622baecd2c5dec">More...</a><br /></td></tr>
+<tr class="separator:aa4f1c217eeb689ecbc622baecd2c5dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ac70e2499b8aeb789658ff4596ded7221"></a>
@@ -193,8 +193,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a43baea25481fdd02ce42e4d249f12353"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43baea25481fdd02ce42e4d249f12353">&#9670;&nbsp;</a></span>execute_child()</h2>
+<a id="a461ae962ce9a1aee7221ac4b9c581f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a461ae962ce9a1aee7221ac4b9c581f98">&#9670;&nbsp;</a></span>execute_child()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,19 +203,13 @@ Here is the caller graph for this function:</div>
           <td class="memname">void execute_child </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
-          <td class="paramname"><em>top_stack</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
           <td class="paramname"><em>temp</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -227,20 +221,20 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="multipipe_8c_a43baea25481fdd02ce42e4d249f12353_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="multipipe_8c_a461ae962ce9a1aee7221ac4b9c581f98_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="multipipe_8c_a43baea25481fdd02ce42e4d249f12353_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="multipipe_8c_a461ae962ce9a1aee7221ac4b9c581f98_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a3f78d597d08aaca5580b2c89f956a3a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f78d597d08aaca5580b2c89f956a3a2">&#9670;&nbsp;</a></span>multipipe_cmd()</h2>
+<a id="aa4f1c217eeb689ecbc622baecd2c5dec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f1c217eeb689ecbc622baecd2c5dec">&#9670;&nbsp;</a></span>multipipe_cmd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,19 +242,9 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">int multipipe_cmd </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
-          <td class="paramname"><em>top_stack</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -277,20 +261,20 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="multipipe_8c_a3f78d597d08aaca5580b2c89f956a3a2_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="multipipe_8c_aa4f1c217eeb689ecbc622baecd2c5dec_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="multipipe_8c_a3f78d597d08aaca5580b2c89f956a3a2_icgraph.svg" width="359" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="multipipe_8c_aa4f1c217eeb689ecbc622baecd2c5dec_icgraph.svg" width="359" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="af32b88ab44b94650a0bb6f805f70a805"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af32b88ab44b94650a0bb6f805f70a805">&#9670;&nbsp;</a></span>multipipe_intermediary_cmd()</h2>
+<a id="af31c329200501f497cd102a470450103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31c329200501f497cd102a470450103">&#9670;&nbsp;</a></span>multipipe_intermediary_cmd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -304,14 +288,14 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
-          <td class="paramname"><em>top_stack</em>, </td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>&#160;</td>
+          <td class="paramtype">pid_t *&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -334,13 +318,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="multipipe_8c_af32b88ab44b94650a0bb6f805f70a805_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="multipipe_8c_af31c329200501f497cd102a470450103_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="multipipe_8c_af32b88ab44b94650a0bb6f805f70a805_icgraph.svg" width="618" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="multipipe_8c_af31c329200501f497cd102a470450103_icgraph.svg" width="618" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

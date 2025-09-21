@@ -96,7 +96,7 @@ var sectionId = 'dynsection-1';
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="execution__node_8c.html#a6cfdc545c2222bbb0ca1dfc8431f72a3" target="_top" xlink:title="we are going to execute the command here we have a security about absolute path given =&gt; because it&#39;s...">
+<g id="a_node3"><a xlink:href="execution__node_8c.html#adda76b40c34c18ec83b1d98700083f8a" target="_top" xlink:title="we are going to execute the command here we have a security about absolute path given =&gt; because it&#39;s...">
 <polygon fill="none" stroke="black" points="655,-19.5 655,-38.5 748,-38.5 748,-19.5 655,-19.5"/>
 <text text-anchor="middle" x="701.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">execution_node</text>
 </a>
@@ -111,7 +111,7 @@ var sectionId = 'dynsection-1';
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="multipipe_8c.html#a43baea25481fdd02ce42e4d249f12353" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="multipipe_8c.html#a461ae962ce9a1aee7221ac4b9c581f98" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="513.5,-38.5 513.5,-57.5 596.5,-57.5 596.5,-38.5 513.5,-38.5"/>
 <text text-anchor="middle" x="555" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">execute_child</text>
 </a>
@@ -126,7 +126,7 @@ var sectionId = 'dynsection-1';
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="execution_8c.html#ac70faaedddc427b5051b808a8de40da4" target="_top" xlink:title="in this function we do the fork to create a child process we do the redirection if we need to">
+<g id="a_node9"><a xlink:href="execution_8c.html#aa6f3ac2f0c10538c125eafcb587fd021" target="_top" xlink:title="in this function we do the fork to create a child process we do the redirection if we need to">
 <polygon fill="none" stroke="black" points="491,-0.5 491,-19.5 619,-19.5 619,-0.5 491,-0.5"/>
 <text text-anchor="middle" x="555" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">one_command_execve</text>
 </a>
@@ -141,7 +141,7 @@ var sectionId = 'dynsection-1';
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="multipipe_8c.html#af32b88ab44b94650a0bb6f805f70a805" target="_top" xlink:title="it&#39;s where the fork happen and sent to be execute">
+<g id="a_node5"><a xlink:href="multipipe_8c.html#af31c329200501f497cd102a470450103" target="_top" xlink:title="it&#39;s where the fork happen and sent to be execute">
 <polygon fill="none" stroke="black" points="297,-38.5 297,-57.5 455,-57.5 455,-38.5 297,-38.5"/>
 <text text-anchor="middle" x="376" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">multipipe_intermediary_cmd</text>
 </a>
@@ -156,7 +156,7 @@ var sectionId = 'dynsection-1';
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="multipipe_8c.html#a3f78d597d08aaca5580b2c89f956a3a2" target="_top" xlink:title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered...">
+<g id="a_node6"><a xlink:href="multipipe_8c.html#aa4f1c217eeb689ecbc622baecd2c5dec" target="_top" xlink:title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered...">
 <polygon fill="none" stroke="black" points="172,-38.5 172,-57.5 261,-57.5 261,-38.5 172,-38.5"/>
 <text text-anchor="middle" x="216.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">multipipe_cmd</text>
 </a>
@@ -171,7 +171,7 @@ var sectionId = 'dynsection-1';
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="execution_8c.html#a9dffeca3c2ff474e24c3e98ab856df76" target="_top" xlink:title="first function of the execution part when we have something to do we have to deal with two cases ; if...">
+<g id="a_node7"><a xlink:href="execution_8c.html#a9542b61daba3eb4d45c8887c5648b2f6" target="_top" xlink:title="first function of the execution part when we have something to do we have to deal with two cases ; if...">
 <polygon fill="none" stroke="black" points="77,-19.5 77,-38.5 136,-38.5 136,-19.5 77,-19.5"/>
 <text text-anchor="middle" x="106.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">executor</text>
 </a>
@@ -201,7 +201,7 @@ var sectionId = 'dynsection-1';
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="execution_8c.html#a4ef7db02a474eb1b198b2a25e1303118" target="_top" xlink:title="here we check if it&#39;s a builtin where we have to fork or not we still need to do the redirection veri...">
+<g id="a_node10"><a xlink:href="execution_8c.html#a38335028b2bc7aa436f8f79a3753ce5e" target="_top" xlink:title="here we check if it&#39;s a builtin where we have to fork or not we still need to do the redirection veri...">
 <polygon fill="none" stroke="black" points="172,-0.5 172,-19.5 261,-19.5 261,-0.5 172,-0.5"/>
 <text text-anchor="middle" x="216.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">one_command</text>
 </a>
