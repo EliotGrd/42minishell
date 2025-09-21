@@ -1,9 +1,12 @@
 <map id="peek" name="peek">
-<area shape="rect" id="node1" title="&quot;Peek&quot;, Look at the next character in the input string" alt="" coords="593,56,648,83"/>
-<area shape="rect" id="node2" href="$lexer__word_8c.html#a088ba907ca2f9f7d89809627a5ef8313" title="Lexes a segment delimited by double quotes." alt="" coords="363,5,545,32"/>
-<area shape="rect" id="node6" href="$lexer__word_8c.html#ad7d5fd37a954794c29d8d8b4807c233e" title="Handle backslash to escape next char correctly." alt="" coords="388,56,520,83"/>
-<area shape="rect" id="node7" href="$lexer_8c.html#a4224de0ac9d722a19a477ae2880f54da" title="Make the operator in the global string a token." alt="" coords="211,107,315,133"/>
-<area shape="rect" id="node3" href="$lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01" title="Lexes the string to create a WORD token." alt="" coords="222,56,303,83"/>
-<area shape="rect" id="node4" href="$lexer_8c.html#aced469451204cf536fd18b4cf94f6b91" title="Global lexing function, that traverses readline&#39;s string and separate in tokens." alt="" coords="108,81,163,108"/>
-<area shape="rect" id="node5" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,81,60,108"/>
+<area shape="rect" id="node1" title="&quot;Peek&quot;, Look at the next character in the input string" alt="" coords="679,75,733,101"/>
+<area shape="rect" id="node2" href="$lexer__word_8c.html#a088ba907ca2f9f7d89809627a5ef8313" title="Lexes a segment delimited by double quotes." alt="" coords="448,100,631,127"/>
+<area shape="rect" id="node6" href="$lexer__word_8c.html#ad7d5fd37a954794c29d8d8b4807c233e" title="Handle backslash to escape next char correctly." alt="" coords="473,49,605,76"/>
+<area shape="rect" id="node7" href="$expand__dollar_8c.html#ac3e15865744ed2c1300a5cb96f24e33d" title="Manages all possibilities with expand : $?, known and unknown env variable." alt="" coords="484,151,595,177"/>
+<area shape="rect" id="node10" href="$lexer_8c.html#a4224de0ac9d722a19a477ae2880f54da" title="Make the operator in the global string a token." alt="" coords="293,5,397,32"/>
+<area shape="rect" id="node3" href="$lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01" title="Lexes the string to create a WORD token." alt="" coords="305,63,386,89"/>
+<area shape="rect" id="node4" href="$lexer_8c.html#aced469451204cf536fd18b4cf94f6b91" title="Global lexing function, that traverses readline&#39;s string and separate in tokens." alt="" coords="148,63,203,89"/>
+<area shape="rect" id="node5" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,100,60,127"/>
+<area shape="rect" id="node8" href="$expand__word_8c.html#a0ec378990f411456436a9bb6a71babfc" title="Scans the word to dequote/expand and build correct output." alt="" coords="291,139,400,165"/>
+<area shape="rect" id="node9" href="$expand_8c.html#a53c53e75b0ad8c8888217cd918304b8b" title="Iterate over every args and redir of each command to expand and dequote what needs to be." alt="" coords="108,125,243,152"/>
 </map>

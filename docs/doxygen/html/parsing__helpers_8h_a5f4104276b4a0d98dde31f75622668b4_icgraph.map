@@ -1,5 +1,5 @@
 <map id="argv_buf_end" name="argv_buf_end">
-<area shape="rect" id="node1" title=" " alt="" coords="360,5,471,32"/>
+<area shape="rect" id="node1" title="Ends and null terminate the argv so it can be used." alt="" coords="360,5,471,32"/>
 <area shape="rect" id="node2" href="$parser_8c.html#a53cd1de291e3e0bab0192a7880cd6449" title=" " alt="" coords="219,5,312,32"/>
 <area shape="rect" id="node3" href="$parser_8c.html#a302af903b3f87eaaff83762f60c2d8cb" title=" " alt="" coords="108,5,171,32"/>
 <area shape="rect" id="node4" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,5,60,32"/>

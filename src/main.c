@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:37:57 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/20 11:35:21 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/21 20:52:09 by egiraud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	init_minishell(t_minishell *minishell, char **envp)
 	minishell->top_cmd = NULL;
 	minishell->top_env = NULL;
 	minishell->top_tok = NULL;
+	minishell->index_rm_exp = -1;
 	set_up_env(&minishell->top_env, envp);
 }
 

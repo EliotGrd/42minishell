@@ -1,0 +1,12 @@
+<map id="my_exit" name="my_exit">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,80,108"/>
+<area shape="rect" id="node2" href="$exit_8c.html#a7e369b4894a31549c9b65f718e28823f" title=" " alt="" coords="143,5,235,32"/>
+<area shape="rect" id="node3" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="128,56,251,83"/>
+<area shape="rect" id="node8" href="$lst__env_8c.html#a226ae0aa054e697998b2ecbc5d61d592" title=" " alt="" coords="130,107,249,133"/>
+<area shape="rect" id="node10" href="$cd_8c.html#a7593627e795ae769b5117673b60846c9" title=" " alt="" coords="168,157,211,184"/>
+<area shape="rect" id="node4" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="299,56,380,83"/>
+<area shape="rect" id="node5" href="$lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" title=" " alt="" coords="428,31,553,57"/>
+<area shape="rect" id="node7" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="732,56,824,83"/>
+<area shape="rect" id="node6" href="$lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" title=" " alt="" coords="601,31,684,57"/>
+<area shape="rect" id="node9" href="$lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" title=" " alt="" coords="301,107,378,133"/>
+</map>

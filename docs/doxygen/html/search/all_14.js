@@ -1,18 +1,9 @@
 var searchData=
 [
-  ['t_5fargv_5fbuf_173',['t_argv_buf',['../parsing__helpers_8h.html#ac585b315914c085428d96deebffd9110',1,'parsing_helpers.h']]],
-  ['t_5fcmd_174',['t_cmd',['../minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7',1,'minishell.h']]],
-  ['t_5fenv_175',['t_env',['../minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b',1,'minishell.h']]],
-  ['t_5flexer_176',['t_lexer',['../parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2',1,'parsing.h']]],
-  ['t_5fminishell_177',['t_minishell',['../minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b',1,'minishell.h']]],
-  ['t_5fredirect_178',['t_redirect',['../minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6',1,'minishell.h']]],
-  ['t_5fstr_5fbuf_179',['t_str_buf',['../parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a',1,'parsing_helpers.h']]],
-  ['t_5ftokcursor_180',['t_tokcursor',['../parsing_8h.html#a00b1b91326ce45c94bb1928fb8617b84',1,'parsing.h']]],
-  ['t_5ftoken_181',['t_token',['../structt__token.html',1,'t_token'],['../parsing_8h.html#aead06bc7a81ebdd60cbdcf6b3b8e51d4',1,'t_token():&#160;parsing.h']]],
-  ['t_5ftype_182',['t_type',['../minishell_8h.html#a2f9e89a3064f8daf69a1077e29c559b6',1,'minishell.h']]],
-  ['token_5futils_2ec_183',['token_utils.c',['../token__utils_8c.html',1,'']]],
-  ['top_5fcmd_184',['top_cmd',['../structs__minishell.html#ad33ce8e64e7cb367f6c3ab5d5c80be73',1,'s_minishell']]],
-  ['top_5fenv_185',['top_env',['../structs__minishell.html#a5c454b8e923e51fea285a8d45c8cf584',1,'s_minishell']]],
-  ['top_5ftok_186',['top_tok',['../structs__minishell.html#ae824e91d6368cd66ed4f34ce16cfbfc4',1,'s_minishell']]],
-  ['type_187',['type',['../structs__token.html#af83a08ea5e22f576861745590a66437e',1,'s_token::type()'],['../structs__redirect.html#a4b8b78b7819bab781804851dc674e337',1,'s_redirect::type()']]]
+  ['unset_217',['unset',['../unset_8c.html#a4b3bbc6cfa6ff293119825a11324fb9f',1,'unset(t_minishell *minishell, char *key):&#160;unset.c'],['../minishell_8h.html#a4b3bbc6cfa6ff293119825a11324fb9f',1,'unset(t_minishell *minishell, char *key):&#160;unset.c']]],
+  ['unset_2ec_218',['unset.c',['../unset_8c.html',1,'']]],
+  ['unset_5fcall_219',['unset_call',['../unset_8c.html#abcfd4d5a4f0408bdc748ce044e5ce08c',1,'unset_call(t_minishell *minishell, char **str):&#160;unset.c'],['../minishell_8h.html#abcfd4d5a4f0408bdc748ce044e5ce08c',1,'unset_call(t_minishell *minishell, char **str):&#160;unset.c']]],
+  ['update_5fpwd_220',['update_pwd',['../cd_8c.html#a68bb8beb2cf13bb992af8322f31f94e7',1,'cd.c']]],
+  ['update_5fstatus_221',['update_status',['../heredoc_8c.html#a62f285b689f1045264be19c5467c1781',1,'heredoc.c']]],
+  ['update_5funderscore_222',['update_underscore',['../execution_8c.html#af1c2063cb0d6822097c6e8d18d808745',1,'execution.c']]]
 ];

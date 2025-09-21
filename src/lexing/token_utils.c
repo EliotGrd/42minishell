@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 19:24:09 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/08 14:28:03 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/21 21:45:54 by egiraud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
  #include "../../includes/parsing.h"
@@ -68,11 +68,11 @@ void	free_tokens(t_token *token)
 	{
 		temp = token->next;
 		ft_free((void **)&token->lexeme);
-		token -> lexeme = NULL;//ajout de ma part
+		//token -> lexeme = NULL;//ajout de ma part
 		//ft_printf("%s, %p\n", token->lexeme, &token->lexeme);
 		//free(token->lexeme);
 		ft_free((void **)&token);
-		token = NULL;//ajout de ma part
+		//token = NULL;//ajout de ma part
 		//ft_printf("%p\n", &token);
 		//free(token);
 		token = temp;

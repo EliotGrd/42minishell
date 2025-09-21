@@ -92,17 +92,21 @@ $(document).ready(function(){initNavTree('signals_8c.html',''); initResizable();
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for signals.c:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="signals_8c__incl.svg" width="100%" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="signals_8c__incl.svg" width="100%" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a258e3b580e688a0cf46e4258525aeaf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="signals_8c.html#a258e3b580e688a0cf46e4258525aeaf1">sigint_handler</a> (int sig)</td></tr>
 <tr class="separator:a258e3b580e688a0cf46e4258525aeaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06f925baa9a6f549b31de64d4faac32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="signals_8c.html#aa06f925baa9a6f549b31de64d4faac32">sigint_handler2</a> (int sig)</td></tr>
+<tr class="memdesc:aa06f925baa9a6f549b31de64d4faac32"><td class="mdescLeft">&#160;</td><td class="mdescRight">allow us to don't create issue when a child process with readline  <a href="signals_8c.html#aa06f925baa9a6f549b31de64d4faac32">More...</a><br /></td></tr>
+<tr class="separator:aa06f925baa9a6f549b31de64d4faac32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ea78f2f2215fe1ed765af80a1b2893d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="signals_8c.html#a7ea78f2f2215fe1ed765af80a1b2893d">sigint_heredoc</a> (int sig)</td></tr>
 <tr class="memdesc:a7ea78f2f2215fe1ed765af80a1b2893d"><td class="mdescLeft">&#160;</td><td class="mdescRight">allow us to warn the process child heredoc it's time to stop and close the file descriptor  <a href="signals_8c.html#a7ea78f2f2215fe1ed765af80a1b2893d">More...</a><br /></td></tr>
 <tr class="separator:a7ea78f2f2215fe1ed765af80a1b2893d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a368a774e2b304a3de55f58168563967d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="signals_8c.html#a368a774e2b304a3de55f58168563967d">sigquit_handler</a> (int sig)</td></tr>
+<tr class="separator:a368a774e2b304a3de55f58168563967d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a258e3b580e688a0cf46e4258525aeaf1"></a>
@@ -123,7 +127,38 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="signals_8c_a258e3b580e688a0cf46e4258525aeaf1_icgraph.svg" width="228" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="signals_8c_a258e3b580e688a0cf46e4258525aeaf1_icgraph.svg" width="228" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa06f925baa9a6f549b31de64d4faac32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa06f925baa9a6f549b31de64d4faac32">&#9670;&nbsp;</a></span>sigint_handler2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sigint_handler2 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>allow us to don't create issue when a child process with readline </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sig</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="signals_8c_aa06f925baa9a6f549b31de64d4faac32_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -156,6 +191,30 @@ Here is the caller graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="signals_8c_a7ea78f2f2215fe1ed765af80a1b2893d_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a368a774e2b304a3de55f58168563967d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a368a774e2b304a3de55f58168563967d">&#9670;&nbsp;</a></span>sigquit_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sigquit_handler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="signals_8c_a368a774e2b304a3de55f58168563967d_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

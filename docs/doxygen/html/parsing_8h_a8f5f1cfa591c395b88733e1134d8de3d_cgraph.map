@@ -1,9 +1,10 @@
 <map id="syntax_error" name="syntax_error">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,109,57"/>
-<area shape="rect" id="node2" href="$error_8c.html#a193034f887c71fdb2486835d8cbd9dd3" title=" " alt="" coords="157,31,300,57"/>
-<area shape="rect" id="node3" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="348,5,471,32"/>
-<area shape="rect" id="node7" href="$token__utils_8c.html#ab3d9f0b7ddaf8661f8a3b3243d33bce7" title="Free t_token entire linked list." alt="" coords="360,56,459,83"/>
-<area shape="rect" id="node4" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="519,5,600,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,109,83"/>
+<area shape="rect" id="node2" href="$error_8c.html#a193034f887c71fdb2486835d8cbd9dd3" title=" " alt="" coords="157,56,300,83"/>
+<area shape="rect" id="node3" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="348,31,471,57"/>
+<area shape="rect" id="node8" href="$token__utils_8c.html#ab3d9f0b7ddaf8661f8a3b3243d33bce7" title="Free t_token entire linked list." alt="" coords="360,81,459,108"/>
+<area shape="rect" id="node4" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="519,31,600,57"/>
 <area shape="rect" id="node5" href="$lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" title=" " alt="" coords="648,5,773,32"/>
+<area shape="rect" id="node7" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="952,31,1044,57"/>
 <area shape="rect" id="node6" href="$lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" title=" " alt="" coords="821,5,904,32"/>
 </map>

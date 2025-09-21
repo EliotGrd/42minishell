@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['unset_188',['unset',['../unset_8c.html#a9f3a931b6e1e798b91f27ec7493e17fe',1,'unset(t_env **top_env, char *key):&#160;unset.c'],['../minishell_8h.html#a9f3a931b6e1e798b91f27ec7493e17fe',1,'unset(t_env **top_env, char *key):&#160;unset.c']]],
-  ['unset_2ec_189',['unset.c',['../unset_8c.html',1,'']]],
-  ['update_5fstatus_190',['update_status',['../heredoc_8c.html#a1e49e3a472f4fd4b4c38a3e393868e67',1,'heredoc.c']]]
+  ['value_223',['value',['../structs__env.html#aeed22f6fb6689d3a190d64d3e11d989f',1,'s_env']]]
 ];

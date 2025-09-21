@@ -166,9 +166,6 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a0adfa8c08200844de0cdc6f24bac6b12"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a0adfa8c08200844de0cdc6f24bac6b12">search_path</a> (char *str, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *envp)</td></tr>
 <tr class="separator:a0adfa8c08200844de0cdc6f24bac6b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cfdc545c2222bbb0ca1dfc8431f72a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a6cfdc545c2222bbb0ca1dfc8431f72a3">execution_node</a> (char **str, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="memdesc:a6cfdc545c2222bbb0ca1dfc8431f72a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">we are going to execute the command here we have a security about absolute path given =&gt; because it's up to us to change information in specific case. if it's a builtin =&gt; we call the right function we have done the redirection verification and also the redirection set up  <a href="minishell_8h.html#a6cfdc545c2222bbb0ca1dfc8431f72a3">More...</a><br /></td></tr>
-<tr class="separator:a6cfdc545c2222bbb0ca1dfc8431f72a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af14361e499107d3c8982a2e4057e253b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#af14361e499107d3c8982a2e4057e253b">opening_infile</a> (char *argv)</td></tr>
 <tr class="separator:af14361e499107d3c8982a2e4057e253b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f13394f1f23e1575b37b1be4fb2801b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a8f13394f1f23e1575b37b1be4fb2801b">opening_outfile</a> (char *argv)</td></tr>
@@ -221,32 +218,35 @@ Functions</h2></td></tr>
 <tr class="separator:aa33f790ca1fd5de2acbd30cf08f437f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb0801286560639fb0d37901d566a3e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#acb0801286560639fb0d37901d566a3e5">create_node_redir</a> (char *str, <a class="el" href="minishell_8h.html#a2f9e89a3064f8daf69a1077e29c559b6">t_type</a> type)</td></tr>
 <tr class="separator:acb0801286560639fb0d37901d566a3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb71521101d250f88504e9a350f39299"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#acb71521101d250f88504e9a350f39299">execute_child</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_stack, <a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *emp, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="separator:acb71521101d250f88504e9a350f39299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f78d597d08aaca5580b2c89f956a3a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a3f78d597d08aaca5580b2c89f956a3a2">multipipe_cmd</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_stack, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="memdesc:a3f78d597d08aaca5580b2c89f956a3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">management of the multipipe (= name when we have at least one pipe) First step is to manage the heredoc Then we are going to go throught each node of the linked list of command Each time we check the redirection =&gt; to manage error and create documents If no error =&gt; sent to execute (fork will happen anyway)  <a href="minishell_8h.html#a3f78d597d08aaca5580b2c89f956a3a2">More...</a><br /></td></tr>
-<tr class="separator:a3f78d597d08aaca5580b2c89f956a3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda76b40c34c18ec83b1d98700083f8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#adda76b40c34c18ec83b1d98700083f8a">execution_node</a> (char **str, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="memdesc:adda76b40c34c18ec83b1d98700083f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">we are going to execute the command here we have a security about absolute path given =&gt; because it's up to us to change information in specific case. if it's a builtin =&gt; we call the right function we have done the redirection verification and also the redirection set up  <a href="minishell_8h.html#adda76b40c34c18ec83b1d98700083f8a">More...</a><br /></td></tr>
+<tr class="separator:adda76b40c34c18ec83b1d98700083f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a626a34649e53cefe0d224c9ae5ccb5b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a626a34649e53cefe0d224c9ae5ccb5b6">execute_child</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *emp, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="separator:a626a34649e53cefe0d224c9ae5ccb5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f1c217eeb689ecbc622baecd2c5dec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#aa4f1c217eeb689ecbc622baecd2c5dec">multipipe_cmd</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="memdesc:aa4f1c217eeb689ecbc622baecd2c5dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">management of the multipipe (= name when we have at least one pipe) First step is to manage the heredoc Then we are going to go throught each node of the linked list of command Each time we check the redirection =&gt; to manage error and create documents If no error =&gt; sent to execute (fork will happen anyway)  <a href="minishell_8h.html#aa4f1c217eeb689ecbc622baecd2c5dec">More...</a><br /></td></tr>
+<tr class="separator:aa4f1c217eeb689ecbc622baecd2c5dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7980d82e7ea7c0c84519ef3e3011b98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#af7980d82e7ea7c0c84519ef3e3011b98">close_fd_parent</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_stack)</td></tr>
 <tr class="separator:af7980d82e7ea7c0c84519ef3e3011b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19e2c31eeb0eb25575df2277cbd7774e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a19e2c31eeb0eb25575df2277cbd7774e">command_redirect</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_stack)</td></tr>
-<tr class="separator:a19e2c31eeb0eb25575df2277cbd7774e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b2bd9dba90bfc9b2ead44af5e630315"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a8b2bd9dba90bfc9b2ead44af5e630315">launch_builtin</a> (char **str, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="memdesc:a8b2bd9dba90bfc9b2ead44af5e630315"><td class="mdescLeft">&#160;</td><td class="mdescRight">launch the builtin <br  />
- some of them are not present because we have to fork() them why ? because we can have redirection, redirection are done in a fork process  <a href="minishell_8h.html#a8b2bd9dba90bfc9b2ead44af5e630315">More...</a><br /></td></tr>
-<tr class="separator:a8b2bd9dba90bfc9b2ead44af5e630315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c96266f1645047a9bdd9af22de94a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a26c96266f1645047a9bdd9af22de94a7">command_redirect</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_stack)</td></tr>
+<tr class="separator:a26c96266f1645047a9bdd9af22de94a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bee4f6fbfd70ef7ec1f52856538ac71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a7bee4f6fbfd70ef7ec1f52856538ac71">launch_builtin</a> (char **str, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="memdesc:a7bee4f6fbfd70ef7ec1f52856538ac71"><td class="mdescLeft">&#160;</td><td class="mdescRight">launch the builtin <br  />
+ some of them are not present because we have to fork() them why ? because we can have redirection, redirection are done in a fork process  <a href="minishell_8h.html#a7bee4f6fbfd70ef7ec1f52856538ac71">More...</a><br /></td></tr>
+<tr class="separator:a7bee4f6fbfd70ef7ec1f52856538ac71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3acc0bb56da881cc8609ca9e94ec8e93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a3acc0bb56da881cc8609ca9e94ec8e93">is_it_builtin</a> (char *str)</td></tr>
 <tr class="memdesc:a3acc0bb56da881cc8609ca9e94ec8e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">detect if it's a builtin with strncmp() but the real question is "is it a builtin I have 
 to launch in a fork process or not ?"  <a href="minishell_8h.html#a3acc0bb56da881cc8609ca9e94ec8e93">More...</a><br /></td></tr>
 <tr class="separator:a3acc0bb56da881cc8609ca9e94ec8e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ef7db02a474eb1b198b2a25e1303118"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a4ef7db02a474eb1b198b2a25e1303118">one_command</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_cmd, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="memdesc:a4ef7db02a474eb1b198b2a25e1303118"><td class="mdescLeft">&#160;</td><td class="mdescRight">here we check if it's a builtin where we have to fork or not we still need to do the redirection verification (aka creation and error management of files). In the case of a builtin they are not going to be used but....depends of which builtin  <a href="minishell_8h.html#a4ef7db02a474eb1b198b2a25e1303118">More...</a><br /></td></tr>
-<tr class="separator:a4ef7db02a474eb1b198b2a25e1303118"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dffeca3c2ff474e24c3e98ab856df76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a9dffeca3c2ff474e24c3e98ab856df76">executor</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_cmd, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="memdesc:a9dffeca3c2ff474e24c3e98ab856df76"><td class="mdescLeft">&#160;</td><td class="mdescRight">first function of the execution part when we have something to do we have to deal with two cases ; if we have only one command and more why ? because in the case of one command + with some builtin we don't have to fork while with multipipe (from one | to an infinite number) you have to fork anyway  <a href="minishell_8h.html#a9dffeca3c2ff474e24c3e98ab856df76">More...</a><br /></td></tr>
-<tr class="separator:a9dffeca3c2ff474e24c3e98ab856df76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac70faaedddc427b5051b808a8de40da4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#ac70faaedddc427b5051b808a8de40da4">one_command_execve</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_cmd, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="memdesc:ac70faaedddc427b5051b808a8de40da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">in this function we do the fork to create a child process we do the redirection if we need to  <a href="minishell_8h.html#ac70faaedddc427b5051b808a8de40da4">More...</a><br /></td></tr>
-<tr class="separator:ac70faaedddc427b5051b808a8de40da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38335028b2bc7aa436f8f79a3753ce5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a38335028b2bc7aa436f8f79a3753ce5e">one_command</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="memdesc:a38335028b2bc7aa436f8f79a3753ce5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">here we check if it's a builtin where we have to fork or not we still need to do the redirection verification (aka creation and error management of files). In the case of a builtin they are not going to be used but....depends of which builtin  <a href="minishell_8h.html#a38335028b2bc7aa436f8f79a3753ce5e">More...</a><br /></td></tr>
+<tr class="separator:a38335028b2bc7aa436f8f79a3753ce5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9542b61daba3eb4d45c8887c5648b2f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a9542b61daba3eb4d45c8887c5648b2f6">executor</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="memdesc:a9542b61daba3eb4d45c8887c5648b2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">first function of the execution part when we have something to do we have to deal with two cases ; if we have only one command and more why ? because in the case of one command + with some builtin we don't have to fork while with multipipe (from one | to an infinite number) you have to fork anyway  <a href="minishell_8h.html#a9542b61daba3eb4d45c8887c5648b2f6">More...</a><br /></td></tr>
+<tr class="separator:a9542b61daba3eb4d45c8887c5648b2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f3ac2f0c10538c125eafcb587fd021"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#aa6f3ac2f0c10538c125eafcb587fd021">one_command_execve</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="memdesc:aa6f3ac2f0c10538c125eafcb587fd021"><td class="mdescLeft">&#160;</td><td class="mdescRight">in this function we do the fork to create a child process we do the redirection if we need to  <a href="minishell_8h.html#aa6f3ac2f0c10538c125eafcb587fd021">More...</a><br /></td></tr>
+<tr class="separator:aa6f3ac2f0c10538c125eafcb587fd021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b749bc2b4088984c0efe1c479ae6ec8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a5b749bc2b4088984c0efe1c479ae6ec8">fail_previous</a> (void)</td></tr>
 <tr class="separator:a5b749bc2b4088984c0efe1c479ae6ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a0d7f695cf53df46301e14ffab77638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a3a0d7f695cf53df46301e14ffab77638">close_previous</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_stack)</td></tr>
@@ -266,29 +266,38 @@ to launch in a fork process or not ?"  <a href="minishell_8h.html#a3acc0bb56da88
 <tr class="memitem:ac61790fa82f2a9b6b904cd92135b6acb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#ac61790fa82f2a9b6b904cd92135b6acb">outfile_append_redirection</a> (<a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *redir, <a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> **top_stack, int type)</td></tr>
 <tr class="memdesc:ac61790fa82f2a9b6b904cd92135b6acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">outfile and append are open with the right flags in a case of an error we write a message with the name of the file which creates this error we close the previous fd_out and we keep the new one  <a href="minishell_8h.html#ac61790fa82f2a9b6b904cd92135b6acb">More...</a><br /></td></tr>
 <tr class="separator:ac61790fa82f2a9b6b904cd92135b6acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7678c59b5365c776294bdeefd3d7583"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#ad7678c59b5365c776294bdeefd3d7583">env</a> (<a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="separator:ad7678c59b5365c776294bdeefd3d7583"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab62618359287b6604bd60852145b9726"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#ab62618359287b6604bd60852145b9726">pwd</a> (void)</td></tr>
-<tr class="separator:ab62618359287b6604bd60852145b9726"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f3a931b6e1e798b91f27ec7493e17fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a9f3a931b6e1e798b91f27ec7493e17fe">unset</a> (<a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> **top_env, char *key)</td></tr>
-<tr class="separator:a9f3a931b6e1e798b91f27ec7493e17fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08aa1a32a4d2f6bcca10f6424195d4ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a08aa1a32a4d2f6bcca10f6424195d4ef">env</a> (<a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env, char **str)</td></tr>
+<tr class="separator:a08aa1a32a4d2f6bcca10f6424195d4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6977235be2514ba716ef89aad796063"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#ac6977235be2514ba716ef89aad796063">pwd</a> (void)</td></tr>
+<tr class="separator:ac6977235be2514ba716ef89aad796063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b3bbc6cfa6ff293119825a11324fb9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a4b3bbc6cfa6ff293119825a11324fb9f">unset</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell, char *key)</td></tr>
+<tr class="separator:a4b3bbc6cfa6ff293119825a11324fb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5522916069f77552d810e207670e3170"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a5522916069f77552d810e207670e3170">my_echo</a> (char **argv)</td></tr>
 <tr class="separator:a5522916069f77552d810e207670e3170"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68ca1d5a8272f17815cfd7394a24ad19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a68ca1d5a8272f17815cfd7394a24ad19">cd</a> (char **argv, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="separator:a68ca1d5a8272f17815cfd7394a24ad19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab409cd8fcc654b7e32155051ded49ff5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#ab409cd8fcc654b7e32155051ded49ff5">export</a> (char **str, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env)</td></tr>
-<tr class="separator:ab409cd8fcc654b7e32155051ded49ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5260679719a4e1f862a6efd1f12cf85"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#aa5260679719a4e1f862a6efd1f12cf85">here_doc_management</a> (<a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_cmd)</td></tr>
-<tr class="memdesc:aa5260679719a4e1f862a6efd1f12cf85"><td class="mdescLeft">&#160;</td><td class="mdescRight">the function will go through all the commands and check the redirection if we encounter a heredoc we manage it  <a href="minishell_8h.html#aa5260679719a4e1f862a6efd1f12cf85">More...</a><br /></td></tr>
-<tr class="separator:aa5260679719a4e1f862a6efd1f12cf85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab68377acf2c8adf39f991dc425297c09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#ab68377acf2c8adf39f991dc425297c09">heredoc_input</a> (<a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *temp, <a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_cmd)</td></tr>
-<tr class="memdesc:ab68377acf2c8adf39f991dc425297c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">it's where we open the heredoc and start writing inside our pipe each time we check if it's the word allowing to stop the heredoc or not we are going to keep only the read part of the fd inside the node of redirection  <a href="minishell_8h.html#ab68377acf2c8adf39f991dc425297c09">More...</a><br /></td></tr>
-<tr class="separator:ab68377acf2c8adf39f991dc425297c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3cf8a1d55856208b8d44453d4cf9b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#afa3cf8a1d55856208b8d44453d4cf9b4">cd</a> (char **argv, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="separator:afa3cf8a1d55856208b8d44453d4cf9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcbec3416f97b2d0b8d53cf4c2b2a436"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#adcbec3416f97b2d0b8d53cf4c2b2a436">my_exit</a> (char **argv, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="separator:adcbec3416f97b2d0b8d53cf4c2b2a436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcfd4d5a4f0408bdc748ce044e5ce08c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#abcfd4d5a4f0408bdc748ce044e5ce08c">unset_call</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell, char **str)</td></tr>
+<tr class="separator:abcfd4d5a4f0408bdc748ce044e5ce08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bb2544b6254ee4ddb592a4cfa61734f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a1bb2544b6254ee4ddb592a4cfa61734f">export_call</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell, char **str)</td></tr>
+<tr class="separator:a1bb2544b6254ee4ddb592a4cfa61734f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17337782f10170a6f2f9188bf557de0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a17337782f10170a6f2f9188bf557de0f">here_doc_management</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="memdesc:a17337782f10170a6f2f9188bf557de0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">the function will go through all the commands and check the redirection if we encounter a heredoc we manage it  <a href="minishell_8h.html#a17337782f10170a6f2f9188bf557de0f">More...</a><br /></td></tr>
+<tr class="separator:a17337782f10170a6f2f9188bf557de0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b4a5d07e8877b06b8977b47a6d51930"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a0b4a5d07e8877b06b8977b47a6d51930">heredoc_input</a> (<a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *temp, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
+<tr class="memdesc:a0b4a5d07e8877b06b8977b47a6d51930"><td class="mdescLeft">&#160;</td><td class="mdescRight">it's where we open the heredoc and start writing inside our pipe each time we check if it's the word allowing to stop the heredoc or not we are going to keep only the read part of the fd inside the node of redirection  <a href="minishell_8h.html#a0b4a5d07e8877b06b8977b47a6d51930">More...</a><br /></td></tr>
+<tr class="separator:a0b4a5d07e8877b06b8977b47a6d51930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a258e3b580e688a0cf46e4258525aeaf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a258e3b580e688a0cf46e4258525aeaf1">sigint_handler</a> (int sig)</td></tr>
 <tr class="separator:a258e3b580e688a0cf46e4258525aeaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06f925baa9a6f549b31de64d4faac32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#aa06f925baa9a6f549b31de64d4faac32">sigint_handler2</a> (int sig)</td></tr>
+<tr class="memdesc:aa06f925baa9a6f549b31de64d4faac32"><td class="mdescLeft">&#160;</td><td class="mdescRight">allow us to don't create issue when a child process with readline  <a href="minishell_8h.html#aa06f925baa9a6f549b31de64d4faac32">More...</a><br /></td></tr>
+<tr class="separator:aa06f925baa9a6f549b31de64d4faac32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ea78f2f2215fe1ed765af80a1b2893d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a7ea78f2f2215fe1ed765af80a1b2893d">sigint_heredoc</a> (int sig)</td></tr>
 <tr class="memdesc:a7ea78f2f2215fe1ed765af80a1b2893d"><td class="mdescLeft">&#160;</td><td class="mdescRight">allow us to warn the process child heredoc it's time to stop and close the file descriptor  <a href="minishell_8h.html#a7ea78f2f2215fe1ed765af80a1b2893d">More...</a><br /></td></tr>
 <tr class="separator:a7ea78f2f2215fe1ed765af80a1b2893d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a368a774e2b304a3de55f58168563967d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a368a774e2b304a3de55f58168563967d">sigquit_handler</a> (int sig)</td></tr>
+<tr class="separator:a368a774e2b304a3de55f58168563967d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0250cce1862c20e31d0c0ece960bc3a0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a0250cce1862c20e31d0c0ece960bc3a0">join_path</a> (char *str, char *str2, char sep)</td></tr>
 <tr class="separator:a0250cce1862c20e31d0c0ece960bc3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bca6910c90a19d96b36506a2e2cebf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a1bca6910c90a19d96b36506a2e2cebf6">ft_close_fd</a> (int *fd)</td></tr>
@@ -302,6 +311,10 @@ to launch in a fork process or not ?"  <a href="minishell_8h.html#a3acc0bb56da88
 <tr class="memitem:a4fd8e3642e456e9a2f7fe4dc8f44ad43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a4fd8e3642e456e9a2f7fe4dc8f44ad43">remove_echoctl</a> (void)</td></tr>
 <tr class="memdesc:a4fd8e3642e456e9a2f7fe4dc8f44ad43"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove the echoctl which are the symbol which appears when you press CTRL+C or CTRL+\ it's different here because we don't have to manage this in readline in particular but only here on here_doc because we are using GNL  <a href="minishell_8h.html#a4fd8e3642e456e9a2f7fe4dc8f44ad43">More...</a><br /></td></tr>
 <tr class="separator:a4fd8e3642e456e9a2f7fe4dc8f44ad43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7593627e795ae769b5117673b60846c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a7593627e795ae769b5117673b60846c9">len</a> (char **argv)</td></tr>
+<tr class="separator:a7593627e795ae769b5117673b60846c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cd6579fc3858072521e55ef235a2637"><td class="memItemLeft" align="right" valign="top"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minishell_8h.html#a8cd6579fc3858072521e55ef235a2637">research_node_env</a> (<a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env, char *search)</td></tr>
+<tr class="separator:a8cd6579fc3858072521e55ef235a2637"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -442,14 +455,13 @@ Variables</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_aa497366ed7c88c6e5b6d70a4cb398ae9_icgraph.svg" width="180" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_aa497366ed7c88c6e5b6d70a4cb398ae9_icgraph.svg" width="180" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a68ca1d5a8272f17815cfd7394a24ad19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68ca1d5a8272f17815cfd7394a24ad19">&#9670;&nbsp;</a></span>cd()</h2>
+<a id="afa3cf8a1d55856208b8d44453d4cf9b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa3cf8a1d55856208b8d44453d4cf9b4">&#9670;&nbsp;</a></span>cd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -463,8 +475,8 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -476,13 +488,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a68ca1d5a8272f17815cfd7394a24ad19_cgraph.svg" width="236" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_afa3cf8a1d55856208b8d44453d4cf9b4_cgraph.svg" width="432" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a68ca1d5a8272f17815cfd7394a24ad19_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_afa3cf8a1d55856208b8d44453d4cf9b4_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -644,14 +656,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a19e2c31eeb0eb25575df2277cbd7774e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19e2c31eeb0eb25575df2277cbd7774e">&#9670;&nbsp;</a></span>command_redirect()</h2>
+<a id="a26c96266f1645047a9bdd9af22de94a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c96266f1645047a9bdd9af22de94a7">&#9670;&nbsp;</a></span>command_redirect()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void command_redirect </td>
+          <td class="memname">int command_redirect </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
           <td class="paramname"><em>top_stack</em></td><td>)</td>
@@ -662,12 +674,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a19e2c31eeb0eb25575df2277cbd7774e_cgraph.svg" width="462" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a26c96266f1645047a9bdd9af22de94a7_cgraph.svg" width="462" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a19e2c31eeb0eb25575df2277cbd7774e_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a26c96266f1645047a9bdd9af22de94a7_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -691,8 +704,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a8dd9c58ef8144c1956483eb089e5080f_icgraph.svg" width="362" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a8dd9c58ef8144c1956483eb089e5080f_icgraph.svg" width="362" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -759,8 +771,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_acb0801286560639fb0d37901d566a3e5_icgraph.svg" width="647" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_acb0801286560639fb0d37901d566a3e5_icgraph.svg" width="647" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -783,12 +794,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a132395876bb5a7cfe926b9e37571a1e3_cgraph.svg" width="567" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a132395876bb5a7cfe926b9e37571a1e3_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a132395876bb5a7cfe926b9e37571a1e3_icgraph.svg" width="100%" height="508"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a132395876bb5a7cfe926b9e37571a1e3_icgraph.svg" width="100%" height="584"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -817,7 +829,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a226ae0aa054e697998b2ecbc5d61d592_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a226ae0aa054e697998b2ecbc5d61d592_icgraph.svg" width="100%" height="584"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -841,36 +853,47 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a30ccaf401a4f897e48ead5fe54f4b307_cgraph.svg" width="267" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a30ccaf401a4f897e48ead5fe54f4b307_cgraph.svg" width="407" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a30ccaf401a4f897e48ead5fe54f4b307_icgraph.svg" width="100%" height="508"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a30ccaf401a4f897e48ead5fe54f4b307_icgraph.svg" width="100%" height="584"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ad7678c59b5365c776294bdeefd3d7583"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7678c59b5365c776294bdeefd3d7583">&#9670;&nbsp;</a></span>env()</h2>
+<a id="a08aa1a32a4d2f6bcca10f6424195d4ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08aa1a32a4d2f6bcca10f6424195d4ef">&#9670;&nbsp;</a></span>env()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void env </td>
+          <td class="memname">int env </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em></td><td>)</td>
+          <td class="paramname"><em>top_env</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_ad7678c59b5365c776294bdeefd3d7583_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a08aa1a32a4d2f6bcca10f6424195d4ef_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -900,8 +923,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="acb71521101d250f88504e9a350f39299"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb71521101d250f88504e9a350f39299">&#9670;&nbsp;</a></span>execute_child()</h2>
+<a id="a626a34649e53cefe0d224c9ae5ccb5b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a626a34649e53cefe0d224c9ae5ccb5b6">&#9670;&nbsp;</a></span>execute_child()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -910,19 +933,13 @@ Here is the caller graph for this function:</div>
           <td class="memname">void execute_child </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
-          <td class="paramname"><em>top_stack</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
           <td class="paramname"><em>emp</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -934,20 +951,20 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_acb71521101d250f88504e9a350f39299_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a626a34649e53cefe0d224c9ae5ccb5b6_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_acb71521101d250f88504e9a350f39299_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a626a34649e53cefe0d224c9ae5ccb5b6_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a6cfdc545c2222bbb0ca1dfc8431f72a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cfdc545c2222bbb0ca1dfc8431f72a3">&#9670;&nbsp;</a></span>execution_node()</h2>
+<a id="adda76b40c34c18ec83b1d98700083f8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda76b40c34c18ec83b1d98700083f8a">&#9670;&nbsp;</a></span>execution_node()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -961,8 +978,8 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -984,20 +1001,20 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a6cfdc545c2222bbb0ca1dfc8431f72a3_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_adda76b40c34c18ec83b1d98700083f8a_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a6cfdc545c2222bbb0ca1dfc8431f72a3_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_adda76b40c34c18ec83b1d98700083f8a_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a9dffeca3c2ff474e24c3e98ab856df76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dffeca3c2ff474e24c3e98ab856df76">&#9670;&nbsp;</a></span>executor()</h2>
+<a id="a9542b61daba3eb4d45c8887c5648b2f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9542b61daba3eb4d45c8887c5648b2f6">&#9670;&nbsp;</a></span>executor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1005,19 +1022,9 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void executor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
-          <td class="paramname"><em>top_cmd</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1033,35 +1040,35 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a9dffeca3c2ff474e24c3e98ab856df76_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a9542b61daba3eb4d45c8887c5648b2f6_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a9dffeca3c2ff474e24c3e98ab856df76_icgraph.svg" width="192" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a9542b61daba3eb4d45c8887c5648b2f6_icgraph.svg" width="192" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ab409cd8fcc654b7e32155051ded49ff5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab409cd8fcc654b7e32155051ded49ff5">&#9670;&nbsp;</a></span>export()</h2>
+<a id="a1bb2544b6254ee4ddb592a4cfa61734f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bb2544b6254ee4ddb592a4cfa61734f">&#9670;&nbsp;</a></span>export_call()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int export </td>
+          <td class="memname">int export_call </td>
           <td>(</td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>&#160;</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1073,13 +1080,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_ab409cd8fcc654b7e32155051ded49ff5_cgraph.svg" width="424" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a1bb2544b6254ee4ddb592a4cfa61734f_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_ab409cd8fcc654b7e32155051ded49ff5_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a1bb2544b6254ee4ddb592a4cfa61734f_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1164,7 +1171,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_ab80db2e6dc59c16654afb6a26d633a21_icgraph.svg" width="295" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_ab80db2e6dc59c16654afb6a26d633a21_icgraph.svg" width="508" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -1216,8 +1224,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa5260679719a4e1f862a6efd1f12cf85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5260679719a4e1f862a6efd1f12cf85">&#9670;&nbsp;</a></span>here_doc_management()</h2>
+<a id="a17337782f10170a6f2f9188bf557de0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17337782f10170a6f2f9188bf557de0f">&#9670;&nbsp;</a></span>here_doc_management()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1225,8 +1233,8 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">int here_doc_management </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
-          <td class="paramname"><em>top_cmd</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1243,20 +1251,20 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_aa5260679719a4e1f862a6efd1f12cf85_cgraph.svg" width="100%" height="506"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a17337782f10170a6f2f9188bf557de0f_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_aa5260679719a4e1f862a6efd1f12cf85_icgraph.svg" width="582" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a17337782f10170a6f2f9188bf557de0f_icgraph.svg" width="582" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ab68377acf2c8adf39f991dc425297c09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab68377acf2c8adf39f991dc425297c09">&#9670;&nbsp;</a></span>heredoc_input()</h2>
+<a id="a0b4a5d07e8877b06b8977b47a6d51930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b4a5d07e8877b06b8977b47a6d51930">&#9670;&nbsp;</a></span>heredoc_input()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1270,8 +1278,8 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
-          <td class="paramname"><em>top_cmd</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1292,13 +1300,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_ab68377acf2c8adf39f991dc425297c09_cgraph.svg" width="650" height="275"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a0b4a5d07e8877b06b8977b47a6d51930_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_ab68377acf2c8adf39f991dc425297c09_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a0b4a5d07e8877b06b8977b47a6d51930_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1427,8 +1435,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a8b2bd9dba90bfc9b2ead44af5e630315"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b2bd9dba90bfc9b2ead44af5e630315">&#9670;&nbsp;</a></span>launch_builtin()</h2>
+<a id="a7bee4f6fbfd70ef7ec1f52856538ac71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bee4f6fbfd70ef7ec1f52856538ac71">&#9670;&nbsp;</a></span>launch_builtin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1442,8 +1450,8 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1466,13 +1474,37 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a8b2bd9dba90bfc9b2ead44af5e630315_cgraph.svg" width="603" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a7bee4f6fbfd70ef7ec1f52856538ac71_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a8b2bd9dba90bfc9b2ead44af5e630315_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a7bee4f6fbfd70ef7ec1f52856538ac71_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7593627e795ae769b5117673b60846c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7593627e795ae769b5117673b60846c9">&#9670;&nbsp;</a></span>len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int len </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a7593627e795ae769b5117673b60846c9_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1507,8 +1539,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a3f78d597d08aaca5580b2c89f956a3a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f78d597d08aaca5580b2c89f956a3a2">&#9670;&nbsp;</a></span>multipipe_cmd()</h2>
+<a id="aa4f1c217eeb689ecbc622baecd2c5dec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f1c217eeb689ecbc622baecd2c5dec">&#9670;&nbsp;</a></span>multipipe_cmd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1516,19 +1548,9 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">int multipipe_cmd </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
-          <td class="paramname"><em>top_stack</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1545,13 +1567,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a3f78d597d08aaca5580b2c89f956a3a2_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_aa4f1c217eeb689ecbc622baecd2c5dec_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a3f78d597d08aaca5580b2c89f956a3a2_icgraph.svg" width="359" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_aa4f1c217eeb689ecbc622baecd2c5dec_icgraph.svg" width="359" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1573,6 +1595,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a5522916069f77552d810e207670e3170_cgraph.svg" width="287" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a5522916069f77552d810e207670e3170_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
@@ -1581,8 +1609,48 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a4ef7db02a474eb1b198b2a25e1303118"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ef7db02a474eb1b198b2a25e1303118">&#9670;&nbsp;</a></span>one_command()</h2>
+<a id="adcbec3416f97b2d0b8d53cf4c2b2a436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcbec3416f97b2d0b8d53cf4c2b2a436">&#9670;&nbsp;</a></span>my_exit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int my_exit </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_adcbec3416f97b2d0b8d53cf4c2b2a436_cgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_adcbec3416f97b2d0b8d53cf4c2b2a436_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a38335028b2bc7aa436f8f79a3753ce5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38335028b2bc7aa436f8f79a3753ce5e">&#9670;&nbsp;</a></span>one_command()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1590,19 +1658,9 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">int one_command </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
-          <td class="paramname"><em>top_cmd</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1619,20 +1677,20 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a4ef7db02a474eb1b198b2a25e1303118_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a38335028b2bc7aa436f8f79a3753ce5e_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a4ef7db02a474eb1b198b2a25e1303118_icgraph.svg" width="359" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a38335028b2bc7aa436f8f79a3753ce5e_icgraph.svg" width="359" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ac70faaedddc427b5051b808a8de40da4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac70faaedddc427b5051b808a8de40da4">&#9670;&nbsp;</a></span>one_command_execve()</h2>
+<a id="aa6f3ac2f0c10538c125eafcb587fd021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6f3ac2f0c10538c125eafcb587fd021">&#9670;&nbsp;</a></span>one_command_execve()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1640,19 +1698,9 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">int one_command_execve </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *&#160;</td>
-          <td class="paramname"><em>top_cmd</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1669,13 +1717,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_ac70faaedddc427b5051b808a8de40da4_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_aa6f3ac2f0c10538c125eafcb587fd021_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_ac70faaedddc427b5051b808a8de40da4_icgraph.svg" width="578" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_aa6f3ac2f0c10538c125eafcb587fd021_icgraph.svg" width="578" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1791,12 +1839,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a8e2b63759f149b547e0d07f210ede9b3_cgraph.svg" width="396" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a8e2b63759f149b547e0d07f210ede9b3_cgraph.svg" width="536" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a8e2b63759f149b547e0d07f210ede9b3_icgraph.svg" width="100%" height="508"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a8e2b63759f149b547e0d07f210ede9b3_icgraph.svg" width="100%" height="584"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1820,7 +1869,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a058c245b5f2ef22f9d2659f90e4d3537_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a058c245b5f2ef22f9d2659f90e4d3537_icgraph.svg" width="100%" height="584"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1842,9 +1891,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_ade8f0bdda51d9bf348ebeb38fefba881_cgraph.svg" width="234" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_ade8f0bdda51d9bf348ebeb38fefba881_icgraph.svg" width="100%" height="508"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_ade8f0bdda51d9bf348ebeb38fefba881_icgraph.svg" width="100%" height="584"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1879,6 +1934,12 @@ Here is the caller graph for this function:</div>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_aed036fcdab112b64cbd705f26aee31e0_cgraph.svg" width="295" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_aed036fcdab112b64cbd705f26aee31e0_icgraph.svg" width="351" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -2011,14 +2072,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ab62618359287b6604bd60852145b9726"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab62618359287b6604bd60852145b9726">&#9670;&nbsp;</a></span>pwd()</h2>
+<a id="ac6977235be2514ba716ef89aad796063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6977235be2514ba716ef89aad796063">&#9670;&nbsp;</a></span>pwd()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void pwd </td>
+          <td class="memname">int pwd </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -2029,7 +2090,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_ab62618359287b6604bd60852145b9726_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_ac6977235be2514ba716ef89aad796063_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -2145,7 +2206,41 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a4d4a14327b2c3ff88099102b6bd77986_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a4d4a14327b2c3ff88099102b6bd77986_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8cd6579fc3858072521e55ef235a2637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cd6579fc3858072521e55ef235a2637">&#9670;&nbsp;</a></span>research_node_env()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a>* research_node_env </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
+          <td class="paramname"><em>top_env</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>search</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a8cd6579fc3858072521e55ef235a2637_icgraph.svg" width="100%" height="470"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -2223,8 +2318,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_ac1233f225cd25a82eded5e81135528cd_icgraph.svg" width="368" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_ac1233f225cd25a82eded5e81135528cd_icgraph.svg" width="368" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -2247,7 +2341,38 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a258e3b580e688a0cf46e4258525aeaf1_icgraph.svg" width="228" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a258e3b580e688a0cf46e4258525aeaf1_icgraph.svg" width="228" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa06f925baa9a6f549b31de64d4faac32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa06f925baa9a6f549b31de64d4faac32">&#9670;&nbsp;</a></span>sigint_handler2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sigint_handler2 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>allow us to don't create issue when a child process with readline </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sig</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_aa06f925baa9a6f549b31de64d4faac32_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -2285,6 +2410,30 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a368a774e2b304a3de55f58168563967d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a368a774e2b304a3de55f58168563967d">&#9670;&nbsp;</a></span>sigquit_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sigquit_handler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a368a774e2b304a3de55f58168563967d_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a4f46edb8da10e7a19d572dd91d8ac21b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4f46edb8da10e7a19d572dd91d8ac21b">&#9670;&nbsp;</a></span>split_env()</h2>
 
@@ -2303,23 +2452,22 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a4f46edb8da10e7a19d572dd91d8ac21b_icgraph.svg" width="498" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_a4f46edb8da10e7a19d572dd91d8ac21b_icgraph.svg" width="498" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a9f3a931b6e1e798b91f27ec7493e17fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f3a931b6e1e798b91f27ec7493e17fe">&#9670;&nbsp;</a></span>unset()</h2>
+<a id="a4b3bbc6cfa6ff293119825a11324fb9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b3bbc6cfa6ff293119825a11324fb9f">&#9670;&nbsp;</a></span>unset()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void unset </td>
+          <td class="memname">int unset </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> **&#160;</td>
-          <td class="paramname"><em>top_env</em>, </td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2334,6 +2482,52 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_a4b3bbc6cfa6ff293119825a11324fb9f_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abcfd4d5a4f0408bdc748ce044e5ce08c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcfd4d5a4f0408bdc748ce044e5ce08c">&#9670;&nbsp;</a></span>unset_call()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int unset_call </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="minishell_8h_abcfd4d5a4f0408bdc748ce044e5ce08c_cgraph.svg" width="206" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="minishell_8h_abcfd4d5a4f0408bdc748ce044e5ce08c_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>

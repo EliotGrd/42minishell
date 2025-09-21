@@ -1,20 +1,23 @@
 <map id="parser" name="parser">
-<area shape="rect" id="node1" title=" " alt="" coords="5,360,68,387"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,297,68,324"/>
 <area shape="rect" id="node2" href="$lst__cmd_8c.html#a8dd9c58ef8144c1956483eb089e5080f" title=" " alt="" coords="116,5,253,32"/>
 <area shape="rect" id="node3" href="$parser_8c.html#a2e2699d47ad80d706e124c654b57b375" title=" " alt="" coords="522,107,601,133"/>
 <area shape="rect" id="node4" href="$token__utils_8c.html#ab3d9f0b7ddaf8661f8a3b3243d33bce7" title="Free t_token entire linked list." alt="" coords="512,461,611,488"/>
 <area shape="rect" id="node5" href="$parser_8c.html#a504166f8c7680aafbdfdb58ab412d498" title=" " alt="" coords="316,411,429,437"/>
-<area shape="rect" id="node6" href="$parser_8c.html#a53cd1de291e3e0bab0192a7880cd6449" title=" " alt="" coords="138,284,231,311"/>
-<area shape="rect" id="node11" href="$parser_8c.html#a196c06f986a99e4ad591e374a4bb6339" title=" " alt="" coords="325,360,420,387"/>
-<area shape="rect" id="node13" href="$error_8c.html#a8f5f1cfa591c395b88733e1134d8de3d" title=" " alt="" coords="133,512,237,539"/>
-<area shape="rect" id="node7" href="$argv__builder_8c.html#a5f4104276b4a0d98dde31f75622668b4" title=" " alt="" coords="317,208,428,235"/>
-<area shape="rect" id="node8" href="$argv__builder_8c.html#a182f853e31c31af45e572979074a4d99" title=" " alt="" coords="317,259,429,285"/>
-<area shape="rect" id="node9" href="$argv__builder_8c.html#aee97e8a2ae269ee4063d3ea917e93ffc" title=" " alt="" coords="319,309,426,336"/>
-<area shape="rect" id="node10" href="$argv__builder_8c.html#a9f9516f7f412bb9019d1fe829f2395a3" title=" " alt="" coords="314,157,431,184"/>
-<area shape="rect" id="node12" href="$lst__redir_8c.html#acb0801286560639fb0d37901d566a3e5" title=" " alt="" coords="492,360,631,387"/>
-<area shape="rect" id="node14" href="$error_8c.html#a193034f887c71fdb2486835d8cbd9dd3" title=" " alt="" coords="301,512,444,539"/>
-<area shape="rect" id="node15" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="500,512,623,539"/>
-<area shape="rect" id="node16" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="679,512,760,539"/>
-<area shape="rect" id="node17" href="$lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" title=" " alt="" coords="808,512,933,539"/>
-<area shape="rect" id="node18" href="$lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" title=" " alt="" coords="981,512,1064,539"/>
+<area shape="rect" id="node6" href="$parser_8c.html#a53cd1de291e3e0bab0192a7880cd6449" title=" " alt="" coords="138,277,231,304"/>
+<area shape="rect" id="node11" href="$parser_8c.html#a196c06f986a99e4ad591e374a4bb6339" title=" " alt="" coords="325,56,420,83"/>
+<area shape="rect" id="node13" href="$lst__cmd_8c.html#aed036fcdab112b64cbd705f26aee31e0" title=" " alt="" coords="121,563,248,589"/>
+<area shape="rect" id="node15" href="$error_8c.html#a8f5f1cfa591c395b88733e1134d8de3d" title=" " alt="" coords="133,512,237,539"/>
+<area shape="rect" id="node7" href="$argv__builder_8c.html#a5f4104276b4a0d98dde31f75622668b4" title="Ends and null terminate the argv so it can be used." alt="" coords="317,360,428,387"/>
+<area shape="rect" id="node8" href="$argv__builder_8c.html#a182f853e31c31af45e572979074a4d99" title="Free each string of the argv then the global array." alt="" coords="317,157,429,184"/>
+<area shape="rect" id="node9" href="$argv__builder_8c.html#aee97e8a2ae269ee4063d3ea917e93ffc" title=" " alt="" coords="319,208,426,235"/>
+<area shape="rect" id="node10" href="$argv__builder_8c.html#a9f9516f7f412bb9019d1fe829f2395a3" title="Tool to build an argv with a buffer that reallocates when more memory is needed and add a string to t..." alt="" coords="314,309,431,336"/>
+<area shape="rect" id="node12" href="$lst__redir_8c.html#acb0801286560639fb0d37901d566a3e5" title=" " alt="" coords="492,56,631,83"/>
+<area shape="rect" id="node14" href="$lst__cmd_8c.html#ab80db2e6dc59c16654afb6a26d633a21" title=" " alt="" coords="318,563,427,589"/>
+<area shape="rect" id="node16" href="$error_8c.html#a193034f887c71fdb2486835d8cbd9dd3" title=" " alt="" coords="301,512,444,539"/>
+<area shape="rect" id="node17" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="500,512,623,539"/>
+<area shape="rect" id="node18" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="679,512,760,539"/>
+<area shape="rect" id="node19" href="$lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" title=" " alt="" coords="808,537,933,564"/>
+<area shape="rect" id="node21" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="1112,512,1204,539"/>
+<area shape="rect" id="node20" href="$lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" title=" " alt="" coords="981,537,1064,564"/>
 </map>

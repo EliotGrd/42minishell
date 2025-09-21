@@ -92,8 +92,7 @@ $(document).ready(function(){initNavTree('argv__builder_8c.html',''); initResiza
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for argv_builder.c:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="argv__builder_8c__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="argv__builder_8c__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -101,10 +100,13 @@ Functions</h2></td></tr>
 <tr class="memitem:aee97e8a2ae269ee4063d3ea917e93ffc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="argv__builder_8c.html#aee97e8a2ae269ee4063d3ea917e93ffc">argv_buf_init</a> (<a class="el" href="parsing__helpers_8h.html#ac585b315914c085428d96deebffd9110">t_argv_buf</a> *avb)</td></tr>
 <tr class="separator:aee97e8a2ae269ee4063d3ea917e93ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f9516f7f412bb9019d1fe829f2395a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="argv__builder_8c.html#a9f9516f7f412bb9019d1fe829f2395a3">argv_buf_push</a> (<a class="el" href="parsing__helpers_8h.html#ac585b315914c085428d96deebffd9110">t_argv_buf</a> *avb, char *str)</td></tr>
+<tr class="memdesc:a9f9516f7f412bb9019d1fe829f2395a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tool to build an argv with a buffer that reallocates when more memory is needed and add a string to the newly created argv.  <a href="argv__builder_8c.html#a9f9516f7f412bb9019d1fe829f2395a3">More...</a><br /></td></tr>
 <tr class="separator:a9f9516f7f412bb9019d1fe829f2395a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f4104276b4a0d98dde31f75622668b4"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="argv__builder_8c.html#a5f4104276b4a0d98dde31f75622668b4">argv_buf_end</a> (<a class="el" href="parsing__helpers_8h.html#ac585b315914c085428d96deebffd9110">t_argv_buf</a> *avb)</td></tr>
+<tr class="memdesc:a5f4104276b4a0d98dde31f75622668b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends and null terminate the argv so it can be used.  <a href="argv__builder_8c.html#a5f4104276b4a0d98dde31f75622668b4">More...</a><br /></td></tr>
 <tr class="separator:a5f4104276b4a0d98dde31f75622668b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a182f853e31c31af45e572979074a4d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="argv__builder_8c.html#a182f853e31c31af45e572979074a4d99">argv_buf_free</a> (<a class="el" href="parsing__helpers_8h.html#ac585b315914c085428d96deebffd9110">t_argv_buf</a> *avb)</td></tr>
+<tr class="memdesc:a182f853e31c31af45e572979074a4d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free each string of the argv then the global array.  <a href="argv__builder_8c.html#a182f853e31c31af45e572979074a4d99">More...</a><br /></td></tr>
 <tr class="separator:a182f853e31c31af45e572979074a4d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -123,6 +125,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Ends and null terminate the argv so it can be used. </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns the built argv </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -147,6 +152,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Free each string of the argv then the global array. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -174,8 +181,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="argv__builder_8c_aee97e8a2ae269ee4063d3ea917e93ffc_icgraph.svg" width="472" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="argv__builder_8c_aee97e8a2ae269ee4063d3ea917e93ffc_icgraph.svg" width="472" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -205,6 +211,15 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Tool to build an argv with a buffer that reallocates when more memory is needed and add a string to the newly created argv. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">avb</td><td></td></tr>
+    <tr><td class="paramname">str</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

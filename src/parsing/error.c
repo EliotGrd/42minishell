@@ -38,3 +38,12 @@ void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head)
 	{
 	}
 }*/
+
+void	exp_redir_error(t_minishell *msh, t_redirect redir )
+{
+	write(2, "ambiguous redirect\n", 19);
+	(void)redir;
+	//error bash: $MACHIN: ambiguous redirect mais need free etc
+	msh->index_rm_exp = -1;
+	//skip exec
+}
