@@ -26,6 +26,7 @@ SRC = \
 	  execution/lst_redir.c \
 	  execution/lst_redir2.c \
 	  execution/heredoc.c \
+	  execution/heredoc2.c \
 	  execution/execution.c \
 	  execution/redirection_verification.c \
 	  execution/banner.c \
