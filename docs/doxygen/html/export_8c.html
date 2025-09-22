@@ -97,10 +97,10 @@ Include dependency graph for export.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8cd6579fc3858072521e55ef235a2637"><td class="memItemLeft" align="right" valign="top"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="export_8c.html#a8cd6579fc3858072521e55ef235a2637">research_node_env</a> (<a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *top_env, char *search)</td></tr>
-<tr class="separator:a8cd6579fc3858072521e55ef235a2637"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a077edb8749298d8320620813ff84519c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="export_8c.html#a077edb8749298d8320620813ff84519c">check_validity_key</a> (char *key)</td></tr>
 <tr class="separator:a077edb8749298d8320620813ff84519c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56cdba320963b2a94cb193c22ca238b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="export_8c.html#a56cdba320963b2a94cb193c22ca238b7">add_env</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell, char *extract_key, char *extract_value, <a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *temporary)</td></tr>
+<tr class="separator:a56cdba320963b2a94cb193c22ca238b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90ff129fee9412bd5c6d74be5970b99f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="export_8c.html#a90ff129fee9412bd5c6d74be5970b99f">export_env_update</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell, char *extract_key, char *extract_value)</td></tr>
 <tr class="separator:a90ff129fee9412bd5c6d74be5970b99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63ef72e778f2b52c924bf77ae989dc80"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="export_8c.html#a63ef72e778f2b52c924bf77ae989dc80">export</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell, char *str)</td></tr>
@@ -109,6 +109,58 @@ Functions</h2></td></tr>
 <tr class="separator:a1bb2544b6254ee4ddb592a4cfa61734f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a56cdba320963b2a94cb193c22ca238b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56cdba320963b2a94cb193c22ca238b7">&#9670;&nbsp;</a></span>add_env()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int add_env </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>minishell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>extract_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>extract_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
+          <td class="paramname"><em>temporary</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="export_8c_a56cdba320963b2a94cb193c22ca238b7_cgraph.svg" width="423" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="export_8c_a56cdba320963b2a94cb193c22ca238b7_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a077edb8749298d8320620813ff84519c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a077edb8749298d8320620813ff84519c">&#9670;&nbsp;</a></span>check_validity_key()</h2>
 
@@ -161,7 +213,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="export_8c_a63ef72e778f2b52c924bf77ae989dc80_cgraph.svg" width="619" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="export_8c_a63ef72e778f2b52c924bf77ae989dc80_cgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
@@ -201,7 +253,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="export_8c_a1bb2544b6254ee4ddb592a4cfa61734f_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="export_8c_a1bb2544b6254ee4ddb592a4cfa61734f_cgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
@@ -247,47 +299,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="export_8c_a90ff129fee9412bd5c6d74be5970b99f_cgraph.svg" width="507" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="export_8c_a90ff129fee9412bd5c6d74be5970b99f_cgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="export_8c_a90ff129fee9412bd5c6d74be5970b99f_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a8cd6579fc3858072521e55ef235a2637"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cd6579fc3858072521e55ef235a2637">&#9670;&nbsp;</a></span>research_node_env()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a>* research_node_env </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b">t_env</a> *&#160;</td>
-          <td class="paramname"><em>top_env</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>search</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="export_8c_a8cd6579fc3858072521e55ef235a2637_icgraph.svg" width="100%" height="470"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

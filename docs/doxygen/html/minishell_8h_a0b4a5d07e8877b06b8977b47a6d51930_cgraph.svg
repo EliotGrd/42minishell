@@ -46,9 +46,9 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 862;
+var viewWidth = 1044;
 var viewHeight = 330;
-var sectionId = 'dynsection-43';
+var sectionId = 'dynsection-45';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
@@ -58,283 +58,319 @@ var sectionId = 'dynsection-43';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title="it&#39;s where we open the heredoc and start writing inside our pipe each time we check if it&#39;s the word ...">
-<polygon fill="#bfbfbf" stroke="black" points="0,-152.5 0,-171.5 86,-171.5 86,-152.5 0,-152.5"/>
-<text text-anchor="middle" x="43" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">heredoc_input</text>
+<polygon fill="#bfbfbf" stroke="black" points="0,-161.5 0,-180.5 86,-180.5 86,-161.5 0,-161.5"/>
+<text text-anchor="middle" x="43" y="-168.5" font-family="Helvetica,sans-Serif" font-size="10.00">heredoc_input</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="heredoc_8c.html#a3e1410633d8c1ad5b1441509a020b0d4" target="_top" xlink:title="allow us to close the file descriptors when we have fork() again the process">
-<polygon fill="none" stroke="black" points="261,-247.5 261,-266.5 374,-266.5 374,-247.5 261,-247.5"/>
-<text text-anchor="middle" x="317.5" y="-254.5" font-family="Helvetica,sans-Serif" font-size="10.00">close_fd_heredocs2</text>
+<g id="a_node2"><a xlink:href="heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a" target="_top" xlink:title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the...">
+<polygon fill="none" stroke="black" points="122,-161.5 122,-180.5 235,-180.5 235,-161.5 122,-161.5"/>
+<text text-anchor="middle" x="178.5" y="-168.5" font-family="Helvetica,sans-Serif" font-size="10.00">child_work_heredoc</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M60.94,-171.6C76.46,-180.13 100.28,-192.53 122,-201 169.53,-219.54 225.71,-235.07 265.44,-245.03"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="264.63,-248.43 275.17,-247.44 266.31,-241.64 264.63,-248.43"/>
-</g>
-<!-- Node3 -->
-<g id="node3" class="node">
-<title>Node3</title>
-<g id="a_node3"><a xlink:href="redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" target="_top" xlink:title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ...">
-<polygon fill="none" stroke="black" points="785,-228.5 785,-247.5 854,-247.5 854,-228.5 785,-228.5"/>
-<text text-anchor="middle" x="819.5" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_close_fd</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node3 -->
-<g id="edge11" class="edge">
-<title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M46.45,-171.84C53.35,-197.28 75.54,-265.3 122,-295 195.18,-341.79 229.64,-314 316.5,-314 316.5,-314 316.5,-314 605,-314 677.18,-314 755.55,-274.97 794.17,-252.85"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="796.24,-255.7 803.1,-247.63 792.71,-249.65 796.24,-255.7"/>
+<path fill="none" stroke="midnightblue" d="M86.24,-171C94.37,-171 103.05,-171 111.72,-171"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="111.85,-174.5 121.85,-171 111.85,-167.5 111.85,-174.5"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="271.5,-190.5 271.5,-209.5 363.5,-209.5 363.5,-190.5 271.5,-190.5"/>
-<text text-anchor="middle" x="317.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">destructor_cmd</text>
+<g id="a_node4"><a xlink:href="redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" target="_top" xlink:title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ...">
+<polygon fill="none" stroke="black" points="967,-151.5 967,-170.5 1036,-170.5 1036,-151.5 967,-151.5"/>
+<text text-anchor="middle" x="1001.5" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00">ft_close_fd</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
+<g id="edge24" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M78.73,-171.57C92.16,-174.98 107.71,-178.57 122,-181 168.67,-188.92 222.25,-193.85 261.34,-196.7"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="261.23,-200.2 271.45,-197.41 261.73,-193.22 261.23,-200.2"/>
+<path fill="none" stroke="midnightblue" d="M51.95,-161.32C82.59,-125.14 197.57,0 321.5,0 321.5,0 321.5,0 778.5,0 851.01,0 874.18,-12.95 931,-58 959.88,-80.89 981.16,-119.1 992.13,-141.99"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="989.07,-143.7 996.43,-151.32 995.42,-140.77 989.07,-143.7"/>
 </g>
-<!-- Node8 -->
-<g id="node8" class="node">
-<title>Node8</title>
-<g id="a_node8"><a xlink:href="lst__env_8c.html#a226ae0aa054e697998b2ecbc5d61d592" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="273,-76.5 273,-95.5 362,-95.5 362,-76.5 273,-76.5"/>
-<text text-anchor="middle" x="317.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">destructor_env</text>
+<!-- Node18 -->
+<g id="node18" class="node">
+<title>Node18</title>
+<g id="a_node18"><a xlink:href="heredoc2_8c.html#ac2c940d294494f86fcc389ffeedfd752" target="_top" xlink:title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the...">
+<polygon fill="none" stroke="black" points="135.5,-275.5 135.5,-294.5 221.5,-294.5 221.5,-275.5 135.5,-275.5"/>
+<text text-anchor="middle" x="178.5" y="-282.5" font-family="Helvetica,sans-Serif" font-size="10.00">update_status</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node8 -->
-<g id="edge9" class="edge">
-<title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M78.24,-152.45C127.49,-138.72 218.35,-113.37 272.52,-98.27"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="273.5,-101.63 282.19,-95.57 271.62,-94.88 273.5,-101.63"/>
+<!-- Node1&#45;&gt;Node18 -->
+<g id="edge25" class="edge">
+<title>Node1&#45;&gt;Node18</title>
+<path fill="none" stroke="midnightblue" d="M55.38,-180.72C78.24,-200.24 129.95,-244.39 158.19,-268.51"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="156.27,-271.47 166.15,-275.31 160.81,-266.15 156.27,-271.47"/>
 </g>
-<!-- Node10 -->
-<g id="node10" class="node">
-<title>Node10</title>
-<g id="a_node10"><a xlink:href="heredoc_8c.html#aa11261ffe1d93fd87488514776e2df34" target="_top" xlink:title="function which allow me to do the loop to call GNL =&gt; there is also the management to leave with the ...">
-<polygon fill="none" stroke="black" points="122,-152.5 122,-171.5 225,-171.5 225,-152.5 122,-152.5"/>
-<text text-anchor="middle" x="173.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">read_gnl_heredoc</text>
+<!-- Node3 -->
+<g id="node3" class="node">
+<title>Node3</title>
+<g id="a_node3"><a xlink:href="heredoc_8c.html#a3e1410633d8c1ad5b1441509a020b0d4" target="_top" xlink:title="allow us to close the file descriptors when we have fork() again the process">
+<polygon fill="none" stroke="black" points="410,-294.5 410,-313.5 523,-313.5 523,-294.5 410,-294.5"/>
+<text text-anchor="middle" x="466.5" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">close_fd_heredocs2</text>
 </a>
 </g>
-</g>
-<!-- Node1&#45;&gt;Node10 -->
-<g id="edge12" class="edge">
-<title>Node1&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M86.08,-162C94.28,-162 103.04,-162 111.71,-162"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="111.82,-165.5 121.82,-162 111.82,-158.5 111.82,-165.5"/>
-</g>
-<!-- Node13 -->
-<g id="node13" class="node">
-<title>Node13</title>
-<g id="a_node13"><a xlink:href="ctl_8c.html#a4fd8e3642e456e9a2f7fe4dc8f44ad43" target="_top" xlink:title="remove the echoctl which are the symbol which appears when you press CTRL+C or CTRL+\ it&#39;s different ...">
-<polygon fill="none" stroke="black" points="126,-76.5 126,-95.5 221,-95.5 221,-76.5 126,-76.5"/>
-<text text-anchor="middle" x="173.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">remove_echoctl</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node13 -->
-<g id="edge19" class="edge">
-<title>Node1&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M57.15,-152.38C72.37,-141.45 98.36,-123.41 122,-110 128.13,-106.53 134.84,-103.09 141.31,-99.96"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="142.98,-103.04 150.52,-95.6 139.99,-96.71 142.98,-103.04"/>
-</g>
-<!-- Node14 -->
-<g id="node14" class="node">
-<title>Node14</title>
-<g id="a_node14"><a xlink:href="signals_8c.html#a7ea78f2f2215fe1ed765af80a1b2893d" target="_top" xlink:title="allow us to warn the process child heredoc it&#39;s time to stop and close the file descriptor">
-<polygon fill="none" stroke="black" points="129.5,-38.5 129.5,-57.5 217.5,-57.5 217.5,-38.5 129.5,-38.5"/>
-<text text-anchor="middle" x="173.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">sigint_heredoc</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node14 -->
-<g id="edge20" class="edge">
-<title>Node1&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M49.59,-152.22C60.9,-133.23 88.34,-91.11 122,-67 124.55,-65.18 127.29,-63.51 130.13,-61.98"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="131.89,-65.02 139.44,-57.58 128.9,-58.69 131.89,-65.02"/>
-</g>
-<!-- Node15 -->
-<g id="node15" class="node">
-<title>Node15</title>
-<g id="a_node15"><a xlink:href="signals_8c.html#a368a774e2b304a3de55f58168563967d" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="127.5,-0.5 127.5,-19.5 219.5,-19.5 219.5,-0.5 127.5,-0.5"/>
-<text text-anchor="middle" x="173.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">sigquit_handler</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node15 -->
-<g id="edge21" class="edge">
-<title>Node1&#45;&gt;Node15</title>
-<path fill="none" stroke="midnightblue" d="M47.06,-152.48C55.26,-128.37 80.03,-64.36 122,-29 124.01,-27.31 126.18,-25.76 128.45,-24.35"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="130.41,-27.27 137.63,-19.51 127.15,-21.08 130.41,-27.27"/>
-</g>
-<!-- Node16 -->
-<g id="node16" class="node">
-<title>Node16</title>
-<g id="a_node16"><a xlink:href="heredoc_8c.html#a62f285b689f1045264be19c5467c1781" target="_top" xlink:title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the...">
-<polygon fill="none" stroke="black" points="130.5,-266.5 130.5,-285.5 216.5,-285.5 216.5,-266.5 130.5,-266.5"/>
-<text text-anchor="middle" x="173.5" y="-273.5" font-family="Helvetica,sans-Serif" font-size="10.00">update_status</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node16 -->
-<g id="edge22" class="edge">
-<title>Node1&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M50.26,-171.56C62.33,-189.36 90.4,-227.97 122,-252 126.85,-255.69 132.36,-259.01 137.91,-261.93"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="136.67,-265.21 147.19,-266.44 139.73,-258.92 136.67,-265.21"/>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M374.2,-261.71C456.56,-267.61 615.48,-274.92 749,-257 759.41,-255.6 770.48,-253.08 780.64,-250.31"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="781.8,-253.62 790.45,-247.5 779.87,-246.89 781.8,-253.62"/>
+<path fill="none" stroke="midnightblue" d="M183.98,-180.82C195.01,-203.73 225.91,-260.61 271,-285 310.12,-306.16 360.17,-310.63 399.71,-309.96"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="399.88,-313.46 409.78,-309.67 399.69,-306.46 399.88,-313.46"/>
+</g>
+<!-- Node2&#45;&gt;Node4 -->
+<g id="edge12" class="edge">
+<title>Node2&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M190.61,-161.43C227.19,-130.94 348.32,-38 465.5,-38 465.5,-38 465.5,-38 778.5,-38 864.98,-38 949.34,-110.3 984,-144.03"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="981.8,-146.78 991.36,-151.35 986.74,-141.81 981.8,-146.78"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="435,-190.5 435,-209.5 496,-209.5 496,-190.5 435,-190.5"/>
-<text text-anchor="middle" x="465.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">pop_cmd</text>
+<g id="a_node5"><a xlink:href="lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="420.5,-161.5 420.5,-180.5 512.5,-180.5 512.5,-161.5 420.5,-161.5"/>
+<text text-anchor="middle" x="466.5" y="-168.5" font-family="Helvetica,sans-Serif" font-size="10.00">destructor_cmd</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node5 -->
+<!-- Node2&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
-<title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M363.89,-200C383.39,-200 405.96,-200 424.78,-200"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="424.81,-203.5 434.81,-200 424.81,-196.5 424.81,-203.5"/>
+<title>Node2&#45;&gt;Node5</title>
+<path fill="none" stroke="midnightblue" d="M196.73,-161.42C214.65,-152.05 243.84,-138.42 271,-133 315.89,-124.05 329.11,-124.05 374,-133 396.92,-137.57 421.28,-147.99 439.09,-156.76"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="437.77,-160.02 448.27,-161.42 440.94,-153.77 437.77,-160.02"/>
 </g>
-<!-- Node5&#45;&gt;Node3 -->
-<g id="edge8" class="edge">
-<title>Node5&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M496.01,-200.05C547.65,-200.58 657.63,-203.6 749,-219 758.8,-220.65 769.2,-223.11 778.9,-225.71"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="778.11,-229.12 788.69,-228.44 780,-222.38 778.11,-229.12"/>
+<!-- Node9 -->
+<g id="node9" class="node">
+<title>Node9</title>
+<g id="a_node9"><a xlink:href="lst__env_8c.html#a226ae0aa054e697998b2ecbc5d61d592" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="422,-104.5 422,-123.5 511,-123.5 511,-104.5 422,-104.5"/>
+<text text-anchor="middle" x="466.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">destructor_env</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node9 -->
+<g id="edge10" class="edge">
+<title>Node2&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M192.97,-161.49C210.15,-149.96 241.22,-131.07 271,-123 317.27,-110.46 371.97,-109.05 411.56,-110.29"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="411.67,-113.8 421.79,-110.68 411.93,-106.8 411.67,-113.8"/>
+</g>
+<!-- Node11 -->
+<g id="node11" class="node">
+<title>Node11</title>
+<g id="a_node11"><a xlink:href="heredoc_8c.html#aa11261ffe1d93fd87488514776e2df34" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="271,-256.5 271,-275.5 374,-275.5 374,-256.5 271,-256.5"/>
+<text text-anchor="middle" x="322.5" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">read_gnl_heredoc</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node11 -->
+<g id="edge13" class="edge">
+<title>Node2&#45;&gt;Node11</title>
+<path fill="none" stroke="midnightblue" d="M188.83,-180.61C204.54,-196.32 237.79,-227.7 271,-247 274.41,-248.98 278.07,-250.83 281.79,-252.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="280.53,-255.79 291.1,-256.44 283.24,-249.34 280.53,-255.79"/>
+</g>
+<!-- Node15 -->
+<g id="node15" class="node">
+<title>Node15</title>
+<g id="a_node15"><a xlink:href="ctl_8c.html#a4fd8e3642e456e9a2f7fe4dc8f44ad43" target="_top" xlink:title="remove the echoctl which are the symbol which appears when you press CTRL+C or CTRL+\ it&#39;s different ...">
+<polygon fill="none" stroke="black" points="275,-218.5 275,-237.5 370,-237.5 370,-218.5 275,-218.5"/>
+<text text-anchor="middle" x="322.5" y="-225.5" font-family="Helvetica,sans-Serif" font-size="10.00">remove_echoctl</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node15 -->
+<g id="edge21" class="edge">
+<title>Node2&#45;&gt;Node15</title>
+<path fill="none" stroke="midnightblue" d="M201.98,-180.58C220.44,-188.4 247.33,-199.63 271,-209 275.83,-210.91 280.94,-212.89 285.97,-214.81"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="284.89,-218.14 295.49,-218.4 287.37,-211.59 284.89,-218.14"/>
+</g>
+<!-- Node16 -->
+<g id="node16" class="node">
+<title>Node16</title>
+<g id="a_node16"><a xlink:href="signals_8c.html#a7ea78f2f2215fe1ed765af80a1b2893d" target="_top" xlink:title="allow us to warn the process child heredoc it&#39;s time to stop and close the file descriptor">
+<polygon fill="none" stroke="black" points="278.5,-180.5 278.5,-199.5 366.5,-199.5 366.5,-180.5 278.5,-180.5"/>
+<text text-anchor="middle" x="322.5" y="-187.5" font-family="Helvetica,sans-Serif" font-size="10.00">sigint_heredoc</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node16 -->
+<g id="edge22" class="edge">
+<title>Node2&#45;&gt;Node16</title>
+<path fill="none" stroke="midnightblue" d="M235.21,-178.45C246.05,-179.9 257.38,-181.42 268.14,-182.86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="267.86,-186.35 278.24,-184.21 268.79,-179.42 267.86,-186.35"/>
+</g>
+<!-- Node17 -->
+<g id="node17" class="node">
+<title>Node17</title>
+<g id="a_node17"><a xlink:href="signals_8c.html#a368a774e2b304a3de55f58168563967d" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="276.5,-142.5 276.5,-161.5 368.5,-161.5 368.5,-142.5 276.5,-142.5"/>
+<text text-anchor="middle" x="322.5" y="-149.5" font-family="Helvetica,sans-Serif" font-size="10.00">sigquit_handler</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node17 -->
+<g id="edge23" class="edge">
+<title>Node2&#45;&gt;Node17</title>
+<path fill="none" stroke="midnightblue" d="M235.21,-163.55C245.47,-162.17 256.17,-160.74 266.41,-159.37"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="267.01,-162.82 276.46,-158.03 266.08,-155.88 267.01,-162.82"/>
+</g>
+<!-- Node3&#45;&gt;Node4 -->
+<g id="edge3" class="edge">
+<title>Node3&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M523.04,-307.94C595.59,-311.55 725.98,-312.75 833,-285 879.95,-272.83 892.18,-266.07 931,-237 953.22,-220.36 974.05,-195.95 987,-179.32"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="990.08,-181.05 993.35,-170.97 984.51,-176.82 990.08,-181.05"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="557,-228.5 557,-247.5 651,-247.5 651,-228.5 557,-228.5"/>
-<text text-anchor="middle" x="604" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">destructor_redir</text>
+<g id="a_node6"><a xlink:href="lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="592,-161.5 592,-180.5 653,-180.5 653,-161.5 592,-161.5"/>
+<text text-anchor="middle" x="622.5" y="-168.5" font-family="Helvetica,sans-Serif" font-size="10.00">pop_cmd</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node5&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M496.12,-208.25C514.45,-213.35 538.32,-219.99 558.85,-225.71"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="558.05,-229.12 568.62,-228.43 559.93,-222.38 558.05,-229.12"/>
+<path fill="none" stroke="midnightblue" d="M512.87,-171C534.73,-171 560.71,-171 581.77,-171"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="581.99,-174.5 591.99,-171 581.99,-167.5 581.99,-174.5"/>
+</g>
+<!-- Node6&#45;&gt;Node4 -->
+<g id="edge9" class="edge">
+<title>Node6&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M653.08,-170.22C719.06,-168.47 878.57,-164.23 956.36,-162.17"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="956.87,-165.66 966.77,-161.89 956.68,-158.66 956.87,-165.66"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="687,-228.5 687,-247.5 749,-247.5 749,-228.5 687,-228.5"/>
-<text text-anchor="middle" x="718" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">pop_redir</text>
+<g id="a_node7"><a xlink:href="lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="730.5,-132.5 730.5,-151.5 824.5,-151.5 824.5,-132.5 730.5,-132.5"/>
+<text text-anchor="middle" x="777.5" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00">destructor_redir</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
 <title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M651.2,-238C659.67,-238 668.46,-238 676.74,-238"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="676.9,-241.5 686.9,-238 676.9,-234.5 676.9,-241.5"/>
+<path fill="none" stroke="midnightblue" d="M653.36,-165.34C672.45,-161.72 697.81,-156.92 720.55,-152.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="721.27,-156.03 730.44,-150.73 719.97,-149.15 721.27,-156.03"/>
 </g>
-<!-- Node7&#45;&gt;Node3 -->
+<!-- Node8 -->
+<g id="node8" class="node">
+<title>Node8</title>
+<g id="a_node8"><a xlink:href="lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="869,-132.5 869,-151.5 931,-151.5 931,-132.5 869,-132.5"/>
+<text text-anchor="middle" x="900" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00">pop_redir</text>
+</a>
+</g>
+</g>
+<!-- Node7&#45;&gt;Node8 -->
 <g id="edge7" class="edge">
-<title>Node7&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M749.12,-238C757.09,-238 765.86,-238 774.41,-238"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="774.65,-241.5 784.65,-238 774.65,-234.5 774.65,-241.5"/>
+<title>Node7&#45;&gt;Node8</title>
+<path fill="none" stroke="midnightblue" d="M824.74,-142C835.91,-142 847.75,-142 858.63,-142"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="858.7,-145.5 868.7,-142 858.7,-138.5 858.7,-145.5"/>
 </g>
-<!-- Node9 -->
-<g id="node9" class="node">
-<title>Node9</title>
-<g id="a_node9"><a xlink:href="lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="436.5,-76.5 436.5,-95.5 494.5,-95.5 494.5,-76.5 436.5,-76.5"/>
-<text text-anchor="middle" x="465.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">pop_env</text>
+<!-- Node8&#45;&gt;Node4 -->
+<g id="edge8" class="edge">
+<title>Node8&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M931.12,-147.75C939.18,-149.29 948.06,-150.99 956.69,-152.63"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="956.17,-156.1 966.65,-154.54 957.49,-149.22 956.17,-156.1"/>
+</g>
+<!-- Node10 -->
+<g id="node10" class="node">
+<title>Node10</title>
+<g id="a_node10"><a xlink:href="lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="593.5,-104.5 593.5,-123.5 651.5,-123.5 651.5,-104.5 593.5,-104.5"/>
+<text text-anchor="middle" x="622.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">pop_env</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node9 -->
-<g id="edge10" class="edge">
-<title>Node8&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M362.3,-86C382.67,-86 406.66,-86 426.28,-86"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="426.38,-89.5 436.38,-86 426.38,-82.5 426.38,-89.5"/>
+<!-- Node9&#45;&gt;Node10 -->
+<g id="edge11" class="edge">
+<title>Node9&#45;&gt;Node10</title>
+<path fill="none" stroke="midnightblue" d="M511.22,-114C533.84,-114 561.2,-114 583.02,-114"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="583.23,-117.5 593.23,-114 583.23,-110.5 583.23,-117.5"/>
 </g>
-<!-- Node10&#45;&gt;Node2 -->
-<g id="edge13" class="edge">
-<title>Node10&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M188.9,-171.63C213.56,-188.13 264.09,-221.94 293.62,-241.7"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="291.81,-244.69 302.06,-247.34 295.7,-238.87 291.81,-244.69"/>
-</g>
-<!-- Node10&#45;&gt;Node3 -->
-<g id="edge16" class="edge">
-<title>Node10&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M225.05,-162C282.92,-162 380.55,-162 464.5,-162 464.5,-162 464.5,-162 605,-162 677.18,-162 755.55,-201.03 794.17,-223.15"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="792.71,-226.35 803.1,-228.37 796.24,-220.3 792.71,-226.35"/>
-</g>
-<!-- Node10&#45;&gt;Node4 -->
+<!-- Node11&#45;&gt;Node3 -->
 <g id="edge14" class="edge">
-<title>Node10&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M210.33,-171.59C228.66,-176.49 251.18,-182.52 270.75,-187.76"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="270.11,-191.21 280.68,-190.41 271.92,-184.45 270.11,-191.21"/>
+<title>Node11&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M359.33,-275.59C377.66,-280.49 400.18,-286.52 419.75,-291.76"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="419.11,-295.21 429.68,-294.41 420.92,-288.45 419.11,-295.21"/>
 </g>
-<!-- Node10&#45;&gt;Node8 -->
-<g id="edge15" class="edge">
-<title>Node10&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M198.42,-152.4C207.1,-148.47 216.79,-143.53 225,-138 243,-125.87 242.34,-116.08 261,-105 264.45,-102.95 268.15,-101.09 271.94,-99.39"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="273.52,-102.53 281.47,-95.53 270.89,-96.04 273.52,-102.53"/>
-</g>
-<!-- Node11 -->
-<g id="node11" class="node">
-<title>Node11</title>
-<g id="a_node11"><a xlink:href="heredoc_8c.html#a62cf028a22b96be266416a01e88726f0" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="267,-114.5 267,-133.5 368,-133.5 368,-114.5 267,-114.5"/>
-<text text-anchor="middle" x="317.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">write_to_heredoc</text>
-</a>
-</g>
-</g>
-<!-- Node10&#45;&gt;Node11 -->
+<!-- Node11&#45;&gt;Node4 -->
 <g id="edge17" class="edge">
-<title>Node10&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M210.33,-152.41C228.66,-147.51 251.18,-141.48 270.75,-136.24"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="271.92,-139.55 280.68,-133.59 270.11,-132.79 271.92,-139.55"/>
+<title>Node11&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M363.72,-256.46C420.73,-243.79 528.46,-223 621.5,-223 621.5,-223 621.5,-223 778.5,-223 849.81,-223 929.42,-192.95 971.22,-174.69"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="972.81,-177.82 980.52,-170.55 969.96,-171.42 972.81,-177.82"/>
+</g>
+<!-- Node11&#45;&gt;Node5 -->
+<g id="edge15" class="edge">
+<title>Node11&#45;&gt;Node5</title>
+<path fill="none" stroke="midnightblue" d="M355.56,-256.45C361.93,-253.87 368.38,-250.73 374,-247 393.38,-234.13 392.3,-224.1 410,-209 419.52,-200.88 430.8,-192.89 440.69,-186.36"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="442.8,-189.16 449.3,-180.8 439,-183.28 442.8,-189.16"/>
+</g>
+<!-- Node11&#45;&gt;Node9 -->
+<g id="edge16" class="edge">
+<title>Node11&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M360.24,-256.5C365.3,-254.02 370.09,-250.9 374,-247 405.97,-215.11 382.09,-187.49 410,-152 417.29,-142.72 427.48,-134.85 437.14,-128.71"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="438.96,-131.7 445.76,-123.58 435.37,-125.69 438.96,-131.7"/>
 </g>
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="export_8c.html#a8cd6579fc3858072521e55ef235a2637" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="410,-114.5 410,-133.5 521,-133.5 521,-114.5 410,-114.5"/>
-<text text-anchor="middle" x="465.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">research_node_env</text>
+<g id="a_node12"><a xlink:href="heredoc2_8c.html#a62cf028a22b96be266416a01e88726f0" target="_top" xlink:title="function to write on the heredoc file depending if we have a $ sign or not we write or we expand">
+<polygon fill="none" stroke="black" points="416,-256.5 416,-275.5 517,-275.5 517,-256.5 416,-256.5"/>
+<text text-anchor="middle" x="466.5" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">write_to_heredoc</text>
 </a>
 </g>
 </g>
 <!-- Node11&#45;&gt;Node12 -->
 <g id="edge18" class="edge">
 <title>Node11&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M368.34,-124C378.48,-124 389.28,-124 399.85,-124"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="399.89,-127.5 409.89,-124 399.89,-120.5 399.89,-127.5"/>
+<path fill="none" stroke="midnightblue" d="M374.36,-266C384.51,-266 395.26,-266 405.67,-266"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="405.94,-269.5 415.94,-266 405.94,-262.5 405.94,-269.5"/>
 </g>
-<!-- Node16&#45;&gt;Node2 -->
-<g id="edge23" class="edge">
-<title>Node16&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M216.72,-270.35C227.41,-268.92 239.14,-267.35 250.69,-265.81"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="251.31,-269.25 260.76,-264.46 250.38,-262.32 251.31,-269.25"/>
+<!-- Node13 -->
+<g id="node13" class="node">
+<title>Node13</title>
+<g id="a_node13"><a xlink:href="heredoc2_8c.html#a2a5c565389701ca49d867d3746245106" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="559,-256.5 559,-275.5 686,-275.5 686,-256.5 559,-256.5"/>
+<text text-anchor="middle" x="622.5" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">write_heredoc_expand</text>
+</a>
+</g>
+</g>
+<!-- Node12&#45;&gt;Node13 -->
+<g id="edge19" class="edge">
+<title>Node12&#45;&gt;Node13</title>
+<path fill="none" stroke="midnightblue" d="M517.07,-266C527.14,-266 537.92,-266 548.59,-266"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="548.77,-269.5 558.77,-266 548.77,-262.5 548.77,-269.5"/>
+</g>
+<!-- Node14 -->
+<g id="node14" class="node">
+<title>Node14</title>
+<g id="a_node14"><a xlink:href="lst__env__two_8c.html#a8cd6579fc3858072521e55ef235a2637" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="722,-256.5 722,-275.5 833,-275.5 833,-256.5 722,-256.5"/>
+<text text-anchor="middle" x="777.5" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">research_node_env</text>
+</a>
+</g>
+</g>
+<!-- Node13&#45;&gt;Node14 -->
+<g id="edge20" class="edge">
+<title>Node13&#45;&gt;Node14</title>
+<path fill="none" stroke="midnightblue" d="M686.17,-266C694.5,-266 703.06,-266 711.43,-266"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="711.52,-269.5 721.52,-266 711.52,-262.5 711.52,-269.5"/>
+</g>
+<!-- Node18&#45;&gt;Node3 -->
+<g id="edge26" class="edge">
+<title>Node18&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M199.66,-294.57C217.84,-302.63 245.55,-313.55 271,-318 317.38,-326.11 370.77,-321.27 409.86,-315.17"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="410.68,-318.58 419.99,-313.51 409.55,-311.67 410.68,-318.58"/>
 </g>
 </g>
 </svg>

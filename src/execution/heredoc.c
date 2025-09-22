@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:39:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/22 14:07:26 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 14:47:32 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,74 +38,7 @@ void	close_fd_heredocs2(t_redirect *current, t_cmd *top_stack)
 		tmp = tmp -> next;
 	}
 }
-/*
-int	write_heredoc_expand(char **line, int **fd, t_minishell *minishell)
-{
-	t_env	*temp;
-	char	*ptr;
-	char	*key;
 
-	ptr = ++(*line);
-	while (*ptr && (ft_isalnum(*ptr) || *ptr == '_'))
-		ptr++;
-	key = ft_strndup(*line, ptr - *line);
-	if (!key)
-		return (1);
-	temp = research_node_env(minishell -> top_env, key);
-	free(key);
-	if (temp != NULL)
-		write(**fd, temp -> value, ft_strlen(temp -> value));
-	*line = ptr;
-	return (0);
-}
-*/
-/**
- * @brief function to write on the heredoc file
- * depending if we have a $ sign or not we write 
- * or we expand
- *
- * @param fd 
- * @param line 
- * @param minishell 
- * @return 
- */
-/*
-int	write_to_heredoc(int *fd, char *line, t_minishell *minishell)
-{
-	if (ft_strchr(line, '$') == NULL)
-		write(*fd, line, ft_strlen(line));
-	else
-	{
-		while (*line)
-		{
-			while (*line && *line != '$')
-				(write(*fd, line, 1), line++);
-			if (*line && *(line + 1) && (ft_isalnum(*(line + 1))
-					|| *(line + 1) == '_'))
-			{
-				if (write_heredoc_expand(&line, &fd, minishell) == 1)
-					return (1);
-			}
-			else if (*line)
-			{
-				write(*fd, line, 1);
-				line++;
-			}
-		}
-	}
-	return (0);
-}
-*/
-/**
- * @brief function which allow me to do the loop 
- * to call GNL => there is also the management to
- * leave with the signal
- * the origin of this function is the norm limitation
- *
- * @param fd 
- * @param temp 
- * @param top_cmd 
- */
 static void	read_gnl_heredoc(t_redirect *temp, t_cmd *top_cmd,
 			t_minishell *minishell, int op)
 {

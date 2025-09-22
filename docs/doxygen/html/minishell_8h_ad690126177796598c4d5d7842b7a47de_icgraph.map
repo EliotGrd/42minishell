@@ -1,0 +1,6 @@
+<map id="update" name="update">
+<area shape="rect" id="node1" title="function to update g_exit_code to be the last exit code of the function" alt="" coords="401,5,468,32"/>
+<area shape="rect" id="node2" href="$multipipe_8c.html#aa4f1c217eeb689ecbc622baecd2c5dec" title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered..." alt="" coords="235,5,353,32"/>
+<area shape="rect" id="node3" href="$execution_8c.html#a9542b61daba3eb4d45c8887c5648b2f6" title="first function of the execution part when we have something to do we have to deal with two cases ; if..." alt="" coords="108,5,187,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,5,60,32"/>
+</map>

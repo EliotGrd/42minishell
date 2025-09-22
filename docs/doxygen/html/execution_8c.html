@@ -97,26 +97,12 @@ Include dependency graph for execution.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7bee4f6fbfd70ef7ec1f52856538ac71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="execution_8c.html#a7bee4f6fbfd70ef7ec1f52856538ac71">launch_builtin</a> (char **str, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
-<tr class="memdesc:a7bee4f6fbfd70ef7ec1f52856538ac71"><td class="mdescLeft">&#160;</td><td class="mdescRight">launch the builtin <br  />
- some of them are not present because we have to fork() them why ? because we can have redirection, redirection are done in a fork process  <a href="execution_8c.html#a7bee4f6fbfd70ef7ec1f52856538ac71">More...</a><br /></td></tr>
-<tr class="separator:a7bee4f6fbfd70ef7ec1f52856538ac71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3acc0bb56da881cc8609ca9e94ec8e93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="execution_8c.html#a3acc0bb56da881cc8609ca9e94ec8e93">is_it_builtin</a> (char *str)</td></tr>
-<tr class="memdesc:a3acc0bb56da881cc8609ca9e94ec8e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">detect if it's a builtin with strncmp() but the real question is "is it a builtin I have 
-to launch in a fork process or not ?"  <a href="execution_8c.html#a3acc0bb56da881cc8609ca9e94ec8e93">More...</a><br /></td></tr>
-<tr class="separator:a3acc0bb56da881cc8609ca9e94ec8e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30cac5c7712d6462192a55849ea237f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="execution_8c.html#a30cac5c7712d6462192a55849ea237f2">is_it_builtin_nonfork</a> (char *str)</td></tr>
-<tr class="memdesc:a30cac5c7712d6462192a55849ea237f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ici ce sont les builtin qu'on doit pas fork dans le cas d'un one_command  <a href="execution_8c.html#a30cac5c7712d6462192a55849ea237f2">More...</a><br /></td></tr>
-<tr class="separator:a30cac5c7712d6462192a55849ea237f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6f3ac2f0c10538c125eafcb587fd021"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="execution_8c.html#aa6f3ac2f0c10538c125eafcb587fd021">one_command_execve</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
 <tr class="memdesc:aa6f3ac2f0c10538c125eafcb587fd021"><td class="mdescLeft">&#160;</td><td class="mdescRight">in this function we do the fork to create a child process we do the redirection if we need to  <a href="execution_8c.html#aa6f3ac2f0c10538c125eafcb587fd021">More...</a><br /></td></tr>
 <tr class="separator:aa6f3ac2f0c10538c125eafcb587fd021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38335028b2bc7aa436f8f79a3753ce5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="execution_8c.html#a38335028b2bc7aa436f8f79a3753ce5e">one_command</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
 <tr class="memdesc:a38335028b2bc7aa436f8f79a3753ce5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">here we check if it's a builtin where we have to fork or not we still need to do the redirection verification (aka creation and error management of files). In the case of a builtin they are not going to be used but....depends of which builtin  <a href="execution_8c.html#a38335028b2bc7aa436f8f79a3753ce5e">More...</a><br /></td></tr>
 <tr class="separator:a38335028b2bc7aa436f8f79a3753ce5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1c2063cb0d6822097c6e8d18d808745"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="execution_8c.html#af1c2063cb0d6822097c6e8d18d808745">update_underscore</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
-<tr class="memdesc:af1c2063cb0d6822097c6e8d18d808745"><td class="mdescLeft">&#160;</td><td class="mdescRight">just a function to update the _ (underscore env variable) not really necessary in minishell but in doubt i set it up because it was kind of easy  <a href="execution_8c.html#af1c2063cb0d6822097c6e8d18d808745">More...</a><br /></td></tr>
-<tr class="separator:af1c2063cb0d6822097c6e8d18d808745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9542b61daba3eb4d45c8887c5648b2f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="execution_8c.html#a9542b61daba3eb4d45c8887c5648b2f6">executor</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
 <tr class="memdesc:a9542b61daba3eb4d45c8887c5648b2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">first function of the execution part when we have something to do we have to deal with two cases ; if we have only one command and more why ? because in the case of one command + with some builtin we don't have to fork while with multipipe (from one | to an infinite number) you have to fork anyway  <a href="execution_8c.html#a9542b61daba3eb4d45c8887c5648b2f6">More...</a><br /></td></tr>
 <tr class="separator:a9542b61daba3eb4d45c8887c5648b2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,126 +141,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_a9542b61daba3eb4d45c8887c5648b2f6_icgraph.svg" width="192" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a3acc0bb56da881cc8609ca9e94ec8e93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3acc0bb56da881cc8609ca9e94ec8e93">&#9670;&nbsp;</a></span>is_it_builtin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int is_it_builtin </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>detect if it's a builtin with strncmp() but the real question is "is it a builtin I have 
-to launch in a fork process or not ?" </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">str</td><td>= the command to check </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>1 if it's a builtin 0 if not </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution_8c_a3acc0bb56da881cc8609ca9e94ec8e93_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a30cac5c7712d6462192a55849ea237f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30cac5c7712d6462192a55849ea237f2">&#9670;&nbsp;</a></span>is_it_builtin_nonfork()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int is_it_builtin_nonfork </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>ici ce sont les builtin qu'on doit pas fork dans le cas d'un one_command </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">str</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_a30cac5c7712d6462192a55849ea237f2_icgraph.svg" width="562" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a7bee4f6fbfd70ef7ec1f52856538ac71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bee4f6fbfd70ef7ec1f52856538ac71">&#9670;&nbsp;</a></span>launch_builtin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int launch_builtin </td>
-          <td>(</td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
-          <td class="paramname"><em>minishell</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>launch the builtin <br  />
- some of them are not present because we have to fork() them why ? because we can have redirection, redirection are done in a fork process </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">str</td><td></td></tr>
-    <tr><td class="paramname">top_env</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution_8c_a7bee4f6fbfd70ef7ec1f52856538ac71_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="execution_8c_a7bee4f6fbfd70ef7ec1f52856538ac71_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_a9542b61daba3eb4d45c8887c5648b2f6_icgraph.svg" width="192" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -313,8 +180,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_a38335028b2bc7aa436f8f79a3753ce5e_icgraph.svg" width="359" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_a38335028b2bc7aa436f8f79a3753ce5e_icgraph.svg" width="359" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -353,47 +219,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_aa6f3ac2f0c10538c125eafcb587fd021_icgraph.svg" width="578" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="af1c2063cb0d6822097c6e8d18d808745"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1c2063cb0d6822097c6e8d18d808745">&#9670;&nbsp;</a></span>update_underscore()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int update_underscore </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
-          <td class="paramname"><em>minishell</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>just a function to update the _ (underscore env variable) not really necessary in minishell but in doubt i set it up because it was kind of easy </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">minishell</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_af1c2063cb0d6822097c6e8d18d808745_cgraph.svg" width="354" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_af1c2063cb0d6822097c6e8d18d808745_icgraph.svg" width="387" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="execution_8c_aa6f3ac2f0c10538c125eafcb587fd021_icgraph.svg" width="578" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

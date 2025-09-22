@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 713;
+var viewWidth = 907;
 var viewHeight = 104;
 var sectionId = 'dynsection-4';
 </script>
@@ -58,163 +58,178 @@ var sectionId = 'dynsection-4';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="613,-38.5 613,-57.5 705,-57.5 705,-38.5 613,-38.5"/>
-<text text-anchor="middle" x="659" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">sigquit_handler</text>
+<polygon fill="#bfbfbf" stroke="black" points="807,-38.5 807,-57.5 899,-57.5 899,-38.5 807,-38.5"/>
+<text text-anchor="middle" x="853" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">sigquit_handler</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="multipipe_8c.html#a461ae962ce9a1aee7221ac4b9c581f98" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="492.5,-76.5 492.5,-95.5 575.5,-95.5 575.5,-76.5 492.5,-76.5"/>
-<text text-anchor="middle" x="534" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">execute_child</text>
+<g id="a_node2"><a xlink:href="heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a" target="_top" xlink:title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the...">
+<polygon fill="none" stroke="black" points="658,-38.5 658,-57.5 771,-57.5 771,-38.5 658,-38.5"/>
+<text text-anchor="middle" x="714.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">child_work_heredoc</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M616.96,-60.68C600.34,-65.81 581.47,-71.64 566.03,-76.41"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="618.44,-63.88 626.96,-57.59 616.37,-57.2 618.44,-63.88"/>
+<path fill="none" stroke="midnightblue" d="M796.89,-48C788.52,-48 779.87,-48 771.48,-48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="796.93,-51.5 806.93,-48 796.93,-44.5 796.93,-51.5"/>
 </g>
-<!-- Node7 -->
-<g id="node7" class="node">
-<title>Node7</title>
-<g id="a_node7"><a xlink:href="heredoc_8c.html#a0b4a5d07e8877b06b8977b47a6d51930" target="_top" xlink:title="it&#39;s where we open the heredoc and start writing inside our pipe each time we check if it&#39;s the word ...">
-<polygon fill="none" stroke="black" points="491,-38.5 491,-57.5 577,-57.5 577,-38.5 491,-38.5"/>
-<text text-anchor="middle" x="534" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">heredoc_input</text>
+<!-- Node9 -->
+<g id="node9" class="node">
+<title>Node9</title>
+<g id="a_node9"><a xlink:href="multipipe_8c.html#a461ae962ce9a1aee7221ac4b9c581f98" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="673,-76.5 673,-95.5 756,-95.5 756,-76.5 673,-76.5"/>
+<text text-anchor="middle" x="714.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">execute_child</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node7 -->
-<g id="edge6" class="edge">
-<title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M602.62,-48C594.1,-48 585.41,-48 577.24,-48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="602.9,-51.5 612.9,-48 602.9,-44.5 602.9,-51.5"/>
+<!-- Node1&#45;&gt;Node9 -->
+<g id="edge9" class="edge">
+<title>Node1&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M807.75,-60.32C789,-65.54 767.47,-71.53 749.93,-76.41"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="808.86,-63.64 817.56,-57.59 806.98,-56.9 808.86,-63.64"/>
 </g>
-<!-- Node10 -->
-<g id="node10" class="node">
-<title>Node10</title>
-<g id="a_node10"><a xlink:href="execution_8c.html#aa6f3ac2f0c10538c125eafcb587fd021" target="_top" xlink:title="in this function we do the fork to create a child process we do the redirection if we need to">
-<polygon fill="none" stroke="black" points="312,-0.5 312,-19.5 440,-19.5 440,-0.5 312,-0.5"/>
-<text text-anchor="middle" x="376" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">one_command_execve</text>
+<!-- Node11 -->
+<g id="node11" class="node">
+<title>Node11</title>
+<g id="a_node11"><a xlink:href="execution_8c.html#aa6f3ac2f0c10538c125eafcb587fd021" target="_top" xlink:title="in this function we do the fork to create a child process we do the redirection if we need to">
+<polygon fill="none" stroke="black" points="298.5,-0.5 298.5,-19.5 426.5,-19.5 426.5,-0.5 298.5,-0.5"/>
+<text text-anchor="middle" x="362.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">one_command_execve</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node10 -->
-<g id="edge11" class="edge">
-<title>Node1&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M612.14,-36.1C600.72,-33.45 588.47,-30.88 577,-29 531.57,-21.55 479.81,-16.73 440.34,-13.81"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="611.38,-39.52 621.92,-38.43 613,-32.71 611.38,-39.52"/>
+<!-- Node1&#45;&gt;Node11 -->
+<g id="edge12" class="edge">
+<title>Node1&#45;&gt;Node11</title>
+<path fill="none" stroke="midnightblue" d="M807.52,-36.02C795.73,-33.27 782.95,-30.67 771,-29 650,-12.13 507.04,-9.37 426.66,-9.36"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="807.03,-39.5 817.58,-38.45 808.68,-32.7 807.03,-39.5"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="multipipe_8c.html#af31c329200501f497cd102a470450103" target="_top" xlink:title="it&#39;s where the fork happen and sent to be execute">
-<polygon fill="none" stroke="black" points="297,-76.5 297,-95.5 455,-95.5 455,-76.5 297,-76.5"/>
-<text text-anchor="middle" x="376" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">multipipe_intermediary_cmd</text>
+<g id="a_node3"><a xlink:href="heredoc_8c.html#a0b4a5d07e8877b06b8977b47a6d51930" target="_top" xlink:title="it&#39;s where we open the heredoc and start writing inside our pipe each time we check if it&#39;s the word ...">
+<polygon fill="none" stroke="black" points="500,-38.5 500,-57.5 586,-57.5 586,-38.5 500,-38.5"/>
+<text text-anchor="middle" x="543" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">heredoc_input</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M482.16,-86C473.51,-86 464.35,-86 455.19,-86"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="482.42,-89.5 492.42,-86 482.42,-82.5 482.42,-89.5"/>
+<path fill="none" stroke="midnightblue" d="M647.97,-48C627.21,-48 604.84,-48 586.18,-48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="648,-51.5 658,-48 648,-44.5 648,-51.5"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="multipipe_8c.html#aa4f1c217eeb689ecbc622baecd2c5dec" target="_top" xlink:title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered...">
-<polygon fill="none" stroke="black" points="172,-57.5 172,-76.5 261,-76.5 261,-57.5 172,-57.5"/>
-<text text-anchor="middle" x="216.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">multipipe_cmd</text>
+<g id="a_node4"><a xlink:href="heredoc_8c.html#a17337782f10170a6f2f9188bf557de0f" target="_top" xlink:title="the function will go through all the commands and check the redirection if we encounter a heredoc we ...">
+<polygon fill="none" stroke="black" points="297,-38.5 297,-57.5 428,-57.5 428,-38.5 297,-38.5"/>
+<text text-anchor="middle" x="362.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">here_doc_management</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M286.73,-75.35C277.92,-74.29 269.28,-73.25 261.24,-72.28"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="286.36,-78.83 296.71,-76.56 287.2,-71.88 286.36,-78.83"/>
+<path fill="none" stroke="midnightblue" d="M489.62,-48C470.39,-48 448.38,-48 428.19,-48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="489.7,-51.5 499.7,-48 489.7,-44.5 489.7,-51.5"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="execution_8c.html#a9542b61daba3eb4d45c8887c5648b2f6" target="_top" xlink:title="first function of the execution part when we have something to do we have to deal with two cases ; if...">
-<polygon fill="none" stroke="black" points="77,-38.5 77,-57.5 136,-57.5 136,-38.5 77,-38.5"/>
-<text text-anchor="middle" x="106.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">executor</text>
+<g id="a_node5"><a xlink:href="multipipe_8c.html#aa4f1c217eeb689ecbc622baecd2c5dec" target="_top" xlink:title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered...">
+<polygon fill="none" stroke="black" points="172,-57.5 172,-76.5 261,-76.5 261,-57.5 172,-57.5"/>
+<text text-anchor="middle" x="216.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">multipipe_cmd</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M161.88,-57.57C152.97,-56 144.05,-54.43 136.08,-53.03"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="161.43,-61.04 171.88,-59.33 162.64,-54.15 161.43,-61.04"/>
+<path fill="none" stroke="midnightblue" d="M286.55,-57.89C277.93,-59.03 269.37,-60.16 261.36,-61.21"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="287.21,-61.33 296.66,-56.56 286.29,-54.39 287.21,-61.33"/>
+</g>
+<!-- Node8 -->
+<g id="node8" class="node">
+<title>Node8</title>
+<g id="a_node8"><a xlink:href="execution_8c.html#a38335028b2bc7aa436f8f79a3753ce5e" target="_top" xlink:title="here we check if it&#39;s a builtin where we have to fork or not we still need to do the redirection veri...">
+<polygon fill="none" stroke="black" points="172,-19.5 172,-38.5 261,-38.5 261,-19.5 172,-19.5"/>
+<text text-anchor="middle" x="216.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">one_command</text>
+</a>
+</g>
+</g>
+<!-- Node4&#45;&gt;Node8 -->
+<g id="edge7" class="edge">
+<title>Node4&#45;&gt;Node8</title>
+<path fill="none" stroke="midnightblue" d="M286.55,-38.11C277.93,-36.97 269.37,-35.84 261.36,-34.79"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="286.29,-41.61 296.66,-39.44 287.21,-34.67 286.29,-41.61"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="main_8c.html#a647f21a28344e1d9c643f4115516d7c9" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="0,-38.5 0,-57.5 41,-57.5 41,-38.5 0,-38.5"/>
-<text text-anchor="middle" x="20.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
+<g id="a_node6"><a xlink:href="execution_8c.html#a9542b61daba3eb4d45c8887c5648b2f6" target="_top" xlink:title="first function of the execution part when we have something to do we have to deal with two cases ; if...">
+<polygon fill="none" stroke="black" points="77,-38.5 77,-57.5 136,-57.5 136,-38.5 77,-38.5"/>
+<text text-anchor="middle" x="106.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">executor</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node5&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M161.88,-57.57C152.97,-56 144.05,-54.43 136.08,-53.03"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="161.43,-61.04 171.88,-59.33 162.64,-54.15 161.43,-61.04"/>
+</g>
+<!-- Node7 -->
+<g id="node7" class="node">
+<title>Node7</title>
+<g id="a_node7"><a xlink:href="main_8c.html#a647f21a28344e1d9c643f4115516d7c9" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="0,-38.5 0,-57.5 41,-57.5 41,-38.5 0,-38.5"/>
+<text text-anchor="middle" x="20.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
+</a>
+</g>
+</g>
+<!-- Node6&#45;&gt;Node7 -->
+<g id="edge6" class="edge">
+<title>Node6&#45;&gt;Node7</title>
 <path fill="none" stroke="midnightblue" d="M66.48,-48C57.72,-48 48.78,-48 41.21,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="66.59,-51.5 76.59,-48 66.59,-44.5 66.59,-51.5"/>
 </g>
-<!-- Node8 -->
-<g id="node8" class="node">
-<title>Node8</title>
-<g id="a_node8"><a xlink:href="heredoc_8c.html#a17337782f10170a6f2f9188bf557de0f" target="_top" xlink:title="the function will go through all the commands and check the redirection if we encounter a heredoc we ...">
-<polygon fill="none" stroke="black" points="310.5,-38.5 310.5,-57.5 441.5,-57.5 441.5,-38.5 310.5,-38.5"/>
-<text text-anchor="middle" x="376" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">here_doc_management</text>
-</a>
-</g>
-</g>
-<!-- Node7&#45;&gt;Node8 -->
-<g id="edge7" class="edge">
-<title>Node7&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M480.54,-48C468.03,-48 454.53,-48 441.54,-48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="480.78,-51.5 490.78,-48 480.78,-44.5 480.78,-51.5"/>
-</g>
-<!-- Node8&#45;&gt;Node4 -->
+<!-- Node8&#45;&gt;Node6 -->
 <g id="edge8" class="edge">
-<title>Node8&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M300.26,-57.02C286.8,-58.64 273.2,-60.28 261.01,-61.75"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="300.98,-60.46 310.48,-55.78 300.14,-53.51 300.98,-60.46"/>
-</g>
-<!-- Node9 -->
-<g id="node9" class="node">
-<title>Node9</title>
-<g id="a_node9"><a xlink:href="execution_8c.html#a38335028b2bc7aa436f8f79a3753ce5e" target="_top" xlink:title="here we check if it&#39;s a builtin where we have to fork or not we still need to do the redirection veri...">
-<polygon fill="none" stroke="black" points="172,-19.5 172,-38.5 261,-38.5 261,-19.5 172,-19.5"/>
-<text text-anchor="middle" x="216.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">one_command</text>
-</a>
-</g>
-</g>
-<!-- Node8&#45;&gt;Node9 -->
-<g id="edge9" class="edge">
-<title>Node8&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M300.26,-38.98C286.8,-37.36 273.2,-35.72 261.01,-34.25"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="300.14,-42.49 310.48,-40.22 300.98,-35.54 300.14,-42.49"/>
-</g>
-<!-- Node9&#45;&gt;Node5 -->
-<g id="edge10" class="edge">
-<title>Node9&#45;&gt;Node5</title>
+<title>Node8&#45;&gt;Node6</title>
 <path fill="none" stroke="midnightblue" d="M161.88,-38.43C152.97,-40 144.05,-41.57 136.08,-42.97"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="162.64,-41.85 171.88,-36.67 161.43,-34.96 162.64,-41.85"/>
 </g>
-<!-- Node10&#45;&gt;Node9 -->
-<g id="edge12" class="edge">
-<title>Node10&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M301.83,-18.83C287.98,-20.5 273.9,-22.2 261.31,-23.71"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="302.34,-22.29 311.85,-17.62 301.5,-15.34 302.34,-22.29"/>
+<!-- Node10 -->
+<g id="node10" class="node">
+<title>Node10</title>
+<g id="a_node10"><a xlink:href="multipipe_8c.html#af31c329200501f497cd102a470450103" target="_top" xlink:title="it&#39;s where the fork happen and sent to be execute">
+<polygon fill="none" stroke="black" points="464,-76.5 464,-95.5 622,-95.5 622,-76.5 464,-76.5"/>
+<text text-anchor="middle" x="543" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">multipipe_intermediary_cmd</text>
+</a>
+</g>
+</g>
+<!-- Node9&#45;&gt;Node10 -->
+<g id="edge10" class="edge">
+<title>Node9&#45;&gt;Node10</title>
+<path fill="none" stroke="midnightblue" d="M662.52,-86C649.79,-86 635.85,-86 622.13,-86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="662.9,-89.5 672.9,-86 662.9,-82.5 662.9,-89.5"/>
+</g>
+<!-- Node10&#45;&gt;Node5 -->
+<g id="edge11" class="edge">
+<title>Node10&#45;&gt;Node5</title>
+<path fill="none" stroke="midnightblue" d="M453.61,-80.82C391.17,-77.17 310.16,-72.43 261.1,-69.55"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="453.67,-84.33 463.86,-81.42 454.08,-77.35 453.67,-84.33"/>
+</g>
+<!-- Node11&#45;&gt;Node8 -->
+<g id="edge13" class="edge">
+<title>Node11&#45;&gt;Node8</title>
+<path fill="none" stroke="midnightblue" d="M288.3,-19.66C279.02,-20.88 269.78,-22.1 261.17,-23.24"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="288.88,-23.11 298.34,-18.33 287.97,-16.17 288.88,-23.11"/>
 </g>
 </g>
 </svg>
