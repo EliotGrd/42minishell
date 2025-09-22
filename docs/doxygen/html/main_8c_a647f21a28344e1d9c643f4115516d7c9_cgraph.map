@@ -11,7 +11,7 @@
 <area shape="rect" id="node50" href="$signals_8c.html#a258e3b580e688a0cf46e4258525aeaf1" title=" " alt="" coords="118,1348,233,1375"/>
 <area shape="rect" id="node4" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="927,171,1008,197"/>
 <area shape="rect" id="node5" href="$lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" title=" " alt="" coords="1056,171,1181,197"/>
-<area shape="rect" id="node6" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="1073,272,1165,299"/>
+<area shape="rect" id="node6" href="$utils_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="1073,272,1165,299"/>
 <area shape="rect" id="node8" href="$lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" title=" " alt="" coords="929,613,1006,640"/>
 <area shape="rect" id="node10" href="$lst__cmd_8c.html#a63d671132be802a34817bb9d887b7e9f" title=" " alt="" coords="313,537,419,564"/>
 <area shape="rect" id="node11" href="$multipipe_8c.html#aa4f1c217eeb689ecbc622baecd2c5dec" title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered..." alt="" coords="307,411,425,437"/>

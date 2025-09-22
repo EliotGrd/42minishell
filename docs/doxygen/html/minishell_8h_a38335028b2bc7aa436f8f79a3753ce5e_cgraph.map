@@ -1,52 +1,52 @@
 <map id="one_command" name="one_command">
-<area shape="rect" id="node1" title="here we check if it&#39;s a builtin where we have to fork or not we still need to do the redirection veri..." alt="" coords="5,228,124,255"/>
-<area shape="rect" id="node2" href="$multipipe_8c.html#a9b21b82386f20636501d279a66b7260d" title="in the case of an error in the redirection, we have a case where the here_doc opened in a previous si..." alt="" coords="395,51,529,77"/>
-<area shape="rect" id="node4" href="$heredoc_8c.html#a17337782f10170a6f2f9188bf557de0f" title="the function will go through all the commands and check the redirection if we encounter a heredoc we ..." alt="" coords="172,253,347,280"/>
-<area shape="rect" id="node17" href="$launcher_8c.html#a30cac5c7712d6462192a55849ea237f2" title="ici ce sont les builtin qu&#39;on doit pas fork dans le cas d&#39;un one_command" alt="" coords="182,203,337,229"/>
-<area shape="rect" id="node18" href="$launcher_8c.html#a7bee4f6fbfd70ef7ec1f52856538ac71" title="launch the builtin &#160;&#160;some of them are not present because we have to fork() them why ?..." alt="" coords="596,1013,709,1040"/>
-<area shape="rect" id="node36" href="$execution_8c.html#aa6f3ac2f0c10538c125eafcb587fd021" title="in this function we do the fork to create a child process we do the redirection if we need to" alt="" coords="174,785,345,812"/>
-<area shape="rect" id="node47" href="$redirection__verification_8c.html#af9b05287627b76434ceb0070c5cb2c8a" title="we go through each node of the redirection and we have special treatment depending of the following c..." alt="" coords="776,152,948,179"/>
-<area shape="rect" id="node3" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="1461,329,1553,356"/>
-<area shape="rect" id="node5" href="$heredoc_8c.html#a0b4a5d07e8877b06b8977b47a6d51930" title="it&#39;s where we open the heredoc and start writing inside our pipe each time we check if it&#39;s the word ..." alt="" coords="405,253,519,280"/>
-<area shape="rect" id="node6" href="$heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a" title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the..." alt="" coords="577,456,728,483"/>
-<area shape="rect" id="node16" href="$heredoc2_8c.html#ac2c940d294494f86fcc389ffeedfd752" title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the..." alt="" coords="595,253,710,280"/>
-<area shape="rect" id="node7" href="$heredoc_8c.html#a3e1410633d8c1ad5b1441509a020b0d4" title="allow us to close the file descriptors when we have fork() again the process" alt="" coords="1018,355,1169,381"/>
-<area shape="rect" id="node8" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="1032,608,1155,635"/>
-<area shape="rect" id="node10" href="$lst__env_8c.html#a226ae0aa054e697998b2ecbc5d61d592" title=" " alt="" coords="1034,557,1153,584"/>
-<area shape="rect" id="node12" href="$heredoc_8c.html#aa11261ffe1d93fd87488514776e2df34" title=" " alt="" coords="793,507,931,533"/>
-<area shape="rect" id="node13" href="$ctl_8c.html#a4fd8e3642e456e9a2f7fe4dc8f44ad43" title="remove the echoctl which are the symbol which appears when you press CTRL+C or CTRL+\ it&#39;s different ..." alt="" coords="799,355,925,381"/>
-<area shape="rect" id="node14" href="$signals_8c.html#a7ea78f2f2215fe1ed765af80a1b2893d" title="allow us to warn the process child heredoc it&#39;s time to stop and close the file descriptor" alt="" coords="803,405,921,432"/>
-<area shape="rect" id="node15" href="$signals_8c.html#a368a774e2b304a3de55f58168563967d" title=" " alt="" coords="801,659,923,685"/>
-<area shape="rect" id="node9" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="1271,507,1353,533"/>
-<area shape="rect" id="node11" href="$lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" title=" " alt="" coords="1273,456,1351,483"/>
-<area shape="rect" id="node19" href="$cd_8c.html#afa3cf8a1d55856208b8d44453d4cf9b4" title=" " alt="" coords="843,1165,881,1192"/>
-<area shape="rect" id="node24" href="$env_8c.html#a08aa1a32a4d2f6bcca10f6424195d4ef" title=" " alt="" coords="839,1013,885,1040"/>
-<area shape="rect" id="node25" href="$export_8c.html#a1bb2544b6254ee4ddb592a4cfa61734f" title=" " alt="" coords="815,1115,909,1141"/>
-<area shape="rect" id="node29" href="$my__echo_8c.html#a5522916069f77552d810e207670e3170" title=" " alt="" coords="821,861,903,888"/>
-<area shape="rect" id="node31" href="$exit_8c.html#adcbec3416f97b2d0b8d53cf4c2b2a436" title=" " alt="" coords="825,963,899,989"/>
-<area shape="rect" id="node33" href="$pwd_8c.html#ac6977235be2514ba716ef89aad796063" title=" " alt="" coords="837,912,887,939"/>
-<area shape="rect" id="node34" href="$unset_8c.html#abcfd4d5a4f0408bdc748ce044e5ce08c" title=" " alt="" coords="818,1064,906,1091"/>
-<area shape="rect" id="node20" href="$cd_8c.html#a7593627e795ae769b5117673b60846c9" title=" " alt="" coords="1072,1115,1115,1141"/>
-<area shape="rect" id="node21" href="$lst__env__two_8c.html#a4d4a14327b2c3ff88099102b6bd77986" title=" " alt="" coords="1024,1267,1163,1293"/>
-<area shape="rect" id="node22" href="$cd_8c.html#a68bb8beb2cf13bb992af8322f31f94e7" title=" " alt="" coords="1261,1419,1363,1445"/>
-<area shape="rect" id="node23" href="$lst__env__two_8c.html#a8cd6579fc3858072521e55ef235a2637" title=" " alt="" coords="1433,1393,1581,1420"/>
-<area shape="rect" id="node26" href="$export_8c.html#a63ef72e778f2b52c924bf77ae989dc80" title=" " alt="" coords="1061,1165,1125,1192"/>
-<area shape="rect" id="node27" href="$export_8c.html#a077edb8749298d8320620813ff84519c" title=" " alt="" coords="1239,1165,1385,1192"/>
-<area shape="rect" id="node28" href="$export_8c.html#a90ff129fee9412bd5c6d74be5970b99f" title=" " alt="" coords="1239,1368,1385,1395"/>
-<area shape="rect" id="node30" href="$my__echo_8c.html#a7c657de7306d33ae5cdab2bf43f35ae1" title=" " alt="" coords="1020,861,1167,888"/>
-<area shape="rect" id="node32" href="$exit_8c.html#a7e369b4894a31549c9b65f718e28823f" title=" " alt="" coords="1047,963,1139,989"/>
-<area shape="rect" id="node35" href="$unset_8c.html#a4b3bbc6cfa6ff293119825a11324fb9f" title=" " alt="" coords="1064,1064,1123,1091"/>
-<area shape="rect" id="node37" href="$redirection__multipipe_8c.html#a26c96266f1645047a9bdd9af22de94a7" title=" " alt="" coords="1021,659,1165,685"/>
-<area shape="rect" id="node40" href="$execution__node_8c.html#adda76b40c34c18ec83b1d98700083f8a" title="we are going to execute the command here we have a security about absolute path given =&gt; because it&#39;s..." alt="" coords="400,1115,524,1141"/>
-<area shape="rect" id="node46" href="$signals_8c.html#aa06f925baa9a6f549b31de64d4faac32" title="allow us to don&#39;t create issue when a child process with readline" alt="" coords="401,811,523,837"/>
-<area shape="rect" id="node38" href="$redirection__multipipe_8c.html#a3a0d7f695cf53df46301e14ffab77638" title=" " alt="" coords="1253,608,1371,635"/>
-<area shape="rect" id="node39" href="$redirection__multipipe_8c.html#a5b749bc2b4088984c0efe1c479ae6ec8" title=" " alt="" coords="1259,659,1365,685"/>
-<area shape="rect" id="node41" href="$execution__node_8c.html#a74f4c34ebdc38c1fb50db2aa13f97b66" title=" " alt="" coords="585,1165,720,1192"/>
-<area shape="rect" id="node42" href="$execution__node_8c.html#adc2c91230d4a0a1a1f98db2a888afcaa" title="error message management for the specific case of execution" alt="" coords="803,1216,921,1243"/>
-<area shape="rect" id="node43" href="$launcher_8c.html#a3acc0bb56da881cc8609ca9e94ec8e93" title="detect if it&#39;s a builtin with strncmp() but the real question is &quot;is it a builtin I have &#160;to launch i..." alt="" coords="604,1064,701,1091"/>
-<area shape="rect" id="node44" href="$lst__env__two_8c.html#aafcce0b2f2958645e84ae23b14116680" title=" " alt="" coords="594,1115,711,1141"/>
-<area shape="rect" id="node45" href="$getenv_8c.html#a5d0cf05c2622983111dcfc0f179c5739" title=" " alt="" coords="602,1267,703,1293"/>
-<area shape="rect" id="node48" href="$redirection__verification_8c.html#a95641b4885e9c0b07b477846c96c0d2f" title="we have to check if the file exist then if we are allowed to open it in any error case we write a mes..." alt="" coords="1028,152,1159,179"/>
-<area shape="rect" id="node50" href="$redirection__verification_8c.html#ac61790fa82f2a9b6b904cd92135b6acb" title="outfile and append are open with the right flags in a case of an error we write a message with the na..." alt="" coords="996,101,1191,128"/>
-<area shape="rect" id="node49" href="$redirection__verification_8c.html#a5b79f4b52353f6558575b5da0dd28fd4" title="we close the fd_in and fd_out in case of a fail this function is able to manage the error coming from..." alt="" coords="1255,101,1369,128"/>
+<area shape="rect" id="node1" title="here we check if it&#39;s a builtin where we have to fork or not we still need to do the redirection veri..." alt="" coords="5,232,124,258"/>
+<area shape="rect" id="node2" href="$multipipe_8c.html#a9b21b82386f20636501d279a66b7260d" title="in the case of an error in the redirection, we have a case where the here_doc opened in a previous si..." alt="" coords="395,54,529,81"/>
+<area shape="rect" id="node4" href="$heredoc_8c.html#a17337782f10170a6f2f9188bf557de0f" title="the function will go through all the commands and check the redirection if we encounter a heredoc we ..." alt="" coords="172,257,347,284"/>
+<area shape="rect" id="node17" href="$launcher_8c.html#a30cac5c7712d6462192a55849ea237f2" title="ici ce sont les builtin qu&#39;on doit pas fork dans le cas d&#39;un one_command" alt="" coords="182,206,337,233"/>
+<area shape="rect" id="node18" href="$launcher_8c.html#a7bee4f6fbfd70ef7ec1f52856538ac71" title="launch the builtin &#160;&#160;some of them are not present because we have to fork() them why ?..." alt="" coords="596,1017,709,1044"/>
+<area shape="rect" id="node36" href="$execution_8c.html#aa6f3ac2f0c10538c125eafcb587fd021" title="in this function we do the fork to create a child process we do the redirection if we need to" alt="" coords="174,789,345,816"/>
+<area shape="rect" id="node47" href="$redirection__verification_8c.html#af9b05287627b76434ceb0070c5cb2c8a" title="we go through each node of the redirection and we have special treatment depending of the following c..." alt="" coords="776,156,948,182"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="1500,333,1592,360"/>
+<area shape="rect" id="node5" href="$heredoc_8c.html#a0b4a5d07e8877b06b8977b47a6d51930" title="it&#39;s where we open the heredoc and start writing inside our pipe each time we check if it&#39;s the word ..." alt="" coords="405,257,519,284"/>
+<area shape="rect" id="node6" href="$heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a" title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the..." alt="" coords="577,460,728,486"/>
+<area shape="rect" id="node16" href="$heredoc2_8c.html#ac2c940d294494f86fcc389ffeedfd752" title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the..." alt="" coords="595,257,710,284"/>
+<area shape="rect" id="node7" href="$heredoc_8c.html#a3e1410633d8c1ad5b1441509a020b0d4" title="allow us to close the file descriptors when we have fork() again the process" alt="" coords="1018,358,1169,385"/>
+<area shape="rect" id="node8" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="1032,612,1155,638"/>
+<area shape="rect" id="node10" href="$lst__env_8c.html#a226ae0aa054e697998b2ecbc5d61d592" title=" " alt="" coords="1034,561,1153,588"/>
+<area shape="rect" id="node12" href="$heredoc_8c.html#aa11261ffe1d93fd87488514776e2df34" title=" " alt="" coords="793,510,931,537"/>
+<area shape="rect" id="node13" href="$ctl_8c.html#a4fd8e3642e456e9a2f7fe4dc8f44ad43" title="remove the echoctl which are the symbol which appears when you press CTRL+C or CTRL+\ it&#39;s different ..." alt="" coords="799,358,925,385"/>
+<area shape="rect" id="node14" href="$signals_8c.html#a7ea78f2f2215fe1ed765af80a1b2893d" title="allow us to warn the process child heredoc it&#39;s time to stop and close the file descriptor" alt="" coords="803,409,921,436"/>
+<area shape="rect" id="node15" href="$signals_8c.html#a368a774e2b304a3de55f58168563967d" title=" " alt="" coords="801,662,923,689"/>
+<area shape="rect" id="node9" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="1291,510,1372,537"/>
+<area shape="rect" id="node11" href="$lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" title=" " alt="" coords="1293,460,1370,486"/>
+<area shape="rect" id="node19" href="$cd_8c.html#afa3cf8a1d55856208b8d44453d4cf9b4" title=" " alt="" coords="843,1169,881,1196"/>
+<area shape="rect" id="node24" href="$env_8c.html#a08aa1a32a4d2f6bcca10f6424195d4ef" title=" " alt="" coords="839,1017,885,1044"/>
+<area shape="rect" id="node25" href="$export_8c.html#a1bb2544b6254ee4ddb592a4cfa61734f" title=" " alt="" coords="815,1118,909,1145"/>
+<area shape="rect" id="node29" href="$my__echo_8c.html#a5522916069f77552d810e207670e3170" title=" " alt="" coords="821,865,903,892"/>
+<area shape="rect" id="node31" href="$exit_8c.html#adcbec3416f97b2d0b8d53cf4c2b2a436" title=" " alt="" coords="825,966,899,993"/>
+<area shape="rect" id="node33" href="$pwd_8c.html#ac6977235be2514ba716ef89aad796063" title=" " alt="" coords="837,916,887,942"/>
+<area shape="rect" id="node34" href="$unset_8c.html#abcfd4d5a4f0408bdc748ce044e5ce08c" title=" " alt="" coords="818,1068,906,1094"/>
+<area shape="rect" id="node20" href="$cd_8c.html#a7593627e795ae769b5117673b60846c9" title=" " alt="" coords="1072,1118,1115,1145"/>
+<area shape="rect" id="node21" href="$lst__env__two_8c.html#a4d4a14327b2c3ff88099102b6bd77986" title=" " alt="" coords="1024,1270,1163,1297"/>
+<area shape="rect" id="node22" href="$cd_8c.html#a68bb8beb2cf13bb992af8322f31f94e7" title=" " alt="" coords="1281,1422,1382,1449"/>
+<area shape="rect" id="node23" href="$lst__env__two_8c.html#a8cd6579fc3858072521e55ef235a2637" title=" " alt="" coords="1472,1397,1620,1424"/>
+<area shape="rect" id="node26" href="$export_8c.html#a63ef72e778f2b52c924bf77ae989dc80" title=" " alt="" coords="1061,1169,1125,1196"/>
+<area shape="rect" id="node27" href="$export_8c.html#a077edb8749298d8320620813ff84519c" title=" " alt="" coords="1258,1169,1405,1196"/>
+<area shape="rect" id="node28" href="$export_8c.html#a90ff129fee9412bd5c6d74be5970b99f" title=" " alt="" coords="1258,1372,1405,1398"/>
+<area shape="rect" id="node30" href="$my__echo_8c.html#a7c657de7306d33ae5cdab2bf43f35ae1" title=" " alt="" coords="1020,865,1167,892"/>
+<area shape="rect" id="node32" href="$exit_8c.html#a7e369b4894a31549c9b65f718e28823f" title=" " alt="" coords="1047,966,1139,993"/>
+<area shape="rect" id="node35" href="$unset_8c.html#a4b3bbc6cfa6ff293119825a11324fb9f" title=" " alt="" coords="1064,1068,1123,1094"/>
+<area shape="rect" id="node37" href="$redirection__multipipe_8c.html#a26c96266f1645047a9bdd9af22de94a7" title=" " alt="" coords="1021,662,1165,689"/>
+<area shape="rect" id="node40" href="$execution__node_8c.html#adda76b40c34c18ec83b1d98700083f8a" title="we are going to execute the command here we have a security about absolute path given =&gt; because it&#39;s..." alt="" coords="400,1118,524,1145"/>
+<area shape="rect" id="node46" href="$signals_8c.html#aa06f925baa9a6f549b31de64d4faac32" title="allow us to don&#39;t create issue when a child process with readline" alt="" coords="401,814,523,841"/>
+<area shape="rect" id="node38" href="$redirection__multipipe_8c.html#a221f4b2814fe6c3ab1b3ad1fd7f24fb2" title=" " alt="" coords="1239,612,1424,638"/>
+<area shape="rect" id="node39" href="$redirection__multipipe_8c.html#a5b749bc2b4088984c0efe1c479ae6ec8" title=" " alt="" coords="1278,662,1385,689"/>
+<area shape="rect" id="node41" href="$execution__node_8c.html#a74f4c34ebdc38c1fb50db2aa13f97b66" title=" " alt="" coords="585,1169,720,1196"/>
+<area shape="rect" id="node42" href="$execution__node_8c.html#adc2c91230d4a0a1a1f98db2a888afcaa" title="error message management for the specific case of execution" alt="" coords="803,1220,921,1246"/>
+<area shape="rect" id="node43" href="$launcher_8c.html#a3acc0bb56da881cc8609ca9e94ec8e93" title="detect if it&#39;s a builtin with strncmp() but the real question is &quot;is it a builtin I have &#160;to launch i..." alt="" coords="604,1068,701,1094"/>
+<area shape="rect" id="node44" href="$lst__env__two_8c.html#aafcce0b2f2958645e84ae23b14116680" title=" " alt="" coords="594,1118,711,1145"/>
+<area shape="rect" id="node45" href="$getenv_8c.html#a5d0cf05c2622983111dcfc0f179c5739" title=" " alt="" coords="602,1270,703,1297"/>
+<area shape="rect" id="node48" href="$redirection__verification_8c.html#a95641b4885e9c0b07b477846c96c0d2f" title="we have to check if the file exist then if we are allowed to open it in any error case we write a mes..." alt="" coords="1028,156,1159,182"/>
+<area shape="rect" id="node50" href="$redirection__verification_8c.html#ac61790fa82f2a9b6b904cd92135b6acb" title="outfile and append are open with the right flags in a case of an error we write a message with the na..." alt="" coords="996,105,1191,132"/>
+<area shape="rect" id="node49" href="$redirection__verification_8c.html#a5b79f4b52353f6558575b5da0dd28fd4" title="we close the fd_in and fd_out in case of a fail this function is able to manage the error coming from..." alt="" coords="1274,105,1389,132"/>
 </map>

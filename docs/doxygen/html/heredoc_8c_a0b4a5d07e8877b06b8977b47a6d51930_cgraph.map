@@ -1,7 +1,7 @@
 <map id="heredoc_input" name="heredoc_input">
 <area shape="rect" id="node1" title="it&#39;s where we open the heredoc and start writing inside our pipe each time we check if it&#39;s the word ..." alt="" coords="5,194,120,221"/>
 <area shape="rect" id="node2" href="$heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a" title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the..." alt="" coords="168,194,319,221"/>
-<area shape="rect" id="node4" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="1295,207,1387,234"/>
+<area shape="rect" id="node4" href="$utils_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="1295,207,1387,234"/>
 <area shape="rect" id="node18" href="$heredoc2_8c.html#ac2c940d294494f86fcc389ffeedfd752" title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the..." alt="" coords="186,42,301,69"/>
 <area shape="rect" id="node3" href="$heredoc_8c.html#a3e1410633d8c1ad5b1441509a020b0d4" title="allow us to close the file descriptors when we have fork() again the process" alt="" coords="552,17,703,43"/>
 <area shape="rect" id="node5" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="566,194,689,221"/>

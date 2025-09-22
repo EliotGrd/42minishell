@@ -24,7 +24,7 @@
 <area shape="rect" id="node25" href="$lst__env_8c.html#a226ae0aa054e697998b2ecbc5d61d592" title=" " alt="" coords="323,107,442,133"/>
 <area shape="rect" id="node21" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="537,56,618,83"/>
 <area shape="rect" id="node22" href="$lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" title=" " alt="" coords="710,81,835,108"/>
-<area shape="rect" id="node24" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="1083,56,1175,83"/>
+<area shape="rect" id="node24" href="$utils_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="1083,56,1175,83"/>
 <area shape="rect" id="node23" href="$lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" title=" " alt="" coords="920,81,1003,108"/>
 <area shape="rect" id="node26" href="$lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" title=" " alt="" coords="539,107,616,133"/>
 <area shape="rect" id="node29" href="$unset_8c.html#a4b3bbc6cfa6ff293119825a11324fb9f" title=" " alt="" coords="353,461,412,488"/>

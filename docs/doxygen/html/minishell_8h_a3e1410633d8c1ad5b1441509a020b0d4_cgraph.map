@@ -1,4 +1,4 @@
 <map id="close_fd_heredocs2" name="close_fd_heredocs2">
 <area shape="rect" id="node1" title="allow us to close the file descriptors when we have fork() again the process" alt="" coords="5,5,156,32"/>
-<area shape="rect" id="node2" href="$redirection__multipipe_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="204,5,296,32"/>
+<area shape="rect" id="node2" href="$utils_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="204,5,296,32"/>
 </map>

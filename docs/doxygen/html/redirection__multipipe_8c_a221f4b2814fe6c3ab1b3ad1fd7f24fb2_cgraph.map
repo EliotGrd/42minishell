@@ -1,0 +1,5 @@
+<map id="command_redirect_part2" name="command_redirect_part2">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,191,57"/>
+<area shape="rect" id="node2" href="$redirection__multipipe_8c.html#a3a0d7f695cf53df46301e14ffab77638" title=" " alt="" coords="239,5,357,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="405,31,497,57"/>
+</map>
