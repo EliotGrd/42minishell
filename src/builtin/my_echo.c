@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 14:07:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/13 11:07:08 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 09:01:58 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	check_option_echo(char *str)
 {
 	++str;
-	while(*str)
+	while (*str)
 	{
 		if (*str != 'n' && *str != 'e')
 			return (0);

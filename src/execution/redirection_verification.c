@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 09:11:55 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/19 11:04:32 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 11:21:50 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	infile_redirection(t_redirect *redir, t_cmd **top_stack)
 		close_fd_error(top_stack);
 		return (-1);
 	}
-	else if (access(redir -> file, R_OK) != 0) //a verifier si bon flag
+	else if (access(redir -> file, R_OK) != 0)
 	{
 		ft_putstr_fd(redir -> file, 2);
 		ft_putstr_fd(" permission denied\n", 2);

@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 14:18:51 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/17 15:15:50 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 09:01:18 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	unset(t_minishell *minishell, char *key)
 	t_env	*temp;
 
 	temp = minishell -> top_env;
-	if (key == NULL)//securite add
+	if (key == NULL)
 		return (0);
 	while (temp)
 	{
@@ -51,4 +51,3 @@ int	unset_call(t_minishell *minishell, char **str)
 	}
 	return (0);
 }
-

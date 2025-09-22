@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 08:23:59 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/16 09:01:07 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 11:23:37 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,7 @@
 
 void	banner(void)
 {
-	ft_printf("  ,-.       _,---._ __  / \\ \n");
-	ft_printf(" /  )    .-'       `./ /   \\ \n");
-	ft_printf("(  (   ,'            `/    /| \n");
-	ft_printf(" \\  `-\"            '\\'\\   / | \n");
-	ft_printf("  `.              ,  \\ \\ /  | \n");
-	ft_printf("   /`.          ,'-`----Y   | \n");
-	ft_printf("  (            ;/| /\\   |   ' \n");
-	ft_printf("  |  ,-.    ,-'/_|  /   |  / \n");
-	ft_printf("  |  | (   |     | /_   | / \n");
-	ft_printf("  )  |  \\  `.___________|/ \n");
-	ft_printf("  `--'   `--' \n");
-	/*ft_putstr_fd("  ,-.       _,---._ __  / \\ \n", 2);
+	ft_putstr_fd("  ,-.       _,---._ __  / \\ \n", 2);
 	ft_putstr_fd(" /  )    .-'       `./ /   \\ \n", 2);
 	ft_putstr_fd("(  (   ,'            `/    /| \n", 2);
 	ft_putstr_fd(" \\  `-\"            '\\'\\   / | \n", 2);
@@ -35,5 +24,5 @@ void	banner(void)
 	ft_putstr_fd("  |  ,-.    ,-'/_|  /   |  / \n", 2);
 	ft_putstr_fd("  |  | (   |     | /_   | / \n", 2);
 	ft_putstr_fd("  )  |  \\  `.___________|/ \n", 2);
-	ft_putstr_fd("  `--'   `--' \n", 2);*/
+	ft_putstr_fd("  `--'   `--' \n", 2);
 }

@@ -31,6 +31,7 @@ SRC = \
 	  execution/banner.c \
 	  execution/signals.c \
 	  execution/ctl.c \
+	  execution/utils.c \
 	  env/getenv.c \
 	  env/env_utils.c \
 	  env/lst_env.c \
@@ -41,14 +42,15 @@ SRC = \
 	  builtin/pwd.c \
 	  builtin/cd.c \
 	  builtin/export.c \
-	  builtin/exit.c
+	  builtin/exit.c \
+	  builtin/launcher.c \
 
 SRCS = $(addprefix $(SRC_PATH), $(SRC))
 OBJ = $(addprefix $(OBJ_PATH), $(SRC:.c=.o))
 DPD = $(addprefix $(OBJ_PATH), $(SRC:.c=.d))
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -MMD -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -MMD -g #-fsanitize=address,leak
 INCS = includes/minishell.h includes/parsing.h includes/parsing_helpers.h
 INC = -Iincludes -I$(LIBFT_PATH)/includes
 

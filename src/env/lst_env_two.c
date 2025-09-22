@@ -6,11 +6,22 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 14:22:48 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/11 09:39:54 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 09:48:41 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+t_env	*research_node_env(t_env *top_env, char *search)
+{
+	while (top_env)
+	{
+		if (ft_strncmp(search, top_env -> key, ft_strlen(search) + 1) == 0)
+			return (top_env);
+		top_env = top_env -> next;
+	}
+	return (NULL);
+}
 
 char	**split_env(char *envp)
 {
@@ -88,7 +99,7 @@ int	set_up_env(t_env **top_env, char **envp)
 		if (!temp)
 			return (destructor_env(top_env), *top_env = NULL, 1);
 		node_env = create_node_env(temp[0], temp[1]);
-		free(temp); 
+		free(temp);
 		temp = NULL;
 		if (!node_env)
 			return (destructor_env(top_env), *top_env = NULL, 1);

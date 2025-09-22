@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:37:57 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/21 20:52:09 by egiraud          ###   ########.fr       */
+/*   Updated: 2025/09/22 11:07:41 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,7 @@ int	main(int argc, char **argv, char **envp)
 		{
 			signal(SIGINT, sigint_handler);
 			signal(SIGQUIT, SIG_IGN);
-			if (isatty(STDIN_FILENO))
-				line = readline("CHAT$> ");
-			else
-				line = readline(NULL);
+			line = readline("CHAT$> ");
 			ft_printf("line : %s\n\n", line);
 			if (line == NULL)
 			{

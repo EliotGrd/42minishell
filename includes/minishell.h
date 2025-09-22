@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 08:21:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/20 16:17:28 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 11:51:44 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@
 # include <curses.h>
 # include <readline/readline.h>
 # include <readline/history.h>
+
+# define PATH "/tmp/heredoc.txt"
 
 extern	int	g_exit_code;
 
@@ -128,6 +130,7 @@ void	close_fd_parent(t_cmd *top_stack);
 int	command_redirect(t_cmd *top_stack);
 int	launch_builtin(char **str, t_minishell *minishell);
 int	is_it_builtin(char *str);
+int	is_it_builtin_nonfork(char *str);
 int	one_command(t_minishell *minishell);
 void	executor(t_minishell *minishell);
 int	one_command_execve(t_minishell *minishell);
@@ -169,5 +172,7 @@ void	active_echoctl(void);
 void	remove_echoctl(void);
 int	len(char **argv);
 t_env *research_node_env(t_env *top_env, char *search);
+int	update_underscore(t_minishell *minishell);
+void	update(pid_t last);
 
 #endif

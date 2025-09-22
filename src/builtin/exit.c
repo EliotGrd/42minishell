@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 09:08:43 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/20 14:33:44 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 08:59:05 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	my_exit(char **argv, t_minishell *minishell)
 			destructor_env(&minishell -> top_env);
 			destructor_cmd(&minishell -> top_cmd);
 			exit(2);
-
 		}
 		else
 			return (ft_putstr_fd("Too much arguments\n", 2), 1);

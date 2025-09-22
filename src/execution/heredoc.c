@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:39:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/20 13:50:19 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 08:24:59 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,7 +169,7 @@ int	heredoc_input(t_redirect *temp, t_minishell *minishell)
 	pid_t		childpid;
 
 	g_exit_code = 0;
-	int op = open("./test.txt",O_CREAT | O_WRONLY | O_TRUNC, 0644);
+	int op = open(PATH ,O_CREAT | O_WRONLY | O_TRUNC, 0644);
 	if (op < 0)
 		return (-1);
 	childpid = fork();
@@ -189,12 +189,12 @@ int	heredoc_input(t_redirect *temp, t_minishell *minishell)
 	}
 	waitpid(childpid, &status, 0);
 	if (update_status(status, temp, minishell -> top_cmd) == -1)
-		return (ft_close_fd(&op), unlink("./test.txt"), -1);
+		return (ft_close_fd(&op), unlink(PATH), -1);
 	ft_close_fd(&op);
-	op = open("./test.txt",O_RDONLY, 0644);
+	op = open(PATH,O_RDONLY, 0644);
 	if (op < 0)
-		return (unlink("./test.txt"), -1);
-	unlink("./test.txt");
+		return (unlink(PATH), -1);
+	unlink(PATH);
 	return (op);
 }
 

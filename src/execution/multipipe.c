@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/20 16:09:01 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 11:52:39 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	execute_child(t_cmd *temp, t_minishell *minishell)
 	close_fd_heredocs(minishell -> top_cmd, temp);
 	destructor_env(&minishell -> top_env);
 	destructor_cmd(&minishell -> top_cmd);
-	exit(EXIT_FAILURE);
+	exit(g_exit_code);
 }
 
 /**
@@ -74,7 +74,7 @@ int	multipipe_intermediary_cmd(t_cmd *temp, t_minishell *minishell, pid_t *last)
 		if (pipe(temp -> fd) == -1)
 			return (-1);
 	*last = fork();
-	signal(SIGINT, sigint_handler2); 
+	signal(SIGINT, sigint_handler2);
 	if (*last == -1)
 		return (-1);
 	if (*last == 0)
@@ -82,7 +82,7 @@ int	multipipe_intermediary_cmd(t_cmd *temp, t_minishell *minishell, pid_t *last)
 	else
 	{
 		if (temp -> previous != NULL)
-			close_fd_parent(temp); 
+			close_fd_parent(temp);
 	}
 	return (0);
 }
@@ -124,12 +124,9 @@ void	close_redir_temp(t_cmd *temp)
  */
 int	multipipe_cmd(t_minishell *minishell)
 {
-	int		status;
 	t_cmd	*temp;
 	pid_t	last;
-	pid_t	n;
 
-	n = 1;
 	temp = minishell -> top_cmd;
 	if (here_doc_management(minishell) == -1)
 		return (-1);
@@ -138,26 +135,16 @@ int	multipipe_cmd(t_minishell *minishell)
 		if (redirection_verification(&temp) != -1)
 		{
 			g_exit_code = 0;
-			if (temp -> args == NULL)//pour gere le cas ou j'ai pas d'args
+			if (temp -> args == NULL)
 				;
 			else if (multipipe_intermediary_cmd(temp, minishell, &last) == -1)
-				exit(EXIT_FAILURE);//voir ce qu'il faut faire dans ce cas surement
+				exit(EXIT_FAILURE);
 		}
 		else
 			(close_redir_temp(temp), g_exit_code = 1);
 		(ft_close_fd(&temp -> fd_in), ft_close_fd(&temp -> fd_out));
 		temp = temp -> next;
 	}
-	while (n > 0)//surement ca a exporte pour norme
-	{
-		if (n == last && g_exit_code == 0)
-		{
-			if (WIFEXITED(status))
-				g_exit_code = WEXITSTATUS(status);
-			else if (WIFSIGNALED(status))
-				g_exit_code = 128 + WTERMSIG(status);
-		}
-		n = waitpid(-1, &status, 0);
-	}
+	update(last);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:44:13 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/20 16:16:13 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 11:53:54 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,6 @@ int	command_redirect(t_cmd *top_stack)
 		if (dup2(top_stack -> fd[1], STDOUT_FILENO) < 0)
 			return (-1);
 	}
-	ft_close_fd(&top_stack -> fd[1]);
-	close_previous(top_stack);
+	(ft_close_fd(&top_stack -> fd[1]), close_previous(top_stack));
 	return (0);
 }

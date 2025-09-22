@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:49:45 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/20 14:09:36 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 11:14:35 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,11 +81,13 @@ int	execution_node(char **str, t_minishell *minishell)
 	char		*binary;
 
 	if (is_it_builtin(str[0]))
-		(g_exit_code = launch_builtin(str, minishell), destructor_env(&minishell -> top_env), destructor_cmd(&minishell -> top_cmd), exit(g_exit_code));
+	{
+		g_exit_code = launch_builtin(str, minishell);
+		return (-1);
+	}
 	temp_env = lst_to_tab_env(minishell -> top_env);
 	if (!temp_env && minishell -> top_env != NULL)
-		return (-1);//a voir comment gere pour bien quitter 
-	//mais dasn un fork donc surement exit() avec la destructor
+		return (-1);
 	else if (ft_strchr(str[0], '/'))
 	{
 		if (check_accessible(str[0], temp_env) != 0)
@@ -99,7 +101,5 @@ int	execution_node(char **str, t_minishell *minishell)
 			return (message_error(temp_env, str[0], 3), g_exit_code = 127);
 	}
 	execve(binary, str, temp_env);
-	//est ce que je dois free binary en cas de fail ? 
-	perror("Error");
-	return (0);
+	return (free(binary), perror("Error"), 0);
 }

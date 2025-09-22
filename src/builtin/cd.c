@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:08:46 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/19 09:17:53 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/22 09:36:03 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,25 +60,16 @@ int	cd(char **argv, t_minishell *minishell)
 	{
 		home = research_key_env(minishell -> top_env, "HOME");
 		if (home == NULL)
-		{
-			ft_putstr_fd("HOME is not set\n", 2);
-			return (1);
-		}
+			return (ft_putstr_fd("HOME is not set\n", 2), 1);
 		if (chdir(home) == -1)
-		{
-			perror("CHAT$ ");
-			return (1);
-		}
+			return (perror("CHAT$ "), 1);
 		free(home);
 		return (1);
 	}
 	else
 	{
 		if (chdir(argv[1]) == -1)
-		{
-			perror("CHAT$ ");
-			return (1);
-		}
+			return (perror("CHAT$ "), 1);
 	}
 	update_pwd("PWD", minishell);
 	return (0);
