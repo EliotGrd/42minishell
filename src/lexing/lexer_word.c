@@ -27,27 +27,11 @@ static int	single_quoted_segment(t_lexer *lex, t_str_buf *sb)
 		advance(lex, 1);
 	}
 	if (lex->c != '\'')
-	{
-		// maybe something more to flag/error
-		return (0);
-	}
+		return (ft_putendl_fd("chats: unclosed quotes", 2), 0);
 	str_buf_putc(sb, lex->c);
 	advance(lex, 1);
 	return (1);
 }
-
-static int	is_dquotes_escapable(char c)
-{
-	if (c == '$' || c == '`' || c == '"' || c == '\\' || c == '\n')
-		return (1);
-	return (0);
-}
-
-/*static void	escape_in_dquote(t_lexer *lex, t_str_buf *sb, char c)
-{
-	if (c == '\n')
-
-}*/
 
 /**
  * @brief Lexes a segment delimited by double quotes
@@ -56,35 +40,45 @@ static int	is_dquotes_escapable(char c)
  */
 static int	double_quoted_segment(t_lexer *lex, t_str_buf *sb)
 {
-	char	c;
-
 	(str_buf_putc(sb, lex->c), advance(lex, 1));
 	while (lex->c && lex->c != '"')
-	{
-		if (lex->c == '\\')
-		{
-			c = peek(lex);
-			if (!c)
-				return (0); // and error unclosed quotes mes couilles
-			if (is_dquotes_escapable(c))
-			{
-				if (c == '\n')
-				{
-					advance(lex, 2);
-					continue;
-				}
-				(str_buf_putc(sb, lex->c), advance(lex, 2));
-				continue ;
-			}
-			(str_buf_putc(sb, lex->c), advance(lex, 2));
-			continue ;
-		}
 		(str_buf_putc(sb, lex->c), advance(lex, 1));
-	}
 	if (lex->c != '"')
-		return (0); // plus error unclosed quotes
+		return (ft_putendl_fd("chats: unclosed quotes", 2), 0);
 	(str_buf_putc(sb, lex->c), advance(lex, 1));
 	return (1);
+}
+
+/**
+ * @brief Lexes the string to create a WORD token
+ *
+ * @return Returns the token created 
+ */
+t_token	*lex_word(t_lexer *lex)
+{
+	t_str_buf		sb;
+	t_token			*token;
+	char			*result;
+
+	str_buf_init(&sb);
+	while (lex->c && !ft_iswspace(lex->c) && !is_char_operator(lex->c))
+	{
+		if (lex->c == '\'')
+		{
+			if (!single_quoted_segment(lex, &sb))
+				return (str_buf_free(&sb), NULL);
+		}
+		else if (lex->c == '\"')
+		{
+			if (!double_quoted_segment(lex, &sb))
+				return (str_buf_free(&sb), NULL);
+		}
+		else
+			(str_buf_putc(&sb, lex->c), advance(lex, 1));
+	}
+	result = str_buf_end(&sb);
+	token = make_token(WORD, result);
+	return (ft_free((void **)&result), token);
 }
 
 /**
@@ -92,7 +86,7 @@ static int	double_quoted_segment(t_lexer *lex, t_str_buf *sb)
  *
  * @return Return 1 when success, 0 if an error occured
  */
-static int	escape_segment(t_lexer *lex, t_str_buf *sb)
+/*static int	escape_segment(t_lexer *lex, t_str_buf *sb)
 {
 	char	c;
 
@@ -108,14 +102,16 @@ static int	escape_segment(t_lexer *lex, t_str_buf *sb)
 		// incertitude mais trop fatigue pour le faire au mental
 	advance(lex, 2);
 	return (1);
-}
+}*/
 
-/**
- * @brief Lexes the string to create a WORD token
- *
- * @return Returns the token created 
- */
-t_token	*lex_word(t_lexer *lex)
+/*static int	is_dquotes_escapable(char c)
+{
+	if (c == '$' || c == '`' || c == '"' || c == '\\' || c == '\n')
+		return (1);
+	return (0);
+}*/
+
+/*t_token	*lex_word(t_lexer *lex)
 {
 	t_str_buf		sb;
 	unsigned int	q_state;
@@ -149,4 +145,37 @@ t_token	*lex_word(t_lexer *lex)
 	token = make_token(WORD, result, q_state);
 	ft_free((void **)&result);
 	return (token);
-}
+}*/
+
+/*static int	double_quoted_segment(t_lexer *lex, t_str_buf *sb)
+{
+	//char	c;
+
+	(str_buf_putc(sb, lex->c), advance(lex, 1));
+	while (lex->c && lex->c != '"')
+	{
+		if (lex->c == '\\')
+		{
+			c = peek(lex);
+			if (!c)
+				return (0); // and error unclosed quotes mes couilles
+			if (is_dquotes_escapable(c))
+			{
+				if (c == '\n')
+				{
+					advance(lex, 2);
+					continue;
+				}
+				(str_buf_putc(sb, lex->c), advance(lex, 2));
+				continue ;
+			}
+			(str_buf_putc(sb, lex->c), advance(lex, 2));
+			continue ;
+		}
+		(str_buf_putc(sb, lex->c), advance(lex, 1));
+	}
+	if (lex->c != '"')
+		return (0); // plus error unclosed quotes
+	(str_buf_putc(sb, lex->c), advance(lex, 1));
+	return (1);
+}*/

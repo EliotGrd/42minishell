@@ -24,7 +24,6 @@ typedef struct s_token
 {
 	t_type			type;
 	char			*lexeme;     ///< Actual word to lex, only usefull for WORD type
-	unsigned		q_state; ///< 1 = single quotes, 2 = double quotes
 	struct s_token	*next;
 }					t_token;
 
@@ -59,8 +58,7 @@ void				skip_wspaces(t_lexer *lex);
 int					is_char_operator(char c);
 
 void				append_token(t_token **head, t_token **tail, t_token *new);
-t_token				*make_token(t_type type, char *lexeme,
-						unsigned int q_state);
+t_token				*make_token(t_type type, char *lexeme);
 void				free_tokens(t_token *token);
 void				cur_next(t_tokcursor *c);
 int					is_token_redir(t_token *token);

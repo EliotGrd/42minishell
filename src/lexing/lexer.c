@@ -41,23 +41,23 @@ static t_token *lex_operator(t_lexer *lex)
 		if (peek(lex) == '<')
 		{
 			advance(lex, 2);
-			return (make_token(HERE_DOC, NULL, 0));
+			return (make_token(HERE_DOC, NULL));
 		}
 		advance(lex, 1);
-		return (make_token(INFILE, NULL, 0));
+		return (make_token(INFILE, NULL));
 	}
 	if (lex->c == '>')
 	{
 		if (peek(lex) == '>')
 		{
 			advance(lex, 2);
-			return (make_token(APPEND, NULL, 0));
+			return (make_token(APPEND, NULL));
 		}
 		advance(lex, 1);
-		return (make_token(OUTFILE, NULL, 0));
+		return (make_token(OUTFILE, NULL));
 	}
 	advance(lex, 1);
-	return (make_token(PIPE, NULL, 0));
+	return (make_token(PIPE, NULL));
 }
 
 /**
@@ -87,11 +87,12 @@ t_token	*lexer(char *line)
 			current = lex_word(&lex);
 		if (!current)
 		{
-			;//error
+			free_tokens(head);
+			return (NULL);
 		}
 		append_token(&head, &tail, current);
 		skip_wspaces(&lex);
 	}
-	append_token(&head, &tail, make_token(END, NULL, 0));
+	append_token(&head, &tail, make_token(END, NULL));
 	return (head);
 }

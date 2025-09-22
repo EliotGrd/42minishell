@@ -18,7 +18,7 @@
  * @param lexeme 
  * @param q_state 
  */
-t_token	*make_token(t_type type, char *lexeme, unsigned int q_state)
+t_token	*make_token(t_type type, char *lexeme)
 {
 	t_token	*token;
 
@@ -26,7 +26,6 @@ t_token	*make_token(t_type type, char *lexeme, unsigned int q_state)
 	if (!token)
 		return (NULL); // flag error
 	token->type = type;
-	token->q_state = q_state;
 	if (lexeme)
 		token->lexeme = ft_strdup(lexeme);
 	return (token);
