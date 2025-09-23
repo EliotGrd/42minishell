@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 14:07:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/22 09:01:58 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/23 13:59:22 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	my_echo(char **argv)
 
 	i = 0;
 	n = 0;
+	if (len(argv) > 1)
+		return (0);
 	while (argv[i][0] == '-' && check_option_echo(argv[i]))
 	{
 		n = 1;
