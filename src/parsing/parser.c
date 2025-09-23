@@ -100,11 +100,6 @@ t_cmd	*parser(t_token *head)
 		else if (is_token_redir(c.current))
 		{
 			if (!parse_redir(&c, cmd_node))
-				/*c.current = NULL;//ajout de ma part
-				//head = NULL;//ajout de ma part
-				ft_free((void **)&cmd_node);//ajout de ma part
-				//cmd_node = NULL;//ajout de ma part
-				return (NULL);*/
 				return (syntax_error(c.current, head, cmd_head),
 					ft_free((void **)&cmd_node), NULL);
 			cur_next(&c);
@@ -114,7 +109,7 @@ t_cmd	*parser(t_token *head)
 			if (c.current->next->type == PIPE || c.current->next->type == END)
 				return (syntax_error(c.current->next, head, cmd_head), ft_free_tab(cmd_node->args), ft_free((void **)&cmd_node), NULL);
 			push_back_cmd(&cmd_head, cmd_node);
-			cmd_node = create_node_cmd(NULL); // securite a faire
+			cmd_node = create_node_cmd(0); // securite a faire
 			if (c.current != NULL)
 				cur_next(&c);
 		}
@@ -123,3 +118,11 @@ t_cmd	*parser(t_token *head)
 	free_tokens(head);
 	return (cmd_head);
 }
+
+
+
+				/*c.current = NULL;//ajout de ma part
+				//head = NULL;//ajout de ma part
+				ft_free((void **)&cmd_node);//ajout de ma part
+				//cmd_node = NULL;//ajout de ma part
+				return (NULL);*/

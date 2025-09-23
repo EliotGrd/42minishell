@@ -18,15 +18,21 @@ void	*ft_realloc(void *to_realloc, size_t old_size, size_t new_size)
 	size_t	tocopy;
 
 	if (to_realloc == NULL)
+	{
+		if (new_size == 0)
+			return (NULL);
 		return (malloc(new_size));
+	}
 	if (new_size == 0)
 	{
 		free(to_realloc);
 		to_realloc = NULL;
-		return (malloc(0));
+		return (NULL);
 	}
 	new_ptr = malloc(new_size);
-	if (new_size > old_size)
+	if (!new_ptr)
+		return (NULL);
+	if (new_size < old_size)
 		tocopy = new_size;
 	else
 		tocopy = old_size;
