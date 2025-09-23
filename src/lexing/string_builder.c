@@ -31,12 +31,13 @@ void	str_buf_putc(t_str_buf *sb, char c)
 			sb->cap = 16;
 		else
 			sb->cap *= 2;
-		//sb->str = ft_realloc(sb->str, sb->len, sb->cap);
-		sb->str = realloc(sb->str, sb->cap * sizeof(char));
+		sb->str = ft_realloc(sb->str, sb->len, sb->cap * sizeof(char));
+		//sb->str = realloc(sb->str, sb->cap * sizeof(char));
 	}
 	sb->str[sb->len] = c;
 	sb->len++;
 }
+//putot un oldcap ? 
 
 /**
  * @brief Put a string of size characters in the t_str_buf struct, it lower the 

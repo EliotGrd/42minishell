@@ -20,8 +20,8 @@
 typedef struct s_argv_buf
 {
 	char	**argv;
-	int		i;
-	int		cap;
+	size_t	i;
+	size_t	cap;
 }			t_argv_buf;
 
 void		argv_buf_init(t_argv_buf *avb);
