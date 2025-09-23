@@ -13,7 +13,7 @@ SRC = \
 	  lexing/string_builder.c \
 	  lexing/token_utils.c \
 	  parsing/argv_builder.c\
-	  parsing/error.c \
+	  parsing/parsing_error.c \
 	  parsing/parser.c\
 	  expand/expand.c\
 	  expand/expand_word.c\
