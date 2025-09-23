@@ -20,13 +20,33 @@ void	parsing_destructor(t_token *tok_head, t_cmd *cmd_head)
 		destructor_cmd(&cmd_head);
 }
 
+static char *find_redir_symbol(t_token *tok)
+{
+	if (tok->type == INFILE)
+		return (ft_strdup("<"));
+	else if (tok->type == OUTFILE)
+			return (ft_strdup(">"));
+	else if (tok->type == HERE_DOC)
+			return (ft_strdup("<<"));
+	else if (tok->type == APPEND)
+			return (ft_strdup(">>"));
+	else if (tok->type == PIPE)
+			return (ft_strdup("|"));
+	else
+		return (ft_strdup("newline"));
+}
+
 void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head)
 {
-	ft_putstr_fd("bash: syntax error near unexpected token `", 2);
-	//write(2, tok->lexeme, ft_strlen(tok->lexeme));//j'ai un probleme de strlen ?
+	char *print;
+
+	print = find_redir_symbol(tok);
+	ft_putstr_fd("chats: syntax error near unexpected token `", 2);
+	ft_putstr_fd(print, 2);
 	write(2, "'\n", 2);
+	ft_free((void **)&print);
 	parsing_destructor(tok_head, cmd_head);
-	(void) tok;
+	g_exit_code = 2;
 }
 
 /*void	lexing_error(int errcode, t_token *head)
@@ -39,11 +59,3 @@ void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head)
 	}
 }*/
 
-void	exp_redir_error(t_minishell *msh, t_redirect redir )
-{
-	write(2, "ambiguous redirect\n", 19);
-	(void)redir;
-	//error bash: $MACHIN: ambiguous redirect mais need free etc
-	msh->index_rm_exp = -1;
-	//skip exec
-}

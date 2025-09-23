@@ -18,9 +18,13 @@
  */
 static void	error_code_var(t_lexer *lex, t_str_buf *sb, t_expand *exp)
 {
+	char *exitcode;
+
+	exitcode = ft_itoa(g_exit_code);
 	if (exp->qstate != 1)
 	{
-		str_buf_puts(sb, ft_itoa(g_exit_code));
+		str_buf_puts(sb, exitcode);
+		ft_free((void **)&exitcode);
 		advance(lex, 2);
 	}
 	else

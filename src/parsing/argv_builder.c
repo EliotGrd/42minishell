@@ -70,7 +70,9 @@ void	argv_buf_free(t_argv_buf *avb)
 	n = 0;
 	while (n < avb->i)
 	{
-		ft_free((void **)avb->argv[n]);
+		ft_free((void **)&avb->argv[n]);
+		//free(avb->argv[n]);
+		//avb->argv[n] = NULL;
 		n++;
 	}
 	ft_free((void **)avb->argv);

@@ -12,6 +12,13 @@
 
 #include "../../includes/parsing.h"
 
+static void	exp_redir_error(t_minishell *msh)
+{
+	msh->index_rm_exp = -1;
+	ft_putendl_fd("chats: ambiguous redirect", 2);
+	destructor_cmd(&msh->top_cmd);
+}
+
 /**
  * @brief Checks if a given char is a valid character for the key of 
  * an env variable
@@ -25,25 +32,6 @@ int	is_valid_for_key(char c)
 		return (1);
 	return (0);
 }
-
-/* 
-int	is_key_valid(char *str)
-{
-	int	i;
-
-	i = 0;
-	if (!str)
-		return (0);
-	if (str[0] >= 48 && str[0] <= 57)
-		return (0);
-	while (str[i] && str[i] != '=')
-	{
-		if (!is_valid_for_key(str[i]))
-			return (0);
-		i++;
-	}
-	return (1);
-}*/
 
 /**
  * @brief Removes a given index of an argv in case of env variable not found
@@ -100,7 +88,7 @@ void	expand_manager(t_cmd *head, t_minishell *msh)
 		{
 			cur_redir->file = expand_word(cur_redir->file, msh, 0);
 			if (msh->index_rm_exp > -1)
-				exp_redir_error(msh, *cur_redir);
+				return (exp_redir_error(msh));
 			cur_redir = cur_redir->next;
 		}
 		cur = cur->next;

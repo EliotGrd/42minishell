@@ -1,0 +1,7 @@
+<map id="make_token" name="make_token">
+<area shape="rect" id="node1" title="Build a token." alt="" coords="363,56,464,83"/>
+<area shape="rect" id="node2" href="$lexer_8c.html#a4224de0ac9d722a19a477ae2880f54da" title="Make the operator in the global string a token." alt="" coords="211,5,315,32"/>
+<area shape="rect" id="node3" href="$lexer_8c.html#aced469451204cf536fd18b4cf94f6b91" title="Global lexing function, that traverses readline&#39;s string and separate in tokens." alt="" coords="108,56,163,83"/>
+<area shape="rect" id="node5" href="$lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01" title="Lexes the string to create a WORD token." alt="" coords="222,107,303,133"/>
+<area shape="rect" id="node4" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,56,60,83"/>
+</map>

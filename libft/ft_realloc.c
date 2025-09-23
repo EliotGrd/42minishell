@@ -22,6 +22,7 @@ void	*ft_realloc(void *to_realloc, size_t old_size, size_t new_size)
 	if (new_size == 0)
 	{
 		free(to_realloc);
+		to_realloc = NULL;
 		return (malloc(0));
 	}
 	new_ptr = malloc(new_size);
@@ -31,5 +32,6 @@ void	*ft_realloc(void *to_realloc, size_t old_size, size_t new_size)
 		tocopy = old_size;
 	ft_memcpy(new_ptr, to_realloc, tocopy);
 	free(to_realloc);
+	to_realloc = NULL;
 	return (new_ptr);
 }

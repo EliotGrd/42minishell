@@ -64,7 +64,6 @@ void				cur_next(t_tokcursor *c);
 int					is_token_redir(t_token *token);
 
 void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head);
-void	exp_redir_error(t_minishell *msh, t_redirect redir);
 void	lexing_error(int errcode, t_token *head);
 
 /* Parsing */

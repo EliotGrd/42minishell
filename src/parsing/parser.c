@@ -28,10 +28,10 @@ int	is_token_redir(t_token *token)
 
 int	parse_redir(t_tokcursor *c, t_cmd *cur_cmd)
 {
-	//t_redirect	*node;
 	t_redirect	*tail;
 
-	//node = create_node_redir(0, c->current->type);
+	// t_redirect	*node;
+	// node = create_node_redir(0, c->current->type);
 	if (c->current->next->type != WORD || !c->current)
 		return (0);
 	if (!cur_cmd->redir)
@@ -45,7 +45,7 @@ int	parse_redir(t_tokcursor *c, t_cmd *cur_cmd)
 		tail->next = create_node_redir(ft_strdup(c->current->next->lexeme),
 				c->current->type);
 	}
-	//cur_next(c);//temp pour comprendre l'erreur
+	// cur_next(c);//temp pour comprendre l'erreur
 	cur_next(c);
 	return (1);
 }
@@ -67,17 +67,15 @@ int	parse_cmd(t_tokcursor *c, t_cmd *cur_cmd)
 		else if (is_token_redir(c->current))
 		{
 			if (!parse_redir(c, cur_cmd))
-				return (0);
+				return (argv_buf_free(&avb), 0);
 			empty = 0;
 		}
 		cur_next(c);
 	}
 	cur_cmd->args = argv_buf_end(&avb);
+	//argv_buf_free(&avb);
 	if (empty == 1)
-	{
-		argv_buf_free(&avb);
-		return (0);
-	}
+		return (argv_buf_free(&avb), 0);
 	return (1);
 }
 
@@ -88,41 +86,40 @@ t_cmd	*parser(t_token *head)
 	t_cmd		*cmd_node;
 
 	c.current = head;
-	cmd_node = create_node_cmd(0);//ici check de secu a faire
+	cmd_node = create_node_cmd(0); // ici check de secu a faire
 	cmd_head = NULL;
+	if (c.current->type == PIPE)
+		return (syntax_error(c.current, head, cmd_head), ft_free((void **)&cmd_node), NULL);
 	while (c.current != NULL && c.current->type != END)
 	{
 		if (c.current->type == WORD)
 		{
 			if (!parse_cmd(&c, cmd_node))
-				syntax_error(c.current, head, cmd_head);
+				return (syntax_error(c.current, head, cmd_head), ft_free((void **)&cmd_node), NULL);
 		}
 		else if (is_token_redir(c.current))
 		{
 			if (!parse_redir(&c, cmd_node))
-			{
-				syntax_error(c.current, head, cmd_head);
-				c.current = NULL;//ajout de ma part
-				head = NULL;//ajout de ma part
-				free(cmd_node);//ajout de ma part
-				cmd_node = NULL;//ajout de ma part
-			}
+				/*c.current = NULL;//ajout de ma part
+				//head = NULL;//ajout de ma part
+				ft_free((void **)&cmd_node);//ajout de ma part
+				//cmd_node = NULL;//ajout de ma part
+				return (NULL);*/
+				return (syntax_error(c.current, head, cmd_head),
+					ft_free((void **)&cmd_node), NULL);
 			cur_next(&c);
 		}
 		else if (c.current->type == PIPE)
 		{
 			if (c.current->next->type == PIPE || c.current->next->type == END)
-				(syntax_error(c.current->next, head, cmd_head), head = NULL, c.current = NULL, free(cmd_node), cmd_node = NULL, cmd_head = NULL);
+				return (syntax_error(c.current->next, head, cmd_head), ft_free_tab(cmd_node->args), ft_free((void **)&cmd_node), NULL);
 			push_back_cmd(&cmd_head, cmd_node);
-			cmd_node = create_node_cmd(0);//securite a faire
+			cmd_node = create_node_cmd(NULL); // securite a faire
 			if (c.current != NULL)
 				cur_next(&c);
 		}
 	}
-	push_back_cmd(&cmd_head, cmd_node);//pas sur de celui la
+	push_back_cmd(&cmd_head, cmd_node); // pas sur de celui la
 	free_tokens(head);
 	return (cmd_head);
 }
-
-// tant que token est pas pipe ou end ou plus de token
-//
