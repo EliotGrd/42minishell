@@ -79,13 +79,13 @@ int	main(int argc, char **argv, char **envp)
 			signal(SIGINT, sigint_handler);
 			signal(SIGQUIT, SIG_IGN);
 			line = readline("CHAT$> ");
-			ft_printf("line : %s\n\n", line);
+			//ft_printf("line : %s\n\n", line);
 			if (line == NULL)
 			{
 				//faudra call la fonction exit ou de destruction global
 				destructor_cmd(&minishell.top_cmd);
 				destructor_env(&minishell.top_env);
-				ft_printf("Exit\n");
+				ft_printf("Cat finally found his toy, you can leave now..... LEAVE\n");
 				break;
 			}
 			if (line && *line)
@@ -97,7 +97,7 @@ int	main(int argc, char **argv, char **envp)
 				
 				if (minishell.top_tok)
 				{
-					minishell.top_cmd = parser(minishell.top_tok);
+					minishell.top_cmd = parser(&minishell);
 				//	exit(0);
 				}
 

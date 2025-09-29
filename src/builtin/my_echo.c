@@ -31,8 +31,8 @@ int	my_echo(char **argv)
 
 	i = 0;
 	n = 0;
-	if (len(argv) > 1)
-		return (0);
+	if (len(argv) == 0)
+		return (write(1, "\n", 1), 0);
 	while (argv[i][0] == '-' && check_option_echo(argv[i]))
 	{
 		n = 1;

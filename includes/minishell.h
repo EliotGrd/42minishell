@@ -33,6 +33,7 @@
 # include <readline/history.h>
 
 # define PATH "/tmp/heredoc.txt"
+# define MALLOC_ERR "Allocation failed, cat's sad.."
 
 extern int	g_exit_code;
 

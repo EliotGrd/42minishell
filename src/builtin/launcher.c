@@ -61,7 +61,7 @@ int	is_it_builtin_nonfork(char *str)
 int	launch_builtin(char **str, t_minishell *minishell)
 {
 	if (ft_strncmp(str[0], "echo", ft_strlen(str[0]) + 1) == 0)
-		return (my_echo(str));
+		return (my_echo(++str));
 	else if (ft_strncmp(str[0], "pwd", ft_strlen(str[0]) + 1) == 0)
 		return (pwd());
 	else if (ft_strncmp(str[0], "cd", ft_strlen(str[0]) + 1) == 0)

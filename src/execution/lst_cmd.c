@@ -19,7 +19,7 @@ t_cmd	*create_node_cmd(char **str)
 	(void)str;
 	new = malloc(sizeof(t_cmd));
 	if (!new)
-		return (NULL);
+		return (ft_putendl_fd(MALLOC_ERR, 2), NULL);
 	new -> previous = NULL;
 	new -> next = NULL;
 	new -> redir = NULL;

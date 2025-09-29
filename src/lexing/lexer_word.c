@@ -19,16 +19,19 @@
  */
 static int	single_quoted_segment(t_lexer *lex, t_str_buf *sb)
 {
-	str_buf_putc(sb, lex->c);
+	if (!str_buf_putc(sb, lex->c))
+		return (0);
 	advance(lex, 1);
 	while (lex->c && lex->c != '\'')
 	{
-		str_buf_putc(sb, lex->c);
+		if (!str_buf_putc(sb, lex->c))
+			return (0);
 		advance(lex, 1);
 	}
 	if (lex->c != '\'')
-		return (ft_putendl_fd("chats: unclosed quotes", 2), 0);
-	str_buf_putc(sb, lex->c);
+		return (ft_putendl_fd("unclosed quotes, cat probably stole it.", 2), 0);
+	if (!str_buf_putc(sb, lex->c))
+		return (0);
 	advance(lex, 1);
 	return (1);
 }
@@ -40,12 +43,20 @@ static int	single_quoted_segment(t_lexer *lex, t_str_buf *sb)
  */
 static int	double_quoted_segment(t_lexer *lex, t_str_buf *sb)
 {
-	(str_buf_putc(sb, lex->c), advance(lex, 1));
+	if (!str_buf_putc(sb, lex->c))
+		return (0);
+	advance(lex, 1);
 	while (lex->c && lex->c != '"')
-		(str_buf_putc(sb, lex->c), advance(lex, 1));
+	{
+		if (!str_buf_putc(sb, lex->c))
+			return (0);
+		advance(lex, 1);
+	}
 	if (lex->c != '"')
-		return (ft_putendl_fd("chats: unclosed quotes", 2), 0);
-	(str_buf_putc(sb, lex->c), advance(lex, 1));
+		return (ft_putendl_fd("unclosed quotes, cat probably stole it.", 2), 0);
+	if (!str_buf_putc(sb, lex->c))
+		return (0);
+	advance(lex, 1);
 	return (1);
 }
 
@@ -74,10 +85,18 @@ t_token	*lex_word(t_lexer *lex)
 				return (str_buf_free(&sb), NULL);
 		}
 		else
-			(str_buf_putc(&sb, lex->c), advance(lex, 1));
+		{
+			if (!str_buf_putc(&sb, lex->c))
+				return (str_buf_free(&sb), NULL);
+			advance(lex, 1);	
+		}
 	}
 	result = str_buf_end(&sb);
+	if (!result)
+		return (NULL);
 	token = make_token(WORD, result);
+	if (!token)
+		return (ft_free((void **)&result), NULL);
 	return (ft_free((void **)&result), token);
 }
 

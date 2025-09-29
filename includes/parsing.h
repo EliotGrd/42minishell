@@ -63,12 +63,12 @@ void				free_tokens(t_token *token);
 void				cur_next(t_tokcursor *c);
 int					is_token_redir(t_token *token);
 
-void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head);
+void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head, t_cmd *cmd_cur);
 void	lexing_error(int errcode, t_token *head);
 
 /* Parsing */
 
-t_cmd	*parser(t_token *head);
+t_cmd	*parser(t_minishell *msh);
 
 /* Expand */
 void	expand_manager(t_cmd *head, t_minishell *msh);
@@ -78,5 +78,7 @@ void	handle_dollar(t_lexer *lex, t_str_buf *sb, t_expand *exp, t_minishell *msh)
 
 int is_valid_for_key(char c);
 int	is_key_valid(char *str);
+
+void exit_expand_fatal(t_minishell *msh);
 
 #endif

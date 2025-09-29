@@ -70,7 +70,7 @@ t_redirect	*create_node_redir(char *str, t_type type)
 
 	new = malloc(sizeof(t_redirect));
 	if (!new)
-		return (NULL);
+		return (ft_free((void **)&str), ft_putendl_fd(MALLOC_ERR, 2), NULL);
 	new -> file = str;
 	new -> type = type;
 	new -> fd = -1;

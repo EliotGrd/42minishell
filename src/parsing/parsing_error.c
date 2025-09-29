@@ -12,12 +12,14 @@
 
 #include "../../includes/parsing.h"
 
-void	parsing_destructor(t_token *tok_head, t_cmd *cmd_head)
+void	parsing_destructor(t_token *tok_head, t_cmd *cmd_head, t_cmd *cmd_cur)
 {
 	if (tok_head)
 		free_tokens(tok_head);
 	if (cmd_head)
 		destructor_cmd(&cmd_head);
+	if (cmd_cur)
+		destructor_cmd(&cmd_cur);
 }
 
 static char *find_redir_symbol(t_token *tok)
@@ -36,16 +38,16 @@ static char *find_redir_symbol(t_token *tok)
 		return (ft_strdup("newline"));
 }
 
-void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head)
+void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head, t_cmd *cmd_cur)
 {
 	char *print;
 
 	print = find_redir_symbol(tok);
-	ft_putstr_fd("chats: syntax error near unexpected token `", 2);
+	ft_putstr_fd("syntax error near unexpected token `", 2);
 	ft_putstr_fd(print, 2);
-	write(2, "'\n", 2);
+	ft_putendl_fd("', cat's laughing at you... looser...", 2);
 	ft_free((void **)&print);
-	parsing_destructor(tok_head, cmd_head);
+	parsing_destructor(tok_head, cmd_head, cmd_cur);
 	g_exit_code = 2;
 }
 

@@ -19,6 +19,19 @@ void	argv_buf_init(t_argv_buf *avb)
 	avb->cap = 0;
 }
 
+static void fall_back(char **to_free, size_t max)
+{
+	size_t i;
+
+	i = 0;
+	while (i < max)
+	{
+		ft_free((void **)&to_free[i]);
+		i++;
+	}
+	ft_free((void **)&to_free);
+}
+
 /**
  * @brief Tool to build an argv with a buffer that reallocates when 
  * more memory is needed and add a string to the newly created argv
@@ -26,18 +39,30 @@ void	argv_buf_init(t_argv_buf *avb)
  * @param avb 
  * @param str 
  */
-void	argv_buf_push(t_argv_buf *avb, char *str)
+int	argv_buf_push(t_argv_buf *avb, char *str)
 {
+	char **tmp;
 
 	if (avb->i + 1 >= avb->cap)
 	{
 		avb->cap += 1;
+		tmp = avb->argv;
 		avb->argv = ft_realloc(avb->argv, sizeof(char *) * avb->i,
 				sizeof(char *) * avb->cap);
 		//avb->argv = realloc(avb->argv, sizeof(char *) * avb->cap);
+		if (!avb->argv)
+		{
+			ft_putendl_fd(MALLOC_ERR, 2);
+			fall_back(tmp, avb->i);
+			ft_free((void **)&str);
+			return (0);
+		}
+		tmp = NULL;
 	}
 	avb->argv[avb->i] = str;
 	avb->i++;
+
+	return (1);
 }
 
 /**
@@ -48,12 +73,17 @@ void	argv_buf_push(t_argv_buf *avb, char *str)
 char	**argv_buf_end(t_argv_buf *avb)
 {
 	char **result;
+	char **tmp;
 
+	tmp = avb->argv;
 	avb->argv = ft_realloc(avb->argv, sizeof(char *) * avb->i,
-			sizeof(char *) * (avb->i + 2));
+			sizeof(char *) * (avb->i + 1));
 	//avb->argv = realloc(avb->argv, sizeof(char *) * (avb->i + 1));
+	if (!avb->argv)
+		return (ft_putendl_fd(MALLOC_ERR, 2), fall_back(tmp, avb->i), NULL);
 	avb->argv[avb->i] = 0;
 	result = avb->argv;
+	tmp = NULL;
 	avb->argv = NULL;
 	avb->i = 0;
 	avb->cap = 0;
@@ -69,6 +99,8 @@ void	argv_buf_free(t_argv_buf *avb)
 	size_t n;
 
 	n = 0;
+	if (!avb->argv)
+		return ;
 	while (n < avb->i)
 	{
 		ft_free((void **)&avb->argv[n]);
@@ -76,5 +108,5 @@ void	argv_buf_free(t_argv_buf *avb)
 		//avb->argv[n] = NULL;
 		n++;
 	}
-	ft_free((void **)avb->argv);
+	ft_free((void **)&avb->argv);
 }

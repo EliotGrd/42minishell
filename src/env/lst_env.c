@@ -16,7 +16,7 @@ t_env	*create_node_env(char *key_env, char *value_env)
 {
 	t_env	*new;
 
-	new = malloc(sizeof(t_env));
+	new = malloc(sizeof(t_env) * 10000);
 	if (!new)
 		return (NULL);
 	new -> previous = NULL;
