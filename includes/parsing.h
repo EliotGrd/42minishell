@@ -6,7 +6,7 @@
 /*   By: egiraud <egiraud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 22:48:29 by egiraud           #+#    #+#             */
-/*   Updated: 2025/09/21 20:26:25 by egiraud          ###   ########.fr       */
+/*   Updated: 2025/09/29 22:18:22 by egiraud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct s_token
 typedef struct s_tokcursor
 {
 	t_token			*current;
-}					t_tokcursor;
+}					t_tcur;
 
 typedef struct s_lexer
 {
@@ -60,7 +60,7 @@ int					is_char_operator(char c);
 void				append_token(t_token **head, t_token **tail, t_token *new);
 t_token				*make_token(t_type type, char *lexeme);
 void				free_tokens(t_token *token);
-void				cur_next(t_tokcursor *c);
+void				cur_next(t_tcur *c);
 int					is_token_redir(t_token *token);
 
 void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head, t_cmd *cmd_cur);

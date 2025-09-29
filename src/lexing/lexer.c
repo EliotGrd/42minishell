@@ -17,9 +17,8 @@
  * error unclosed quotes ? ou pas laisser comme ca
  */
 
-
 /**
- * @brief Check if the char is one of the possible operator, 
+ * @brief Check if the char is one of the possible operator,
  * currently '<', '>' or '|'
  */
 int	is_char_operator(char c)
@@ -34,7 +33,7 @@ int	is_char_operator(char c)
  *
  * @return Return the token made
  */
-static t_token *lex_operator(t_lexer *lex)
+static t_token	*lex_operator(t_lexer *lex)
 {
 	if (lex->c == '<')
 	{
@@ -61,7 +60,7 @@ static t_token *lex_operator(t_lexer *lex)
 }
 
 /**
- * @brief Global lexing function, that traverses readline's string and 
+ * @brief Global lexing function, that traverses readline's string and
  * separate in tokens
  *
  * @param line String comming from readline
@@ -70,8 +69,8 @@ static t_token *lex_operator(t_lexer *lex)
 t_token	*lexer(char *line)
 {
 	t_lexer	lex;
-	t_token *head;
-	t_token *tail;
+	t_token	*head;
+	t_token	*tail;
 	t_token	*current;
 
 	head = NULL;
@@ -86,10 +85,7 @@ t_token	*lexer(char *line)
 		else
 			current = lex_word(&lex);
 		if (!current)
-		{
-			free_tokens(head);
-			return (NULL);
-		}
+			return (free_tokens(head), NULL);
 		append_token(&head, &tail, current);
 		skip_wspaces(&lex);
 	}

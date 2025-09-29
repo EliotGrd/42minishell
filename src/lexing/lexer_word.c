@@ -13,7 +13,7 @@
 #include "../../includes/parsing.h"
 
 /**
- * @brief Lexes a segment delimited by single quotes 
+ * @brief Lexes a segment delimited by single quotes
  *
  * @return Return 1 when success, 0 if an error occured
  */
@@ -60,37 +60,44 @@ static int	double_quoted_segment(t_lexer *lex, t_str_buf *sb)
 	return (1);
 }
 
-/**
- * @brief Lexes the string to create a WORD token
- *
- * @return Returns the token created 
- */
-t_token	*lex_word(t_lexer *lex)
+static int	lex_word_loop(t_lexer *lex, t_str_buf *sb)
 {
-	t_str_buf		sb;
-	t_token			*token;
-	char			*result;
-
-	str_buf_init(&sb);
 	while (lex->c && !ft_iswspace(lex->c) && !is_char_operator(lex->c))
 	{
 		if (lex->c == '\'')
 		{
-			if (!single_quoted_segment(lex, &sb))
-				return (str_buf_free(&sb), NULL);
+			if (!single_quoted_segment(lex, sb))
+				return (str_buf_free(sb), 0);
 		}
 		else if (lex->c == '\"')
 		{
-			if (!double_quoted_segment(lex, &sb))
-				return (str_buf_free(&sb), NULL);
+			if (!double_quoted_segment(lex, sb))
+				return (str_buf_free(sb), 0);
 		}
 		else
 		{
-			if (!str_buf_putc(&sb, lex->c))
-				return (str_buf_free(&sb), NULL);
-			advance(lex, 1);	
+			if (!str_buf_putc(sb, lex->c))
+				return (str_buf_free(sb), 0);
+			advance(lex, 1);
 		}
 	}
+	return (1);
+}
+
+/**
+ * @brief Lexes the string to create a WORD token
+ *
+ * @return Returns the token created
+ */
+t_token	*lex_word(t_lexer *lex)
+{
+	t_str_buf	sb;
+	t_token		*token;
+	char		*result;
+
+	str_buf_init(&sb);
+	if (!lex_word_loop(lex, &sb))
+		return (NULL);
 	result = str_buf_end(&sb);
 	if (!result)
 		return (NULL);
@@ -183,7 +190,7 @@ t_token	*lex_word(t_lexer *lex)
 				if (c == '\n')
 				{
 					advance(lex, 2);
-					continue;
+					continue ;
 				}
 				(str_buf_putc(sb, lex->c), advance(lex, 2));
 				continue ;

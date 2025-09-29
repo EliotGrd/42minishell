@@ -15,6 +15,7 @@ SRC = \
 	  parsing/argv_builder.c\
 	  parsing/parsing_error.c \
 	  parsing/parser.c\
+	  parsing/parser_utils.c\
 	  expand/expand.c\
 	  expand/expand_word.c\
 	  expand/expand_dollar.c\

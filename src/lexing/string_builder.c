@@ -20,8 +20,9 @@ void	str_buf_init(t_str_buf *sb)
 }
 
 /**
- * @brief Put char in the struct t_str_buf so we can build a string in the struct.
- *The point is to create the string without knowing its final size with realloc
+ * @brief Put char in the struct t_str_buf so we can build a string 
+ * in the struct.
+ * The point is to create the string without knowing its final size with realloc
  */
 int	str_buf_putc(t_str_buf *sb, char c)
 {
@@ -32,11 +33,9 @@ int	str_buf_putc(t_str_buf *sb, char c)
 		else
 			sb->cap *= 2;
 		sb->str = ft_realloc(sb->str, sb->len, sb->cap * sizeof(char));
-		//sb->str = realloc(sb->str, sb->cap * sizeof(char));
 		if (!sb->str)
 			return (ft_putendl_fd("Allocation failed, cat's sad..", 2), 0);
 	}
-
 	sb->str[sb->len] = c;
 	sb->len++;
 	return (1);
@@ -92,7 +91,7 @@ void	str_buf_free(t_str_buf *sb)
  */
 char	*str_buf_end(t_str_buf *sb)
 {
-	char *str;
+	char	*str;
 
 	if (!str_buf_putc(sb, '\0'))
 		return (NULL);
