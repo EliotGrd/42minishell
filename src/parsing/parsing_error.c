@@ -22,25 +22,26 @@ void	parsing_destructor(t_token *tok_head, t_cmd *cmd_head, t_cmd *cmd_cur)
 		destructor_cmd(&cmd_cur);
 }
 
-static char *find_redir_symbol(t_token *tok)
+static char	*find_redir_symbol(t_token *tok)
 {
 	if (tok->type == INFILE)
 		return (ft_strdup("<"));
 	else if (tok->type == OUTFILE)
-			return (ft_strdup(">"));
+		return (ft_strdup(">"));
 	else if (tok->type == HERE_DOC)
-			return (ft_strdup("<<"));
+		return (ft_strdup("<<"));
 	else if (tok->type == APPEND)
-			return (ft_strdup(">>"));
+		return (ft_strdup(">>"));
 	else if (tok->type == PIPE)
-			return (ft_strdup("|"));
+		return (ft_strdup("|"));
 	else
 		return (ft_strdup("newline"));
 }
 
-void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head, t_cmd *cmd_cur)
+void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head,
+		t_cmd *cmd_cur)
 {
-	char *print;
+	char	*print;
 
 	print = find_redir_symbol(tok);
 	ft_putstr_fd("syntax error near unexpected token `", 2);
@@ -50,14 +51,3 @@ void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head, t_cmd *cmd_c
 	parsing_destructor(tok_head, cmd_head, cmd_cur);
 	g_exit_code = 2;
 }
-
-/*void	lexing_error(int errcode, t_token *head)
-{
-	if (errcode == 1)
-	{
-	}
-	else (errcode == 2)
-	{
-	}
-}*/
-

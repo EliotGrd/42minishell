@@ -19,9 +19,9 @@ void	argv_buf_init(t_argv_buf *avb)
 	avb->cap = 0;
 }
 
-static void fall_back(char **to_free, size_t max)
+static void	fall_back(char **to_free, size_t max)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < max)
@@ -33,15 +33,15 @@ static void fall_back(char **to_free, size_t max)
 }
 
 /**
- * @brief Tool to build an argv with a buffer that reallocates when 
+ * @brief Tool to build an argv with a buffer that reallocates when
  * more memory is needed and add a string to the newly created argv
  *
- * @param avb 
- * @param str 
+ * @param avb
+ * @param str
  */
 int	argv_buf_push(t_argv_buf *avb, char *str)
 {
-	char **tmp;
+	char	**tmp;
 
 	if (avb->i + 1 >= avb->cap)
 	{
@@ -49,7 +49,6 @@ int	argv_buf_push(t_argv_buf *avb, char *str)
 		tmp = avb->argv;
 		avb->argv = ft_realloc(avb->argv, sizeof(char *) * avb->i,
 				sizeof(char *) * avb->cap);
-		//avb->argv = realloc(avb->argv, sizeof(char *) * avb->cap);
 		if (!avb->argv)
 		{
 			ft_putendl_fd(MALLOC_ERR, 2);
@@ -61,7 +60,6 @@ int	argv_buf_push(t_argv_buf *avb, char *str)
 	}
 	avb->argv[avb->i] = str;
 	avb->i++;
-
 	return (1);
 }
 
@@ -72,13 +70,12 @@ int	argv_buf_push(t_argv_buf *avb, char *str)
  */
 char	**argv_buf_end(t_argv_buf *avb)
 {
-	char **result;
-	char **tmp;
+	char	**result;
+	char	**tmp;
 
 	tmp = avb->argv;
-	avb->argv = ft_realloc(avb->argv, sizeof(char *) * avb->i,
-			sizeof(char *) * (avb->i + 1));
-	//avb->argv = realloc(avb->argv, sizeof(char *) * (avb->i + 1));
+	avb->argv = ft_realloc(avb->argv, sizeof(char *) * avb->i, sizeof(char *)
+			* (avb->i + 1));
 	if (!avb->argv)
 		return (ft_putendl_fd(MALLOC_ERR, 2), fall_back(tmp, avb->i), NULL);
 	avb->argv[avb->i] = 0;
@@ -96,7 +93,7 @@ char	**argv_buf_end(t_argv_buf *avb)
  */
 void	argv_buf_free(t_argv_buf *avb)
 {
-	size_t n;
+	size_t	n;
 
 	n = 0;
 	if (!avb->argv)
@@ -104,8 +101,6 @@ void	argv_buf_free(t_argv_buf *avb)
 	while (n < avb->i)
 	{
 		ft_free((void **)&avb->argv[n]);
-		//free(avb->argv[n]);
-		//avb->argv[n] = NULL;
 		n++;
 	}
 	ft_free((void **)&avb->argv);

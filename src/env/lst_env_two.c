@@ -33,7 +33,7 @@ char	**split_env(char *envp)
 	temp = envp;
 	result = malloc(sizeof(char *) * 2);
 	if (!result)
-		return (NULL);
+		return (ft_putendl_fd(MALLOC_ERR, 2), NULL);
 	while (*temp && *temp != '=')
 	{
 		temp++;
@@ -41,10 +41,10 @@ char	**split_env(char *envp)
 	}
 	result[0] = ft_strndup(envp, cursor);
 	if (!result[0])
-		return (free(result), NULL);
+		return (ft_putendl_fd(MALLOC_ERR, 2), free(result), NULL);
 	result[1] = ft_strdup(envp + cursor + 1);
 	if (!result[1])
-		return (free(result[0]), free(result), NULL);
+		return (ft_putendl_fd(MALLOC_ERR, 2), free(result[0]), free(result), NULL);
 	return (result);
 }
 
@@ -102,7 +102,7 @@ int	set_up_env(t_env **top_env, char **envp)
 		free(temp);
 		temp = NULL;
 		if (!node_env)
-			return (destructor_env(top_env), *top_env = NULL, 1);
+			return (/*ft_putendl_fd(ft_itoa(i), 1), */destructor_env(top_env), pop_env(&node_env), *top_env = NULL, 1);
 		push_back_env(top_env, node_env);
 		i++;
 	}

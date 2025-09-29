@@ -9,14 +9,14 @@
 /*   Updated: 2025/09/21 21:45:54 by egiraud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
- #include "../../includes/parsing.h"
+#include "../../includes/parsing.h"
 
 /**
  * @brief Build a token
  *
- * @param type 
- * @param lexeme 
- * @param q_state 
+ * @param type
+ * @param lexeme
+ * @param q_state
  */
 t_token	*make_token(t_type type, char *lexeme)
 {
@@ -24,7 +24,7 @@ t_token	*make_token(t_type type, char *lexeme)
 
 	token = ft_calloc(1, sizeof(t_token));
 	if (!token)
-		return (NULL); // flag error
+		return (ft_putendl_fd(MALLOC_ERR, 2), NULL);
 	token->type = type;
 	if (lexeme)
 		token->lexeme = ft_strdup(lexeme);
@@ -41,13 +41,13 @@ t_token	*make_token(t_type type, char *lexeme)
 void	append_token(t_token **head, t_token **tail, t_token *new)
 {
 	if (!new)
-		return;
+		return ;
 	if (!*head)
 	{
 		*tail = new;
 		*head = *tail;
 	}
-	else 
+	else
 	{
 		(*tail)->next = new;
 		*tail = new;
@@ -61,19 +61,13 @@ void	append_token(t_token **head, t_token **tail, t_token *new)
  */
 void	free_tokens(t_token *token)
 {
-	t_token *temp;
+	t_token	*temp;
 
 	while (token)
 	{
 		temp = token->next;
 		ft_free((void **)&token->lexeme);
-		//token -> lexeme = NULL;//ajout de ma part
-		//ft_printf("%s, %p\n", token->lexeme, &token->lexeme);
-		//free(token->lexeme);
 		ft_free((void **)&token);
-		//token = NULL;//ajout de ma part
-		//ft_printf("%p\n", &token);
-		//free(token);
 		token = temp;
 	}
 }
