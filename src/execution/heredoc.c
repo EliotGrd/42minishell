@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:39:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/22 14:47:32 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/30 08:35:06 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,36 +69,6 @@ static void	read_gnl_heredoc(t_redirect *temp, t_cmd *top_cmd,
 	}
 }
 
-/**
- * @brief origin of creation ; the norm
- * what it is doing ? 
- * juste close the fd the right way if we 
- * encounter the CTRL+C signal and setup the exit_code
- *
- * @param status 
- * @param fd 
- * @param temp 
- * @param top_cmd 
- * @return 
- */
-/*
-static int	update_status(int status, t_redirect *temp, t_cmd *top_cmd)
-{
-	if (WIFEXITED(status))
-	{
-		if (WEXITSTATUS(status) == 130)
-			g_exit_code = 130;
-		else if (WEXITSTATUS(status) == 131)
-			g_exit_code = 131;
-		if (g_exit_code == 130 || g_exit_code == 131)
-		{
-			close_fd_heredocs2(temp, top_cmd);
-			return (-1);
-		}
-	}
-	return (0);
-}
-*/
 /**
  * @brief the function to call what the child has to do 
  * main reason for this function => the norm

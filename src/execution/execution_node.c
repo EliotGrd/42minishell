@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:49:45 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/23 13:43:05 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/30 07:50:51 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int	execution_node(char **str, t_minishell *minishell)
 	else if (ft_strchr(str[0], '/'))
 	{
 		if (check_accessible(str[0], temp_env) != 0)
-			exit(g_exit_code);
+			return (g_exit_code);
 		binary = str[0];
 	}
 	else
