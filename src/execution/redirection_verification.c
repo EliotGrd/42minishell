@@ -46,22 +46,23 @@ int	infile_redirection(t_redirect *redir, t_cmd **top_stack)
 	if (access(redir -> file, F_OK) != 0)
 	{
 		ft_putstr_fd(redir -> file, 2);
-		ft_putstr_fd(" file does not exist\n", 2);
+		ft_putstr_fd(": no, this file is not in cat's box\n", 2);
 		close_fd_error(top_stack);
 		return (-1);
 	}
 	else if (access(redir -> file, R_OK) != 0)
 	{
-		ft_putstr_fd(redir -> file, 2);
-		ft_putstr_fd(" permission denied\n", 2);
+		ft_putstr_fd("cat said \"nuh uh\" when openning: ", 2);
+		ft_putendl_fd(redir -> file, 2);
+		//ft_putstr_fd("\n", 2);
 		close_fd_error(top_stack);
 		return (-1);
 	}
 	(*top_stack)-> fd_in = open(redir -> file, O_RDONLY);
 	if ((*top_stack)-> fd_in == -1)
 	{
-		ft_putstr_fd(redir -> file, 2);
-		ft_putstr_fd(" error opening\n", 2);
+		ft_putstr_fd("cat failed to open\n", 2);
+		ft_putendl_fd(redir -> file, 2);
 		close_fd_error(top_stack);
 		return (-1);
 	}
@@ -91,7 +92,7 @@ int	outfile_append_redirection(t_redirect *redir, t_cmd **top_stack, int type)
 	if ((*top_stack)-> fd_out == -1)
 	{
 		ft_putstr_fd(redir -> file, 2);
-		ft_putstr_fd(" permission denied\n", 2);
+		ft_putstr_fd(" permission denied by cat\n", 2);
 		close_fd_error(top_stack);
 		return (-1);
 	}

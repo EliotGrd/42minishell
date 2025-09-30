@@ -15,7 +15,7 @@
 static void	exp_redir_error(t_minishell *msh)
 {
 	msh->index_rm_exp = -1;
-	ft_putendl_fd("chats: ambiguous redirect", 2);
+	ft_putendl_fd("cat thinks this redirect is ambiguous", 2);
 	destructor_cmd(&msh->top_cmd);
 }
 

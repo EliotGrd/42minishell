@@ -33,9 +33,9 @@ static void	message_error(char **temp_env, char *str, int n)
 	}
 	else if (n == 1)
 	{
-		ft_putstr_fd("CHATS: ", 2);
+		ft_putstr_fd("cat thinks ", 2);
 		ft_putstr_fd(str, 2);
-		ft_putstr_fd(" Is a directory\n", 2);
+		ft_putstr_fd(" is a directory and cat is always right \n", 2);
 	}
 	else if (n == 2)
 	{
@@ -44,8 +44,8 @@ static void	message_error(char **temp_env, char *str, int n)
 	}
 	else if (n == 3)
 	{
-		ft_putstr_fd("CHATS: ", 2);
-		ft_putstr_fd("Command not found: ", 2);
+		ft_putstr_fd("cat search in the box ", 2);
+		ft_putstr_fd("but didn't fount the command: ", 2);
 		ft_putendl_fd(str, 2);
 	}
 }

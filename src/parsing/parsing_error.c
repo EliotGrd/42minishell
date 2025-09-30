@@ -46,7 +46,7 @@ void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head,
 	print = find_redir_symbol(tok);
 	ft_putstr_fd("syntax error near unexpected token `", 2);
 	ft_putstr_fd(print, 2);
-	ft_putendl_fd("', cat's laughing at you... looser...", 2);
+	ft_putendl_fd("', cat's laughing at you... loooser...", 2);
 	ft_free((void **)&print);
 	parsing_destructor(tok_head, cmd_head, cmd_cur);
 	g_exit_code = 2;
