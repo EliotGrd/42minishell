@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 09:08:43 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/22 08:59:05 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/30 14:46:35 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	my_exit(char **argv, t_minishell *minishell)
 	unsigned char	exit_code;
 
 	exit_code = 0;
-	if (len(argv) > 1)
+	if (len(argv) > 0)
 	{
 		if (check_exit(argv[0]) == 1)
 		{

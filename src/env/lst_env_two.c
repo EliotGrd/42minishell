@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 14:22:48 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/30 07:58:22 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/09/30 14:37:36 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ int	set_up_env(t_env **top_env, char **envp)
 		free(temp);
 		temp = NULL;
 		if (!node_env)
-			return (/*ft_putendl_fd(ft_itoa(i), 1), */destructor_env(top_env), pop_env(&node_env), *top_env = NULL, 1);
+			return (/*ft_putendl_fd(ft_itoa(i), 1), */destructor_env(top_env), pop_env(&node_env), ft_free_tab(temp), *top_env = NULL, 1);
 		push_back_env(top_env, node_env);
 		i++;
 	}
