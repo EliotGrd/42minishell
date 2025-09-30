@@ -1,7 +1,7 @@
 var searchData=
 [
   ['c_16',['c',['../structs__lexer.html#a94e6f844ddec0eaa505e0a2d2c32a8ca',1,'s_lexer']]],
-  ['cap_17',['cap',['../structs__argv__buf.html#aaf04d55f8404422911786377c693f773',1,'s_argv_buf::cap()'],['../structs__str__buf.html#a29f9f2f5d9ff27ff47b66c3d58d3e875',1,'s_str_buf::cap()']]],
+  ['cap_17',['cap',['../structs__argv__buf.html#a50b80b4024dedf1ba9da6e57f8424ee8',1,'s_argv_buf::cap()'],['../structs__str__buf.html#a29f9f2f5d9ff27ff47b66c3d58d3e875',1,'s_str_buf::cap()']]],
   ['cd_18',['cd',['../cd_8c.html#afa3cf8a1d55856208b8d44453d4cf9b4',1,'cd(char **argv, t_minishell *minishell):&#160;cd.c'],['../minishell_8h.html#afa3cf8a1d55856208b8d44453d4cf9b4',1,'cd(char **argv, t_minishell *minishell):&#160;cd.c']]],
   ['cd_2ec_19',['cd.c',['../cd_8c.html',1,'']]],
   ['check_5faccessible_20',['check_accessible',['../execution__node_8c.html#a74f4c34ebdc38c1fb50db2aa13f97b66',1,'execution_node.c']]],
@@ -22,6 +22,6 @@ var searchData=
   ['create_5fnode_5fenv_35',['create_node_env',['../minishell_8h.html#a9c375db3cbfe2e87b52bae7ee7472eae',1,'create_node_env(char *key_env, char *value_env):&#160;lst_env.c'],['../lst__env_8c.html#a9c375db3cbfe2e87b52bae7ee7472eae',1,'create_node_env(char *key_env, char *value_env):&#160;lst_env.c']]],
   ['create_5fnode_5fredir_36',['create_node_redir',['../minishell_8h.html#acb0801286560639fb0d37901d566a3e5',1,'create_node_redir(char *str, t_type type):&#160;lst_redir.c'],['../lst__redir_8c.html#acb0801286560639fb0d37901d566a3e5',1,'create_node_redir(char *str, t_type type):&#160;lst_redir.c']]],
   ['ctl_2ec_37',['ctl.c',['../ctl_8c.html',1,'']]],
-  ['cur_5fnext_38',['cur_next',['../parser_8c.html#a2e2699d47ad80d706e124c654b57b375',1,'cur_next(t_tokcursor *c):&#160;parser.c'],['../parsing_8h.html#a2e2699d47ad80d706e124c654b57b375',1,'cur_next(t_tokcursor *c):&#160;parser.c']]],
+  ['cur_5fnext_38',['cur_next',['../parser__utils_8c.html#aa186cacc84a5d4dc8cd19bc371be0b61',1,'cur_next(t_tcur *c):&#160;parser_utils.c'],['../parsing_8h.html#aa186cacc84a5d4dc8cd19bc371be0b61',1,'cur_next(t_tcur *c):&#160;parser_utils.c']]],
   ['current_39',['current',['../structs__tokcursor.html#ac6d8c7757c34fbbdfa8673b0162e7934',1,'s_tokcursor']]]
 ];

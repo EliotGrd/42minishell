@@ -103,7 +103,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a088ba907ca2f9f7d89809627a5ef8313"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lexer__word_8c.html#a088ba907ca2f9f7d89809627a5ef8313">double_quoted_segment</a> (<a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *lex, <a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb)</td></tr>
 <tr class="memdesc:a088ba907ca2f9f7d89809627a5ef8313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lexes a segment delimited by double quotes.  <a href="lexer__word_8c.html#a088ba907ca2f9f7d89809627a5ef8313">More...</a><br /></td></tr>
 <tr class="separator:a088ba907ca2f9f7d89809627a5ef8313"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4093905b7d1dfe02710752ee5da8fe01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__token.html">t_token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01">lex_word</a> (<a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *lex)</td></tr>
+<tr class="memitem:a8c3afe25ab140f0d5490ae1a8389e162"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lexer__word_8c.html#a8c3afe25ab140f0d5490ae1a8389e162">lex_word_loop</a> (<a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *lex, <a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb)</td></tr>
+<tr class="separator:a8c3afe25ab140f0d5490ae1a8389e162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4093905b7d1dfe02710752ee5da8fe01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="parsing_8h.html#aead06bc7a81ebdd60cbdcf6b3b8e51d4">t_token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01">lex_word</a> (<a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *lex)</td></tr>
 <tr class="memdesc:a4093905b7d1dfe02710752ee5da8fe01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lexes the string to create a WORD token.  <a href="lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01">More...</a><br /></td></tr>
 <tr class="separator:a4093905b7d1dfe02710752ee5da8fe01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -153,7 +155,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lexer__word_8c_a088ba907ca2f9f7d89809627a5ef8313_icgraph.svg" width="528" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lexer__word_8c_a088ba907ca2f9f7d89809627a5ef8313_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -165,7 +168,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structt__token.html">t_token</a>* lex_word </td>
+          <td class="memname"><a class="el" href="parsing_8h.html#aead06bc7a81ebdd60cbdcf6b3b8e51d4">t_token</a>* lex_word </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *&#160;</td>
           <td class="paramname"><em>lex</em></td><td>)</td>
@@ -179,13 +182,61 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lexer__word_8c_a4093905b7d1dfe02710752ee5da8fe01_cgraph.svg" width="474" height="428"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="lexer__word_8c_a4093905b7d1dfe02710752ee5da8fe01_cgraph.svg" width="638" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="lexer__word_8c_a4093905b7d1dfe02710752ee5da8fe01_icgraph.svg" width="298" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8c3afe25ab140f0d5490ae1a8389e162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c3afe25ab140f0d5490ae1a8389e162">&#9670;&nbsp;</a></span>lex_word_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int lex_word_loop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *&#160;</td>
+          <td class="paramname"><em>lex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *&#160;</td>
+          <td class="paramname"><em>sb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lexer__word_8c_a8c3afe25ab140f0d5490ae1a8389e162_cgraph.svg" width="508" height="268"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lexer__word_8c_a8c3afe25ab140f0d5490ae1a8389e162_icgraph.svg" width="462" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -229,12 +280,14 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lexer__word_8c_ad9e7809fee584699717eb691257a6ded_cgraph.svg" width="339" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="lexer__word_8c_ad9e7809fee584699717eb691257a6ded_cgraph.svg" width="339" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lexer__word_8c_ad9e7809fee584699717eb691257a6ded_icgraph.svg" width="523" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lexer__word_8c_ad9e7809fee584699717eb691257a6ded_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>

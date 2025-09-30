@@ -4,6 +4,7 @@ var minishell_8h =
     [ "s_cmd", "structs__cmd.html", "structs__cmd" ],
     [ "s_env", "structs__env.html", "structs__env" ],
     [ "s_minishell", "structs__minishell.html", "structs__minishell" ],
+    [ "MALLOC_ERR", "minishell_8h.html#aa1ab001303a7dbf4e05f26804886106c", null ],
     [ "PATH", "minishell_8h.html#ab0139008fdda107456f13f837872b410", null ],
     [ "t_cmd", "minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7", null ],
     [ "t_env", "minishell_8h.html#aa3d21e1567b21e23ec928b1eb405fe4b", null ],
@@ -88,7 +89,6 @@ var minishell_8h =
     [ "unset_call", "minishell_8h.html#abcfd4d5a4f0408bdc748ce044e5ce08c", null ],
     [ "update", "minishell_8h.html#ad690126177796598c4d5d7842b7a47de", null ],
     [ "update_status", "minishell_8h.html#ac2c940d294494f86fcc389ffeedfd752", null ],
-    [ "update_underscore", "minishell_8h.html#af1c2063cb0d6822097c6e8d18d808745", null ],
     [ "write_heredoc_expand", "minishell_8h.html#a2a5c565389701ca49d867d3746245106", null ],
     [ "write_to_heredoc", "minishell_8h.html#a62cf028a22b96be266416a01e88726f0", null ],
     [ "g_exit_code", "minishell_8h.html#a0a0f2b913248f67632610c3bf801be96", null ]

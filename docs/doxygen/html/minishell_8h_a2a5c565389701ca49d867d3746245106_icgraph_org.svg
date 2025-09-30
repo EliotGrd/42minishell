@@ -50,7 +50,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a" target="_top" xlink:title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the...">
+<g id="a_node4"><a xlink:href="heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a" target="_top" xlink:title="the function to call what the child has to do main reason for this function =&gt; the norm">
 <polygon fill="none" stroke="black" points="586,-19.5 586,-38.5 699,-38.5 699,-19.5 586,-19.5"/>
 <text text-anchor="middle" x="642.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">child_work_heredoc</text>
 </a>

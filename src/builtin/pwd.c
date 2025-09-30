@@ -28,7 +28,7 @@ int	pwd(void)
 		i *= 10;
 		buf = malloc(i);
 		if (!buf)
-			return (1);
+			return (ft_putendl_fd(MALLOC_ERR, 2), 1);
 	}
 	if (buf && getcwd(buf, i) != NULL)
 		ft_printf("%s\n", buf);

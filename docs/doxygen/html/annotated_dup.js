@@ -9,6 +9,5 @@ var annotated_dup =
     [ "s_redirect", "structs__redirect.html", "structs__redirect" ],
     [ "s_str_buf", "structs__str__buf.html", "structs__str__buf" ],
     [ "s_tokcursor", "structs__tokcursor.html", "structs__tokcursor" ],
-    [ "s_token", "structs__token.html", "structs__token" ],
-    [ "t_token", "structt__token.html", null ]
+    [ "s_token", "structs__token.html", "structs__token" ]
 ];

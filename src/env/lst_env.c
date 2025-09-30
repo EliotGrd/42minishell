@@ -18,7 +18,7 @@ t_env	*create_node_env(char *key_env, char *value_env)
 
 	new = malloc(sizeof(t_env));
 	if (!new)
-		return (NULL);
+		return (ft_putendl_fd(MALLOC_ERR, 2), NULL);
 	new -> previous = NULL;
 	new -> next = NULL;
 	new -> key = key_env;

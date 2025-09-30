@@ -1,0 +1,11 @@
+<map id="parser_exit_fatal" name="parser_exit_fatal">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,137,108"/>
+<area shape="rect" id="node2" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="185,31,308,57"/>
+<area shape="rect" id="node7" href="$lst__env_8c.html#a226ae0aa054e697998b2ecbc5d61d592" title=" " alt="" coords="187,81,306,108"/>
+<area shape="rect" id="node9" href="$token__utils_8c.html#ab3d9f0b7ddaf8661f8a3b3243d33bce7" title="Free t_token entire linked list." alt="" coords="197,132,296,159"/>
+<area shape="rect" id="node3" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="356,31,437,57"/>
+<area shape="rect" id="node4" href="$lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" title=" " alt="" coords="485,5,611,32"/>
+<area shape="rect" id="node6" href="$utils_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="789,31,881,57"/>
+<area shape="rect" id="node5" href="$lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" title=" " alt="" coords="659,5,741,32"/>
+<area shape="rect" id="node8" href="$lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" title=" " alt="" coords="358,81,435,108"/>
+</map>

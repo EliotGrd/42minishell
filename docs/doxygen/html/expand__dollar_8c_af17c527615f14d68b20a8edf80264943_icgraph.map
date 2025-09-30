@@ -1,0 +1,10 @@
+<map id="exit_dollar" name="exit_dollar">
+<area shape="rect" id="node1" title=" " alt="" coords="1176,25,1267,51"/>
+<area shape="rect" id="node2" href="$expand__dollar_8c.html#a6d96e914be2d2db42405f61048e85370" title=" " alt="" coords="799,25,908,51"/>
+<area shape="rect" id="node3" href="$expand__dollar_8c.html#ac3e15865744ed2c1300a5cb96f24e33d" title="Manages all possibilities with expand : $?, known and unknown env variable." alt="" coords="640,50,751,77"/>
+<area shape="rect" id="node8" href="$expand__dollar_8c.html#a288ca34d78433c242163338d2e877550" title=" " alt="" coords="956,25,1128,51"/>
+<area shape="rect" id="node4" href="$expand__word_8c.html#a051bcabe3f6edf5f6d234199cea49f48" title=" " alt="" coords="448,50,592,77"/>
+<area shape="rect" id="node5" href="$expand__word_8c.html#a0ec378990f411456436a9bb6a71babfc" title="Scans the word to dequote/expand and build correct output." alt="" coords="291,50,400,77"/>
+<area shape="rect" id="node6" href="$expand_8c.html#a53c53e75b0ad8c8888217cd918304b8b" title="Iterate over every args and redir of each command to expand and dequote what needs to be." alt="" coords="108,50,243,77"/>
+<area shape="rect" id="node7" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,50,60,77"/>
+</map>

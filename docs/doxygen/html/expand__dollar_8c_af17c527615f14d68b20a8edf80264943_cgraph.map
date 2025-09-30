@@ -1,0 +1,12 @@
+<map id="exit_dollar" name="exit_dollar">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,96,108"/>
+<area shape="rect" id="node2" href="$expand__word_8c.html#a435189c48cf5cbf3527b73c50ca8ee4b" title=" " alt="" coords="144,56,283,83"/>
+<area shape="rect" id="node10" href="$string__builder_8c.html#a34739f65bf6f3e3e2b9e19dadf5fe217" title=" " alt="" coords="163,107,263,133"/>
+<area shape="rect" id="node3" href="$lst__cmd2_8c.html#a132395876bb5a7cfe926b9e37571a1e3" title=" " alt="" coords="331,31,453,57"/>
+<area shape="rect" id="node8" href="$lst__env_8c.html#a226ae0aa054e697998b2ecbc5d61d592" title=" " alt="" coords="333,81,451,108"/>
+<area shape="rect" id="node4" href="$lst__cmd2_8c.html#a8e2b63759f149b547e0d07f210ede9b3" title=" " alt="" coords="501,31,583,57"/>
+<area shape="rect" id="node5" href="$lst__redir2_8c.html#a30ccaf401a4f897e48ead5fe54f4b307" title=" " alt="" coords="631,5,756,32"/>
+<area shape="rect" id="node7" href="$utils_8c.html#a1bca6910c90a19d96b36506a2e2cebf6" title="as fd are all setup to &#45;1 at the beginning we check if they are open before trying to close we avoid ..." alt="" coords="935,31,1027,57"/>
+<area shape="rect" id="node6" href="$lst__redir2_8c.html#ade8f0bdda51d9bf348ebeb38fefba881" title=" " alt="" coords="804,5,887,32"/>
+<area shape="rect" id="node9" href="$lst__env_8c.html#a058c245b5f2ef22f9d2659f90e4d3537" title=" " alt="" coords="503,81,581,108"/>
+</map>

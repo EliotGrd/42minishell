@@ -32,7 +32,7 @@ static void	update_pwd(char *key, t_minishell *minishell)
 		i *= 10;
 		buf = malloc(i);
 		if (!buf)
-			return ;
+			return (ft_putendl_fd(MALLOC_ERR, 2));
 		getcwd(buf, i);
 	}
 	free(temp -> value);

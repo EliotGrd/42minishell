@@ -66,7 +66,7 @@ var sectionId = 'dynsection-45';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a" target="_top" xlink:title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the...">
+<g id="a_node2"><a xlink:href="heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a" target="_top" xlink:title="the function to call what the child has to do main reason for this function =&gt; the norm">
 <polygon fill="none" stroke="black" points="122,-161.5 122,-180.5 235,-180.5 235,-161.5 122,-161.5"/>
 <text text-anchor="middle" x="178.5" y="-168.5" font-family="Helvetica,sans-Serif" font-size="10.00">child_work_heredoc</text>
 </a>
