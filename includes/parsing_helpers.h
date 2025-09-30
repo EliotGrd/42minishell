@@ -25,7 +25,7 @@ typedef struct s_argv_buf
 }			t_argv_buf;
 
 void		argv_buf_init(t_argv_buf *avb);
-int		argv_buf_push(t_argv_buf *avb, char *str);
+int			argv_buf_push(t_argv_buf *avb, char *str);
 char		**argv_buf_end(t_argv_buf *avb);
 void		argv_buf_free(t_argv_buf *avb);
 
@@ -38,9 +38,8 @@ typedef struct s_str_buf
 }			t_str_buf;
 
 void		str_buf_init(t_str_buf *sb);
-int		str_buf_putc(t_str_buf *sb, char c);
-//void		str_buf_putn(t_str_buf *sb, char *str, size_t size);
-int		str_buf_puts(t_str_buf *sb, char *str);
+int			str_buf_putc(t_str_buf *sb, char c);
+int			str_buf_puts(t_str_buf *sb, char *str);
 char		*str_buf_end(t_str_buf *sb);
 void		str_buf_free(t_str_buf *sb);
 

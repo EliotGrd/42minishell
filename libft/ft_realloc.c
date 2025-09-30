@@ -25,8 +25,7 @@ void	*ft_realloc(void *to_realloc, size_t old_size, size_t new_size)
 	}
 	if (new_size == 0)
 	{
-		free(to_realloc);
-		to_realloc = NULL;
+		(free(to_realloc), to_realloc = NULL);
 		return (NULL);
 	}
 	new_ptr = malloc(new_size);

@@ -103,7 +103,7 @@ Functions</h2></td></tr>
 <tr class="memitem:aa11261ffe1d93fd87488514776e2df34"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heredoc_8c.html#aa11261ffe1d93fd87488514776e2df34">read_gnl_heredoc</a> (<a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *temp, <a class="el" href="minishell_8h.html#a4fac5b0c1334043d22fc2631fd6277c7">t_cmd</a> *top_cmd, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell, int op)</td></tr>
 <tr class="separator:aa11261ffe1d93fd87488514776e2df34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98f0cdaa70ea9d777053df568b66e32a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a">child_work_heredoc</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell, <a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *temp, int op)</td></tr>
-<tr class="memdesc:a98f0cdaa70ea9d777053df568b66e32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the CTRL+C signal and setup the exit_code  <a href="heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a">More...</a><br /></td></tr>
+<tr class="memdesc:a98f0cdaa70ea9d777053df568b66e32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">the function to call what the child has to do main reason for this function =&gt; the norm  <a href="heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a">More...</a><br /></td></tr>
 <tr class="separator:a98f0cdaa70ea9d777053df568b66e32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b4a5d07e8877b06b8977b47a6d51930"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="heredoc_8c.html#a0b4a5d07e8877b06b8977b47a6d51930">heredoc_input</a> (<a class="el" href="minishell_8h.html#aa0a54f0f7fe7d432d2a6f820246de5c6">t_redirect</a> *temp, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *minishell)</td></tr>
 <tr class="memdesc:a0b4a5d07e8877b06b8977b47a6d51930"><td class="mdescLeft">&#160;</td><td class="mdescRight">it's where we open the heredoc and start writing inside our pipe each time we check if it's the word allowing to stop the heredoc or not we are going to keep only the read part of the fd inside the node of redirection  <a href="heredoc_8c.html#a0b4a5d07e8877b06b8977b47a6d51930">More...</a><br /></td></tr>
@@ -145,18 +145,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the CTRL+C signal and setup the exit_code </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">status</td><td></td></tr>
-    <tr><td class="paramname">fd</td><td></td></tr>
-    <tr><td class="paramname">temp</td><td></td></tr>
-    <tr><td class="paramname">top_cmd</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<p>the function to call what the child has to do main reason for this function =&gt; the norm</p>
+<p>the function to call what the child has to do main reason for this function =&gt; the norm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">minishell</td><td></td></tr>
@@ -168,12 +157,14 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a98f0cdaa70ea9d777053df568b66e32a_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a98f0cdaa70ea9d777053df568b66e32a_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a98f0cdaa70ea9d777053df568b66e32a_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a98f0cdaa70ea9d777053df568b66e32a_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -220,7 +211,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a3e1410633d8c1ad5b1441509a020b0d4_icgraph.svg" width="100%" height="379"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a3e1410633d8c1ad5b1441509a020b0d4_icgraph.svg" width="100%" height="379"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -252,7 +244,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a17337782f10170a6f2f9188bf557de0f_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a17337782f10170a6f2f9188bf557de0f_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -299,7 +292,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a0b4a5d07e8877b06b8977b47a6d51930_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_a0b4a5d07e8877b06b8977b47a6d51930_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -362,7 +356,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_aa11261ffe1d93fd87488514776e2df34_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="heredoc_8c_aa11261ffe1d93fd87488514776e2df34_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>

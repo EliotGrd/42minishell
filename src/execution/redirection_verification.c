@@ -54,7 +54,6 @@ int	infile_redirection(t_redirect *redir, t_cmd **top_stack)
 	{
 		ft_putstr_fd("cat said \"nuh uh\" when openning: ", 2);
 		ft_putendl_fd(redir -> file, 2);
-		//ft_putstr_fd("\n", 2);
 		close_fd_error(top_stack);
 		return (-1);
 	}

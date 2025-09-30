@@ -38,7 +38,7 @@ int	add_env(t_minishell *minishell, char *extract_key, char *extract_value,
 	{
 		ft_free((void **)&extract_key);
 		ft_free((void **)&extract_value);
-		return (1);
+		return (ft_putendl_fd(MALLOC_ERR, 2), 1);
 	}
 	temporary = create_node_env(extract_key, extract_value);
 	if (temporary == NULL)
@@ -66,7 +66,7 @@ int	export_env_update(t_minishell *minishell, char *extract_key,
 	{
 		extract_value = ft_strdup(extract_value);
 		if (!extract_value)
-			return (1);
+			return (ft_putendl_fd(MALLOC_ERR, 2), 1);
 		(free(temporary -> value), temporary -> value = extract_value);
 	}
 	return (0);

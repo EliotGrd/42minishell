@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="string__builder_8c.html#a54e602a5da87bd89687c69c2d86f34d2" target="_top" xlink:title="Put char in the struct t_str_buf so we can build a string in the struct. The point is to create the s...">
+<g id="a_node3"><a xlink:href="string__builder_8c.html#a2630bac2d2575ee6ecee7ed88e5f8296" target="_top" xlink:title="Put char in the struct t_str_buf so we can build a string in the struct. The point is to create the s...">
 <polygon fill="none" stroke="black" points="169,-0.5 169,-19.5 246,-19.5 246,-0.5 169,-0.5"/>
 <text text-anchor="middle" x="207.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">str_buf_putc</text>
 </a>

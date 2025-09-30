@@ -1,19 +1,20 @@
 <map id="lexer" name="lexer">
-<area shape="rect" id="node1" title="Global lexing function, that traverses readline&#39;s string and separate in tokens." alt="" coords="5,183,60,209"/>
+<area shape="rect" id="node1" title="Global lexing function, that traverses readline&#39;s string and separate in tokens." alt="" coords="5,284,60,311"/>
 <area shape="rect" id="node2" href="$token__utils_8c.html#abe4c47d3831fc3c644e4b78391dfa502" title="Method of append is a linked list with pointers." alt="" coords="108,5,221,32"/>
 <area shape="rect" id="node3" href="$token__utils_8c.html#ab3d9f0b7ddaf8661f8a3b3243d33bce7" title="Free t_token entire linked list." alt="" coords="115,56,214,83"/>
-<area shape="rect" id="node4" href="$lexer_8c.html#a36667927c23670d83624ca9049adfc2d" title="Check if the char is one of the possible operator, currently &#39;&lt;&#39;, &#39;&gt;&#39; or &#39;|&#39;." alt="" coords="295,259,426,285"/>
-<area shape="rect" id="node5" href="$lexer__utils_8c.html#a5226e7cc8fd04bded427425b8bee4439" title="Initialize t_lexer." alt="" coords="129,411,200,437"/>
-<area shape="rect" id="node6" href="$lexer_8c.html#a4224de0ac9d722a19a477ae2880f54da" title="Make the operator in the global string a token." alt="" coords="113,157,217,184"/>
-<area shape="rect" id="node8" href="$token__utils_8c.html#a9fd4752dfeaa8c87b63c2c53710b28f5" title="Build a token." alt="" coords="310,208,411,235"/>
-<area shape="rect" id="node10" href="$lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01" title="Lexes the string to create a WORD token." alt="" coords="124,360,205,387"/>
-<area shape="rect" id="node17" href="$lexer__utils_8c.html#a0665b31ffb5665ad2a085f2b1a5e0e25" title="Skip whitespaces in the t_lexer struct." alt="" coords="109,107,221,133"/>
-<area shape="rect" id="node7" href="$lexer__utils_8c.html#a6b132516dacc9599762b1fe7341a0f04" title="Advance one byte in the struct t_lexer to keep track of progress." alt="" coords="513,309,590,336"/>
-<area shape="rect" id="node9" href="$lexer__utils_8c.html#a855a36981b55d317a52d24560c0809bf" title="&quot;Peek&quot;, Look at the next character in the input string" alt="" coords="333,157,388,184"/>
-<area shape="rect" id="node11" href="$lexer__word_8c.html#a088ba907ca2f9f7d89809627a5ef8313" title="Lexes a segment delimited by double quotes." alt="" coords="269,411,452,437"/>
-<area shape="rect" id="node12" href="$string__builder_8c.html#a54e602a5da87bd89687c69c2d86f34d2" title="Put char in the struct t_str_buf so we can build a string in the struct. The point is to create the s..." alt="" coords="500,436,603,463"/>
-<area shape="rect" id="node13" href="$lexer__word_8c.html#ad9e7809fee584699717eb691257a6ded" title="Lexes a segment delimited by single quotes." alt="" coords="272,360,449,387"/>
-<area shape="rect" id="node14" href="$string__builder_8c.html#a1bfdfae2d27c541b15b526d7d67b7577" title="End and null terminate the string created in t_str_buf, reset the struct so it can be reused and retu..." alt="" coords="311,461,410,488"/>
-<area shape="rect" id="node15" href="$string__builder_8c.html#a34739f65bf6f3e3e2b9e19dadf5fe217" title=" " alt="" coords="311,512,411,539"/>
-<area shape="rect" id="node16" href="$string__builder_8c.html#a2ff0766da574e4904598f3119c7d3749" title=" " alt="" coords="313,563,408,589"/>
+<area shape="rect" id="node4" href="$lexer_8c.html#a36667927c23670d83624ca9049adfc2d" title="Check if the char is one of the possible operator, currently &#39;&lt;&#39;, &#39;&gt;&#39; or &#39;|&#39;." alt="" coords="459,107,590,133"/>
+<area shape="rect" id="node5" href="$lexer__utils_8c.html#a5226e7cc8fd04bded427425b8bee4439" title="Initialize t_lexer." alt="" coords="129,512,200,539"/>
+<area shape="rect" id="node6" href="$lexer_8c.html#a4224de0ac9d722a19a477ae2880f54da" title="Make the operator in the global string a token." alt="" coords="113,360,217,387"/>
+<area shape="rect" id="node8" href="$token__utils_8c.html#a9fd4752dfeaa8c87b63c2c53710b28f5" title="Build a token." alt="" coords="277,309,378,336"/>
+<area shape="rect" id="node10" href="$lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01" title="Lexes the string to create a WORD token." alt="" coords="124,259,205,285"/>
+<area shape="rect" id="node18" href="$lexer__utils_8c.html#a0665b31ffb5665ad2a085f2b1a5e0e25" title="Skip whitespaces in the t_lexer struct." alt="" coords="469,461,581,488"/>
+<area shape="rect" id="node7" href="$lexer__utils_8c.html#a6b132516dacc9599762b1fe7341a0f04" title="Advance one byte in the struct t_lexer to keep track of progress." alt="" coords="677,360,754,387"/>
+<area shape="rect" id="node9" href="$lexer__utils_8c.html#a855a36981b55d317a52d24560c0809bf" title="&quot;Peek&quot;, Look at the next character in the input string" alt="" coords="300,411,355,437"/>
+<area shape="rect" id="node11" href="$lexer__word_8c.html#a8c3afe25ab140f0d5490ae1a8389e162" title=" " alt="" coords="269,259,385,285"/>
+<area shape="rect" id="node16" href="$string__builder_8c.html#a1bfdfae2d27c541b15b526d7d67b7577" title="End and null terminate the string created in t_str_buf, reset the struct so it can be reused and retu..." alt="" coords="278,208,377,235"/>
+<area shape="rect" id="node17" href="$string__builder_8c.html#a2ff0766da574e4904598f3119c7d3749" title=" " alt="" coords="280,157,375,184"/>
+<area shape="rect" id="node12" href="$lexer__word_8c.html#a088ba907ca2f9f7d89809627a5ef8313" title="Lexes a segment delimited by double quotes." alt="" coords="433,208,616,235"/>
+<area shape="rect" id="node13" href="$string__builder_8c.html#a2630bac2d2575ee6ecee7ed88e5f8296" title="Put char in the struct t_str_buf so we can build a string in the struct. The point is to create the s..." alt="" coords="664,183,767,209"/>
+<area shape="rect" id="node14" href="$lexer__word_8c.html#ad9e7809fee584699717eb691257a6ded" title="Lexes a segment delimited by single quotes." alt="" coords="436,259,613,285"/>
+<area shape="rect" id="node15" href="$string__builder_8c.html#a34739f65bf6f3e3e2b9e19dadf5fe217" title=" " alt="" coords="475,309,575,336"/>
 </map>

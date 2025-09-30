@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['str_442',['str',['../structs__str__buf.html#aa4e5a27de3b522558340ce67ff594204',1,'s_str_buf']]]
+  ['str_454',['str',['../structs__str__buf.html#aa4e5a27de3b522558340ce67ff594204',1,'s_str_buf']]]
 ];

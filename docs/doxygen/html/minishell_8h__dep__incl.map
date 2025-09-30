@@ -28,8 +28,8 @@
 <area shape="rect" id="node27" href="$signals_8c.html" title=" " alt="" coords="4556,87,4725,114"/>
 <area shape="rect" id="node28" href="$utils_8c.html" title=" " alt="" coords="4749,87,4900,114"/>
 <area shape="rect" id="node29" href="$main_8c.html" title=" " alt="" coords="4944,259,5033,285"/>
-<area shape="rect" id="node30" href="$parsing_8h.html" title=" " alt="" coords="6011,87,6151,114"/>
-<area shape="rect" id="node42" href="$parsing__helpers_8h.html" title=" " alt="" coords="7153,177,7347,203"/>
+<area shape="rect" id="node30" href="$parsing_8h.html" title=" " alt="" coords="6113,87,6253,114"/>
+<area shape="rect" id="node43" href="$parsing__helpers_8h.html" title=" " alt="" coords="7317,177,7511,203"/>
 <area shape="rect" id="node31" href="$expand_8c.html" title=" " alt="" coords="5027,177,5183,203"/>
 <area shape="rect" id="node32" href="$expand__dollar_8c.html" title=" " alt="" coords="5207,177,5405,203"/>
 <area shape="rect" id="node33" href="$expand__word_8c.html" title=" " alt="" coords="5430,177,5625,203"/>
@@ -40,5 +40,6 @@
 <area shape="rect" id="node38" href="$token__utils_8c.html" title=" " alt="" coords="6403,177,6574,203"/>
 <area shape="rect" id="node39" href="$argv__builder_8c.html" title=" " alt="" coords="6599,177,6787,203"/>
 <area shape="rect" id="node40" href="$parser_8c.html" title=" " alt="" coords="6811,177,6959,203"/>
-<area shape="rect" id="node41" href="$parsing__error_8c.html" title=" " alt="" coords="6983,169,7128,211"/>
+<area shape="rect" id="node41" href="$parser__utils_8c.html" title=" " alt="" coords="6983,169,7122,211"/>
+<area shape="rect" id="node42" href="$parsing__error_8c.html" title=" " alt="" coords="7147,169,7292,211"/>
 </map>

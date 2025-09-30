@@ -42,26 +42,6 @@ int	str_buf_putc(t_str_buf *sb, char c)
 }
 
 /**
- * @brief Put a string of size characters in the t_str_buf struct, it lower the 
- * number of realloc calls.
- *
- * @param size size of the string we need to append in our struct
- 
-void	str_buf_putn(t_str_buf *sb, char *str, size_t size)
-{
-	while (sb->len + size >= sb->cap)
-	{
-		if (sb->cap == 0)
-			sb->cap = 16;
-		else
-			sb->cap *= 2;
-		sb->str = ft_realloc(sb->str, sb->len, sb->cap);
-	}
-	ft_memcpy(sb->str + sb->len, str, size);
-	sb->len += size;
-}*/
-
-/**
  * @brief Put a null terminated string in the t_str_buf struct
  *
  */

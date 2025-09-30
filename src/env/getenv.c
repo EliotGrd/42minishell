@@ -22,7 +22,7 @@ char	*join_path(char *str, char *str2, char sep)
 	j = 0;
 	result = malloc(sizeof(char) * (ft_strlen(str) + ft_strlen(str2) + 2));
 	if (!result)
-		return (NULL);
+		return (ft_putendl_fd(MALLOC_ERR, 2), NULL);
 	while (str[i])
 	{
 		result[i] = str[i];
@@ -54,7 +54,7 @@ char	*search_path(char *str, t_env *top_env)
 		return (NULL);
 	split_envp = ft_split(path, ':');
 	if (!split_envp)
-		return (NULL);
+		return (ft_putendl_fd(MALLOC_ERR, 2), NULL);
 	while (split_envp[i])
 	{
 		result = join_path(split_envp[i++], str, '/');

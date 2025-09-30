@@ -6,11 +6,12 @@ var parsing_8h =
     [ "s_expand", "structs__expand.html", "structs__expand" ],
     [ "t_expand", "parsing_8h.html#af91834e8448f6316d53acafaea68dd14", null ],
     [ "t_lexer", "parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2", null ],
-    [ "t_tokcursor", "parsing_8h.html#a00b1b91326ce45c94bb1928fb8617b84", null ],
+    [ "t_tcur", "parsing_8h.html#a63e27add5d78a597275cc979225a2e1c", null ],
     [ "t_token", "parsing_8h.html#aead06bc7a81ebdd60cbdcf6b3b8e51d4", null ],
     [ "advance", "parsing_8h.html#a6b132516dacc9599762b1fe7341a0f04", null ],
     [ "append_token", "parsing_8h.html#abe4c47d3831fc3c644e4b78391dfa502", null ],
-    [ "cur_next", "parsing_8h.html#a2e2699d47ad80d706e124c654b57b375", null ],
+    [ "cur_next", "parsing_8h.html#aa186cacc84a5d4dc8cd19bc371be0b61", null ],
+    [ "exit_expand_fatal", "parsing_8h.html#a435189c48cf5cbf3527b73c50ca8ee4b", null ],
     [ "expand_manager", "parsing_8h.html#a53c53e75b0ad8c8888217cd918304b8b", null ],
     [ "expand_word", "parsing_8h.html#a0ec378990f411456436a9bb6a71babfc", null ],
     [ "free_tokens", "parsing_8h.html#ab3d9f0b7ddaf8661f8a3b3243d33bce7", null ],
@@ -24,8 +25,8 @@ var parsing_8h =
     [ "lexer", "parsing_8h.html#a050765808030dae001e2dc9c076fee4f", null ],
     [ "lexing_error", "parsing_8h.html#ac1b4c6895ba27744498434d42b9a2e53", null ],
     [ "make_token", "parsing_8h.html#a9fd4752dfeaa8c87b63c2c53710b28f5", null ],
-    [ "parser", "parsing_8h.html#a302af903b3f87eaaff83762f60c2d8cb", null ],
+    [ "parser", "parsing_8h.html#ae22079ec4dbb24c0eb15425a8dd785bd", null ],
     [ "peek", "parsing_8h.html#a855a36981b55d317a52d24560c0809bf", null ],
     [ "skip_wspaces", "parsing_8h.html#a0665b31ffb5665ad2a085f2b1a5e0e25", null ],
-    [ "syntax_error", "parsing_8h.html#a8f5f1cfa591c395b88733e1134d8de3d", null ]
+    [ "syntax_error", "parsing_8h.html#a858393a79410c7eb4d9a6f615396f426", null ]
 ];

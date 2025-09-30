@@ -16,9 +16,9 @@ t_env	*research_node_env(t_env *top_env, char *search)
 {
 	while (top_env)
 	{
-		if (ft_strncmp(search, top_env -> key, ft_strlen(search) + 1) == 0)
+		if (ft_strncmp(search, top_env->key, ft_strlen(search) + 1) == 0)
 			return (top_env);
-		top_env = top_env -> next;
+		top_env = top_env->next;
 	}
 	return (NULL);
 }
@@ -44,7 +44,8 @@ char	**split_env(char *envp)
 		return (ft_putendl_fd(MALLOC_ERR, 2), free(result), NULL);
 	result[1] = ft_strdup(envp + cursor + 1);
 	if (!result[1])
-		return (ft_putendl_fd(MALLOC_ERR, 2), free(result[0]), free(result), NULL);
+		return (ft_putendl_fd(MALLOC_ERR, 2), free(result[0]), free(result),
+			NULL);
 	return (result);
 }
 
@@ -54,9 +55,9 @@ char	*research_key_env(t_env *top_env, char *search)
 		return (NULL);
 	while (top_env)
 	{
-		if (ft_strncmp(search, top_env -> key, ft_strlen(search) + 1) == 0)
-			return (ft_strdup(top_env -> value));
-		top_env = top_env -> next;
+		if (ft_strncmp(search, top_env->key, ft_strlen(search) + 1) == 0)
+			return (ft_strdup(top_env->value));
+		top_env = top_env->next;
 	}
 	return (NULL);
 }
@@ -73,13 +74,13 @@ char	**lst_to_tab_env(t_env *top)
 	size = env_lst_size(top);
 	result = malloc(sizeof(char *) * (size + 1));
 	if (!result)
-		return (NULL);
+		return (ft_putendl_fd(MALLOC_ERR, 2), NULL);
 	while (i < size)
 	{
-		result[i] = join_path(top -> key, top -> value, '=');
+		result[i] = join_path(top->key, top->value, '=');
 		if (result[i] == NULL)
 			return (ft_free_all(result, i), NULL);
-		top = top -> next;
+		top = top->next;
 		i++;
 	}
 	result[i] = NULL;
@@ -101,10 +102,11 @@ int	set_up_env(t_env **top_env, char **envp)
 		if (!temp)
 			return (destructor_env(top_env), *top_env = NULL, 1);
 		node_env = create_node_env(temp[0], temp[1]);
-		free(temp);
-		temp = NULL;
 		if (!node_env)
-			return (/*ft_putendl_fd(ft_itoa(i), 1), */destructor_env(top_env), pop_env(&node_env), ft_free_tab(temp), *top_env = NULL, 1);
+			return (destructor_env(top_env), ft_free((void **)&temp[1]),
+				ft_free((void **)&temp[0]), ft_free((void **)&temp),
+				*top_env = NULL, 1);
+		ft_free((void **)&temp);
 		push_back_env(top_env, node_env);
 		i++;
 	}

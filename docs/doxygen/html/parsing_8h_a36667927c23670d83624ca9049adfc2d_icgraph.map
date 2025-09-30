@@ -1,6 +1,7 @@
 <map id="is_char_operator" name="is_char_operator">
-<area shape="rect" id="node1" title="Check if the char is one of the possible operator, currently &#39;&lt;&#39;, &#39;&gt;&#39; or &#39;|&#39;." alt="" coords="340,31,471,57"/>
-<area shape="rect" id="node2" href="$lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01" title="Lexes the string to create a WORD token." alt="" coords="211,5,292,32"/>
-<area shape="rect" id="node3" href="$lexer_8c.html#aced469451204cf536fd18b4cf94f6b91" title="Global lexing function, that traverses readline&#39;s string and separate in tokens." alt="" coords="108,31,163,57"/>
-<area shape="rect" id="node4" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node1" title="Check if the char is one of the possible operator, currently &#39;&lt;&#39;, &#39;&gt;&#39; or &#39;|&#39;." alt="" coords="504,31,635,57"/>
+<area shape="rect" id="node2" href="$lexer__word_8c.html#a8c3afe25ab140f0d5490ae1a8389e162" title=" " alt="" coords="340,5,456,32"/>
+<area shape="rect" id="node4" href="$lexer_8c.html#aced469451204cf536fd18b4cf94f6b91" title="Global lexing function, that traverses readline&#39;s string and separate in tokens." alt="" coords="108,31,163,57"/>
+<area shape="rect" id="node3" href="$lexer__word_8c.html#a4093905b7d1dfe02710752ee5da8fe01" title="Lexes the string to create a WORD token." alt="" coords="211,5,292,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a647f21a28344e1d9c643f4115516d7c9" title=" " alt="" coords="5,31,60,57"/>
 </map>

@@ -1,8 +1,8 @@
 var parser_8c =
 [
-    [ "cur_next", "parser_8c.html#a2e2699d47ad80d706e124c654b57b375", null ],
-    [ "is_token_redir", "parser_8c.html#a504166f8c7680aafbdfdb58ab412d498", null ],
-    [ "parse_cmd", "parser_8c.html#a53cd1de291e3e0bab0192a7880cd6449", null ],
-    [ "parse_redir", "parser_8c.html#a196c06f986a99e4ad591e374a4bb6339", null ],
-    [ "parser", "parser_8c.html#a302af903b3f87eaaff83762f60c2d8cb", null ]
+    [ "parse_cmd", "parser_8c.html#ad8a725eb1fe38bc14d96924df6878b56", null ],
+    [ "parse_redir", "parser_8c.html#a3fb162f9c645f99a8764a678b4768f38", null ],
+    [ "parser", "parser_8c.html#ae22079ec4dbb24c0eb15425a8dd785bd", null ],
+    [ "parser_exit_fatal", "parser_8c.html#a3902c1c0f51a35acf377da51345103b7", null ],
+    [ "parser_loop", "parser_8c.html#a7e8d15749e17fe4ed49f75c3c6998719", null ]
 ];

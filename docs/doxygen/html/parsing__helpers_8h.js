@@ -7,11 +7,10 @@ var parsing__helpers_8h =
     [ "argv_buf_end", "parsing__helpers_8h.html#a5f4104276b4a0d98dde31f75622668b4", null ],
     [ "argv_buf_free", "parsing__helpers_8h.html#a182f853e31c31af45e572979074a4d99", null ],
     [ "argv_buf_init", "parsing__helpers_8h.html#aee97e8a2ae269ee4063d3ea917e93ffc", null ],
-    [ "argv_buf_push", "parsing__helpers_8h.html#a9f9516f7f412bb9019d1fe829f2395a3", null ],
+    [ "argv_buf_push", "parsing__helpers_8h.html#a71866a37dc221a296b930979eb5e98c2", null ],
     [ "str_buf_end", "parsing__helpers_8h.html#a1bfdfae2d27c541b15b526d7d67b7577", null ],
     [ "str_buf_free", "parsing__helpers_8h.html#a34739f65bf6f3e3e2b9e19dadf5fe217", null ],
     [ "str_buf_init", "parsing__helpers_8h.html#a2ff0766da574e4904598f3119c7d3749", null ],
-    [ "str_buf_putc", "parsing__helpers_8h.html#a54e602a5da87bd89687c69c2d86f34d2", null ],
-    [ "str_buf_putn", "parsing__helpers_8h.html#a8feaedb1aa8df7eb71268f15e1518fa0", null ],
-    [ "str_buf_puts", "parsing__helpers_8h.html#a4bb0bb42cbf7ca9f7feff204d3059306", null ]
+    [ "str_buf_putc", "parsing__helpers_8h.html#a2630bac2d2575ee6ecee7ed88e5f8296", null ],
+    [ "str_buf_puts", "parsing__helpers_8h.html#ae2f6bd82646cd8367e2f42a0b737b556", null ]
 ];

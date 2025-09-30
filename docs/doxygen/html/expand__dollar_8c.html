@@ -97,16 +97,22 @@ Include dependency graph for expand_dollar.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1cf0ce389e469994b9ddb06a944e531e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expand__dollar_8c.html#a1cf0ce389e469994b9ddb06a944e531e">error_code_var</a> (<a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *lex, <a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb, <a class="el" href="parsing_8h.html#af91834e8448f6316d53acafaea68dd14">t_expand</a> *exp)</td></tr>
-<tr class="memdesc:a1cf0ce389e469994b9ddb06a944e531e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle $? to expand on current error code.  <a href="expand__dollar_8c.html#a1cf0ce389e469994b9ddb06a944e531e">More...</a><br /></td></tr>
-<tr class="separator:a1cf0ce389e469994b9ddb06a944e531e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c40b201e71a1f59fb92ee39ac89d70"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expand__dollar_8c.html#ae2c40b201e71a1f59fb92ee39ac89d70">error_code_var</a> (<a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *lex, <a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb, <a class="el" href="parsing_8h.html#af91834e8448f6316d53acafaea68dd14">t_expand</a> *exp)</td></tr>
+<tr class="memdesc:ae2c40b201e71a1f59fb92ee39ac89d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle $? to expand on current error code.  <a href="expand__dollar_8c.html#ae2c40b201e71a1f59fb92ee39ac89d70">More...</a><br /></td></tr>
+<tr class="separator:ae2c40b201e71a1f59fb92ee39ac89d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af17c527615f14d68b20a8edf80264943"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expand__dollar_8c.html#af17c527615f14d68b20a8edf80264943">exit_dollar</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *msh, <a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb, <a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *exp)</td></tr>
+<tr class="separator:af17c527615f14d68b20a8edf80264943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288ca34d78433c242163338d2e877550"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expand__dollar_8c.html#a288ca34d78433c242163338d2e877550">expand_valid_build_str</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *msh, <a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb, <a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb_env, <a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *lex)</td></tr>
+<tr class="separator:a288ca34d78433c242163338d2e877550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d96e914be2d2db42405f61048e85370"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expand__dollar_8c.html#a6d96e914be2d2db42405f61048e85370">expand_valid</a> (<a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *msh, <a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *lex, <a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb, <a class="el" href="parsing_8h.html#af91834e8448f6316d53acafaea68dd14">t_expand</a> *exp)</td></tr>
+<tr class="separator:a6d96e914be2d2db42405f61048e85370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3e15865744ed2c1300a5cb96f24e33d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expand__dollar_8c.html#ac3e15865744ed2c1300a5cb96f24e33d">handle_dollar</a> (<a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *lex, <a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb, <a class="el" href="parsing_8h.html#af91834e8448f6316d53acafaea68dd14">t_expand</a> *exp, <a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *msh)</td></tr>
 <tr class="memdesc:ac3e15865744ed2c1300a5cb96f24e33d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages all possibilities with expand : $?, known and unknown env variable.  <a href="expand__dollar_8c.html#ac3e15865744ed2c1300a5cb96f24e33d">More...</a><br /></td></tr>
 <tr class="separator:ac3e15865744ed2c1300a5cb96f24e33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a1cf0ce389e469994b9ddb06a944e531e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cf0ce389e469994b9ddb06a944e531e">&#9670;&nbsp;</a></span>error_code_var()</h2>
+<a id="ae2c40b201e71a1f59fb92ee39ac89d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c40b201e71a1f59fb92ee39ac89d70">&#9670;&nbsp;</a></span>error_code_var()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -115,7 +121,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void error_code_var </td>
+          <td class="memname">static int error_code_var </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *&#160;</td>
           <td class="paramname"><em>lex</em>, </td>
@@ -149,12 +155,188 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_a1cf0ce389e469994b9ddb06a944e531e_cgraph.svg" width="431" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_ae2c40b201e71a1f59fb92ee39ac89d70_cgraph.svg" width="431" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_a1cf0ce389e469994b9ddb06a944e531e_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_ae2c40b201e71a1f59fb92ee39ac89d70_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af17c527615f14d68b20a8edf80264943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af17c527615f14d68b20a8edf80264943">&#9670;&nbsp;</a></span>exit_dollar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void exit_dollar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>msh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *&#160;</td>
+          <td class="paramname"><em>exp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_af17c527615f14d68b20a8edf80264943_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_af17c527615f14d68b20a8edf80264943_icgraph.svg" width="100%" height="362"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6d96e914be2d2db42405f61048e85370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d96e914be2d2db42405f61048e85370">&#9670;&nbsp;</a></span>expand_valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void expand_valid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>msh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *&#160;</td>
+          <td class="paramname"><em>lex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parsing_8h.html#af91834e8448f6316d53acafaea68dd14">t_expand</a> *&#160;</td>
+          <td class="paramname"><em>exp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_a6d96e914be2d2db42405f61048e85370_cgraph.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_a6d96e914be2d2db42405f61048e85370_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a288ca34d78433c242163338d2e877550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a288ca34d78433c242163338d2e877550">&#9670;&nbsp;</a></span>expand_valid_build_str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void expand_valid_build_str </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="minishell_8h.html#abb217954475dbe33e716f1a5f1c8f68b">t_minishell</a> *&#160;</td>
+          <td class="paramname"><em>msh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *&#160;</td>
+          <td class="paramname"><em>sb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *&#160;</td>
+          <td class="paramname"><em>sb_env</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="parsing_8h.html#ad557a756816c4d6761218fc3d8af61d2">t_lexer</a> *&#160;</td>
+          <td class="paramname"><em>lex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_a288ca34d78433c242163338d2e877550_cgraph.svg" width="100%" height="461"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_a288ca34d78433c242163338d2e877550_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -201,12 +383,14 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_ac3e15865744ed2c1300a5cb96f24e33d_cgraph.svg" width="610" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_ac3e15865744ed2c1300a5cb96f24e33d_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_ac3e15865744ed2c1300a5cb96f24e33d_icgraph.svg" width="564" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="expand__dollar_8c_ac3e15865744ed2c1300a5cb96f24e33d_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>

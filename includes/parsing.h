@@ -16,14 +16,10 @@
 # include "minishell.h"
 # include "parsing_helpers.h"
 
-/**
- * @struct t_token
- * @brief Contains all token infos
- */
 typedef struct s_token
 {
 	t_type			type;
-	char			*lexeme;     ///< Actual word to lex, only usefull for WORD type
+	char			*lexeme;
 	struct s_token	*next;
 }					t_token;
 
@@ -37,15 +33,15 @@ typedef struct s_lexer
 {
 	char			*line;
 	size_t			i;
-	char 			c; ///< current line[i] to keep track of progress
+	char			c;
 }					t_lexer;
 
 typedef struct s_expand
 {
-	int	inquotes;
-	int	qstate;
-	int argvindex;
-}	t_expand;
+	int				inquotes;
+	int				qstate;
+	int				argvindex;
+}					t_expand;
 
 /* Lexing */
 t_token				*lexer(char *input);
@@ -63,22 +59,24 @@ void				free_tokens(t_token *token);
 void				cur_next(t_tcur *c);
 int					is_token_redir(t_token *token);
 
-void	syntax_error(t_token *tok, t_token *tok_head, t_cmd *cmd_head, t_cmd *cmd_cur);
-void	lexing_error(int errcode, t_token *head);
+void				syntax_error(t_token *tok, t_token *tok_head,
+						t_cmd *cmd_head, t_cmd *cmd_cur);
+void				lexing_error(int errcode, t_token *head);
 
 /* Parsing */
 
-t_cmd	*parser(t_minishell *msh);
+t_cmd				*parser(t_minishell *msh);
 
 /* Expand */
-void	expand_manager(t_cmd *head, t_minishell *msh);
-char	*expand_word(char *str, t_minishell *msh, int argvindex);
+void				expand_manager(t_cmd *head, t_minishell *msh);
+char				*expand_word(char *str, t_minishell *msh, int argvindex);
 
-void	handle_dollar(t_lexer *lex, t_str_buf *sb, t_expand *exp, t_minishell *msh);
+void				handle_dollar(t_lexer *lex, t_str_buf *sb, t_expand *exp,
+						t_minishell *msh);
 
-int is_valid_for_key(char c);
-int	is_key_valid(char *str);
+int					is_valid_for_key(char c);
+int					is_key_valid(char *str);
 
-void exit_expand_fatal(t_minishell *msh);
+void				exit_expand_fatal(t_minishell *msh);
 
 #endif

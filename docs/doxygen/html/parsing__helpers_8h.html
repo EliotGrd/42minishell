@@ -124,9 +124,9 @@ Typedefs</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:aee97e8a2ae269ee4063d3ea917e93ffc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing__helpers_8h.html#aee97e8a2ae269ee4063d3ea917e93ffc">argv_buf_init</a> (<a class="el" href="parsing__helpers_8h.html#ac585b315914c085428d96deebffd9110">t_argv_buf</a> *avb)</td></tr>
 <tr class="separator:aee97e8a2ae269ee4063d3ea917e93ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f9516f7f412bb9019d1fe829f2395a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing__helpers_8h.html#a9f9516f7f412bb9019d1fe829f2395a3">argv_buf_push</a> (<a class="el" href="parsing__helpers_8h.html#ac585b315914c085428d96deebffd9110">t_argv_buf</a> *avb, char *str)</td></tr>
-<tr class="memdesc:a9f9516f7f412bb9019d1fe829f2395a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tool to build an argv with a buffer that reallocates when more memory is needed and add a string to the newly created argv.  <a href="parsing__helpers_8h.html#a9f9516f7f412bb9019d1fe829f2395a3">More...</a><br /></td></tr>
-<tr class="separator:a9f9516f7f412bb9019d1fe829f2395a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71866a37dc221a296b930979eb5e98c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing__helpers_8h.html#a71866a37dc221a296b930979eb5e98c2">argv_buf_push</a> (<a class="el" href="parsing__helpers_8h.html#ac585b315914c085428d96deebffd9110">t_argv_buf</a> *avb, char *str)</td></tr>
+<tr class="memdesc:a71866a37dc221a296b930979eb5e98c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tool to build an argv with a buffer that reallocates when more memory is needed and add a string to the newly created argv.  <a href="parsing__helpers_8h.html#a71866a37dc221a296b930979eb5e98c2">More...</a><br /></td></tr>
+<tr class="separator:a71866a37dc221a296b930979eb5e98c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f4104276b4a0d98dde31f75622668b4"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing__helpers_8h.html#a5f4104276b4a0d98dde31f75622668b4">argv_buf_end</a> (<a class="el" href="parsing__helpers_8h.html#ac585b315914c085428d96deebffd9110">t_argv_buf</a> *avb)</td></tr>
 <tr class="memdesc:a5f4104276b4a0d98dde31f75622668b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends and null terminate the argv so it can be used.  <a href="parsing__helpers_8h.html#a5f4104276b4a0d98dde31f75622668b4">More...</a><br /></td></tr>
 <tr class="separator:a5f4104276b4a0d98dde31f75622668b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,15 +135,12 @@ Functions</h2></td></tr>
 <tr class="separator:a182f853e31c31af45e572979074a4d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ff0766da574e4904598f3119c7d3749"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing__helpers_8h.html#a2ff0766da574e4904598f3119c7d3749">str_buf_init</a> (<a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb)</td></tr>
 <tr class="separator:a2ff0766da574e4904598f3119c7d3749"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54e602a5da87bd89687c69c2d86f34d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing__helpers_8h.html#a54e602a5da87bd89687c69c2d86f34d2">str_buf_putc</a> (<a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb, char c)</td></tr>
-<tr class="memdesc:a54e602a5da87bd89687c69c2d86f34d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put char in the struct t_str_buf so we can build a string in the struct. The point is to create the string without knowing its final size with realloc.  <a href="parsing__helpers_8h.html#a54e602a5da87bd89687c69c2d86f34d2">More...</a><br /></td></tr>
-<tr class="separator:a54e602a5da87bd89687c69c2d86f34d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8feaedb1aa8df7eb71268f15e1518fa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing__helpers_8h.html#a8feaedb1aa8df7eb71268f15e1518fa0">str_buf_putn</a> (<a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb, char *str, size_t size)</td></tr>
-<tr class="memdesc:a8feaedb1aa8df7eb71268f15e1518fa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put a string of size characters in the t_str_buf struct, it lower the number of realloc calls.  <a href="parsing__helpers_8h.html#a8feaedb1aa8df7eb71268f15e1518fa0">More...</a><br /></td></tr>
-<tr class="separator:a8feaedb1aa8df7eb71268f15e1518fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bb0bb42cbf7ca9f7feff204d3059306"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing__helpers_8h.html#a4bb0bb42cbf7ca9f7feff204d3059306">str_buf_puts</a> (<a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb, char *str)</td></tr>
-<tr class="memdesc:a4bb0bb42cbf7ca9f7feff204d3059306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put a null terminated string in the t_str_buf struct.  <a href="parsing__helpers_8h.html#a4bb0bb42cbf7ca9f7feff204d3059306">More...</a><br /></td></tr>
-<tr class="separator:a4bb0bb42cbf7ca9f7feff204d3059306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2630bac2d2575ee6ecee7ed88e5f8296"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing__helpers_8h.html#a2630bac2d2575ee6ecee7ed88e5f8296">str_buf_putc</a> (<a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb, char c)</td></tr>
+<tr class="memdesc:a2630bac2d2575ee6ecee7ed88e5f8296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put char in the struct t_str_buf so we can build a string in the struct. The point is to create the string without knowing its final size with realloc.  <a href="parsing__helpers_8h.html#a2630bac2d2575ee6ecee7ed88e5f8296">More...</a><br /></td></tr>
+<tr class="separator:a2630bac2d2575ee6ecee7ed88e5f8296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f6bd82646cd8367e2f42a0b737b556"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing__helpers_8h.html#ae2f6bd82646cd8367e2f42a0b737b556">str_buf_puts</a> (<a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb, char *str)</td></tr>
+<tr class="memdesc:ae2f6bd82646cd8367e2f42a0b737b556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put a null terminated string in the t_str_buf struct.  <a href="parsing__helpers_8h.html#ae2f6bd82646cd8367e2f42a0b737b556">More...</a><br /></td></tr>
+<tr class="separator:ae2f6bd82646cd8367e2f42a0b737b556"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bfdfae2d27c541b15b526d7d67b7577"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parsing__helpers_8h.html#a1bfdfae2d27c541b15b526d7d67b7577">str_buf_end</a> (<a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *sb)</td></tr>
 <tr class="memdesc:a1bfdfae2d27c541b15b526d7d67b7577"><td class="mdescLeft">&#160;</td><td class="mdescRight">End and null terminate the string created in t_str_buf, reset the struct so it can be reused and returns the string created.  <a href="parsing__helpers_8h.html#a1bfdfae2d27c541b15b526d7d67b7577">More...</a><br /></td></tr>
 <tr class="separator:a1bfdfae2d27c541b15b526d7d67b7577"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,9 +196,16 @@ Functions</h2></td></tr>
 <p>Ends and null terminate the argv so it can be used. </p>
 <dl class="section return"><dt>Returns</dt><dd>Returns the built argv </dd></dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a5f4104276b4a0d98dde31f75622668b4_cgraph.svg" width="251" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a5f4104276b4a0d98dde31f75622668b4_icgraph.svg" width="476" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a5f4104276b4a0d98dde31f75622668b4_icgraph.svg" width="623" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -226,7 +230,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a182f853e31c31af45e572979074a4d99_icgraph.svg" width="478" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a182f853e31c31af45e572979074a4d99_icgraph.svg" width="624" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -249,19 +254,20 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_aee97e8a2ae269ee4063d3ea917e93ffc_icgraph.svg" width="472" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_aee97e8a2ae269ee4063d3ea917e93ffc_icgraph.svg" width="619" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
 </div>
-<a id="a9f9516f7f412bb9019d1fe829f2395a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f9516f7f412bb9019d1fe829f2395a3">&#9670;&nbsp;</a></span>argv_buf_push()</h2>
+<a id="a71866a37dc221a296b930979eb5e98c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71866a37dc221a296b930979eb5e98c2">&#9670;&nbsp;</a></span>argv_buf_push()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void argv_buf_push </td>
+          <td class="memname">int argv_buf_push </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="parsing__helpers_8h.html#ac585b315914c085428d96deebffd9110">t_argv_buf</a> *&#160;</td>
           <td class="paramname"><em>avb</em>, </td>
@@ -289,9 +295,16 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a71866a37dc221a296b930979eb5e98c2_cgraph.svg" width="258" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a9f9516f7f412bb9019d1fe829f2395a3_icgraph.svg" width="483" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a71866a37dc221a296b930979eb5e98c2_icgraph.svg" width="630" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -317,12 +330,14 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a1bfdfae2d27c541b15b526d7d67b7577_cgraph.svg" width="260" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a1bfdfae2d27c541b15b526d7d67b7577_cgraph.svg" width="260" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a1bfdfae2d27c541b15b526d7d67b7577_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a1bfdfae2d27c541b15b526d7d67b7577_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -345,7 +360,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a34739f65bf6f3e3e2b9e19dadf5fe217_icgraph.svg" width="446" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a34739f65bf6f3e3e2b9e19dadf5fe217_icgraph.svg" width="100%" height="459"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -368,19 +384,20 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a2ff0766da574e4904598f3119c7d3749_icgraph.svg" width="100%" height="379"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a2ff0766da574e4904598f3119c7d3749_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
 </div>
-<a id="a54e602a5da87bd89687c69c2d86f34d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54e602a5da87bd89687c69c2d86f34d2">&#9670;&nbsp;</a></span>str_buf_putc()</h2>
+<a id="a2630bac2d2575ee6ecee7ed88e5f8296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2630bac2d2575ee6ecee7ed88e5f8296">&#9670;&nbsp;</a></span>str_buf_putc()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void str_buf_putc </td>
+          <td class="memname">int str_buf_putc </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *&#160;</td>
           <td class="paramname"><em>sb</em>, </td>
@@ -403,62 +420,20 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a54e602a5da87bd89687c69c2d86f34d2_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a2630bac2d2575ee6ecee7ed88e5f8296_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a8feaedb1aa8df7eb71268f15e1518fa0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8feaedb1aa8df7eb71268f15e1518fa0">&#9670;&nbsp;</a></span>str_buf_putn()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void str_buf_putn </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *&#160;</td>
-          <td class="paramname"><em>sb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Put a string of size characters in the t_str_buf struct, it lower the number of realloc calls. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td>size of the string we need to append in our struct </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a4bb0bb42cbf7ca9f7feff204d3059306"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bb0bb42cbf7ca9f7feff204d3059306">&#9670;&nbsp;</a></span>str_buf_puts()</h2>
+<a id="ae2f6bd82646cd8367e2f42a0b737b556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2f6bd82646cd8367e2f42a0b737b556">&#9670;&nbsp;</a></span>str_buf_puts()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void str_buf_puts </td>
+          <td class="memname">int str_buf_puts </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="parsing__helpers_8h.html#a9177cf0f60f26199225f0bdd3132cc5a">t_str_buf</a> *&#160;</td>
           <td class="paramname"><em>sb</em>, </td>
@@ -481,12 +456,14 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a4bb0bb42cbf7ca9f7feff204d3059306_cgraph.svg" width="264" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_ae2f6bd82646cd8367e2f42a0b737b556_cgraph.svg" width="264" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_a4bb0bb42cbf7ca9f7feff204d3059306_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="parsing__helpers_8h_ae2f6bd82646cd8367e2f42a0b737b556_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>

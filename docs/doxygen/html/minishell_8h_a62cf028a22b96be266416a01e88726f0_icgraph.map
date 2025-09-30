@@ -1,7 +1,7 @@
 <map id="write_to_heredoc" name="write_to_heredoc">
 <area shape="rect" id="node1" title="function to write on the heredoc file depending if we have a $ sign or not we write or we expand" alt="" coords="1171,31,1305,57"/>
 <area shape="rect" id="node2" href="$heredoc_8c.html#aa11261ffe1d93fd87488514776e2df34" title=" " alt="" coords="985,31,1123,57"/>
-<area shape="rect" id="node3" href="$heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a" title="origin of creation ; the norm what it is doing ? juste close the fd the right way if we encounter the..." alt="" coords="787,31,937,57"/>
+<area shape="rect" id="node3" href="$heredoc_8c.html#a98f0cdaa70ea9d777053df568b66e32a" title="the function to call what the child has to do main reason for this function =&gt; the norm" alt="" coords="787,31,937,57"/>
 <area shape="rect" id="node4" href="$heredoc_8c.html#a0b4a5d07e8877b06b8977b47a6d51930" title="it&#39;s where we open the heredoc and start writing inside our pipe each time we check if it&#39;s the word ..." alt="" coords="624,31,739,57"/>
 <area shape="rect" id="node5" href="$heredoc_8c.html#a17337782f10170a6f2f9188bf557de0f" title="the function will go through all the commands and check the redirection if we encounter a heredoc we ..." alt="" coords="401,31,576,57"/>
 <area shape="rect" id="node6" href="$multipipe_8c.html#aa4f1c217eeb689ecbc622baecd2c5dec" title="management of the multipipe (= name when we have at least one pipe) First step is to manage the hered..." alt="" coords="235,5,353,32"/>

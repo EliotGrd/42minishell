@@ -1,0 +1,5 @@
+<map id="handle_quotes" name="handle_quotes">
+<area shape="rect" id="node1" title="Dequotes and manage quote state to expand correctly." alt="" coords="5,31,123,57"/>
+<area shape="rect" id="node2" href="$lexer__utils_8c.html#a6b132516dacc9599762b1fe7341a0f04" title="Advance one byte in the struct t_lexer to keep track of progress." alt="" coords="183,5,261,32"/>
+<area shape="rect" id="node3" href="$string__builder_8c.html#a2630bac2d2575ee6ecee7ed88e5f8296" title="Put char in the struct t_str_buf so we can build a string in the struct. The point is to create the s..." alt="" coords="171,56,273,83"/>
+</map>
