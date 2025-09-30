@@ -137,6 +137,8 @@ int	multipipe_cmd(t_minishell *minishell)
 			g_exit_code = 0;
 			if (temp -> args == NULL)
 				;
+			if (!temp -> args[0] ||temp -> args[0][0] == '\0')
+				ft_putendl_fd("Cat didnt found the command lol", 2);
 			else if (multipipe_intermediary_cmd(temp, minishell, &last) == -1)
 				exit(EXIT_FAILURE);
 		}

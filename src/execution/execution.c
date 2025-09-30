@@ -66,8 +66,10 @@ int	one_command(t_minishell *minishell)
 		return (-1);
 	if (redirection_verification(&minishell -> top_cmd) != -1)
 	{
-		if (minishell -> top_cmd -> args == NULL)
+		if (minishell -> top_cmd -> args == NULL) 
 			;
+		if (!minishell -> top_cmd -> args[0] || minishell -> top_cmd -> args[0][0] == '\0')
+			ft_putendl_fd("Cat didnt found the command lol", 2);
 		else if (is_it_builtin_nonfork(minishell ->top_cmd -> args[0]))
 			g_exit_code = launch_builtin(minishell -> top_cmd -> args,
 					minishell);
@@ -96,6 +98,4 @@ void	executor(t_minishell *minishell)
 		one_command(minishell);
 	else
 		multipipe_cmd(minishell);
-	if (g_exit_code != 130)
-		update_underscore(minishell);
 }

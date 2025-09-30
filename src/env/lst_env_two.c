@@ -77,6 +77,8 @@ char	**lst_to_tab_env(t_env *top)
 	while (i < size)
 	{
 		result[i] = join_path(top -> key, top -> value, '=');
+		if (result[i] == NULL)
+			return (ft_free_all(result, i), NULL);
 		top = top -> next;
 		i++;
 	}

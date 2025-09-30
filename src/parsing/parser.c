@@ -75,7 +75,7 @@ int	parse_cmd(t_tcur *c, t_cmd *cur_cmd, t_cmd *cmd_h, t_minishell *msh)
 	return (1);
 }
 
-t_cmd	*parser(t_minishell *msh)
+/*t_cmd	*parser(t_minishell *msh)
 {
 	t_tcur	c;
 	t_cmd		*cmd_h;
@@ -119,21 +119,20 @@ t_cmd	*parser(t_minishell *msh)
 	push_back_cmd(&cmd_h, cmd_node);
 	free_tokens(msh->top_tok);
 	return (cmd_h);
-}
+}*/
 
-/*static int	parser_loop(t_tcur *c, t_minishell *msh, t_cmd *cmd_h,
-		t_cmd *cmd_node)
+int	parser_loop(t_tcur *c, t_minishell *msh, t_cmd **cmd_h, t_cmd **cmd_node)
 {
 	while (c->current != NULL && c->current->type != END)
 	{
 		if (c->current->type == WORD)
 		{
-			if (!parse_cmd(c, cmd_node, cmd_h, msh))
+			if (!parse_cmd(c, *cmd_node, *cmd_h, msh))
 				return (0);
 		}
 		else if (is_token_redir(c->current))
 		{
-			if (!parse_redir(c, cmd_node, cmd_h, msh))
+			if (!parse_redir(c, *cmd_node, *cmd_h, msh))
 				return (0);
 			cur_next(c);
 		}
@@ -141,12 +140,11 @@ t_cmd	*parser(t_minishell *msh)
 		{
 			if (c->current->next->type == PIPE || c->current->next->type == END)
 				return (0);
-			push_back_cmd(&cmd_h, cmd_node);
-			cmd_node = create_node_cmd(0);
+			push_back_cmd(cmd_h, *cmd_node);
+			*cmd_node = create_node_cmd(0);
 			if (!cmd_node)
-				parser_exit_fatal(msh, cmd_h, NULL);
-			if (c->current != NULL)
-				cur_next(c);
+				parser_exit_fatal(msh, *cmd_h, NULL);
+			cur_next(c);
 		}
 	}
 	return (1);
@@ -165,9 +163,9 @@ t_cmd	*parser(t_minishell *msh)
 		parser_exit_fatal(msh, NULL, NULL);
 	if (c.current->type == PIPE)
 		return (syntax_error(c.current, msh->top_tok, cmd_h, cmd_node), NULL);
-	if (!parser_loop(&c, msh, cmd_h, cmd_node))
+	if (!parser_loop(&c, msh, &cmd_h, &cmd_node))
 		return (syntax_error(c.current, msh->top_tok, cmd_h, cmd_node), NULL);
 	push_back_cmd(&cmd_h, cmd_node);
 	free_tokens(msh->top_tok);
 	return (cmd_h);
-}*/
+}

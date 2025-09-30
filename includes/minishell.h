@@ -175,7 +175,6 @@ void		active_echoctl(void);
 void		remove_echoctl(void);
 int			len(char **argv);
 t_env		*research_node_env(t_env *top_env, char *search);
-int			update_underscore(t_minishell *minishell);
 void		update(pid_t last);
 
 #endif
