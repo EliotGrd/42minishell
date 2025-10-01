@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:39:04 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/22 11:52:39 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/10/01 17:06:29 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,7 +137,7 @@ int	multipipe_cmd(t_minishell *minishell)
 			g_exit_code = 0;
 			if (temp -> args == NULL)
 				;
-			if (!temp -> args[0] || temp -> args[0][0] == '\0')
+			else if (!temp -> args[0] || temp -> args[0][0] == '\0')
 				ft_putendl_fd("Cat didnt found the command lol", 2);
 			else if (multipipe_intermediary_cmd(temp, minishell, &last) == -1)
 				exit(EXIT_FAILURE);

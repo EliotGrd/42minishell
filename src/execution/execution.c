@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 08:42:26 by bsuger            #+#    #+#             */
-/*   Updated: 2025/10/01 10:33:16 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/10/01 17:05:52 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	one_command(t_minishell *minishell)
 	{
 		if (minishell->top_cmd->args == NULL)
 			;
-		if (!minishell->top_cmd->args[0]
+		else if (!minishell->top_cmd->args[0]
 			|| minishell->top_cmd->args[0][0] == '\0')
 			ft_putendl_fd("Cat didnt found the command lol", 2);
 		else if (is_it_builtin_nonfork(minishell->top_cmd->args[0]))
