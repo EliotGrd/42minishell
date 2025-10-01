@@ -14,7 +14,7 @@
 
 int	check_validity_key(char *key)
 {
-	if (ft_isalpha(key[0]) != 1)
+	if (ft_isalpha(key[0]) != 1 && key[0] != '_')
 		return (1);
 	key++;
 	while (*key)
