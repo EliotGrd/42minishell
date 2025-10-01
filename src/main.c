@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:37:57 by bsuger            #+#    #+#             */
-/*   Updated: 2025/10/01 10:30:03 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/10/01 16:57:26 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	quit(t_minishell *minishell)
 	ft_printf("Cat finally found his toy, you can leave now..... LEAVE\n");
 }
 
-void	magic(char *line, t_minishell *minishell)
+void	line_treatment(char *line, t_minishell *minishell)
 {
 	add_history(line);
 	minishell -> top_tok = lexer(line);
@@ -65,7 +65,7 @@ int	main(int argc, char **argv, char **envp)
 				break ;
 			}
 			if (line && *line)
-				magic(line, &minishell);
+				line_treatment(line, &minishell);
 			destructor_cmd(&minishell.top_cmd);
 			ft_free((void **)&line);
 		}

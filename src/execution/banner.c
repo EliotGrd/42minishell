@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 08:23:59 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/22 11:23:37 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/10/01 17:02:04 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 void	banner(void)
 {
-	ft_putstr_fd("  ,-.       _,---._ __  / \\ \n", 2);
-	ft_putstr_fd(" /  )    .-'       `./ /   \\ \n", 2);
-	ft_putstr_fd("(  (   ,'            `/    /| \n", 2);
-	ft_putstr_fd(" \\  `-\"            '\\'\\   / | \n", 2);
-	ft_putstr_fd("  `.              ,  \\ \\ /  | \n", 2);
-	ft_putstr_fd("   /`.          ,'-`----Y   | \n", 2);
-	ft_putstr_fd("  (            ;/| /\\   |   ' \n", 2);
-	ft_putstr_fd("  |  ,-.    ,-'/_|  /   |  / \n", 2);
-	ft_putstr_fd("  |  | (   |     | /_   | / \n", 2);
-	ft_putstr_fd("  )  |  \\  `.___________|/ \n", 2);
-	ft_putstr_fd("  `--'   `--' \n", 2);
+	if (isatty(STDIN_FILENO))
+	{
+		ft_putstr_fd("  ,-.       _,---._ __  / \\ \n", 2);
+		ft_putstr_fd(" /  )    .-'       `./ /   \\ \n", 2);
+		ft_putstr_fd("(  (   ,'            `/    /| \n", 2);
+		ft_putstr_fd(" \\  `-\"            '\\'\\   / | \n", 2);
+		ft_putstr_fd("  `.              ,  \\ \\ /  | \n", 2);
+		ft_putstr_fd("   /`.          ,'-`----Y   | \n", 2);
+		ft_putstr_fd("  (            ;/| /\\   |   ' \n", 2);
+		ft_putstr_fd("  |  ,-.    ,-'/_|  /   |  / \n", 2);
+		ft_putstr_fd("  |  | (   |     | /_   | / \n", 2);
+		ft_putstr_fd("  )  |  \\  `.___________|/ \n", 2);
+		ft_putstr_fd("  `--'   `--' \n", 2);
+	}
 }
