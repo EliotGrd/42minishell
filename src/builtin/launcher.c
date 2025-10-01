@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 10:09:37 by bsuger            #+#    #+#             */
-/*   Updated: 2025/10/01 09:32:01 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/10/01 16:50:06 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	is_it_builtin(char *str)
 		|| ft_strncmp(str, "exit", ft_strlen(str) + 1) == 0
 		|| ft_strncmp(str, "export", ft_strlen(str) + 1) == 0
 		|| ft_strncmp(str, ":", ft_strlen(str) + 1) == 0
+		|| ft_strncmp(str, ".", ft_strlen(str) + 1) == 0
 		|| ft_strncmp(str, "..", ft_strlen(str) + 1) == 0)
 		return (1);
 	return (0);
