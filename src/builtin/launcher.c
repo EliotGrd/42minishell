@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 10:09:37 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/23 13:57:57 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/10/01 09:32:01 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int	is_it_builtin(char *str)
 		|| ft_strncmp(str, "unset", ft_strlen(str) + 1) == 0
 		|| ft_strncmp(str, "exit", ft_strlen(str) + 1) == 0
 		|| ft_strncmp(str, "export", ft_strlen(str) + 1) == 0
-		|| ft_strncmp(str, ":", ft_strlen(str) + 1) == 0)
+		|| ft_strncmp(str, ":", ft_strlen(str) + 1) == 0
+		|| ft_strncmp(str, "..", ft_strlen(str) + 1) == 0)
 		return (1);
 	return (0);
 }
@@ -45,7 +46,9 @@ int	is_it_builtin_nonfork(char *str)
 	if (ft_strncmp(str, "cd", ft_strlen(str) + 1) == 0
 		|| ft_strncmp(str, "unset", ft_strlen(str) + 1) == 0
 		|| ft_strncmp(str, "exit", ft_strlen(str) + 1) == 0
-		|| ft_strncmp(str, "export", ft_strlen(str) + 1) == 0)
+		|| ft_strncmp(str, "export", ft_strlen(str) + 1) == 0
+		|| ft_strncmp(str, ".", ft_strlen(str) + 1) == 0
+		|| ft_strncmp(str, "..", ft_strlen(str) + 1) == 0)
 		return (1);
 	return (0);
 }
@@ -76,5 +79,9 @@ int	launch_builtin(char **str, t_minishell *minishell)
 		my_exit(++str, minishell);
 	else if (ft_strncmp(str[0], ":", ft_strlen(str[0]) + 1) == 0)
 		return (0);
+	else if (ft_strncmp(str[0], "..", ft_strlen(str[0]) + 1) == 0)
+		return (double_dot());
+	else if (ft_strncmp(str[0], ".", ft_strlen(str[0]) + 1) == 0)
+		return (single_dot(minishell, str));
 	return (0);
 }

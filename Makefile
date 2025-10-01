@@ -45,6 +45,7 @@ SRC = \
 	  builtin/cd.c \
 	  builtin/export.c \
 	  builtin/exit.c \
+	  builtin/dot.c \
 	  builtin/launcher.c \
 
 SRCS = $(addprefix $(SRC_PATH), $(SRC))

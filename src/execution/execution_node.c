@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:49:45 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/30 07:50:51 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/10/01 08:46:09 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
  * if 2 we don't have the permission, if 3 we have not found the command 
  * (it's a case where we don't have a path)
  */
-static void	message_error(char **temp_env, char *str, int n)
+void	message_error(char **temp_env, char *str, int n)
 {
 	if (temp_env && *temp_env)
 		ft_free_tab(temp_env);

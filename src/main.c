@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 11:37:57 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/22 11:07:41 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/10/01 10:01:32 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,41 +25,47 @@ void	init_minishell(t_minishell *minishell, char **envp)
 	set_up_env(&minishell->top_env, envp);
 }
 
+void	quit(t_minishell *minishell)
+{
+	destructor_cmd(&minishell -> top_cmd);
+	destructor_env(&minishell -> top_env);
+	ft_printf("Cat finally found his toy, you can leave now..... LEAVE\n");
+}
+
+void	magic(char *line, t_minishell *minishell)
+{
+	add_history(line);
+	minishell -> top_tok = lexer(line);
+	if (minishell -> top_tok)
+		minishell ->top_cmd = parser(minishell);
+	if (minishell ->top_cmd)
+		expand_manager(minishell -> top_cmd, minishell);
+	if (minishell -> top_cmd)
+		executor(minishell);
+}
+
 int	main(int argc, char **argv, char **envp)
 {
+	t_minishell	minishell;
+	char		*line;
+
 	banner();
-	t_minishell minishell;
-	char	*line;
-
-	(void)argc;
-	(void)argv;
+	((void)argc, (void)argv);
 	init_minishell(&minishell, envp);
-
 	if (isatty(STDIN_FILENO) && isatty(STDOUT_FILENO))
 	{
-		while(1)
+		while (1)
 		{
 			signal(SIGINT, sigint_handler);
 			signal(SIGQUIT, SIG_IGN);
 			line = readline("CHAT$> ");
 			if (line == NULL)
 			{
-				destructor_cmd(&minishell.top_cmd);
-				destructor_env(&minishell.top_env);
-				ft_printf("Cat finally found his toy, you can leave now..... LEAVE\n");
-				break;
+				quit(&minishell);
+				break ;
 			}
 			if (line && *line)
-			{
-				add_history(line);
-				minishell.top_tok = lexer(line);
-				if (minishell.top_tok)
-					minishell.top_cmd = parser(&minishell);
-				if (minishell.top_cmd)
-					expand_manager(minishell.top_cmd, &minishell);
-				if (minishell.top_cmd)
-					executor(&minishell);
-			}
+				magic(line, &minishell);
 			destructor_cmd(&minishell.top_cmd);
 			ft_free((void **)&line);
 		}
