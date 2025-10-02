@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:08:46 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/22 09:36:03 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/10/02 08:56:55 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,25 +49,32 @@ int	len(char **argv)
 	return (i);
 }
 
-int	cd(char **argv, t_minishell *minishell)
+int	intermediary_cd(t_minishell *minishell)
 {
 	char	*home;
 
+	home = research_key_env(minishell -> top_env, "HOME");
+	if (home == NULL)
+		return (ft_putstr_fd("HOME is not set\n", 2), 1);
+	if (home[0] == '\0')
+		return (free(home), 0);
+	if (chdir(home) == -1)
+		return (perror("CHAT$ "), free(home), 1);
+	free(home);
+	return (1);
+}
+
+int	cd(char **argv, t_minishell *minishell)
+{
 	if (len(argv + 1) > 1)
 		return (ft_putstr_fd("Too much arguments\n", 2), 1);
 	update_pwd("OLDPWD", minishell);
 	if (argv[1] == NULL)
-	{
-		home = research_key_env(minishell -> top_env, "HOME");
-		if (home == NULL)
-			return (ft_putstr_fd("HOME is not set\n", 2), 1);
-		if (chdir(home) == -1)
-			return (perror("CHAT$ "), 1);
-		free(home);
-		return (1);
-	}
+		return (intermediary_cd(minishell));
 	else
 	{
+		if (*argv[1] == '\0')
+			return (0);
 		if (chdir(argv[1]) == -1)
 			return (perror("CHAT$ "), 1);
 	}
