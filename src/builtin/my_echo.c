@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 14:07:38 by bsuger            #+#    #+#             */
-/*   Updated: 2025/09/23 13:59:22 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/10/02 09:06:49 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	check_option_echo(char *str)
 	++str;
 	while (*str)
 	{
-		if (*str != 'n' && *str != 'e')
+		if (*str != 'n')
 			return (0);
 		str++;
 	}
@@ -33,7 +33,7 @@ int	my_echo(char **argv)
 	n = 0;
 	if (len(argv) == 0)
 		return (write(1, "\n", 1), 0);
-	while (argv[i][0] == '-' && check_option_echo(argv[i]))
+	while (argv[i] && argv[i][0] == '-' && check_option_echo(argv[i]))
 	{
 		n = 1;
 		i++;
