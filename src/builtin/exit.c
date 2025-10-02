@@ -6,7 +6,7 @@
 /*   By: bsuger <bsuger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 09:08:43 by bsuger            #+#    #+#             */
-/*   Updated: 2025/10/02 09:41:11 by bsuger           ###   ########.fr       */
+/*   Updated: 2025/10/02 10:29:58 by bsuger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	check_exit(char *str)
 {
 	while (*str)
 	{
-		if (ft_isdigit(*str) != 1)
+		if (ft_isdigit(*str) != 1 && *str != '-' && *str != '+')
 			return (1);
 		str++;
 	}
