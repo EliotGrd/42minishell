@@ -27,27 +27,13 @@ void	message_error(char **temp_env, char *str, int n)
 	if (temp_env && *temp_env)
 		ft_free_tab(temp_env);
 	if (n == 0)
-	{
-		ft_putstr_fd("CHATS: ", 2);
 		perror(str);
-	}
 	else if (n == 1)
-	{
-		ft_putstr_fd("cat thinks ", 2);
-		ft_putstr_fd(str, 2);
-		ft_putstr_fd(" is a directory and cat is always right \n", 2);
-	}
+		write(2, "cat thinks this is a directory and cat is always right\n", 55);
 	else if (n == 2)
-	{
-		ft_putstr_fd("CHATS: ", 2);
 		perror(str);
-	}
 	else if (n == 3)
-	{
-		ft_putstr_fd("cat search in the box ", 2);
-		ft_putstr_fd("but didn't fount the command: ", 2);
-		ft_putendl_fd(str, 2);
-	}
+		write(2, "cat searched in the box but didn't found the command\n", 53);
 }
 
 static int	check_accessible(char *str, char **temp_env)

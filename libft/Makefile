@@ -57,6 +57,8 @@ SRCS=./ft_isalpha.c \
      ./ft_atoi_base.c \
      ./ft_printf.c \
      ./ft_printf_utils.c \
+     ./ft_dprintf.c \
+     ./ft_dprintf_utils.c \
      ./ft_strndup.c \
      ./ft_free_tab.c \
 	 ./ft_free.c \

@@ -90,6 +90,15 @@ int					ft_printf_unsigned_numbers(unsigned int n);
 int					ft_printf_hex(unsigned int n, char format);
 int					ft_printf_address(unsigned long long n);
 int					ft_printf_ptr(void *ptr);
+int					ft_dprintf(int fd, const char *format, ...);
+int					ft_dconvert(int fd, char format, va_list args);
+int					ft_dprintf_char(int fd, char c);
+int					ft_dprintf_str(int fd, char *str);
+int					ft_dprintf_numbers(int fd, int n);
+int					ft_dprintf_unsigned_numbers(int fd, unsigned int n);
+int					ft_dprintf_hex(int fd, unsigned int n, char format);
+int					ft_dprintf_address(int fd, unsigned long long n);
+int					ft_dprintf_ptr(int fd, void *ptr);
 void				ft_free_tab(char **result);
 void				*ft_realloc(void *to_realloc, size_t old_size,
 						size_t new_size);
