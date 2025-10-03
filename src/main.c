@@ -51,9 +51,9 @@ int	main(int argc, char **argv, char **envp)
 
 	banner();
 	((void)argc, (void)argv);
-	init_minishell(&minishell, envp);
 	if (isatty(STDIN_FILENO) && isatty(STDOUT_FILENO))
 	{
+		init_minishell(&minishell, envp);
 		while (1)
 		{
 			signal(SIGINT, sigint_handler);
