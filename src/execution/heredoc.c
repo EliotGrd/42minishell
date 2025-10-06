@@ -79,7 +79,7 @@ static void	read_gnl_heredoc(t_redirect *temp, t_cmd *top_cmd,
  */
 void	child_work_heredoc(t_minishell *minishell, t_redirect *temp, int op)
 {
-	(signal(SIGINT, sigint_heredoc), signal(SIGQUIT, sigquit_handler));
+	(signal(SIGINT, sigint_heredoc), signal(SIGQUIT, SIG_IGN));
 	remove_echoctl();
 	read_gnl_heredoc(temp, minishell -> top_cmd, minishell, op);
 	ft_close_fd(&op);
