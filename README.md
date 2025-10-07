@@ -22,7 +22,8 @@ MY PART - LEXING/PARSING/EXPAND :
 First, come the lexing (or tokenizing) part. We need to scan the readline input and divide the line into what we call tokens. So each word or symbol is divided into his own token, for example in our project we tokenized into words, infile, here doc, outfile, append, pipe and end. These tokens are contained in a linked list that is given to the parser.  
 The parser will then analyse the tokens and verify that they're correct. After that (or in our case in the same time) the parser will transform these tokens into the data structure we chose. The best option for a shell datastruct like this is to do an AST (more details at the bottom) but because we knew we didn't want to do the bonuses, we chose to do a simple linked list of commands.  
 And finally in the expand phase we go through the command linked list we just did and dequote all args that will be given to execve later and also expand all environnement variable (so everything that starts with a dollarsign and that is present in the env) as well as $? that will expand into the exit code of the last command executed.  
-  
+
+For my part I've learned about lexing/parsing and AST with the book "Crafting Interpreters" by Robert Nystrom. Is is well explained but examples are in Java so it demands a bit of adaptation if you don't know this language. (https://craftinginterpreters.com/)
 HIS PART - ENV/EXEC/BUILTINS :  
 You take the idea from the previous project Pipex, which are fork, pipe, file descriptor management.....  
 With the goal to follow as much as possible the bash behaviour we have to follow certain steps:   
@@ -37,5 +38,5 @@ CTRL+\ we have only to make sure it does not crash our minishell.
 This version on branch main is the one we submitted for evalutation and we got 101% ! Yoohoo... but the project is not perfect.. hum hum sigpipe in heredocs hum hum.  
   
 ## 🖐️ How to use ? 
-Git clone the repo, make and you're done !\
-Some usage examples are shown above, and feel free to try every command you want.. but these commands must have an executable that we can find on the $PATH (you can try `whereis cmd` to see if the command is valid for pipex).  
+Git clone the repo, `make` and you're done ! You can also `make val` to test memory without leaks due to readline.
+You can then execute ./minishell and test all commands you want.. what is supported is written above, and hopes you like cats!
