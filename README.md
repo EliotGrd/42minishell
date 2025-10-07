@@ -24,6 +24,7 @@ The parser will then analyse the tokens and verify that they're correct. After t
 And finally in the expand phase we go through the command linked list we just did and dequote all args that will be given to execve later and also expand all environnement variable (so everything that starts with a dollarsign and that is present in the env) as well as $? that will expand into the exit code of the last command executed.  
 
 For my part I've learned about lexing/parsing and AST with the book "Crafting Interpreters" by Robert Nystrom. Is is well explained but examples are in Java so it demands a bit of adaptation if you don't know this language. (https://craftinginterpreters.com/)  
+  
 HIS PART - ENV/EXEC/BUILTINS :  
 You take the idea from the previous project Pipex, which are fork, pipe, file descriptor management.....  
 With the goal to follow as much as possible the bash behaviour we have to follow certain steps:   
